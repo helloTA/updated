@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby Basic Setup</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby Comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">Exacute Ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby Variables</a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby Classes</a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby Loops</a></li>
+<li><a target="_top" href="ruby-arrays.html">Ruby Arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby Blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby Hashes</a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby Strings</a></li>
+
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby Modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby Procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby Lambda</a></li>
+</ul>
+
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>About Ruby</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>
+If you’re a ruby developer or any sort of software developer you should set up your own development environment and run the applications on your machine or computer.
+</p>
+
+<p>Instead of executing the programs online it is the better way to execute on your own machine or computer to learn any language, not just ruby. Remember, if you work for any software company nobody setup your development environment. It's your responsibility to set up on your own. So try doing that from here.
+</p>
+
+<p>
+ If you don’t want to do all this but still you want run ruby programs please click this below link and start executing ruby programs. But we don’t recommend this approach for some reason.</p> <a href="www.repl.it/languages/Ruby">Repl.it</a>
+
+<p>Here, we’ll walk you through how you can set up ruby development environment and execute ruby programs on your machine. To write ruby programs, you may need some editor. So we’ll cover the best editors in this section along with the ruby software. Please make sure, you should have installed at least one editor on your machine.
+.
+</p>
+<p><strong> Installing Ruby on Windows</strong></p>
+<p>
+    Installing Ruby on Windows is pretty simple. Follow the below instructions and you'll be ready to execute ruby programs on your windows machine.
+
+    </p>
+    <p><strong>Step 1</strong><p>
+     <p>Head over the Ruby  Official Website <a href="http://www.ruby-lang.org/">Ruby Website</a> and click "Download Ruby" on the right. </p>
+
+     <p><strong> Step 2</strong></p>
+     <p> scroll down to the 'Ruby on Windows' section, you'll see that the easiest way to do it is by using the RubyInstaller. Choose the latest version of Ruby, which is Ruby 1.9.2p0. Download it and install it, just like any other Windows program.</p>
+
+<p><strong>step 3 </strong></p>
+<p>Once you've got it installed, it's pretty simple to make sure everything worked. Just open a command prompt and type this:</p>
+
+<pre class="prettyprint"><code class="language-ruby">
+ $ ruby --version
+ruby 1.9.2p0 (2010-08-18) [i386-mingww32]
+</code>
+</pre>
+<p> You will see the above message if you installed ruby successfully.</p>
+<p><b>It's that easy!</b></p>
+
+<p><strong> Installing Ruby on Mac </strong></p>
+<p>What you might be interested to know is that Ruby comes preinstalled on your Mac. Check this on your Mac machine.
+   Open the Terminal and type:</p>
+   
+
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul>
+
+
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

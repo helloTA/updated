@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> PHP Variables</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">PHP Tutorials</li>
+<li><a target="_top" href="about.php.html">About PHP</a></li>
+<li><a target="_top" href="php-environment-setup.html">PHP Environment Setup</a> </li>
+<li><a target="_top" href="php-variable.html">PHP Variabes</a> </li>
+<li><a target="_top" href="operators-in-php.html">PHP Operators </a></li>
+<li><a target="_top" href="decision-making-in-php.html">PHP Decision Making</a> </li>
+<li><a target="_top" href="loops-in-php.html">PHP Loops </a></li>
+<li><a target="_top" href="functions-in-php.html">PHP Functions</a></li>
+<li><a target="_top" href="arrays-in-php.html">PHP Arrays</a></li>
+<li><a target="_top" href="strings-in-php.html">PHP Strings</a></li>
+<li><a target="_top" href="web-concepts-in-php.html">PHP Web Concepts</a></li>
+<li><a target="_top" href="get-and-post-in-php.html">PHP GET &amp; POST</a></li>
+<li><a target="_top" href="files-in-php.html">PHP Files</a></li>
+<li><a target="_top" href="arrays-in-php.html">PHP Arrays</a></li>
+<li><a target="_top" href="cookies-in-php.html">PHP Cookies</a></li>
+<li><a target="_top" href="sessoins-in-php.html">PHP Sessoins</a></li>
+<li><a target="_top" href="sending-emails-in-php.html">PHP Sending Emails</a></li>
+<li><a target="_top" href="date-and-time-in-php.html">PHP Date and Time </a></li>
+<li><a target="_top" href="file-handling-in-php.html">PHP File Handling</a></li>
+<li><a target="_top" href="file-upload-in-php.html">PHP  File Upload</a></li>
+<li><a target="_top" href="predefined-variables-in-php.html">PHP Predeined Variables</a></li>
+<li><a target="_top" href="regular-expressions-in-php.html">PHP Regular Expressions</a></li>
+<li><a target="_top" href="error-handling-in-php.html">PHP Error Handling</a></li>
+<li><a target="_top" href="filters-in-php.html">PHP Filters</a></li>
+<li><a target="_top" href="php-and-mysql-php.html">PHP and MySQL</a></li>
+<li><a target="_top" href="using-ajax-with-php.html">Using Ajax with PHP </a></li>
+</ul>                           
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<!-- CONTENT STARTS -->
+<div class="content">
+<h1>PHP Operators</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+<h1>Operators in PHP</h1>
+
+<p>Operator is something that can be used to perform the operations.</p>
+
+<b>Types of operators in php :</b>
+<p>Assignment</p>
+<p>Arithmetic</p>
+<p>Logical</p>
+<p>Comparison</p>
+<p>Concatenation Operators</p>
+
+<p> <b>What is an Assignment Operator</b> </p>
+<p>Assignment operators are used to set a variable equal to a value or set a variable by doing an arithmetic operation on itself and another value.</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Operation</th>
+            <th>Resulst</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>=</td>
+            <td>m=n</td>
+            <td>m eqal to n</td>
+        </tr>
+        <tr class="danger">
+            <td>+=</td>
+            <td>m+=n</td>
+            <td>m= m+n</td>
+        </tr>
+         <tr class="warning">
+            <td>-=</td>
+            <td>m-=n</td>
+            <td>m= m-n</td>
+        </tr>
+         <tr class="info">
+            <td>-=</td>
+            <td>m-=n</td>
+            <td>m= m-n</td>
+        </tr>
+         <tr class="warning">
+            <td>*=</td>
+            <td>m*=n</td>
+            <td>m= m*n</td>
+        </tr>
+         <tr class="danger">
+            <td>/=</td>
+            <td>m/=n</td>
+            <td>m= m/n</td>
+        </tr>
+         <tr class="success">
+            <td>%=</td>
+            <td>m%=n</td>
+            <td>m= m%n</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Arithmetic Operators in PHP</h3>
+<p>Arithmetic operators are used perform arithmetical operations, such as addition, subtraction, multiplication, Division  etc.</p>
+<table class="table">
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="active">
+                <td>+</td>
+                <td>Addition</td>
+                <td>m = 2, n = 3</td>
+                <td>m+n = 5</td>
+            </tr>
+            <tr class="success">
+                <td>-</td>
+                <td>Subtraction</td>
+                <td>  a = 4, b = 3</td>
+                <td>a-b = 1</td>
+            </tr>
+            <tr class="info">
+                <td>/</td>
+                <td>Division</td>
+                <td> a = 20, b= 5</td>
+                <td>a/b = 4</td>
+            </tr>
+            <tr class="warning">
+                <td>*</td>
+                <td>Multiplication</td>
+                <td>x = 2, y = 2</td>
+                <td>x*y = 4</td>
+            </tr>
+            <tr class="danger">
+                <td>++</td>
+                <td>Increment </td>
+                <td>x = 5</td>
+                <td>x++ = 6</td>
+            </tr>
+            <tr class="success">
+                <td>--</td>
+                <td>Decrement </td>
+                <td>x = 5</td>
+                <td>x-- = 4</td>
+            </tr>
+             <tr class="success">
+                <td>%</td>
+                <td>Modulo </td>
+                <td>x = 10, y = 8</td>
+                <td>x%y = 2</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Logical Operators in PHP</h3>
+<p>Logical operators are used perform conditional operations.</p>
+
+<p> Logical operators returns either true or false</p>
+<table class="table">
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="active">
+                <td>&&</td>
+                <td>Logical And</td>
+                <td>x = 3, y=5</td>
+                <td>(x < 5 && y > 4) returns true</td>
+            </tr>
+            <tr class="success">
+                <td>||</td>
+                <td>Logical Or</td>
+                <td>x = 3, y=5</td>
+                <td>(x == 3 || y == 5 ) returns true</td>
+            </tr>
+             <tr class="danger">
+                <td>!</td>
+                <td>Logical Not</td>
+                <td>x = 5, y=5< /td>
+                <td>!(x==y ) returns false</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Comparison Operators in PHP</h3>
+<p>Comparison operators are used to compare two values</p>
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="active">
+                <td>==</td>
+                <td>is equal to</td>
+                <td>11 ==23</td>
+                <td>returns false</td>
+            </tr>
+            <tr class="success">
+                <td>!=</td>
+                <td>is not equal to</td>
+                <td>11 != 22</td>
+                <td>returns true</td>
+            </tr>
+             <tr class="warning">
+                <td><</td>
+                <td>Less than</td>
+                <td>2 < 4</td>
+                <td>returns true</td>
+            </tr>
+             <tr class="success">
+                <td>></td>
+                <td>Greater than</td>
+                <td>4 > 2</td>
+                <td>returns true</td>
+            </tr>
+             <tr class="danger">
+                <td>< =</td>
+                <td>Less than or equal to </td>
+                <td>20 <= 21</td>
+                <td>returns true</td>
+            </tr>
+             <tr class="info">
+                <td>> =</td>
+                <td>GReater than or equal to </td>
+                <td>200 >= 199</td>
+                <td>returns true</td>
+            </tr>
+          
+        </tbody>
+    </table>
+
+<h3>Concatnation Operator in PHP</h3>
+<p>In php concatenation operator is used to combine string
+Combine string using symbol is (.)</p>
+
+<p><b>Example1:</b></p><br />
+<pre class="prettyprint"><code class="language-php">
+ &lt;?php <br />
+   $x=’Raju’;
+   echo “Hello”.$x; 
+?&gt;   
+</code></pre>
+<b>Output: </b>
+<div class="alert alert-info" role="alert">
+    Hello Raju
+</div>
+
+
+<b>Example2:</b>
+<pre class="prettyprint"><code class="language-php">
+ &lt;?php <br />
+ while ($personCount < 10) {
+    $result .= $personCount . ' people';
+    $personCount++;
+}
+ 
+echo $result; 
+?&gt;   
+</code></pre>
+<b>Output: </b>
+<div class="alert alert-info" role="alert">
+    1 person 2 person 3 person etc...
+
+</div>
+
+
+<!-- CONTENT ENDS HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

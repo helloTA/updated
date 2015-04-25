@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby variables</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="guide-to-the-material.html">Guide to the material</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Ruby Basics</li>
+<li><a target="_top" href="ruby-syntax.html">Ruby syntax</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html"><strong>Ruby variables</strong></a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby classes</a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby loops</a></li>
+<li><a target="_top" href="ruby-arrays.html">Ruby arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby hashes</a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby strings</a></li>
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby lambda</a></li>
+</ul>
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby variables</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>Variables are used to store data in the memory. It contains  some data in our program.</p>
+ <strong> Syntax:</strong>
+<p> 
+<pre class="prettyprint"><code class="language-ruby">
+var_name = &ldquo;value&rdquo;
+</code>
+</pre>
+<br />
+  Each variable has a name and value.<br />
+ <!-- IMAGE - images/ruby-variables/one.png<br />-->
+  Just like the above sentence a car needs some  parking space to keep it in real world.<br />
+  In computers and programs we need place to keep our data  and make it as reference to call it or see it or use it later.<br />
+ <!-- Understanding:
+  images/ruby-variables/two.jpg
+  images/ruby-variables.three.png. -->I am hoping you could understand  what is a variable means by now.<br />
+  <img src="images/ruby variables.png" width="600">
+  <br />
+  Almost every programming language has variables but all are not same. In  ruby, we&rsquo;ve 4 different variables for 4 different purposes. Lets see what they  are and why they are.<br />
+  <strong>Local Variables:</strong> <br />
+  A variable whose name begins with a lowercase letter (a-z)  or underscore (_) is a local variable.<br />
+  <img src="images/local-variables.jpg" width="600">
+  IMAGE - ruby-local-variables.jpg<br />
+  <strong>Key:  </strong>A local variable is only accessible from  within the block of its initialization<br />
+  <strong>Example:</strong> <br />
+  <pre class="prettyprint"><code class="language-ruby">
+  loop {<br />
+  var_two =  100      # only accessible within this  block<br />
+  puts &quot;The  value of local variable  is  #{var_two}&quot;<br />
+  break  <br/>
+  }
+  </code></pre>
+  output: 
+  <pre class="prettyprint"><code class="language-ruby">
+  The value of local variable is 100
+  </code></pre>
+  <br />
+  In the above example var_two is a local variable which means it can be  accessed only within the block. i.e in between curly braces &ldquo;{ }&rdquo;<br />
+  <strong>Example 2:<br />
+  </strong>Lets try to  access the local variable from outside of the block. See the ruby interpreter  complains about that.<br />
+  <pre class="prettyprint"><code class="language-ruby">
+  loop {<br />
+  loop {<br />
+  var_two = 100<br />
+  }<br />
+  puts &ldquo;The value of local variable is #{var}&rdquo;    # Accessing from outside<br />
+  </code></pre>
+  <strong>output:</strong>
+  <pre class="prettyprint"><code class="language-ruby">
+  Error:  undefined local variable or method `var_two'<br />
+  When you access a local variable from outside of the loop or block it  gives <br />
+  <strong>&ldquo; undefined local variable or  method `var_two' &ldquo;</strong><br />
+  </code></pre>
+  Try an Example:   repl.it/languages/Ruby</p>
+<h2><a name="h.8byjq31fp6up" id="h.8byjq31fp6up"></a>Global Variables</h2>
+<p>Global variables can be accessed from anywhere within the program during  runtime.<br />
+  A  variable whose name begins with '$' has a global scope<br />
+  IMAGE - ruby-global-variables.jpg</p>
+<p>Example:<br />
+  <pre class="prettyprint"><code class="language-ruby">
+  $var_one  = 10            # can be accessed from anywhere(Global Variable )<br />
+  loop {<br />
+  var_two =  100      # only accessible within this  block<br />
+  puts &quot;The  value of local variable  is  #{var_two}&quot;<br />
+  break            <br />
+  }<br />
+  puts &ldquo;The value of global variable is #{var_one}&rdquo;<br />
+  </code></pre>
+  <strong>output:</strong> <br />
+  <pre class="prettyprint"><code class="language-ruby">
+  The value of local variable is 100<br />
+  The value of global variable is 10<br />
+  </code></pre>
+  <strong>Intermediate Example:</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  def method_one<br />
+  $number =  100  # Global variable<br />
+  puts  &quot;the number is #{$number}&quot;  #  it should print 100<br />
+  end<br />
+  method_one <br />
+  </code></pre>
+   
+  <strong>Output:</strong> 
+  <pre class="prettyprint"><code class="language-ruby">
+  the number is  100
+  </code></pre>
+  
+<pre class="prettyprint"><code class="language-ruby">
+<p>def method_one<br />
+  $number =  100            # assigning number = 100<br />
+  puts &quot;the  number is #{$number}&quot;     # it will  print as number = 100<br />
+  end<br />
+  method_one<br />
+  def method_two<br />
+  $number =  200     # changing the value of number to  200<br />
+  puts &quot;the  number is #{$number}&quot;   # it will  print as number = 100 because it has been changed<br />
+  end<br />
+  method_two<br />
+</code></pre>
+
+<strong>Output:</strong>    
+<pre class="prettyprint"><code class="language-ruby">
+the number  is 100<br />
+the number  is 200
+</code></pre>
+
+<h2><a name="h.818dyc6f3gwc" id="h.818dyc6f3gwc"></a>Ruby Instance Variables</h2>
+
+<p>A variable whose name begins with '@' is an instance  variable of self.<br />
+  An instance variable belongs to the <a href="http://en.wikibooks.org/w/index.php?title=Ruby_Programming/Object&amp;action=edit&amp;redlink=1">object</a> itself. Uninitialized instance variables have a  value of nil. Instance variables do not need to be  declared<br />
+  Every instance of a class has a different set of instance  variables<br />
+  <img src="images/instance-variable.jpg" width="600">
+  
+
+<h2><strong>Ruby Class Variables</strong><br /></h2>
+  A class variable is shared by all instances of a class and  begins with '@@'<br />
+  <img src="images/class-variable.jpg" width="600">
+</p>
+
+<p>Example: <br />
+<pre class="prettyprint"><code class="language-ruby">
+  # In this ruby program we'll focus on ruby class, ruby  object <br />
+  # and how we can change the class variables in ou program.<br />
+  class School<br />
+  @@students_count =  10   # these 3 class variables can be  accessible<br />
+  @@teachers_count =  4    # in the class. If you change<br />
+  @holidays =  15          # class variables in any  method it will be final.</p>
+<p>  def  initialize(student_name, student_rank, student_class)<br />
+  # these  parameters are used to catch the values we pass <br />
+  # during the  object creation. Refer to Object creation below<br />
+  @s_name =  student_name   # Instance variables<br />
+  @s_rank =  student_rank<br />
+  @s_class =  student_class<br />
+  end</p>
+<p>  def student_info<br />
+  puts  &quot;Displaying Student Details&quot;<br />
+  puts  &quot;Student name is #@s_name&quot;<br />
+  puts  &quot;Student rank is #@s_rank&quot;<br />
+  puts  &quot;Student class is #@s_class&quot;</p>
+<p>    # Lets also  display the current details<br />
+  puts &quot;The  Old students count is #@@students_count&quot;<br />
+  puts &quot;The  Old teachers count is #@@teachers_count&quot;<br />
+  end</p>
+<p>  ## Lets increase  the student count by 4 and teachers count by 1<br />
+  def  total_students_count()<br />
+  @@students_count  += 4          # Accessing the class  variable @@students_count<br />
+  puts &quot;The  new students count #@@students_count&quot;<br />
+  end</p>
+<p>  ## Lets  also increase the teachers count by 1.<br />
+  def  total_teachers_count()<br />
+  @@teachers_count  += 1       # Accessing the class variable  @@teachers_count<br />
+  puts &quot;The  new teachers count is   #@@teachers_count&quot;<br />
+  end<br />
+  end</p>
+<p># Now lets create object for the class and pass some data</p>
+<p>student_one = School.new(&quot;Mark&quot;,  &quot;1st&quot;, &quot;5th&quot;)<br />
+  student_two = School.new(&quot;Steve&quot;,  &quot;2nd&quot;, &quot;6th&quot;)</p>
+<p># Lets call the methods we've defined.</p>
+<p>student_one.student_info<br />
+  <br />
+  student_one.total_students_count<br />
+  student_one.total_teachers_count</p>
+</code></pre>
+
+<strong>## OUTPUT ##</strong><br />
+<pre class="prettyprint"><code class="language-ruby">
+  Displaying Student Details<br />
+<p>Student name is Mark<br />
+  Student rank is 1st<br />
+  Student class is 5th</p>
+<p>The Old students count is 10<br />
+  The Old teachers count is 4</p>
+<p>The new students count 14<br />
+  The new teachers count is   5</p>
+</code></pre>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+    
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul> 
+               
+                
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>  
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

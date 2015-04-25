@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tutorials Academy </title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="guide-to-the-material.html">Guide to the material</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Ruby Basics</li>
+<li><a target="_top" href="ruby-syntax.html">Ruby syntax</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby variables</a></li>
+<li><a target="_top" href="ruby-classes.html"><strong>Ruby classes</strong></a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby loops</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Intermediate Ruby</li>
+<li><a target="_top" href="ruby-arrays.html">Ruby arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby hashes</a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby strings</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Advanced Ruby</li>
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby lambda</a></li>
+</ul>
+
+<ul class="menu">
+<li class="heading">Ruby api</li>
+</ul>
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby Classes and Ruby Objects</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>Ruby is an object-oriented programming language, which means it manipulates programming constructs called objects. Sometimes we refer class as blueprint of an object.</p>
+<p>A class is made up of a collection of variables representing internal state and methods providing behaviours that operate on that state.</p>
+<p>Classes are defined in Ruby using the <strong>class</strong> keyword followed by a name.The name of the ruby class must begin with a capital letter.</p>
+
+
+<img src="images/ruby class.jpg">
+<p>In the above image you can say Car is a class. </p>
+<p>if you create an object for the car like below.</p>
+<pre class="prettyprint"><code class="language-ruby">BMW = Car.new</code></pre>
+<p>then BMW is the instance of Car class.</p>
+A basic class consists only of the class keyword and the name of the class.
+<br>
+
+<div>
+<h3> Ruby Class Syntax</h3>
+<pre class="prettyprint"><code class="language-ruby">
+  class Myclass
+   # code goes here
+  end
+</code>
+</pre>
+</div>
+
+
+<div>
+<h4>Ruby Class Basic Example</h4>
+<pre class="prettyprint"><code class="language-ruby">
+class Company
+   # Every class must be initialized before it is used
+  def initialize(company, founder)
+    @company_name = company
+    @company_founder = founder
+  end
+
+# In object oriented programming class can have many methods. 
+# Here we've one method called description	
+
+  def description
+    puts "The company is #{@company_name} and it was founded by #{@company_founder}"
+  end
+end
+
+# In object oriented programming, we can create any number of
+# objects or instances for the class. Here we've 3 objects
+
+obj1 = Company.new("Microsoft", "Bill Gates")
+obj2 = Company.new("Facebook", "Mark Zuckerberg")
+obj3 = Company.new("Apple", "Steve Jobs")
+
+obj1.description
+obj2.description
+obj3.description
+</code>
+</pre>
+<br/>
+</div>
+<div>
+<pre class="output">
+<h3 class="header"> OutPut</h3>
+The company is Microsoft and it was founded by Bill Gates
+The company is Facebook and it was founded by Mark Zuckerberg
+The company is Apple and it was founded by Steve Jobs
+</pre>
+</div>
+
+<p>Every ruby class can have any no of variables and methods. Lets say, if we've a class called Car. It will contain properties. Please see the image below for more understanding.</p>
+
+<img src="images/ruby-class-methods_two.jpg">
+
+
+
+<p>I hope you understand about the ruby classes by now. Lets take a look at ruby objects.</p>
+
+<h3> Ruby Objects</h3>
+<p><strong>What is an Object?</strong> An object is nothing but the instance of a class. In object oriented programming objects are called the blueprints of a class. Lets say you’ve a car class. Here Car is a class. Lets say you’ve BMW, Ferrari cars. Now these BMW is an object of Car class, and ferrari is another object of the same Car class.
+<p>Object plays an important role in Object oriented programming language. In we Ruby programming language we can create objects in our programs to manipulate data using new keyword. In Ruby new keyword is used to create a new object.</p> 
+Lets look at the syntax of how we can create an object in ruby.
+</p>
+<img src="images/ruby-objects.png">
+
+
+<div>
+<pre class="prettyprint"><code class="language-ruby">
+<h3> Ruby Object Syntax</h3>
+  bmw= Car.new
+  # If you want to pass the data then you can pass some parameters.
+  bmw = Car.new(“Red color”, “BMW”, $100000)
+</code>
+</pre>
+</div>
+
+<h3>Ruby Objects Example</h3>
+<pre class="prettyprint"><code class="language-ruby">
+class Car
+  @@vehicle_type = "4 wheeler"
+
+  def initialize(color, brand, horsepower)
+   @color = color
+   @brand = brand
+   @horsepower = horsepower
+  end
+
+  # Our car class can have any no of methods.
+  # In this Car example we've 4 methods.
+  # A Car can go fast, go slow, turn_back, turn_left
+
+  def car_details
+   puts "I've a #{@color} color #{@brand} car and it is #{@horsepower} fast. "
+  end
+
+  def fast
+   puts "Drive the car fast...."
+  end
+
+  def slow
+   puts "Drive the car slowly.."
+  end
+
+  def move_back
+   puts "Turn Back"
+  end
+
+  def move_left
+      puts "Turn left"
+  end
+end
+
+# Creating an Object for Car Class
+
+bmw = Car.new("Red", "BMW", "100 KM/HR")
+
+# Creating another object for Car Class
+ferrari = Car.new("Blue", "Ferrari", "250 KM/HR" )
+
+# calling our class methods with the class instance(object)
+
+bmw.car_details
+ferrari.car_details
+
+# calling other class methods
+
+bmw.fast
+ferrari.slow
+
+bmw.move_left
+bmw.move_back
+</code>
+</pre>
+<br>
+
+<pre  class="output">
+<h3 class="header"> Output</h3>
+I've a Red color BMW car and it is 100 KM/HR fast.
+I've a Blue color Ferrari car and it is 250 KM/HR fast.
+Drive the car fast....
+Drive the car slowly..
+Turn left
+Turn Back
+</pre>
+</div> 
+
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+    
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul> 
+               
+                
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>  
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

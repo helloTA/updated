@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby Hashes</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="guide-to-the-material.html">Guide to the material</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Ruby Basics</li>
+<li><a target="_top" href="ruby-syntax.html">Ruby syntax</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby variables</a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby classes</a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby loops</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Intermediate Ruby</li>
+<li><a target="_top" href="ruby-arrays.html">Ruby arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html"><strong>Ruby hashes</strong></a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby strings</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Advanced Ruby</li>
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby lambda</a></li>
+</ul>
+
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby Hashes</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>Similar to Arrays, Hashes are  heterogenous. Which means a Hash can hold mixture of data types in the same  Hash.</p>
+<p>Hashes contains key-value pairs.  In the key value pairs key means the referred value.</p>
+</p>A Hash is a collection of  key-value pairs. You retrieve or create a new entry in a Hash by referring to  its key. Hashes are also called 'associative arrays', 'dictionary', 'HashMap'  etc. in other languages</p>
+<p>Just like array indexes we've keys  in hashes.</p>
+</p>if we want to use numeric indices  that don't go in order from 0 to the end of the array? What if we don't want to  use numbers as indices at all? We'll need a new array structure called a hash.</p>
+
+  <p><strong>For example in </strong>
+
+  <pre class="prettyprint"><code class="language-ruby">
+  Array  a = [&quot;apple&quot;, &quot;banana&quot;,  &quot;mango&quot;]<br />
+  a[0] =&gt; apple<br />
+  a[1] =&gt; banana<br />
+  a[3] =&gt; mango</p>
+  </code></pre>
+  
+  <p>We can represent the same data  using hashes more powerfully.<br />
+ 
+  <strong>Example:</strong>      
+  <pre class="prettyprint"><code class="language-ruby">
+  list = {&quot;fruit 1&quot; =&gt;  &quot;apple&quot;,<br />
+  &quot;fruit 2&quot; =&gt;  &quot;banana&quot;,<br />
+  &quot;fruit  3&quot; =&gt; &quot;mango&quot; <br />
+  }                      
+  puts list[&quot;fruit  1&quot;] # apple<br />
+  puts list[&quot;fruit  2&quot;] # banana<br />
+  puts list[&quot;fruit  3&quot;] # mango<br />
+  </code></pre>
+  
+  Creating ruby hashes:<br />
+  Ruby hashes are more powerful data  structure to represent data.<br />
+  ruby hash can be declared using two curly  braces {}. Here is an example of a Hash in Ruby:</p>
+  <p><strong>Synatx : </strong>          
+  <pre class="prettyprint"><code class="language-ruby">
+  hash = Hash.new<br />
+  hash = {<br />
+  key1 =&gt; value1,<br />
+  key2 =&gt; value2,<br />
+  key3 =&gt; value3<br />
+  }
+  
+  <p>student_ages = {<br />
+  &quot;Jack&quot; =&gt; 10,<br />
+  &quot;Jill&quot; =&gt; 12,<br />
+  &quot;Bob&quot; =&gt; 14<br />
+  }</p>
+  </code></pre>
+  
+<p>Lets look at ruby hash example:</p>
+  <p>
+  <pre class="prettyprint"><code class="language-ruby">
+  restaurant_menu = {  &quot;Idly&quot; =&gt; 100, &quot;Biryani&quot; =&gt; 300, &quot;Coffee&quot;  =&gt; 200 }<br />
+  restaurant_menu.each  do | item, price |<br />
+  puts &quot;#{item}: $#{price}&quot;
+  </code></pre>
+  </p>
+  
+<p>Output: 
+  <pre class="prettyprint"><code class="language-ruby">
+  Idly : 100<br />
+  Biryani : 300<br />
+  Coffee: 200<br />
+  </code></pre>
+  In the above example keys are  &quot;Idly&quot;, &quot;Biryani&quot;, &quot;Coffee&quot;  and values are 100, 300, 200</p>
+<p>&nbsp;</p>
+<p><strong>Example 2:</strong></p>
+ <pre class="prettyprint"><code class="language-ruby">
+  <p>my_hash = {  &quot;name&quot; =&gt; &quot;James&quot;,<br />
+  &quot;age&quot; =&gt; 26,<br />
+  &quot;alive?&quot; =&gt; true<br />
+  }</p>
+  <p>puts  my_hash[&quot;name&quot;]<br />
+  puts  my_hash[&quot;age&quot;]<br />
+  puts  my_hash[&quot;alive?&quot;]</p>
+  </code></pre>
+  <p>Output:  
+  <pre class="prettyprint"><code class="language-ruby">
+  James<br />
+  26<br />
+  true</p>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+    
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul> 
+               
+                
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>  
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

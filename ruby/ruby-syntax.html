@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby syntax</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="guide-to-the-material.html">Guide to the material</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Ruby Basics</li>
+<li><a target="_top" href="ruby-syntax.html"><strong>Ruby syntax</strong></a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby variables</a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby classes</a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby loops</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Intermediate Ruby</li>
+<li><a target="_top" href="ruby-arrays.html">Ruby arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby hashes</a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby strings</a></li>
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby lambda</a></li>
+</ul>
+
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby syntax</h1>
+<hr />
+<div class="pre-btn">
+<a href="/Ruby/Ruby-system-performance.htm">Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/Ruby/Ruby-useful-commands.htm">Next Page</a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>
+Ruby is the programmer's best friend.  That being said, ruby is very easy. The  language ruby can be understood by non-programmers as well.  In this section, I&rsquo;ll explain the basic  syntax of ruby. Let&rsquo;s get started with ruby operators.<br />
+<br />
+<strong>Ruby Assignment:<br />
+</strong>Ruby assignment is done using the equal operator &ldquo;=&rdquo;. This is both for  variables and objects.<br />
+<pre class="prettyprint">
+<code class="language-ruby">
+name = &ldquo;tutorialsacademy&rdquo;                     #assigning string to a  variable<br />
+year = 2015                                              #  assigning number to a variable
+</code>
+</pre>
+</p>
+<p><strong>Ruby multiple  assignment:</strong></p>
+<p>
+  ruby multiple assignment allows us to assign more than one variable in the same  line with (,) comma separation.<br />
+  <pre class="prettyprint">
+  <code class="language-ruby">
+  num1, num2, num3 = 10, 11, 12<br />
+  puts num1        #prints 10<br />
+  puts num2       #prints 11<br />
+  puts num3       #print 12
+  </code>
+  </pre>
+</p>
+<p><strong>Variable Names</strong></p>
+<p>Variables are the key part for any programming. Variables are  used to store data in the memory. It contains some data in our program.</p>
+<p>
+<pre class="prettyprint">
+<code class="language-ruby">
+  foobar             #Local Variable<br />
+  @foobar          # Global variable<br />
+  @@foobar        # Class variable<br />
+  MAXIMUM       # Constant
+</code>
+</pre>
+</p>
+<p><strong>Ruby statements</strong></p>
+  Ruby statements are also known as the control flow of the program.<br />
+<pre class="prettyprint">
+<code class="language-ruby">
+  if x &gt; 10 then<br />
+  # do something<br />
+  elsif x &lt; 10<br />
+  # do something else<br />
+  else<br />
+  # do another thing<br />
+  end<br />
+</code>
+</pre>
+
+<strong>While Loop in ruby</strong><br />
+<pre class="prettyprint">
+<code class="language-ruby">  
+  while x &gt; 2 do<br />
+  # do what I say until I say stop<br />
+  puts the value of x is #{x}<br />
+  until x == 99<br />
+  end<br />
+</code>
+</pre>  
+<strong>Ruby Arrays</strong><br />
+<pre class="prettyprint">
+<code class="language-ruby">
+  my_array = [1,2,3,4,5,6]<br />
+  for value in my_array do<br />
+  ……….<br />
+  end
+</code>
+</pre>
+</p>
+<p><strong>Ruby Class</strong><br />
+<pre class="prettyprint">
+<code class="language-ruby">
+  class MyLikes<br />
+  def initialize(my_favorite_fruit, my_favorite_sweet)<br />
+  @my_favorite_fruit = my_favorite_fruit<br />
+  @my_favorite_sweet = my_favorite_sweet<br />
+  end<br />
+  end
+</code>
+</pre>  
+</p>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+    
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul> 
+               
+                
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>  
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

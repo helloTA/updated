@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby Loops</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+</ul>
+<ul class="menu">
+<li><a target="_top" href="ruby-syntax.html">Ruby Syntax</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby Comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby Variables</a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby Classes</a></li>
+<li><a target="_top" href="ruby-loops.html"><strong>Ruby Loops</strong></a></li>
+</ul>
+<ul class="menu">
+<li><a target="_top" href="ruby-arrays.html">Ruby Arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby Blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby Hashes</a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby Strings</a></li>
+</ul>
+<ul class="menu">
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby Modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby Procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby Lambda</a></li>
+</ul>
+
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby Loops</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>Computer  programs often have to perform actions a number of times, not just once. For  example, a program that prints all of your <a href="http://pcsupport.about.com/od/fileextensions/f/emailfile.htm">new email</a> will need to print each email from a  list, not just a single email. To do this, a constructs called loops are used.  A loop will repeat the <a href="http://ruby.about.com/od/glossary/g/statement.htm">statements</a> inside it a number of times until some  condition is met.<br />
+Loops are programming constructs that help you repeat an action an  arbitrary number of times.<br />
+Loops are mainly used to repeat the same piece of code any number of  times.<br />
+For example you really like chocolates. Really really very much. And you want  say &ldquo;I love chocolates very much 5 times&rdquo; with your friend. What you do is,  You&rsquo;ve to say <br />
+<pre class="prettyprint"><code class="language-ruby">
+I love chocolates vey much<br />
+I love chocolates vey much<br />
+I love chocolates vey much<br />
+I love chocolates vey much<br />
+I love chocolates vey much<br />
+</code></pre>
+But computers are pretty awesome at doing such kind of repeated tasks  again and again.<br />
+Since we&rsquo;re focusing on ruby loops, I&rsquo;ll show you does ruby loops works.<br />
+Ruby has 8 loops which does different jobs for different purposes.<br />
+<br />
+<strong>Ruby For Loop:</strong><br />
+For loop is used to loop through  an array or some list and print them all.<strong> </strong>Looping over the values in an array or  hash.<br />
+<strong>ruby for loop syntax:</strong><br />
+<pre class="prettyprint"><code class="language-ruby">
+ for variable in  list do<br />
+ # code<br />
+end<br />
+</code></pre>
+
+<img src="images/for_loop.png"><br />
+<br />
+</strong>Look into the  image clearly.The bus has some passengers and we want to print all the  passengers . See the below code how  ruby  for loop does the magic.</p>
+<p><strong>Example: </strong>
+ <pre class="prettyprint"><code class="language-ruby">
+  passengers  = [&ldquo;Bob&rdquo;, &ldquo;Mike&rdquo;, &ldquo;John&rdquo;, &ldquo;Christy&rdquo;, &ldquo;Emily&rdquo;]<br />
+  for passenger in passengers do<br />
+  print &ldquo; The  passenger name is #{passenger}&rdquo;<br />
+  end<br />
+  </code></pre>
+  <strong>Output:</strong>
+  <pre class="prettyprint"><code class="language-ruby">
+  The passenger  name is Bob<br />
+  The  passenger name is Mike<br />
+  The  passenger name is John<br />
+  The  passenger name is Christy<br />
+  The  passenger name is Emily<br />
+  </code></pre>
+
+  This is how ruby for  loop works by looping through the list or array or hash.<br />
+  Now lets move on exploring more ruby loops.<br />
+
+  <strong>Ruby for each loop:</strong><br />
+
+  Ruby for each loop is also similar to for loop in ruby. But the only  difference is<strong> ,</strong>the  each loop will take a list of variables and run a block of statements for each  of them.<br />
+  <br />
+  Example: 
+  <pre class="prettyprint"><code class="language-ruby">
+  passengers = [&ldquo;Bob&rdquo;, &ldquo;John&rdquo;, &ldquo;Mike&rdquo;, &ldquo;Christy&rdquo;, &ldquo;Emily&rdquo;]<br />
+  passengers.each do |name|<br />
+  print &ldquo;The passenger name is  #{name}&rdquo;<br />
+  end
+  </code></pre>
+  <br />
+
+  <strong>Output:</strong> 
+  <pre class="prettyprint"><code class="language-ruby">
+  The passenger name is Bob<br />
+  The passenger name is John<br />
+  The passenger name is Mike<br />
+  The passenger name is Christy<br />
+  The passenger name is Emily<br />
+  </code></pre>
+
+  <strong>Ruby While Loop:</strong><br />
+  <strong> </strong>While loops will execute all of the statements  contained within them as long as the conditional statement remains true.<br />
+  <strong>Ruby while loop syntax:</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  code while condition<br />
+    OR<br />
+    begin <br />
+    code <br />
+    end while conditional
+  </code></pre>
+  </p>
+
+  <p>
+  <img src="images/while-loop.png">
+  <pre class="prettyprint"><code class="language-ruby">
+  $apples = 1<br />
+  $count = 10<br />
+  while $apples &lt;= $count  do<br />
+  puts &quot;I've #$apples apples in my  bag&quot;<br />
+  $apples += 1<br />
+  end<br />
+  </code></pre>
+
+  <strong>Output: </strong>   
+  <pre class="prettyprint"><code class="language-ruby">
+  I've 0 apples in my bag<br />
+  I've 1 apples in my bag<br />
+  I've 2 apples in my bag<br />
+  I've 3 apples in my bag<br />
+  I've 4 apples in my bag<br />
+  I've 5 apples in my bag<br />
+  I've 6 apples in my bag<br />
+  I've 7 apples in my bag<br />
+  I've 8 apples in my bag<br />
+  I've 9 apples in my bag<br />
+  I've 10 apples in my bag<br />
+  </code></pre>
+
+  <strong>Ruby Until Loop:</strong><br />
+  Until loops are  almost identical to while loops except that they will loop as long as the  conditional statement is <em>false</em>.<br />
+  Ruby until loop syntax.<br />
+  <br />
+  <pre class="prettyprint"><code class="language-ruby">
+  until conditional [do]<br />
+  code<br />
+  end<br />
+  </code></pre>
+  <img src="images/ruby-until-loop.png">
+
+  </p>
+  <p><strong>Example: </strong><br />
+
+  <pre class="prettyprint"><code class="language-ruby">
+  $tickets = 10<br />
+  $count = 0<br />
+  until $tickets == $count do<br />
+  puts &quot;Only #$tickets  tickets left. Hurry up!&quot;<br />
+  $tickets -= 1<br />
+  if $tickets < 1
+  puts "Sorry, All Tickets are Sold Out!"<br />
+  end<br/>
+  end<br />
+  </code></pre>
+
+  <strong>Output</strong><br />
+
+  <pre class="prettyprint"><code class="language-ruby">
+  Only 10 tickets left. Hurry up!<br />
+  Only 9 tickets left. Hurry up!<br />
+  Only 8 tickets left. Hurry up!<br />
+  Only 7 tickets left. Hurry up!<br />
+  Only 6 tickets left. Hurry up!<br />
+  Only 5 tickets left. Hurry up!<br />
+  Only 4 tickets left. Hurry up!<br />
+  Only 3 tickets left. Hurry up!<br />
+  Only 2 tickets left. Hurry up!<br />
+  Only 1 tickets left. Hurry up!</p>
+  <b>Sorry, no tickets are left!!!</b>
+
+  </code></pre>
+
+
+  <p><strong>Ruby Times loop.</strong><br />
+  The times loop can be used on any variable  containing a number or used on a number itself. Ruby times loop will print  anything we want for any number of times.<br />
+  <br />
+  Example:
+  <pre class="prettyprint"><code class="language-ruby">
+  We want print Tutorials Academy.com for 4 times.<br />
+  4.times do<br />
+  puts  &ldquo;tutorialsacademy.com&rdquo;<br />
+  end
+  </code></pre>
+
+  <p>OUTPUT: <br />
+
+  <pre class="prettyprint"><code class="language-ruby">
+  tutorialsacademy.com<br />
+  tutorialsacademy.com<br />
+  tutorialsacademy.com<br />
+  tutorialsacademy.com</p>
+  </code></pre>
+
+  <p><strong>Ruby break  Statement:</strong><br />
+  Ruby break statement will break the execution  of  a loop when a certain condition is  met. Take a look at the image below<br />
+  <img src="images/ruby-break.jpg" /></p>
+  <p><strong>Example1:</strong><br />
+
+  <pre class="prettyprint"><code class="language-ruby">
+  stops = ['kerala', 'Goa', 'Delhi', 'Chennai',  'Mumbai', 'Jaipur']<br />
+  stops.each do |k|<br />
+  if k ==  'Chennai'<br />
+  break<br />
+  end<br />
+  puts  &quot;The bus just reached #{k}&quot;<br />
+  end
+  </code></pre>
+  <p><strong>OUTPUT: </strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  The bus just reached kerala<br />
+  The bus just reached Goa<br />
+  The bus just reached Delhi<br />
+  </code></pre>
+  <strong>Example 2:</strong> <br />
+  <pre class="prettyprint"><code class="language-ruby">
+  days = ['sunday', 'monday', 'tuesday', 'wednesday',  'thursday', 'friday', 'saturday']
+  <p>for day in days<br />
+  if day ==  'thursday'<br />
+  break   # if the day == thursday  it will stop the execution from there using break keyword in ruby<br />
+  end<br />
+  puts  &quot;The days is #{day}&quot;<br />
+  end<br />
+  </code></pre>
+
+  <strong>OUTPUT: </strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  The days is sunday<br />
+  The days is monday<br />
+  The days is tuesday<br />
+  The days is wednesday</p>
+  </code></pre>
+
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul>
+
+
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

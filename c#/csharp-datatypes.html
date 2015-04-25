@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> PHP Variables</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">C# Tutorials</li>
+<li><a target="_top" href="about.csharp.html">About C#</a></li>
+<li><a target="_top" href="csharp-environment-setup.html">C# Environment Setup</a> </li>
+<li><a target="_top" href="csharp-program-strucutre.html">C# Program Strucutre</a> </li>
+<li><a target="_top" href="csharp-comments.html">C# Comments</a></li>
+<li><a target="_top" href="csharp-datatypes.html">C# Datatypes </a></li>
+<li><a target="_top" href="csharp-typeconversion.html">C# Type Conversion </a></li>
+<li><a target="_top" href="csharp-variables.html">C# Variables </a></li>
+<li><a target="_top" href="csharp-constants.html">C# Constants </a></li>
+<li><a target="_top" href="csharp-operators.html">C# Operators </a></li>
+<li><a target="_top" href="csharp-methods.html">C# Methods </a></li>
+<li><a target="_top" href="csharp-decision-making.html">C# Decision Making</a> </li>
+<li><a target="_top" href="csharp-loops.html">C# Loops </a></li>
+
+<li><a target="_top" href="csharp-encapsulation.html">C# Encapsulation</a></li>
+<li><a target="_top" href="csharp-arrays.html">C# Arrays</a></li>
+<li><a target="_top" href="csharp-strings.html">C# Strings</a></li>
+<li><a target="_top" href="csharp-structures.html">C# Struct</a></li>
+<li><a target="_top" href="csharp-classes.html">C# Classes</a></li>
+<li><a target="_top" href="chsarp-inheritance.html">C# Inheritance</a></li>
+<li><a target="_top" href="chsarp-polymorphism.html">C# Polymorphism</a></li>
+<li><a target="_top" href="csharp-operator-overloading.html">C# Operator Overloading
+</a></li>
+<li><a target="_top" href="csharp-interfaces.html">C# Interfaces</a></li>
+<li><a target="_top" href="csharp-namespaces.html">C# Namespaces</a></li><br />
+<li class="heading">C# Advanced Tutorials</li>
+<li><a target="_top" href="csharp-regular-expressions.html">C# Regular Expressions</a></li>
+<li><a target="_top" href="csharp-exception-handling.html">C# Exception Handling</a></li>
+<li><a target="_top" href="csharp-file-io.html">C# File I/O</a></li>
+<li><a target="_top" href="csharp-attributes.html">C# Attributes</a></li>
+<li><a target="_top" href="csharp-properties.html">C# Properties</a></li>
+<li><a target="_top" href="csharp-indexers.html">C# Indexers</a></li>
+<li><a target="_top" href="csharp-delegates.html">C# Delegates</a></li>
+<li><a target="_top" href="csharp-events.html">C# Events</a></li>
+<li><a target="_top" href="csharp-collections.html">C# Collections</a></li>
+<li><a target="_top" href="csharp-events.html">C# Events</a></li>
+<li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
+<li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
+</ul>                           
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<!-- CONTENT STARTS -->
+<div class="content">
+<h1>C# Datatypes</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h3>C# Datatypes </h3>
+
+<p>A data type in a programming language is a set of data with values having predefined characteristics. The language usually specifies the range of values for a given data type, how the values are processed and how they are stored.</p>
+<p> There are five different types of datatypes in C#</p>
+<p>Let's look each of them</p>
+<br />
+
+<p>Integer types:</p>
+<p>Decimal of Float types</p>
+<p>Boolean type</p>
+<p>Character types:</p>
+<p>Base type</p><br />
+
+<strong>Integer Datatypes in C#</strong>
+<table class="table">
+    <thead>
+        <tr>
+            <th>C# Types</th>
+            <th>IL types</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>byte(1)</td>
+            <td>System.Byte</td>
+            <td>0 - 255</td>
+        </tr>
+        <tr class="info">
+            <td>short (2)</td>
+            <td>System.int16</td>
+            <td>-32768 to 32767</td>
+        </tr>
+         <tr class="success">
+            <td>int (40)</td>
+            <td>System.int32</td>
+            <td>-2<sup>31</sup>to 2<sup>31</sup></td>
+        </tr>
+
+
+         <tr class="danger">
+            <td>long (8)</td>
+            <td>System.SByte</td>
+            <td>-128 to 127</td>
+        </tr>
+         <tr class="warning">
+            <td>ushort</td>
+            <td>System.Uint16</td>
+            <td>0 to 65535</td>
+        </tr>
+         <tr class="success">
+            <td>ulong</td>
+            <td>System.Uint32</td>
+            <td>0 to 2<sup>64</sup>-1</td>
+        </tr>
+    </tbody>
+</table> <br />
+<strong>Decimal of Float types C#</strong>
+<table class="table">
+    <thead>
+        <tr>
+            <th>C# Types</th>
+            <th>IL types</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>float </td>
+            <td>System.Single</td>
+            <td>4 bytes</td>
+        </tr>
+
+        <tr class="danger">
+            <td>double</td>
+            <td>System.Double</td>
+            <td>8 bytes</td>
+        </tr>
+         <tr class="info">
+            <td>Decimal</td>
+            <td>System.Decimal</td>
+            <td>16 bytes</td>
+        </tr>
+    </tbody>
+</table> <br />
+
+<strong>Boolean type</strong>
+<table class="table">
+    <thead>
+        <tr>
+         <th>C# Types</th>
+            <th>IL types</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>bool</td>
+            <td>System.Boolean</td>
+            <td>true or false </td>
+        </tr>
+    </tbody>
+</table> <br />
+
+<strong>Character types</strong>
+<table class="table">
+    <thead>
+        <tr>
+         <th>C# Types</th>
+            <th>IL types</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>char</td>
+            <td>System.Char</td>
+            <td>2 bytes</td>
+        </tr>
+         <tr class="danger">
+            <td>string</td>
+            <td>System.String</td>
+            <td>--</td>
+        </tr>
+    </tbody>
+</table> <br />
+
+<p>The size of char byte has been increased to 2 bytes for providing support to unicode characters. i.e., languages other than english like Hindi, French, German etc
+String type is a variable length type i.e., the size of a string depends upon the value we assigned to the string.
+</p>
+<p>Data types are basically divided into 2 categories.</p>
+
+<strong>Value Types:</strong>
+<p>It’s store data on stack which is a place where data stores in fixed length such as int, float , char etc. Every program in execution as its own stack and no other program shares it.
+Stack works on the principles of Last In First Out (LIFO) and moreover stack will be under the control of Operating System.</p>
+
+<strong>Reference Types:</strong>
+
+<p>Reference types are stored on Heap memory which is another place where data can be stored.
+C# supports 2 predefined reference types such as Object and string.
+In .NET the heap is now more managed called as managed heap memory because it is implicitly managed not explicitly.</p>
+<img src="images/managed heap.png">
+
+
+<strong>Example:</strong>
+<pre class="prettyprint"><code class="language-php">
+// Example code for value type and reference type <br />
+int x = 100;        //  value type
+float f = 3.14f         //  value type
+string s = “hello”; // Reference type 
+</code></pre>
+
+<br />
+<p><a class="btn btn-success" role="button">Note</a>
+In c, c++ we call it as heap but in java and c# we call this concept as a managed heap.
+</p>
+<p> This is all about datatypes in C#. Now let's look into boxing and unboxing in C#</p>
+
+
+<h3>Boxing and Unboxing in C# </h3> <br />
+<b>What is Boxing in C# ?</b>
+<p>Boxing is the process of converting a value type to the type object or to any interface type implemented by this value type</p>
+
+<p>If a value type is converted into reference type and store on the managed heap memory we call it as boxing.</p>
+
+<b>Example</b>
+<p>This example converts an integer variable i to an object o by using boxing. Then, the value stored in the variable i is changed from 123 to 456.</p><br />
+<pre class="prettyprint"><code class="language-php">
+// Example of boxing <br />
+  int x = 123;
+  object obj = x;     // Boxing 
+</code></pre> <br />
+
+<strong>What is Unboxing in C# ?</strong> <br />
+
+<p>Unboxing is an explicit conversion from the type object to a value type or from an interface type to a value type that implements the interface.
+
+<p> An unboxing operation consists of:</p>
+<li>Checking the object instance to make sure that it is a boxed value of the given value type.</li>
+<li>Copying the value from the instance into the value-type variable.</li>
+
+<p> Note that,  Unboxing requires an explicit conversion and can not be performed directly.</p>
+
+<pre class="prettyprint"><code class="language-php">
+// Example of Unboxing <br />
+ int y = Convert.Toint32(obj);      // Unboxing 
+</code></pre> <br />
+
+<p>Note: A direct reference can never be converted into value type.</p>
+
+
+
+<strong>Alright, but why should you use boxing and Unboxing?</strong>
+<p>Think of it like this. You have a variable <code>o</code> of type <code>object</code>. And now you have an <code>int</code> and you want to put it into <code>o</code>. <code>o</code> is a reference to something somewhere, and the <code>int</code> is emphatically not a reference to something somewhere (after all, it's just a number). So, what you do is this: you make a new <code>object</code> that can store the <code>int</code> and then you assign a reference to that object to o. We call this process "boxing."</p>
+<p>I hope you understood the boxing and unboxing in C# by now</p>
+
+<!-- CONTENT ENDS HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

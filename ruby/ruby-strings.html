@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby Strings</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="guide-to-the-material.html">Guide to the material</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Ruby Basics</li>
+<li><a target="_top" href="ruby-syntax.html">Ruby syntax</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby variables</a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby classes</a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby loops</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Intermediate Ruby</li>
+<li><a target="_top" href="ruby-arrays.html">Ruby arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby hashes</a></li>
+<li><a target="_top" href="ruby-strings.html"><strong>Ruby strings</strong></a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Advanced Ruby</li>
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby lambda</a></li>
+</ul>
+
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby Strings</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>A  String object holds and manipulates an arbitrary  sequence of bytes, typically representing characters.<br />
+One way to create a String is to use single or double  quotes inside a Ruby program to create what is called a string literal.<br />
+<pre class="prettyprint"><code class="language-ruby">
+<strong>puts</strong> 'Hello world'<br />
+<strong>puts</strong> &quot;Hello world&quot;<br />
+</code></pre>
+So what difference is there between single quotes and  double quotes in Ruby? In the above code, there's no difference. However,  consider the following code:<br />
+<pre class="prettyprint"><code class="language-ruby">
+<strong>puts</strong> &quot;Bob&rsquo;s  coffee machine&quot;<br />
+<strong>puts</strong> 'Bobs\'s coffee machine'<br />
+</code></pre>
+<br />
+Because &quot;Bob's&quot; contains an  apostrophe, which is the same character as the single quote, in the second line  we need to use a backslash to escape the apostrophe so that Ruby understands  that the apostrophe is <em>in</em> the string  literal instead of marking the end of the string literal. The backslash  followed by the single quote is called an<a href="http://en.wikipedia.org/wiki/escape_sequence">escape  sequence</a>.</p>
+<h2><a name="h.brgg7q5igcnn" id="h.brgg7q5igcnn"></a>Ruby Strings Single  quotes </h2>
+<p>Single quotes only support two escape sequences.</p>
+<ol>
+  <li>\' – single quote</li>
+  <li>\\ – single backslash</li>
+</ol>
+<p>Except for these two escape sequences, everything else  between single quotes is treated literally.<br />
+  <strong>Ruby String Double  Quotes</strong><br />
+  Double quotes allow for many more escape sequences than  single quotes. They also allow you to embed variables or Ruby code inside of a  string literal – this is commonly referred to as interpolation.<br />
+  <pre class="prettyprint"><code class="language-ruby">
+  <strong>puts</strong> &quot;Enter  name&quot;<br />
+  name = <strong>gets</strong>.<strong>chomp</strong><br />
+  <strong>puts</strong> &quot;Your name is #{name}&quot;</p>
+  </code></pre>
+<h3><a name="h.teqra7bsjqqd" id="h.teqra7bsjqqd"></a>Escape sequences[<a href="http://en.wikibooks.org/w/index.php?title=Ruby_Programming/Strings&amp;action=edit&amp;section=4">edit</a>]</h3>
+<p>Below are some of the more common escape sequences that  can appear inside of double quotes.</p>
+<ol>
+  <li>\&quot; – double quote</li>
+  <li>\\ – single backslash</li>
+  <li>\a – <a href="http://en.wikipedia.org/wiki/bell_character">bell/alert</a></li>
+  <li>\b – <a href="http://en.wikipedia.org/wiki/backspace">backspace</a></li>
+  <li>\r – <a href="http://en.wikipedia.org/wiki/carriage_return">carriage  return</a></li>
+  <li>\n – <a href="http://en.wikipedia.org/wiki/newline">newline</a></li>
+  <li>\s – <a href="http://en.wikipedia.org/wiki/space_character">space</a></li>
+  <li>\t – <a href="http://en.wikipedia.org/wiki/tab_key">tab</a></li>
+</ol>
+<p>
+  <pre class="prettyprint"><code class="language-ruby">
+  <strong>puts</strong> &quot;Hello\rStart over  world&quot;<br />
+  <strong>puts</strong> &quot;1. Hello\n2. World&quot;<br />
+  </code></pre>
+  <br />
+  <strong>The result:</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  Hello            world<br />
+  Goodbye world<br />
+  Start over world<br />
+  1. Hello<br />
+  2. World<br />
+  </code></pre>
+  
+  <br />
+  Ruby's print function only  prints out a new line if you specify one. For example, try out the following  code. We include a newline at the end of print's argument list so  that the shell prompt appears on a new line, after the text.<br />
+  <pre class="prettyprint"><code class="language-ruby">
+  <strong>print</strong> &quot;Say&quot;, &quot;hello&quot;, &quot;to&quot;, &quot;the&quot;, &quot;world&quot;, &quot;\n&quot;<br />
+  </code></pre>
+  
+  <strong>The result:</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  Sayhellototheworld<br />
+  </code></pre>
+  
+  Ruby provides so many methods we can apply with strings.  Lets look at those.<br />
+  <strong>capitalize</strong>    <strong>ruby  capitalize method will capitalize the first letter in any string.</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  str =  &ldquo;apple&rdquo;<br />
+  str.capitalize  # =&gt; Apple<br />
+  my_string = &ldquo;123abc&rdquo;<br />
+  my_string.capitalize # =&gt; 123ABC</p>
+  </code></pre>
+  
+ 
+  <p><strong>count</strong><strong> ruby count method will count the no of letters in a string</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  str = &ldquo;Good Morning&rdquo;</p>
+  str.count(&ldquo;o&rdquo;)  # =&gt; 3
+  </code></pre>
+  <p><strong>downcase</strong> <strong>ruby  downcase method will change the upcase letters to downcase</strong></p>
+  <pre class="prettyprint"><code class="language-ruby">
+  <p> fruit = &ldquo;BaNanA&rdquo;</p>
+  fruit.downcase   # =&gt; banana        
+  </code></pre>
+  
+  <p><strong>empty?</strong> <strong>ruby  empty method will check if the string is empty or not. If empty , it returns  true</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  str = &ldquo;hello&rdquo;<br />
+  str.empty?   # =&gt; false<br />
+  my_str = &ldquo;&rdquo;<br />
+  my_str.empty?   # =&gt; true
+  </code></pre>
+  
+<p><strong>concat</strong> <strong>ruby  concat method will concat the two strings.</strong><br />
+ <pre class="prettyprint"><code class="language-ruby">
+  str = &ldquo;hello &rdquo;<br />
+  str.concat(&ldquo;  world&rdquo;)</p>
+  str  # =&gt; helloworld
+  </code></pre>
+  
+<p><strong>include?</strong> <strong>ruby  include? method will checks if the given character or string is present or not.</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  my_str  = &ldquo;Morning&rdquo; <br />
+  my_str.include?(&ldquo;n&rdquo;)  # =&gt; true</p>
+  my_str.include?(&ldquo;p&rdquo;)  # =&gt; false
+  </code></pre>
+  
+<p><strong>replace</strong> <strong>ruby  replace method will replace the given string or character with old character of  string</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  fruit = &ldquo;banana&rdquo;<br />
+  fruit  # =&gt; banana<br />
+  fruit.replace(&ldquo;orange&rdquo;)</p>
+  fruit # =&gt; orange
+  </code></pre>
+  
+<p><strong>insert</strong> <strong>ruby  insert method will insert any character at a given index</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  str = &ldquo;bad&rdquo;   # =&gt; bad<br />
+  str.insert(&ldquo;0&rdquo;, &ldquo;m&rdquo;)</p>
+  str # =&gt; mad
+  </code></pre>
+  
+<p><strong>prepend </strong><strong>ruby  prepend method will add any string or character before other string or  character</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  my_life =  &ldquo;Night&rdquo;<br />
+  my_life.prepend(&ldquo;Good&rdquo;)</p>
+  my_life # =&gt;  Good Night
+  </code></pre>
+  
+<p><strong>upcase</strong> <strong>ruby  upcase method will change the downcase string to upcase</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  a = &ldquo;hello&rdquo;</p>
+  a.upcase   # =&gt; HELLO
+  </code></pre>
+  
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+    
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul> 
+               
+                
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>  
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

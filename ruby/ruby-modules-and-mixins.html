@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby modules and Mixins</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="guide-to-the-material.html">Guide to the material</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Ruby Basics</li>
+<li><a target="_top" href="ruby-syntax.html">Ruby syntax</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby variables</a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby classes</a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby loops</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Intermediate Ruby</li>
+<li><a target="_top" href="ruby-arrays.html">Ruby arrays</a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby hashes</a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby strings</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Advanced Ruby</li>
+<li><a target="_top" href="ruby-modules-and-mixins.html"><strong>Ruby modules and Mixins</strong></a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby lambda</a></li>
+</ul>
+
+<ul class="menu">
+<li class="heading">Ruby api</li>
+</ul>
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby modules and Mixins</h1>
+<hr />
+<div class="pre-btn">
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>Modules  are the one of the key features in ruby programming language.<br />
+But  what is Module in ruby?. Modules in ruby is way to organise group of or no of  methods, classes,variables together in single module.</p>
+<p>But  what exactly ruby modules does?. Lets think about a situation where you want to  write  an application where you want to write more no of classes.You  need to write more and more number of methods. How do you do that? How  can you access each class?. </p>
+<p>Lets  say you are writing a program called Mobile Phones. You wrote 50 ruby classes  in the program  and saved it in mobile_phones.rb file.Now  you're writing Telephones program and you wrote 30 ruby classes. You  need to write 10 more ruby classes but somehow   you came to know that Mobile Phones.rb file has the  same set of 10 ruby classes which you need.</p>
+<p>Now  you've two options.<br />
+  1. Write the 10 ruby classes again in Telephones.rb file<br />
+  2. Use the Mobile Phones.rb classes.</p>
+<p>If you're a smart programmer you would chose the second option to inherit <br />
+  Mobile  Phones.rb ruby classes. That is the power of ruby modules. Ruby modules does  this job for you.</p>
+<p>You  can just use the code of other class using the modules without re-writing those  classes again.</p>
+<p>Take  look at the below image. There is file called ruby-authentication.rb which has  50 ruby classes and 100 ruby methods which allows users to signup or  authenticate from third party services<br />
+  like  facebook, twitter etc....</p>
+<p>Lets  say, if you're writing a ruby application to allow users to authenticate to  your website from other services. Instead of writing authentication program for  each service, here one program to authenticate from facebook, authenticate from  twitter, authenticate from google+, authenticate from quora you can use a  single authenticate program and implement the same for all the services with a  single file with the help of ruby modules. That is why ruby modules are very  powerful. Ruby modules<br />
+  implements  DRY feature. Which means Don't repeat yourself.<br />
+  Ruby  modules the powerful feature in doing such kind of tasks.<br />
+  <br />
+  Ruby also provides name collision facility. Which means if you’ve 3 classes  with same name ruby modules will help us to prevent this collision. <br />
+  <strong>Ruby Modules Syntax:<br />
+  <pre class="prettyprint"><code class="language-ruby">
+  module Module_name</strong><br />
+  <p><strong>module Module_name  # Module name must start with Capital letter.</strong><br />
+  <strong>    def Module_name.method_one_name    # Creating a method with module</strong><br />
+  <strong>    end</strong><br />
+  <strong>   def Module_name.method_two_name</strong><br />
+  <strong>   end</strong><br />
+  <strong>end</strong></p>
+  <strong>end</strong></p>
+  </code></pre>
+   
+  <p><strong>Using Ruby Classes within Ruby Modules</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  <strong>module  Module_name</strong><br />
+  <strong>  class Class_name</strong><br />
+  <strong>   def my_method</strong><br />
+  <strong>   end</strong><br />
+  <strong>  end</strong><br />
+  <strong>end</strong><br />
+  <strong>obj =  Module_name::Class_name.new</strong><br />
+  <strong>obj.my_method</strong>
+  </code></pre></p>
+  
+ <p><strong>Ruby Include Statement</strong><br />
+  Include statement in ruby is used to include one module in other modules.<br />
+  If you want to work the different modules then you can simple mention the  module which you want to incorporate in your program. Ruby modules can be used  anywhere using ruby  include statement.<br />
+  <strong>Syntax for ruby include statement.</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  <strong>include  module_name</strong><br />
+  </code></pre>
+  
+  <strong>Example Syntax:</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  module  Fruits<br />
+  end<br />
+  module Vegetables<br />
+  include Fruits     #  when you include Fruits module then you have access to all methods, variables  and code<br />
+  end<br />
+  </code></pre>
+  
+  <strong>Example  Program</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  <strong># user/country.rb file </strong><br />
+  module India_country<br />
+  CAPITAL =  &quot;New Delhi&quot;<br />
+  def  India_Country.capital<br />
+  puts &quot;The  Capital of India is New Delhi&quot;<br />
+  end<br />
+  def  India_country.prime_minister<br />
+  puts &quot;M.r  Narendra Modi is the Prime Minister of India&quot;<br />
+  end<br />
+  end<br />
+  # user/capital.rb file<br />
+  $LOAD_PATH &lt;&lt; '.'<br />
+  require &quot;country&quot;</p>
+<p>class World<br />
+  include India_country<br />
+  total_states=  1.252 Billion<br />
+  def no_of_states<br />
+  puts  India_country::CAPITAL<br />
+  puts  total_states<br />
+  end<br />
+  end<br />
+  w1=World.new<br />
+  puts India_country::CAPITAL<br />
+  India_country.capital<br />
+  Week.prime_minister<br />
+  w1.no_of_states<br />
+  Output:<br />
+  New Delhi<br />
+  The Capital of India is New Delhi<br />
+  M.r Narendra Modi is the Prime Minister of India<br />
+  29
+  </code></pre> 
+  </p>
+<p>&nbsp;</p>
+<p><strong>Ruby Mixins</strong></p>
+<p>What is a Mixin in Ruby?.  Mixins are used to implement multiple inheritance. Technically, ruby does not support multiple  inheritance. So ruby mixins come in hand to implement the same feature in ruby using ruby  mixins. Also Mixins provides fully  controlled way to add functionality to our ruby class.</strong></p>
+<p><strong># Module One</strong></p>
+ <pre class="prettyprint"><code class="language-ruby"> 
+  <p>module First<br />
+  def first_method<br />
+  puts &quot;I am in  the first method of Module First&quot;<br />
+  end<br />
+  def second_method<br />
+  puts &quot;I am in  the second method of module First&quot;<br />
+  end<br />
+  end<br />
+  Module Second<br />
+  def third_method<br />
+  puts &quot;I am  in the third method of Module Two&quot;<br />
+  end<br />
+  def fourth_method<br />
+  puts &quot;I am in  the fourth method of module Two&quot;<br />
+  end<br />
+  end<br />
+  # Now lets define a  class to play with.</p>
+<p>class Testing<br />
+  # Now we want to  create two methods first_method, and second_method<br />
+  # Should we define  the same methods again in the class??? No1. Not.<br />
+  # Instead, we can just include the Module First to have  access to first_method, and second_method<br />
+  include First  # When you include First module you have  included the two method as well.<br />
+  t = Testing.new<br />
+  t.first_method<br />
+  t.second_method<br />
+  end<br />
+</code></pre>   
+  
+  <strong>Output:</strong><br />
+  <pre class="prettyprint"><code class="language-ruby"> 
+  I am in the first method of Module First<br />
+  I am in the second method of Module First</p>
+  </code></pre>  
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+    
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul> 
+               
+                
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>  
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>

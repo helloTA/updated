@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ruby Arrays</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Feedback</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="fright">
+<form class="form-wrapper cf">
+	<input type="text" placeholder="Search here..." required>
+	<button type="submit">Search</button>
+</form>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/rubyrails.png" alt="Ruby Tutorial" width="100%"/>
+</div>
+<ul class="menu">
+<li class="heading">Ruby</li>
+<li><a target="_top" href="what_is_ruby.html">What is Ruby</a></li>
+<li><a target="_top" href="about-ruby.html">About Ruby</a></li>
+<li><a target="_top" href="basic-setup.html">Basic setup</a></li>
+<li><a target="_top" href="prerequisites.html">Prerequisites</a></li>
+<li><a target="_top" href="ruby-features.html">Ruby features</a></li>
+<li><a target="_top" href="guide-to-the-material.html">Guide to the material</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Ruby Basics</li>
+<li><a target="_top" href="ruby-syntax.html">Ruby syntax</a></li>
+<li><a target="_top" href="ruby-comments.html">Ruby comments</a></li>
+<li><a target="_top" href="ruby-versions.html">Ruby Versions</a></li>
+<li><a target="_top" href="how-to-execute-ruby-programs.html">How to execute ruby programs</a></li>
+<li><a target="_top" href="ruby-variables.html">Ruby variables</a></li>
+<li><a target="_top" href="ruby-classes.html">Ruby classes</a></li>
+<li><a target="_top" href="ruby-loops.html">Ruby loops</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Intermediate Ruby</li>
+<li><a target="_top" href="ruby-arrays.html"><strong>Ruby arrays</strong></a></li>
+<li><a target="_top" href="ruby-blocks.html">Ruby blocks</a></li>
+<li><a target="_top" href="ruby-hashes.html">Ruby hashes</a></li>
+<li><a target="_top" href="ruby-strings.html">Ruby strings</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">Advanced Ruby</li>
+<li><a target="_top" href="ruby-modules-and-mixins.html">Ruby modules and Mixins</a></li>
+<li><a target="_top" href="ruby-iterators.html">Ruby Iterators</a></li>
+<li><a target="_top" href="ruby-procs.html">Ruby procs</a></li>
+<li><a target="_top" href="ruby-lambda.html">Ruby lambda</a></li>
+</ul>
+</div><!-- leftcol -->
+<div id="middlecol">
+<!-- PRINTING STARTS HERE -->
+<div class="ads"><img src="images/ad1.png" /></div>
+<div class="content">
+<h1>Ruby Arrays</h1>
+<hr />
+div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+<div class="inner_content">
+<br><br>
+<p>An array is a  container object that holds a fixed number of values of a single type. The  length of an array is established when the array is created.<br />
+In ruby arrays are indexed with starting as 0. Ruby arrays are associated with  some reference these references are also called as indexes.<br />
+<img src="images/ruby-arrays.jpg"><br />
+Ruby arrays can  contain or hold any type of data including strings, integers, floating numbers,  hashes..etc. <br />
+Lets take an example  of sample array.<br />
+<strong>Ruby array syntax:</strong><br />
+<pre class="prettyprint"><code class="language-ruby">
+array = [value 1,  value 2, value 3 ……. value n]<br />
+</code>
+</pre>
+<br />
+In ruby we can access the values of the  array with indexes.<br />
+Lets say if we want to access the array values we can say<br />
+<pre class="prettyprint"><code class="language-ruby">
+array [ 0 ] = value  1<br />
+array [ 1] = value 2<br />
+array [ value n ] =  value n-1<br />
+</code>
+</pre>
+Always remember  array indexes starts with index 0 and ends with index n-1.<br />
+<img src="images/Types-of-Arrays.jpg"></p>
+<p><strong>Creating ruby arrays: </strong><br />
+  There are many different ways to  create an array in ruby. We&rsquo;ll see two common ways of creating arrays in ruby.<br />
+  <br />
+  If you don&rsquo;t know the size of an array you can use the new keyword to create an  array.<br />
+  <br />
+  <pre class="prettyprint"><code class="language-ruby">
+  my_array = Array.new<br />
+  </code></pre>
+  If you know the size of an array!.  Lets say you want store 10 elements in an array<br />
+  
+  <pre class="prettyprint"><code class="language-ruby">
+  my_array =  Array.new( 10 )<br />
+  </code></pre>
+  Lets take a look  into how we can play with arrays in ruby.<br />
+  <strong>Example </strong><br />
+  
+  <pre class="prettyprint"><code class="language-ruby">
+  cars = Array.new( 6)<br />
+  cars = ['BMW',  'Ford','Ferrari', 'Audi', &lsquo;Skoda&rsquo;, &lsquo;Maruti&rsquo; ]<br />
+  puts &ldquo;The array of  car size is + #{cars.size} &ldquo;  # it will  print 6<br />
+  cars.each do  |car_name|<br />
+  puts   car_name   # It returns all the car names<br />
+  end<br />
+  </code></pre>  
+  <strong>Output:</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  6 <br />
+  BMW<br />
+  Ford<br />
+  Ferrari<br />
+  Audi<br />
+  </code></pre>
+  
+  <strong>Example 2</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  presidents = [&quot;Ford&quot;,  &quot;Carter&quot;, &quot;Reagan&quot;, &quot;Bush1&quot;, &quot;Clinton&quot;,  &quot;Bush2&quot;]<br />
+  p=presidents[1..3]<br />
+  p.each { |i| print i, &quot;\n&quot;}<br />
+  Output:<br />
+  Carter<br />
+  Reagan<br />
+  Bush1</p>
+  </code></pre>
+  
+<p><strong>Example 3</strong><br />
+  <pre class="prettyprint"><code class="language-ruby">
+  count =  [100, 200, 300, 400, 500]<br />
+  fruits = ['apples', 'oranges', 'pears', 'apricots']<br />
+  change = [1, 'pennies', 2, 'dimes', 3, 'quarters']<br />
+  <br />
+  <em># this first kind of for-loop goes  through a list</em><br />
+  <em># in a more traditional style found in  other languages</em><br />
+  for number in the_count<br />
+  puts &quot;This is count  #{number}&quot;<br />
+  end<br />
+  </code></pre>
+  <br />
+  <em># same as above, but in a more Ruby style</em><br />
+  <em># this and the next one are the preferred </em><br />
+  <em># way Ruby for-loops are written</em><br />
+  fruits.each do |fruit|<br />
+  puts &quot;A fruit of type:  #{fruit}&quot;<br />
+  end<br />
+  <br />
+  <em># also we can go through mixed lists too</em><br />
+  <em># note this is yet another style, exactly  like above</em><br />
+  <em># but a different syntax (way to write  it).</em><br />
+  change.each {|i| puts &quot;I got #{i}&quot; }<br />
+  </code></pre>
+ 
+  <strong>Output: </strong>
+  <pre class="prettyprint"><code class="language-ruby">
+  <em>This is count 1</em><br />
+  <em>This is count 2</em><br />
+  <em>This is count 3</em><br />
+  <em>This is count 4</em><br />
+  <em>This is count 5</em><br />
+  <em>A fruit of type: apples</em><br />
+  <em>A fruit of type: oranges</em><br />
+  <em>A fruit of type: pears</em><br />
+  <em>A fruit of type: apricots</em><br />
+  <em>I got 1</em><br />
+  <em>I got pennies</em><br />
+  <em>I got 2</em><br />
+  <em>I got dimes</em><br />
+  <em>I got 3</em><br />
+  <em>I got quarters</em><br />
+  </code></pre>
+  
+  Ruby arrays has so  many methods to make it easy for programs to deal with data. Lets look into  some of the common methods.<br />
+  To understand the  array methods , we&rsquo;ll work with these two below arrays.<br />
+  <pre class="prettyprint"><code class="language-ruby">
+  first_array  = [ 1,2,3,4,5]<br />
+  second_array  =  [&lsquo;apple&rsquo;, &lsquo;mango&rsquo;, &lsquo;banana&rsquo;, &lsquo;grape&rsquo;]<br />
+  
+  <strong>RUBY ARRAY METHODS LIST</strong><br />
+  
+  
+  <strong>Method         Description                                       Example                                                       </strong><br />
+  <strong>any? </strong><strong>ruby any?  method  checks whether the array contains   first_array  = [1,2,3,4]</strong><br />
+  <strong>            </strong><strong>any value of not. It returns false if empty                       first_array.any?    </strong><br />
+  <strong>                                                                                                   </strong><strong>O/p:   true</strong></p>
+<div> </div>
+<p>&nbsp;</p>
+<p><strong>at  </strong><strong> ruby at method returns the element at a given  index   first_array = [1,2,3,4]</strong><br />
+  first_array.at(2)<br />
+  first_array.at(0)<br />
+  O/p:  3<br />
+  1</p>
+<div> </div>
+<p><strong>concat  </strong><strong>ruby concat method will add the  values to array itself.</strong><br />
+  <strong>                                                                        first_array = [1,2,3,4]</strong><br />
+  <strong>                                                                        first_array.concat([5,6,7,8])</strong><br />
+  <strong>                                                                    puts  first_array</strong><br />
+  <strong>                                                                     O/p: 1,2,3,4,5,6,7,8</strong></p>
+<div> </div>
+<p>&nbsp;</p>
+<p><strong>delete </strong>  <strong>ruby  delete method will delete the given element from the array</strong><br />
+  my_array =  [&lsquo;a&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &lsquo;d&rsquo; ]<br />
+  my_array.delete(&lsquo;b&rsquo;) # deletes b element from the array<br />
+  puts my_array # prints &lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;d&rsquo;</p>
+<div> </div>
+<p>&nbsp;</p>
+<p>similar to delete we also have  ruby delete_at and ruby delete_if.<br />
+  <strong>delete_at</strong> will delete  any element at a given index<br />
+  a =  [&quot;ant&quot;, &quot;bat&quot;, &quot;cat&quot;, &quot;dog&quot;]<br />
+  a.delete_at(2)    <strong>#=&gt;  &quot;cat&quot;</strong><br />
+  a                 <strong>#=&gt; [&quot;ant&quot;,  &quot;bat&quot;, &quot;dog&quot;]</strong></p>
+<p>while ruby delete_if will delete  if the given element is present in the array. Otherwise it returns nil.<br />
+  scopes = [97, 42,  75]<br />
+  scores.delete_if  {|score|  score &lt; 80}}  # =&gt; 97</p>
+<div> </div>
+<p>&nbsp;</p>
+<p><strong>each</strong> <strong>ruby each method will print each  element in an array</strong><br />
+  numbers  = [1,2,3,4,5]<br />
+  numbers.each {| i| print i , &ldquo; ,&rdquo;}<br />
+  O/p:  1,2,3,4,5</p>
+<div> </div>
+<p>  <br />
+  <strong>each_with_index</strong> ruby each with index method will does the  same job as ruby each method. But the only difference is it prints the indexes  instead of values.<br />
+  numbers =  [100, 200, 300, 400 ]<br />
+  numbers.each {| i| print i , &ldquo; ,&rdquo;}</p>
+<div><br />
+  O/p:  0, 1, 2, 3 </div>
+<p><strong>fill</strong> <strong>ruby fill method will replace all  the existing ruby values with new values or elements</strong><br />
+  my_array = [ &ldquo;a&rdquo;, &ldquo;d&rdquo;, &ldquo;c&rdquo;, &ldquo;d&rdquo;, &ldquo;e&rdquo;]<br />
+  my_array.fill(&ldquo;X&rdquo;)</p>
+<div><br />
+  print my_array  # =&gt; [&ldquo;X&rdquo;, &ldquo;X&rdquo;,  &ldquo;X&rdquo;, &ldquo;X&rdquo;, &ldquo;X&rdquo;] </div>
+<p><strong>first</strong> <strong>ruby first method will return  first element or elements in a given array</strong><br />
+  my_array  = [ &ldquo;a&rdquo;, &ldquo;d&rdquo;, &ldquo;c&rdquo;, &ldquo;d&rdquo;, &rdquo;e&rdquo;, &ldquo;f&rdquo;, &ldquo;g&rdquo;]<br />
+  my_array.first  # =&gt; returns a<br />
+  my_array.first(3) # =&gt; returns  first 3 elements</p>
+<div><br />
+  o/p:     &ldquo;a&rdquo;, &ldquo;d&rdquo; , &ldquo;c&rdquo; </div>
+<p><strong>include</strong><strong> ruby include method checks whether the given  element is in the array or not. If the element is present then it returns true  otherwise false.</strong><br />
+  new_array = [ &ldquo;a&rdquo;, &ldquo;b&rdquo; &ldquo;c&rdquo;]<br />
+  new_array.include?(&ldquo;a&rdquo;) # =&gt; true</p>
+<div><br />
+  new_array.include?(&ldquo;  y&rdquo;)  # =&gt; false </div>
+<p><strong>insert</strong><strong> ruby insert method will insert the different  elements anywhere in the array or list.</strong><br />
+  a = %w { b c d}<br />
+  a.insert( 1, 33) # =&gt; insert 33   element  at index[1]<br />
+  a.insert( 2, 44 ) # =&gt; Insert 44 element at index [2]<br />
+  print a</p>
+<div><br />
+  [&ldquo;b&rdquo; 33, &ldquo;44&rdquo;, &ldquo;c&rdquo; ,&rdquo;d&rdquo;] </div>
+<p><strong>pop</strong><strong> ruby pop method will pop the last element in the array</strong><br />
+  numbers = [100, 200, 300, 400 ]<br />
+  numbers.pop #=&gt; 400<br />
+  print numbers</p>
+<div><br />
+  O/p: 100,200,300 </div>
+<p><strong>push</strong> <strong>ruby push method will pushes the  give new element at the end of an array</strong><br />
+  my_array = [ &ldquo;a&rdquo;, &ldquo;b&rdquo; , &ldquo;c&rdquo; , &ldquo;d&rdquo;]<br />
+  my_array.push(&ldquo;x&rdquo;, &ldquo;y&rdquo;, &ldquo;z&rdquo;)<br />
+  print  my_array</p>
+<div><br />
+  o/p:   [&ldquo;a&rdquo;, &ldquo;b&rdquo;, &ldquo;c&rdquo;, &ldquo;d&rdquo;, &ldquo;x&rdquo;, &ldquo;y&rdquo;, &ldquo;z&rdquo;] </div>
+<p><strong>reverse</strong> <strong>ruby reverse method will reverse  the array elements </strong><br />
+  my_array = [ &ldquo;a&rdquo;, &ldquo;b&rdquo; , &ldquo;c&rdquo; , &ldquo;d&rdquo;]</p>
+<div><br />
+  my_array.reverse #=&gt;  [ &ldquo;d&rdquo;, &ldquo;c&rdquo;, &ldquo;b&rdquo;, &ldquo;a&rdquo;] </div>
+<p><strong>select</strong> <strong>ruby select method will select the  elements with the given condition in an   array or list. </strong><br />
+  num = [&ldquo;1&rdquo;,  &ldquo;2, &ldquo;5&rdquo;, &ldquo;8&rdquo;, &ldquo;3&rdquo;, &ldquo;7&rdquo;] <br />
+  num.select {  |x| x &gt; 4 } # =&gt; select the element if it is greater than 4</p>
+<div><br />
+  print num </div>
+<p><strong>sort</strong> <strong>ruby sort method will sort all the  elements in a specific order.</strong><br />
+  my_array =  [&ldquo;c&rdquo;, &ldquo;a&rdquo;, &ldquo;f&rdquo;, &ldquo;b&rdquo;,  &ldquo;x&rdquo;]</p>
+<div><br />
+  my_array.sort  # =&gt; returns  [&ldquo;a&rdquo;, &ldquo;b&rdquo;, &ldquo;c&rdquo;, &ldquo;f&rdquo;, &ldquo;x&rdquo; ] </div>
+<p><strong>uniq</strong> <strong>ruby uniq method will select only  the uniw elements which means eliminates duplicate elements</strong><br />
+  my_array = [&ldquo;a&rdquo;, &ldquo;b&rdquo;, &ldquo;a&rdquo;, &ldquo;k&rdquo;, &ldquo;a&rdquo;,   &ldquo;d&rdquo;, &ldquo;b&rdquo;, &ldquo;c&rdquo;, &ldquo;d&rdquo;] </p>
+<div><br />
+  my_array.uniq # =&gt; [ &ldquo;a&rdquo;,  &ldquo;b&rdquo;, &ldquo;c&rdquo;, &ldquo;d&rdquo;, &ldquo;k&rdquo;] </div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+ <a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad1.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+    
+<div id="footer" style=" background: none repeat scroll 0 0 #92142a;">
+	<div class="main ">
+    	<div class="footer_middle">
+            <div class="footer_info text6" style="margin-left:21px;">
+            	<p>Quick Link</p>
+             	<ul style="margin-left:0px;">
+                    <li><a href="#" class="text5">Home</a></li>
+                    <li><a href="#" class="text5">About Us</a></li>
+                    <li><a href="#" class="text5">Sitemap</a></li>
+                    <li><a href="#" class="text5">Privacy Policy</a></li>
+                    <li><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer_info text6" >
+            		<P>Our Courses</P>
+                    <ul style="margin-left:-15px; margin-top:0px;">
+                     	<li><a href="#" class="text5">Web Designimg</a></li>
+                        <li><a href="https://twitter.com/" class="text5">Database</a></li>
+                        <li><a href="https://www.facebook.com/" class="text5">Java Programing</a></li>
+                        <li><a href="#" class="text5">Mobile Development</a></li>
+                        <li><a href="#" class="text5">Server Side Scripts</a></li>
+                     </ul> 
+               
+                
+            </div>
+            <div class="footer_info text6" >
+            		<p>Contact Us</p>
+                	<p class="text5" style="line-height:20px;">S144, Haware Fantasia Business <br />
+                    Park, Sector 30A, Vashi,<br />
+                    Hyderabad<br />
+                    Contact No.:+91 0123456789 / 1234567890 / 012-123456<br /></p>  
+            </div>
+            <div style="clear:both"></div>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialgarage.com
+            </div>
+        </div>
+       
+    </div>
+</div>
+</body>
+</html>
