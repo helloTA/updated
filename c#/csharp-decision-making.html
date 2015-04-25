@@ -292,18 +292,18 @@ namespace DecisionMaking
       static void Main(string[] args)
       {
          /* local variables definition */
-         int total_budget_collected = $2000;
-         int budget_required_to_goa = $1000
-         int budget_required_to_newdelhi = $2000
-         int budget_required_to_mumbai = $1000
+         int total_budget_collected_in_dollars = 2000;
+         int budget_required_to_goa_in_dollars = 1000
+         int budget_required_to_newdelhi_in_dollars = 2000
+         int budget_required_to_mumbai_in_dollars = 1000
 
          /* check the boolean condition using if statement */
-         if (total_budget_collected >=  budget_required_to_goa)
+         if (total_budget_collected_in_dollars >=  budget_required_to_goa_in_dollars)
          {
             /* if condition is true then print the following */
             Console.WriteLine("We can visit Goa");
          }
-         else if (total_budget_collected >=  budget_required_to_newdelhi )
+         else if (total_budget_collected_in_dollars >=  budget_required_to_newdelhi_in_dollars )
          {
              Console.WriteLine("We can visit New Delhi");
          }
@@ -326,6 +326,107 @@ namespace DecisionMaking
 </div>
  
 
+ <h4>Switch Statement in C#</h4>
+ <p>A switch statement is a type of selection control mechanism used to allow the value of a variable or expression to change the control flow of program execution via a multiway branch.</p>
+
+ <p>A simple case statement in real life would be something like below</p>
+
+ <div class="prettyprint"><code class="language-csharp">
+     You are tavelling from one place to another.<br />
+     When you reach Bangelore, it print Bangelore <br />
+     When you reach New Delhi, it print Bangelore <br />
+     When you reach Jaipur, it print Bangelore <br />
+     When you reach Mumabi, it print Bangelore <br />
+     if not, the default case statement like your source will print.
+ </code></div> <br />
+
+ <p>A typical switch statement would be like this</p>
+ <pre class="prettyptint"><code class="language-csharp">
+switch (age) {
+  case 1:  Console.WriteLine("You're one.");     break;
+  case 2:  Console.WriteLine("You're two.");     break;
+  case 3:  Console.WriteLine("You're three.");   break;
+  case 4:  Console.WriteLine("You're four.");    break;
+  default: Console.WriteLine("You're neither!"); break;
+}
+ </code></pre>
+
+
+<b> syntax of a switch statement in C#:</b>
+<pre class="prettyprint"><code class="language-csharp">
+switch(expression) {
+   case 1  :
+      statement(s);
+      break; /* optional */
+   case  2:
+      statement(s);
+      break; /* optional */
+  
+   /* you can have any number of case statements */
+   default : /* Optional */
+   statement(s);
+}
+    
+</code></pre>
+
+
+
+<b>Example program for C# switch statement</b>
+<pre class="prettyprint"><code class="language-csharp">
+using System;
+namespace DecisionMaking
+{
+   class ExampleSwitchProgram
+   {
+      static void Main(string[] args)
+      {
+         /* local variable definition */
+          string train_location;
+          train_location = "Mumbai";
+        
+         
+         switch (train_location)
+         {
+            case "Bangelore":
+               Console.WriteLine("You are in Bangelore");
+    
+           
+               break;
+            case "New Delhi":
+               Console.WriteLine("You are in New Delhi");
+               break;
+            case "Mumbai":
+               Console.WriteLine("You are in Mumabi");
+               break;
+               default:
+            Console.WriteLine("You are in Hyderabad");
+               break;
+         }
+         Console.WriteLine("The train is currently moving from  {0}", train_location);
+         Console.ReadLine();
+      }
+   }
+}
+</code></pre>
+<br />
+
+<b>Output</b><br />
+<div class="alert alert-info">
+You are in Mumabi <br />
+The train is currently moving from  Mumbai
+</div>
+
+<h3> The ?: Operator</h3>
+<p>In C# we can also perform if else statement decision making  
+with conditional operator <code>? :</code></p>
+<b>Syntax</b>
+<pre class="prettyprint"><code class="language-csharp">
+ExpressionX ? ExpressionY : ExpressionZ;
+</code></pre>
+<br />
+<b>Example:</b><code> a>b ? “a is bigger” : “b is bigger”;</code>
+<p>
+From the above example, the first expression is evaluated before finalizing the result of the statement. So if a is greater than b then it returns the result as “a is bigger”. </p>
 
 <!-- CONTENT END HERE -->
 </div>
