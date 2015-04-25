@@ -1,9 +1,8 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> C# Constants</title>
+<title> C# Loops</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -77,6 +76,7 @@
 <li><a target="_top" href="csharp-variables.html">C# Variables </a></li>
 <li><a target="_top" href="csharp-constants.html">C# Constants </a></li>
 <li><a target="_top" href="csharp-operators.html">C# Operators </a></li>
+<li><a target="_top" href="csharp-operator-precedence.html">C# Operators Precedence</a></li>
 <li><a target="_top" href="csharp-methods.html">C# Methods </a></li>
 <li><a target="_top" href="csharp-decision-making.html">C# Decision Making</a> </li>
 <li><a target="_top" href="csharp-loops.html">C# Loops </a></li>
@@ -113,10 +113,12 @@
 <div class="middle_right">
 <div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
-<!-- PRINTING STARTS HERE -->
+
 <!-- CONTENT STARTS -->
 <div class="content">
-<h1>C# Constants</h1>
+
+
+<h1>C# Loops</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,174 +130,307 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>What is a Constant</h3>
+<h2>What is a Loop</h2>
 <div class="alert alert-success">
-    A constant is an identifier with an associated value which cannot be altered by the program during normal execution – the value is constant
+    A loop is group of statements we want to execute several times until  we say stop.
 </div>
-<p>Constants in C# is variable  which can  not be modified once after declaration,  at the time of declaration only it is required to be initialize.</p>
-
- <p>The behaviour of a constant variable is  similar to the behaviour of static variable. </p>
- <p>Constants are also not associated with the object of the class.</p>
-
-<p>The only difference between static and constant variables is static variable can be modified but not constants.</p>
-
-<h4>Defining Constants in C#</h4>
-
-<p>Constants are defined using the const keyword.</p>
-<b>Syntax</b> <br />
-<div class="prettyprint notranslate prettyprinted">
-<span class="kwd">const</span>
- <span class="pln"> </span>
- <span class="str">&lt;data_type&gt;</span>
- <span class="pln"> </span>
- <span class="str">&lt;constant_name&gt;</span>
- <span class="pln"> </span>
- <span class="pun">=</span>
- <span class="pln"> value</span>
- <span class="pun">;</span>
- </div> <br />
-
-<p>There are different types of constants in C#. Let's look at each one of them.</p>
-
+<p>A loop statement allows us to execute a statement or a group of statements multiple times:</p>
+<p>C# provides 4 different loops that allows you to execute a block of code repeatedly until a certain condition is met. We call these loops as Conditional loops in c#. 
+</p>
+<br />
 <ol>
-    <li>Integer Literals</li>
-    <li>Character Constants</li>
-    <li>Floating-point Literals</li>
-    <li>String Literals</li>
+<li>for loop</li>
+<li>while loop</li>
+<li>do-while loop</li>
+<li>foreach loop</li>
+
 </ol>
 
-<h4>Integer Literals</h4>
-<div class="alert alert-success">
-An integer literal is an integer whose value is directly represented in source code.
+
+<h4>For loop in C#</h4>
+<p>
+    By using a for loop, you can run a statement or a block of statements repeatedly until a specified expression evaluates to false. This would be more useful for iterating over arrays and for other applications. Before made this loop in c# we get to know in advance how many times the loop has to iterate.
+
+</p><br />
+<img src="images/for-loop.png"> <br />
+
+<b>for loop syntax in c#</b> <br />
+<pre class="prettyprint"><code class="language-csharp">
+ for(initializer; condition; iteration)
+{
+   -- statements.
+}
+
+</code></pre> <br />
+
+<p>Now let's look at a practial example of for loop in c#</p>
+
+<pre class="prettyprint"><code class="language-csharp">
+    class ForLoop
+{
+    static void Main() 
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write(i+”  “);
+        }
+    }
+}
+
+</code></pre> <br />
+
+<p>If you run the above program it will produce the following output</p>
+<b>Output</b><br />
+<div class="alert alert-info">
+    1 2 3 4 5
 </div>
 
-<p>An integer literal can be a int, octal, decimal or hexadecimal constant. A prefix specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and no prefix id for decimal.</p>
 
-<b>Examples of various types of Integer literals</b><br />
+
+<h3> While loop</h3>
+<div class="alert alert-success">
+    
+The while loop simply executes a block of code as long as the condition you give it is true. 
+</div>
+
+<h3>Syntax</h3>
+<p>The syntax of a while loop in C# </p>
 <pre class="prettyprint"><code class="language-csharp">
-  70         /* int */
-  30u        /* unsigned int */
-  54         /* decimal */
-  0313       /* octal */
-  0x8b       /* hexadecimal */
-  31l        /* long */
-  70ul       /* unsigned long */
-</code>
-</pre>
-
-<h4>Character Constants</h4>
-<p>Character literals are enclosed in single quotes. For example, 'h' and can be stored in a simple variable of char type.</p>
-<p> A character literal can be a plain character (such as 'd', 'c', 'n' etc..), an escape sequence (such as '\t'), or a universal character (such as '\u02C0').</p>
-
-<p>There are few escape characters we can use in C#. Let's look at them</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Escape Character</th>
-            <th>Meaning</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td>\b </td>
-            <td>Backspace</td>
-
-        </tr>
-
-        <tr class="danger">
-            <td>\n </td>
-            <td> Newline</td>
-
-        </tr>
-         <tr class="info">
-            <td>\t</td>
-            <td> Horizontal tab</td>
-
-        </tr>
-         <tr class="warning">
-            <td>\' </td>
-            <td>' character</td>
-
-        </tr>
-         <tr class="success">
-            <td>\\</td>
-            <td>\ character</td>
-        </tr>
-         <tr class="danger">
-            <td>\"</td>
-            <td>" character</td>
-        </tr>
-        <tr class="info">
-            <td>\?</td>
-            <td> ? character</td>
-        </tr>
-        <tr class="danger">
-            <td>\f</td>
-            <td> Form feed</td>
-        </tr>
-        <tr class="warning">
-            <td>\r</td>
-            <td> Carriage return</td>
-        </tr>
-         <tr class="info">
-            <td>\v</td>
-            <td>Vertical tab</td>
-        </tr>
-    </tbody>
-</table> <br />
-<strong>Example program for Character Literals in C#</strong>
-<pre class="prettyptint"><code class="language-csharp">
-using System;
-namespace EscapeChar
+    while(condition)
 {
-   class StringLiteralsExample
+   statement(s);
+}
+
+</code></pre>
+
+<img src="images/while-loop.png">
+
+
+<p>Let's look at a sample example of a while loop program in c#</p>
+<b>While loop example in c#</b>
+
+<pre class="prettyprint"><code class="language-csharp">
+using System;
+namespace Loops 
+{
+   class WhileLoopExample
    {
       static void Main(string[] args)
       {
-         Console.WriteLine("Welcome\tto\t Tutorials\tAcademy\n\n");
+         /* local variable definition */
+         int apples = 10;
+         int count = 1;
+
+         /* while loop execution */
+         while (count &lt; apples )
+         {
+            Console.WriteLine("There are  {0} apples in the  bag", count);
+            count++;
+         }
          Console.ReadLine();
       }
    }
-}
+} 
 </code></pre>
-<p>If you run the above example code, it would produce the below output.</p>
+<p>If you run the above code it will produce the following output</p>
 <b>Output</b>
 <div class="alert alert-info">
-  Welcome to   Tutorials  Academy
+There are  1 apples in the  bag <br />
+There are  2 apples in the  bag<br />
+There are  3 apples in the  bag<br />
+There are  4 apples in the  bag<br />
+There are  5 apples in the  bag<br />
+There are  6 apples in the  bag<br />
+There are  7 apples in the  bag<br />
+There are  8 apples in the  bag<br />
+There are  9 apples in the  bag
 </div>
 
-<h4>Floating-point Literals</h4>
-<p>A floating-point literal consists of the following:</p>
+
+<h4>do-while loop in C#</h4>
+<p>The function of do-while loop works exactly same as while loop but quite opposite. The do loop evaluates the condition after the loop has executed, which makes execute the code at least once.. </p>
+
+<b>The syntax of a do...while loop in C# </b>
+<pre class="prettyprint"><code class="language-csharp">
+do
+{
+   statement(s);
+
+}while( condition );
+
+    
+</code></pre>
+
+<p>Now let's look at a sample example of do while loop in C#</p>
+<b>Example</b>
+
+<pre class="prettyprint"><code class="language-csharp">
+using System;
+namespace Loops
+{
+   class ExampleDoWhile
+   {
+      static void Main(string[] args)
+      {
+         /*  variable definition */
+         int score = 90;
+         
+         /* do loop execution */
+         do
+         {
+            Console.WriteLine("My current score is: {0}", score);
+            score= score + 1;
+         } 
+         while (score &lt;= 100);
+         Console.ReadLine();
+      }
+   }
+} 
+</code></pre>
+<p>if you run the above code, it will produce the following output</p>
+
+<b>Output</b>
+<div class="alert alert-info">
+My current score is: 90 <br />
+My current score is: 91<br />
+My current score is: 92<br />
+My current score is: 93<br />
+My current score is: 94<br />
+My current score is: 95<br />
+My current score is: 96<br />
+My current score is: 97<br />
+My current score is: 98<br />
+My current score is: 99<br />
+My current score is: 100
+</div>
+
+
+
+<h4>Control Statements in C#</h4>
+
+<p>control statements are used to control the program specifically loops.
+Sometimes we want to skip the loop condition or sometimes we want to halt the loop and do something else. In such cases the loop control statements are used.</p>
+
+
+<p>C# provides two different types of control statements.</p>
 <ol>
-    <li>An integral part</li>
-    <li>A decimal point</li>
-    <li>A fractional part</li>
-    <li>An exponent part</li>
-    <li>An optional suffix</li>
+    <li>Break Statement</li>
+    <li>continue Statement</li>
 </ol>
 
-<p>Both the integral and fractional parts are made up of decimal digits. You can omit either the integral part or the fractional part, but not both. You can omit either the decimal point or the exponent part, but not both.</p>
+<b>Break statement  in C#</b>
+<p>When the break statement is encountered inside a loop, the loop is immediately terminated and program control resumes at the next statement following the loop.</p>
 
-<strong>Examples of floating point literals in C#</strong>
-<pre class="prettyprint"><code class="language-csharp">
-  3.14159
-  314159E-5L
-</code></pre><br />
-
-<h4>String Literals in C#</h4>
-
-<p>A string literal is a sequence of zero or more Unicode characters beginning and ending with an ASCII double-quote character, a Unicode left double-quote character, or a Unicode right double-quote character. Within a string, a sequence of two double-quote characters is an escape sequence representing a double quote in the string. A string constant is of the String type.</p>
-
-<li>String literals or constants are enclosed in double quotes "" or with @""</li>
-<li>A string contains characters that are similar to character literals: plain characters, escape sequences, and universal characters.</li>
+<p>Syntax for a break statement in C#</p>
 
 <pre class="prettyprint"><code class="language-csharp">
-"cool, right"
-"awesome, \
-dear"
-"tutorials, " "A" "cademy"
-@"tutorials academy"
+break;
+
 </code></pre>
+
+<b>Example</b>
+<pre class="prettyprint"><code class="language-csharp">
+using System;
+namespace Loops 
+{
+   class ExampleBreakStatement
+   {
+      static void Main(string[] args)
+      {
+         /*  variable definition */
+         int x = 5;
+         
+         /* while loop execution */
+         while (x < 15)
+         {
+            Console.WriteLine("value of x is: {0}", x);
+            x++;
+            if (x > 11)
+            {
+               /* terminate the loop when the x value becomes 11 statement */
+               break;
+            }
+         }
+         Console.ReadLine();
+      }
+   }
+} 
+</code></pre>
+<p>If you run the above code it will produce the following output</p>
+<b>Output</b> <br/>
+
+<div class="alert alert-info">
+value of x is: 5 <br />
+value of x is: 6<br />
+value of x is: 7<br />
+value of x is: 8<br />
+value of x is: 9<br />
+value of x is: 10<br />
+value of x is: 11
+</div>
+<p>Observe, the above output. In our program we said <code>while (x < 15)</code>
+ print the valus, but if the values is 11 then break the program. That's the out stopped printing
+ after the x values becomes 11</p>
+
+
+ <h4>Continue Statement in C#</h4>
+ <p>The continue statement in C# works somewhat like the break statement. Instead of forcing 
+ the program to terminate,the  continue statement will  force the program to continue to  the next iteration of the loop  and  skipping any code in between.</p>
+
+ <p>Syntax for continue statement in c#</p>
+
+ <pre class="prettyprint"><code class="language-csharp">
+     continue;
+ </code></pre>
+
+ <b>Example program for c# continue statement</b>
+
+ <pre class="prettyprint"><code class="language-csharp">
+using System;
+namespace Loops
+{
+   class ExampleProgram
+   {
+      static void Main(string[] args)
+      {
+         /* local variable definition */
+         int x = 5;
+         
+         /* do loop execution */
+         do
+         {
+            if (x == 11)
+            {
+               /*if the x value becomes 11 skip that statement and continue
+               to print the next statements */
+               x = x + 1;
+               continue;
+            }
+            Console.WriteLine("value of a: {0}", x);
+            x++;
+         } 
+         while (x < 15);
+         Console.ReadLine();
+      }
+   }
+} 
+ </code></pre>
+
+<b>Output</b>
+<div class="alert alert-info">
+value of a: 5<br />
+value of a: 6<br />
+value of a: 7<br />
+value of a: 8<br />
+value of a: 9<br />
+value of a: 10<br />
+value of a: 12<br />
+value of a: 13<br />
+value of a: 14
+</div>
+<p><strong>Notice,</strong>  The value 11 is not printed!!!! This is because
+when the x value becomes 11, the loop skip the value and continued to the next iteration.</p>
+<!-- CONTENT END HERE -->
 </div>
 </div>
 
@@ -350,5 +485,3 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 </body>
 </html>
-
-  
