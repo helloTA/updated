@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Installation</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">jQuery Tutorials</li>
+<li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
+<li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
+<li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
+<li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
+<li><a target="_top" href="jquery-selectors.html">jQuery Selectors </a></li>
+<li><a target="_top" href="jquery-effects.html">jQuery Effects </a></li>
+<li><a target="_top" href="jquery-events.html">jQuery Events </a></li>
+<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
+<li><a target="_top" href="jquery-with-css.html">jQuery and CSS </a></li>
+<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
+<li><a target="_top" href="jquery-and-ajax.html">jQuery AJAX </a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+  
+
+<h1>jQuery Installation</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+<h3>How to install jQuery</h3>
+<p>The jQuery installation main motto is to include the jQuery JavaScript file in the web page. We can do this in two ways to access the JavaScript file.</p>
+
+
+<p>Download the jQuery library from<a href="jQuery.com">jQuery website</a>  and hosting it in web application</p>
+
+
+<p> Downloading jQuery</p>
+
+<p>There are two versions available for downloading the jQuery library:</p>
+<p>Production version - this is for your live website because it has been minified and compressed
+Development version - this is for testing and development (uncompressed and readable code)
+Both versions can be downloaded from <a href="jQuery.com">jQuery</a>.</p>
+
+
+<p>If you want to download the jQuery API, you have to place it on a web server. Once done, Your web pages start consuming jQuery library by specifying the directory path in &lt;scirpt&gt; </code>tag as follows.</p>
+
+<p><b>Note:</b> the &lt;script&gt; tag should be inside the &lt;head&gt; section.
+
+<h4>How to include jQuery in html file</h4><br />
+<pre class="prettyprint"><code class="language-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Including jQuery in HTML&lt;/title&gt;
+        &lt;script type="text/javascript"  src="/jqfolder/1.7.1/jquery.min.js"&gt;&lt;/script>
+    &lt;/head&gt;
+   &lt;body&gt;
+         <p>Basic jQuery Example 
+   &lt;/body&gt;
+   &lt;/html&gt;
+</code></pre>
+  
+
+
+
+
+<strong>Referencing JQuery at Google CDN</strong>
+
+<b>jQuery CDN :</b>
+
+<p>If you don't want to download and make use of hosting jQuery in web pages, still there is an easiest way to include JavaScript file from a CDN (Content Delivery Network). Both Google and Microsoft has CDN to host them on to web pages.</p><br />
+<p>To use jQuery from Google or Microsoft, use one of the following:
+Google CDN:
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+Microsoft CDN:
+<head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+
+
+
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

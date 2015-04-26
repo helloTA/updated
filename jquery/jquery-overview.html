@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> C# Overview</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">jQuery Tutorials</li>
+<li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
+<li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
+<li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
+<li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
+<li><a target="_top" href="jquery-selectors.html">jQuery Selectors </a></li>
+<li><a target="_top" href="jquery-effects.html">jQuery Effects </a></li>
+<li><a target="_top" href="jquery-events.html">jQuery Events </a></li>
+<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
+<li><a target="_top" href="jquery-with-css.html">jQuery and CSS </a></li>
+<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
+<li><a target="_top" href="jquery-and-ajax.html">jQuery AJAX </a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+  
+
+<h1>jQuery Overview</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+<h3>jQuery Overview</h3>
+
+<p>Following steps are very useful to start with jQuery and which helps you to increase the confidence in building the web-based applications.</p>
+<ol>
+    <li>Wait until the page is being ready.</li>
+    <li>Select HTML elements that are defined to modify furtherly.</li>
+    <li>
+Specify appropriate attributes with CSS styles to modify the behaviour.</li>
+<li>If needed, try adding the listener functions, e.g. click() or wait for a JQuery effect to finish etc.
+</li>
+</ol>
+
+<h3>Example</h3>
+<pre class="prettyprint"><code class="language-javascript">
+    // Step 1. Need to wait until page is being ready. this would be done by ready()
+$(document).ready(function() {
+
+    // Step 2. select the HTML element with id ‘parentDiv’ which actually defined in in html code.
+    var parentDiv= $('#parentDiv);
+
+    //Step 3. modify the HTML elements CSS attributes
+    parentDiv.css("font-size", "13px");
+
+    // Step 4. add a click-listener function as follows.
+    parentDiv.click(function() {
+        $('#parentDiv).hide(); // to hide the div element 
+        });
+
+}
+
+</code></pre>
+
+<p>First the above example by default JQuery's $(document).ready() function can be called when the page is being ready which takes a parameter as a  function.</p>
+<p>
+In Second step, jQuery select the HTML element by using the jQuery selection function called $() where it takes string as a parameter to identifying the particular HTML element like “parentDiv”.
+</p>
+<p>In Third step, if we wanted to modify the styles of HTML element that can be achieved by simply taking the help of CSS styles. To achieve this, we have to use CSS() function with CSS attributes. As we see in the above example font-size is a CSS attribute and 13px is the value which sets the font-size of the parent div text.
+</p>
+<p>In Final step, we can add jquery events for the HTML elements like click(), dblclick() and mouseleave() etc. From example jQuery adds the click listener to HTML element “parentDiv” which can be done by using the click() function. Click listener will be functioned when click on HTML “parentDiv” element.
+              
+</p>
+
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
