@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> jQuery Child Filter Selectors</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">jQuery Tutorials</li>
+<li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
+<li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
+<li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
+<li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
+<li><a target="_top" href="jquery-selectors.html">jQuery Selectors </a></li>
+<li><a target="_top" href="jquery-effects.html">jQuery Effects </a></li>
+<li><a target="_top" href="jquery-events.html">jQuery Events </a></li>
+<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
+<li><a target="_top" href="jquery-with-css.html">jQuery and CSS </a></li>
+<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
+<li><a target="_top" href="jquery-and-ajax.html">jQuery AJAX </a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+  
+
+<h1>jQuery Child Filter Selectors</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h3>jQuery :first-child Selector</h3>
+<p>Selects all elements that are the first child of their parent.
+</p>
+
+<h4>Syntax</h4>
+<pre class="prettyprint">
+jQuery( ":first-child" )
+</pre>
+
+<p>When there many no of elements in a page, jquery <code> :first-child </code> selector
+can be used to select the first element of each parent in the webpage</p>
+
+<h4>Example</h4>
+<pre class="prettyprint">
+    &lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;first-child demo&lt;/title&gt;
+  &lt;style&gt;
+  span {
+    color: #008;
+  }
+  span.sogreen {
+    color: blue;
+    font-weight: bolder;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div&gt;
+  &lt;span&gt;Apple,&lt;/span&gt;
+  &lt;span&gt;Banana,&lt;/span&gt;
+  &lt;span&gt;Mango&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;span&gt;Orange&lt;/span&gt;
+  &lt;span&gt;Grape&lt;/span&gt;
+  &lt;span&gt;Carrot&lt;/span&gt;
+&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "div span:first-child" )
+  .css( "color", "green" )
+  .hover(function() {
+    $( this ).addClass( "sogreen" );
+  }, function() {
+    $( this ).removeClass( "sogreen" );
+  });
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="child-first-selector.html" class="btn btn-success">Try It Yourself</a> <br />
+
+<b>Output</b><br />
+<img src="images/examples/child-first-selector.png">
+
+<h4>jQuery :last-child Selector</h4>
+<p>Selects all elements that are the last child of their parent.
+</p>
+<p>When there are many no of elements in a webpage, and you want to select only the last element in
+each parent in such cases you can :last-child selector</p>
+
+<h3>Syntax</h3>
+<pre class="prettyprint">
+  jQuery( ":last-child" )  
+</pre>
+
+<div class="alert alert-success">
+ Note: <code> :last</code> matches only a single element, <code>:last-child</code> can match more than one: one for each parent.
+</div>
+
+<h5>Example</h5>
+<p>Find the last span in each matched div and add some css hover effect.</p>
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;last-child demo&lt;/title&gt;
+  &lt;style&gt;
+  span.solast {
+    text-decoration: line-through;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div&gt;
+  &lt;span&gt;One,&lt;/span&gt;
+  &lt;span&gt;Two,&lt;/span&gt;
+  &lt;span&gt;Three,&lt;/span&gt;
+  &lt;span&gt;Four&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;span&gt;White,&lt;/span&gt;
+  &lt;span&gt;red,&lt;/span&gt;
+  &lt;span&gt;green,&lt;/span&gt;
+  &lt;span&gt;blue&lt;/span&gt;
+&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "div span:last-child" )
+  .css({ color:"green", fontSize:"100%" })
+  .hover(function() {
+    $( this ).addClass( "solast" );
+  }, function() {
+    $( this ).removeClass( "solast" );
+  });
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="child-last-selector.html" class="btn btn-success">Try It Yourself</a>
+<p><b>Output</b></p><br />
+<img src="images/examples/child-last-selector.png">
+
+<h4>:first-of-type Selector</h4>
+<p>The <code>:first-of-type</code> selector matches elements that have no other element with both the same parent and the same element name coming before it in the document tree.</p>
+
+<h3>Syntax</h3>
+<pre class="prettyprint">
+  jQuery( ":first-of-type" )
+</pre>
+
+<h4>Example:</h4>
+<p>It will find the first span in each matched div and add a class to it.</p>
+<h4>Syntax</h4>
+<pre class="prettyprint">
+  jQuery( ":first-of-type" )
+</pre>
+
+<h4>Example</h4>
+<p>When there are multiple elements with the same content or same value, jquery :first-of-type selector will select the first element of its type</p>
+
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;first-of-type demo&lt;/title&gt;
+  &lt;style&gt;
+  span.change {
+    color: blue;
+    font-size: 120%;
+    font-style: bold;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+  &lt;span&gt;Jerry,&lt;/span&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+  &lt;span&gt;Cherry&lt;/span&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;b&gt;Dollar,&lt;/b&gt;
+  &lt;span&gt;Rupee,&lt;/span&gt;
+  &lt;span&gt;Euro,&lt;/span&gt;
+ &lt;span&gt;Rupee&lt;/span&gt;
+ &lt;span&gt;Rupee&lt;/span&gt;
+  
+&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "span:first-of-type" ).addClass( "change" );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>There are elements named Tom and 3 Elements named Rupee. But it only selected the first of its type.</p>
+
+<a href="examples/first-of-type-selector.html" class="btn btn-success">Try It Yourself</a> <br />
+<b>Output</b><br>
+<img src="images/examples/first-of-type-selector.png">
+
+<h4>:last-of-type Selector</h4>
+<p>The <code>:last-of-type</code> selector matches elements that have no other element with both the same parent and the same element name coming before it in the document tree.</p>
+<h4>Syntax</h4>
+<pre class="prettyprint">
+  jQuery( ":last-of-type" )
+</pre>
+
+<p>When there are multiple elements with the same content or same value, jquery <code>:last-of-type</code> selector will select the first element of its type</p>
+
+
+
+<h4>Example</h4>
+
+
+<p>It will find the last span in each matched div and add a class to it.</p>
+
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;first-of-type demo&lt;/title&gt;
+  &lt;style&gt;
+  span.change {
+    color: blue;
+    font-size: 120%;
+    font-style: bold;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+  &lt;span&gt;Jerry,&lt;/span&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+  &lt;span&gt;Cherry&lt;/span&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+  &lt;span&gt;Tom,&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;b&gt;Dollar,&lt;/b&gt;
+  &lt;span&gt;Rupee,&lt;/span&gt;
+  &lt;span&gt;Euro,&lt;/span&gt;
+ &lt;span&gt;Rupee&lt;/span&gt;
+ &lt;span&gt;Rupee&lt;/span&gt;
+  
+&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "span:last-of-type" ).addClass( "change" );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>There are elements named Tom and 3 Elements named Rupee. But it only selected the last of its type.</p>
+<a href="examples/last-of-type-selector.html" class="btn btn-success">Try It Yourself</a> <br />
+<b>Output</b><br>
+<img src="images/examples/last-of-type-selector.png">
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
