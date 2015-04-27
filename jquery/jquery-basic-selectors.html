@@ -142,7 +142,7 @@ $( "tr:even" ).css( "background-color", "red" );
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<a href="event-selector.html" class="btn btn-success">Try It Yourself</a>
+<a href="event-selector.html" class="btn btn-danger">Try It Yourself</a>
 <br />
 <br>
 <p>Output</p>
@@ -186,7 +186,7 @@ $( "tr:odd" ).css( "background-color", "red" );
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<a href="odd-selector.html" class="btn btn-success">Try it Yourself</a>
+<a href="odd-selector.html" class="btn btn-danger">Try it Yourself</a>
 
 <br />
 <p>Output</p>
@@ -224,15 +224,274 @@ jQuery( ":eq(index)" )
 &lt;/html&gt;
 </pre>
 
-<a href="examples/eq-selector-example.html">Try It Yourself</a>
+<a href="examples/eq-selector-example.html" class="btn btn-success">Try It Yourself</a>
 
 <br />
-<p>OutPut</p>
+<p>Output <br >
+       <img src="images/examples/eq-selector.png">
+</p>
 
 
+ <h4>jQuery :first Selector</h4>
 
 
+<p>Selects the first matched element. It selects the first element among others and apply the
+requested styles</p>
+<b>Note</b><p>The <code>:first</code> pseudo-class is equivalent to <code> :eq( 0 )</code></p>
 
+<h5>Syntax</h5>
+<pre class="prettyprint jquery">
+  jQuery( ":first" )
+</pre>
+
+<h4>Example</h4>
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+   &lt;meta charset="utf-8"&gt;
+   &lt;title&gt;first demo&lt;/title&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Number 1&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Number 2&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Number 3&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Number 4&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Number 5&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Number 6&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;script&gt;
+  $( "tr:first" ).css( "color", "red" );
+ &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="first-selector.html" class="btn btn-primary">Try It Yourself</a>
+
+<br />
+<p>Output</p>
+<img src="images/examples/first-selector.png"><br />
+
+<h4>jQuery :last Selector</h4>
+
+
+<p>Selects the last matched element.</p>
+
+<p><b>Note:</b> <code>:last</code> selects a single element by filtering the current jQuery collection and matching the last element within it.</p>
+
+<h5>Syntax</h5>
+<pre class="prettyprint">
+  jQuery( ":last" )
+</pre>
+
+<h5>Example</h5>
+<p>Selects the last element</p>
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;last demo&lt;/title&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;First &lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Middle &lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Last &lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;script&gt;
+ $( "tr:last" ).css({ backgroundColor: "green", fontWeight: "bolder" });
+ &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="last-selector-example.html" class="btn btn-success">Try It Yourself</a>
+<br />
+<b>Output</b> <br />
+<img src="images/examples/last-selector.png">
+
+
+<h4>jQuery :gt() Selector</h4>
+
+
+<p>Select all elements at an index greater than index within the matched set.</p>
+
+<h5>Syntax</h5>
+<pre class="prettyprint">
+  jQuery( ":gt(index)" )
+</pre>
+
+<h4>Example</h4>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;gt demo&lt;/title&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table border="1"&gt;
+  &lt;tr&gt;&lt;td&gt;TD #0&lt;/td&gt;&lt;td&gt;TD #1&lt;/td&gt;&lt;td&gt;TD #2&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;TD #3&lt;/td&gt;&lt;td&gt;TD #4&lt;/td&gt;&lt;td&gt;TD #5&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;TD #6&lt;/td&gt;&lt;td&gt;TD #7&lt;/td&gt;&lt;td&gt;TD #8&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;script&gt;
+ $( "td:gt(3)" ).css( "backgroundColor", "red" );
+
+ &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>It will select all the td elements whose id is greater than 3. In other words
+it will select all the td elements from the index 4</p>
+<a href="gt-selector-exmaple.html"  class="btn btn-primary">Try It Yourself</a>
+<br >
+<b>Output</b><br />
+<img src="images/examples/gt-selector.png">
+
+<h4>jQuery :lt() Selector</h4>
+
+<p>Select all elements at an index less than index within the matched set. It works quite similar to
+jquery gt() selector but the only difference is it selects all the elements whose index is
+less then the index given
+</p>
+
+<h5>Syntax</h5>
+<pre class="prettyprint">
+  jQuery( ":lt(index)" )
+</pre>
+
+<h4>Example</h4>
+<p>Select all the td elements whose index is less than 5</p>
+
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;lt demo&lt;/title&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table border="1"&gt;
+  &lt;tr&gt;&lt;td&gt;Zero&lt;/td&gt;&lt;td&gt;One&lt;/td&gt;&lt;td&gt;Two&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Three&lt;/td&gt;&lt;td&gt;Four&lt;/td&gt;&lt;td&gt;Five&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Six&lt;/td&gt;&lt;td&gt;Seven&lt;/td&gt;&lt;td&gt;Eight&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;script&gt;
+ $( "td:lt(5)" ).css( "backgroundColor", "green" );
+
+ &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre> <br />
+<a href="lt-selector-example.html" class="btn btn-success">Try It Yourself</a>
+
+<br></br>
+<p><b>Output</b></p>
+<img src="images/examples/lt-selector.png">
+
+<h4>jQuery :not() Selector</h4>
+
+<p>Selects all elements that do not match the given selector.
+</p>
+<h5>Syntax</h5>
+<pre class="prettyprint">
+  jQuery( ":not(selector)" )
+</pre>
+<p>All selectors are accepted inside <code>:not()</code>, for example:<code> :not(div a) and :not(div,a)</code>.</p>
+
+
+<h4>Example</h4>
+<pre class="prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+ &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    $("p:not(.dont-select-me)").css("background-color", "green");
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt; My Homepage&lt;/h1&gt;
+
+  &lt;p class="dont-select-me"&gt;Sunday.&lt;/p&gt;
+  &lt;p&gt;Monday.&lt;/p&gt;
+  &lt;p&gt;Tuesday.&lt;/p&gt;
+  &lt;p class="dont-select-me"&gt;Wednsday&lt;/p&gt;
+  &lt;p&gt;Thursday&lt;/p&gt;
+  &lt;p&gt;Friday&lt;/p&gt;
+  &lt;p&gt;Saturday&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>It will select all the elements and apply the green color except for sunday anf webdensday.</p>
+<a href="not-selecto-example.html" class="btn btn-success">Try It Yourself</a>
+
+<br />
+<b>Output</b> <br />
+<img src="images/examples/not-selector.png">
+
+<h4>jQuery :focus Selector</h4>
+
+<p>Selects element if it is currently focused.
+</p>
+<h5>Syntax</h5>
+<pre class="prettyprint">
+  jQuery( ":focus" )
+</pre>
+
+<h5>Example</h5>
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;focus demo&lt;/title&gt;
+&lt;style&gt;
+.focused {
+background: red;
+}
+&lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="content"&gt;
+  &lt;input tabIndex="1"&gt;
+  &lt;input tabIndex="2"&gt;
+  &lt;select tabIndex="3"&gt;
+  &lt;option&gt;select menu&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;div tabIndex="4"&gt;
+  This is a div
+  &lt;/div&gt;
+  &lt;p&gt;When you click inside the form it changes it background color to red
+  &lt;/div&gt;
+&lt;script&gt;
+$( "#content" ).delegate( "*", "focus blur", function() {
+var elem = $( this );
+setTimeout(function() {
+elem.toggleClass( "focused", elem.is( ":focus" ) );
+}, 0 );
+});
+  &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="examples/focus-selector.html" class="btn btn-success">Try It Yourself</a>
+<b>Output</b>
+<img src="images/examples/focus-selector.png">
 
 <!-- CONTENT END HERE -->
 </div>
