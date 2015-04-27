@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>class demo</title>
+  <style>
+  div, span {
+    width: 100px;
+    height: 30px;
+    float: left;
+    padding: 30px;
+    margin: 5px;
+    background-color: #FFF;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div class="class-one">I am Class One"</div>
+<div class="class-two">I am Class Two</div>
+<span class="class-three">I am Class Three</span>
+ 
+<script>
+$( ".class-one" ).css( "border", "3px solid green" );
+$(".class-two").css("border", "5px solid blue");
+$(".class-three").css("border", "5px solid red");
+</script>
+ 
+</body>
+</html>

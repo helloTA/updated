@@ -140,20 +140,39 @@ Both versions can be downloaded from <a href="jQuery.com">jQuery</a>.</p>
 
 
 
-<strong>Referencing JQuery at Google CDN</strong>
+<strong>Referencing jQuery at Google CDN</strong>
 
 <b>jQuery CDN :</b>
 
 <p>If you don't want to download and make use of hosting jQuery in web pages, still there is an easiest way to include JavaScript file from a CDN (Content Delivery Network). Both Google and Microsoft has CDN to host them on to web pages.</p><br />
-<p>To use jQuery from Google or Microsoft, use one of the following:
-Google CDN:
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-</head>
-Microsoft CDN:
-<head>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<p>To use jQuery from Google or Microsoft, use one of the following:</p>
 
+<b>Google CDN:</b>
+<pre class="prettyptint"><code class="language-html">
+ &lt;head&gt;
+  &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&lt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<b>Microsoft CDN:</b>
+<pre class="prettyptiny"><code class="language-html">
+
+&lt;head&gt;
+  &lt;script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"&lt;&lt;/script&gt;
+&lt;/head&gt;   
+</code></pre>
+
+  <h4>Minimized vs. Full jQuery Versions</h4>
+<p>
+There are two versions of JQuery you can reference in your web pages. The minimized (minified), and the full version. There are no functional differences between these two versions. The only difference is the file size.
+</p>
+<br />
+<p>
+The full version contains the JavaScript code in an easy-to-read format. This makes reading and debugging the code easier. The disadvantage is that this file is much larger than the minimized version, resulting in more traffic and slower downloads.
+</p><br />
+<p>
+The minimized version is a compacted edition of the full version. This version is very hard to read and debug inside. But the file is smaller, resulting in faster downloads, and less traffic.
+Usually, developers use the full version during development, and when the site is ready to go live, it will switch to the minimized edition.
+  </p>
 
 
 
