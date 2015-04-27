@@ -103,209 +103,131 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>jQuery Selectors</h4>
-<p>
-jQuery selectors are one of the most important key factors of the jQuery libraries. It  allows you to select and manipulate HTML element(s). jQuery selection of particular HTML element can be done based on their id, classes, types, attributes, values of attributes and much more. All selectors in jQuery start with the dollar sign and parentheses: $().
-</p>
+<h4>jQuery Basic Selectors</h4>
 
- <strong>jQuery Selector Overview</strong>
-<p>
-A jQuery selector is a string which decides which HTML elements to select. jQuery selector string passed as an argument to $() or jQuery() selection function.
-</p> <br />
-<p>
+ <h3> jQuery :even Selector</h3>
 
-jQuery selectors are very easy to learn if you have a good knowledge on CSS selectors. because of jQuery syntax is similar to CSS selectors.
-</p>
-
-<p>jQuery follows following criteria to select HTML elements</p>
-<ol>
-    <li>Element name (e.g. 'p', 'a', 'div' etc.)</li>
-    <li>Element id</li>
-    <li>Element CSS class</li>
-    <li>Element attributes</li>
-    <li>Element visibility</li>
-    <li>Element order</li>
-    <li>Form Fields</li>
-    <li>Element parents or children</li>
-    <li>Combinations of the above</li>
-</ol> 
-
-
-<h4> jQuery Selector Example</h4>
-
-<p>The following example illustrates the jQuery Selector</p>
-<pre class="prettyprint"><code class="language-jquery">
-$(document).ready(function(){
-    $("button").click(function(){
-        $("parenDiv").hide(); 
-    });
-});
-    
-</code></pre>
-
-
-
-<p>This example selects the div element with the id parenDiv, meaning the div element which has an id attribute with the value theDiv.
-</p>
-
-<h4>jQuery All Selector</h4>
-<p>The jQuery element selector selects elements based on the element name.</p>
-
-<p>You can select all &lt;h3&gt; elements on a page like this:</p>
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
-$("*")  
-</code></pre>
-
-
-<h5>Example</h5>
-
-<p>When a user clicks on a button, all &lt;h3&gt; elements will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $("button").click(function(){
-        $("*").hide();
-    });
-});
-
-</code></pre>
-
-
-<a href="element-selector.html" class="btn btn-primary">Try it yourself</a>
-<br />
-
-<h3>jQuery #id Selector</h3>
-<p>jQuery #id selector uses the id attribute of an HTML tag to find the specific element.</p>
-<div class="alert alert-info">
-id should be unique within a page<br />
-Use the #id selector when you want to find a single, unique element.
-
-</div>
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
- $("#myid")
-</code></pre>
-
-
-<h3>Example</h3>
-<p>
-When a user clicks on a button, the element with id="myid" will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#myid").hide();
-    });
-});
-
-</code></pre>
-<a href="id-selector-example.html" class="btn btn-primary">Try It Yourself</a>
-
-
-<h3>jQuery .class Selector</h3>
-<p>jQuery class selector finds elements with a specific class.</p>
-
-<div class="alert alet-info">
- Selects all elements with the given class. 
-</div>
-
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
- $(".test")
-</code></pre>
-
-
+<p>Selects even elements, zero-indexed.</p>
 
 <h4>Example</h4>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $( ".class-one" ).css( "border", "3px solid green" );
-    $(".class-two").css("border", "5px solid blue");
-    $(".class-three").css("border", "5px solid red");
-});
-</code></pre>
-<pre class="prettyprint xml">
+<pre class="prettyprint">
+$( "tr:even" )
+</pre>
+<p>It selects all the even tr elements</p>
+
+<pre class="prettyprint">
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;class demo&lt;/title&gt;
-  &lt;style&gt;
-  div, span {
-    width: 100px;
-    height: 30px;
-    float: left;
-    padding: 30px;
-    margin: 5px;
-    background-color: #FFF;
-  }
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+  &lt;head&gt;
+   &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;even demo&lt;/title&gt;
+&lt;style&gt;
+table {
+background: #eee;
+}
+&lt;/style&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
- 
-&lt;div class="class-one"&gt;I am Class One"&lt;/div&gt;
-&lt;div class="class-two"&gt;I am Class Two&lt;/div&gt;
-&lt;div class="class-three"&gt;I am Class Three&lt;/div&gt;
- 
+    &lt;table border="1"&gt;
+    &lt;tr&gt;&lt;td&gt;Row 0 Even&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 1 Odd&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 2 Even &lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 3 Odd&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 4 Even&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
 &lt;script&gt;
-$( ".class-one" ).css( "border", "3px solid green" );
-$(".class-two").css("border", "5px solid blue");
-$(".class-three").css("border", "5px solid red");
+$( "tr:even" ).css( "background-color", "red" );
 &lt;/script&gt;
- 
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>If you run the above jQuery class example code,  it will apply the green color for class-one and blue color to class-two and finally, red color to class-three. Run the below live example and see it in live.:</p>
+<a href="event-selector.html" class="btn btn-success">Try It Yourself</a>
+<br />
+<br>
+<p>Output</p>
+<img src="images/examples/even-selector.png">
 
-<a href="class-selector-example.html" class="btn btn-primary">Try It Yourself</a>
 
-<h4>jQuery this selector</h4>
-<p>Selects the current HTML element</p>
-<p>$(this) enables you to select the current HTML element. Here, meaning of this keyword is to refer the current element.
-</p>
+ <h4>jQuery :odd Selector</h4>
 
+<p>Selects odd elements, zero-indexed</p>
 <h5>Syntax</h5>
-<pre class="prettyprint jquery">
-$(selector).action()
+<pre class="prettyprint">
+$( "tr:odd" )
 </pre>
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-$(document).ready(function(){
-    $("button").click(function(){
-        $(this).hide();
-    });
-});
-&lt;/script&gt;
+
+<h4>Example:</h4>
+<p>Finds odd table rows, matching the second, fourth and so on</p>
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+   &lt;meta charset="utf-8"&gt;
+   &lt;title&gt;even demo&lt;/title&gt;
+&lt;style&gt;
+table {
+background: #eee;
+}
+&lt;/style&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
-&lt;body&gt;
-
-&lt;h2&gt;jQuery this selector&lt;/h2&gt;
-
-&lt;p&gt;First paragraph&lt;/p&gt;
-
-&lt;button&gt;If you click me, I will hide&lt;/button&gt;
-&lt;button&gt;Hide me&lt;/button&gt;
+   &lt;body&gt;
+    &lt;table border="1"&gt;
+    &lt;tr&gt;&lt;td&gt;Row 0 Even&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 1 Odd&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 2 Even &lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 3 Odd&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Row 4 Even&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;script&gt;
+$( "tr:odd" ).css( "background-color", "red" );
+&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-
 </pre>
+<a href="odd-selector.html" class="btn btn-success">Try it Yourself</a>
 
-<a href="examples/this-selector-example.html" class="btn btn-primary">Try It Yourself</a>
+<br />
+<p>Output</p>
+<img src="images/examples/odd-selector.png">
+
+<h4>jQuery :eq() Selector</h4>
 
 
- <h4>jQuery Multiple Selector (“selector1, selector2, selectorN”)</h4>
+<p>Select the element at index n within the matched set.</p>
+
+<h4>Syntax</h4>
 <pre class="prettyprint">
-
-Selects the combined results of all the specified selectors.<br />
-<b>Syntax</b>
-jQuery( "selector1, selector2, selectorN" )
+jQuery( ":eq(index)" )
 </pre>
+
+<h4>Example</h4>
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+   &lt;meta charset="utf-8"&gt;
+   &lt;title&gt;eq demo&lt;/title&gt;
+   &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table border="1"&gt;
+    &lt;tr&gt;&lt;td&gt;One&lt;/td&gt;&lt;td&gt;Two&lt;/td&gt;&lt;td&gt;Three&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Four&lt;/td&gt;&lt;td&gt;Five&lt;/td&gt;&lt;td&gt;Six&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Seven&lt;/td&gt;&lt;td&gt;Eight&lt;/td&gt;&lt;td&gt;Nine&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+ &lt;script&gt;
+ $( "td:eq( 2 )" ).css( "color", "green" );
+ &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="examples/eq-selector-example.html">Try It Yourself</a>
+
+<br />
+<p>OutPut</p>
 
 
 
