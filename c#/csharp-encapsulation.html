@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> C# Encapsulation</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">C# Tutorials</li>
+<li><a target="_top" href="about.csharp.html">About C#</a></li>
+<li><a target="_top" href="csharp-environment-setup.html">C# Environment Setup</a> </li>
+<li><a target="_top" href="csharp-program-strucutre.html">C# Program Strucutre</a> </li>
+<li><a target="_top" href="csharp-comments.html">C# Comments</a></li>
+<li><a target="_top" href="csharp-datatypes.html">C# Datatypes </a></li>
+<li><a target="_top" href="csharp-typeconversion.html">C# Type Conversion </a></li>
+<li><a target="_top" href="csharp-variables.html">C# Variables </a></li>
+<li><a target="_top" href="csharp-constants.html">C# Constants </a></li>
+<li><a target="_top" href="csharp-operators.html">C# Operators </a></li>
+<li><a target="_top" href="csharp-operator-precedence.html">C# Operators Precedence</a></li>
+<li><a target="_top" href="csharp-methods.html">C# Methods </a></li>
+<li><a target="_top" href="csharp-decision-making.html">C# Decision Making</a> </li>
+<li><a target="_top" href="csharp-loops.html">C# Loops </a></li>
+
+<li><a target="_top" href="csharp-encapsulation.html">C# Encapsulation</a></li>
+<li><a target="_top" href="csharp-arrays.html">C# Arrays</a></li>
+<li><a target="_top" href="csharp-strings.html">C# Strings</a></li>
+<li><a target="_top" href="csharp-structures.html">C# Struct</a></li>
+<li><a target="_top" href="csharp-classes.html">C# Classes</a></li>
+<li><a target="_top" href="chsarp-inheritance.html">C# Inheritance</a></li>
+<li><a target="_top" href="chsarp-polymorphism.html">C# Polymorphism</a></li>
+<li><a target="_top" href="csharp-operator-overloading.html">C# Operator Overloading
+</a></li>
+<li><a target="_top" href="csharp-interfaces.html">C# Interfaces</a></li>
+<li><a target="_top" href="csharp-namespaces.html">C# Namespaces</a></li><br />
+<li class="heading">C# Advanced Tutorials</li>
+<li><a target="_top" href="csharp-regular-expressions.html">C# Regular Expressions</a></li>
+<li><a target="_top" href="csharp-exception-handling.html">C# Exception Handling</a></li>
+<li><a target="_top" href="csharp-file-io.html">C# File I/O</a></li>
+<li><a target="_top" href="csharp-attributes.html">C# Attributes</a></li>
+<li><a target="_top" href="csharp-properties.html">C# Properties</a></li>
+<li><a target="_top" href="csharp-indexers.html">C# Indexers</a></li>
+<li><a target="_top" href="csharp-delegates.html">C# Delegates</a></li>
+<li><a target="_top" href="csharp-events.html">C# Events</a></li>
+<li><a target="_top" href="csharp-collections.html">C# Collections</a></li>
+<li><a target="_top" href="csharp-events.html">C# Events</a></li>
+<li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
+<li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>C# Encapsulation</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h4>What is Encapsulation?</h4>
+<div class="alert alert-success">
+  Encapsulation is the packing of data and functions into a single component. The features of encapsulation are supported using classes in most object-oriented programming languages
+</div>
+
+
+<p>
+  This is all about hiding the data by enclosing/wrapping it under a container known as the class which provides basic security for the contents that are defined inside.</p>
+  <p>
+
+Encapsulation and abstraction are related features in object-oriented programming. Abstraction allows making relevant information visible and encapsulation enables a programmer to implement the desired level of abstraction.</p>
+<p>
+Encapsulation is implemented by using access specifiers. Access specifiers used to define scope of a type as well as their members i.e., we can access them and we can not. C# supports 5 access specifiers those are
+
+</p>
+
+<ol>
+ <li>private</li>
+<li>internal</li>
+<li>protected</li> 
+<li>protected internal</li>
+<li>public</li>
+
+</ol>
+
+<img src="images/encapsulation.png">
+<br />
+
+<div class="alert alert-info">
+  From the above image, it explains clearly what is all about the concept of encapsulation in c# program. We can see class and which consists of variables and methods. If the variable or methods wanted to be exposed outside of the class can be done by using access specifiers. 
+</div>
+
+
+<strong>Access specifiers in C#</strong>
+<p>Let us try to understand the each access specifier.</p>
+
+<strong> Private:</strong>
+<p>
+Members declared as a private under a class or structure can’t be accessed outside of the type in which they are defined and moreover their default scope is private only. Types can be declared as private so private can used only on members.
+</p>
+
+<strong>
+Protected
+</strong>
+<p>
+Members declared as a ‘protected’ under a class can be accessed only within the class or in a child class. Non-child classes can’t consume them. Types can’t be declared as protected also. so this can also be used on members only</p>
+
+
+<strong>Internal</strong>
+<p>
+Members and types that are declared as an ‘internal’ only within the project both from child or non-child. The default scope for any type in c# is internal only</p>
+
+<strong>Protected internal</strong>
+<p>
+Members declared as ‘protected internal’ will have dual scope i.e., within the project they behave as internal providing access to anywhere in the project, outside the project they will change to protected and still provide access to their child classes. Types can’t be declared as ‘protected internal’ also. so this can also applicable any to members.
+</p>
+
+
+<strong>Public:</strong>
+<p>
+A type or member of a type if declared as a public is global in scope which can be accessed anywhere.
+</p>
+
+<b>Example</b>
+<pre class="prettyprint csharp">
+using System;
+
+  namespace AreaApplication
+  {
+  class Area
+  {
+  //member variables
+  public double radius;
+
+
+  public double GetArea()
+  {
+  return 3.14 * radius * radius;
+  }
+  }
+  class CalculateArea
+  {
+  static void Main(string[] args)
+  {
+  Area area = new Area();
+Console.WriteLine(“Area : “+area.GetArea());
+  Console.ReadLine();
+  }
+  }
+  }
+</pre><br />
+
+<b>Output</b>
+<div class="alert alert-success">
+   Area : 200.96
+</div>
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

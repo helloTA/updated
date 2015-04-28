@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> C# Arrays</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">C# Tutorials</li>
+<li><a target="_top" href="about.csharp.html">About C#</a></li>
+<li><a target="_top" href="csharp-environment-setup.html">C# Environment Setup</a> </li>
+<li><a target="_top" href="csharp-program-strucutre.html">C# Program Strucutre</a> </li>
+<li><a target="_top" href="csharp-comments.html">C# Comments</a></li>
+<li><a target="_top" href="csharp-datatypes.html">C# Datatypes </a></li>
+<li><a target="_top" href="csharp-typeconversion.html">C# Type Conversion </a></li>
+<li><a target="_top" href="csharp-variables.html">C# Variables </a></li>
+<li><a target="_top" href="csharp-constants.html">C# Constants </a></li>
+<li><a target="_top" href="csharp-operators.html">C# Operators </a></li>
+<li><a target="_top" href="csharp-operator-precedence.html">C# Operators Precedence</a></li>
+<li><a target="_top" href="csharp-methods.html">C# Methods </a></li>
+<li><a target="_top" href="csharp-decision-making.html">C# Decision Making</a> </li>
+<li><a target="_top" href="csharp-loops.html">C# Loops </a></li>
+
+<li><a target="_top" href="csharp-encapsulation.html">C# Encapsulation</a></li>
+<li><a target="_top" href="csharp-arrays.html">C# Arrays</a></li>
+<li><a target="_top" href="csharp-strings.html">C# Strings</a></li>
+<li><a target="_top" href="csharp-structures.html">C# Struct</a></li>
+<li><a target="_top" href="csharp-classes.html">C# Classes</a></li>
+<li><a target="_top" href="chsarp-inheritance.html">C# Inheritance</a></li>
+<li><a target="_top" href="chsarp-polymorphism.html">C# Polymorphism</a></li>
+<li><a target="_top" href="csharp-operator-overloading.html">C# Operator Overloading
+</a></li>
+<li><a target="_top" href="csharp-interfaces.html">C# Interfaces</a></li>
+<li><a target="_top" href="csharp-namespaces.html">C# Namespaces</a></li><br />
+<li class="heading">C# Advanced Tutorials</li>
+<li><a target="_top" href="csharp-regular-expressions.html">C# Regular Expressions</a></li>
+<li><a target="_top" href="csharp-exception-handling.html">C# Exception Handling</a></li>
+<li><a target="_top" href="csharp-file-io.html">C# File I/O</a></li>
+<li><a target="_top" href="csharp-attributes.html">C# Attributes</a></li>
+<li><a target="_top" href="csharp-properties.html">C# Properties</a></li>
+<li><a target="_top" href="csharp-indexers.html">C# Indexers</a></li>
+<li><a target="_top" href="csharp-delegates.html">C# Delegates</a></li>
+<li><a target="_top" href="csharp-events.html">C# Events</a></li>
+<li><a target="_top" href="csharp-collections.html">C# Collections</a></li>
+<li><a target="_top" href="csharp-events.html">C# Events</a></li>
+<li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
+<li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>C# Arrays</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h4>What is an Array</h4>
+<div class="alert alert-success">
+  An array is a special variable, which can hold more than one value at a time. If you have a list of items (a list of pet names, for example), storing all the petss in single variables .
+</div>
+
+<img src="images/arrays.jpg"> <br />
+
+<p>Arrays in c# are simple data structures used to store data items of a specific types and a set of similar type values that are stored in a sequential order. In c#, we can arrange the data in arrays in 3 different ways.</p>
+
+<ul>
+  <li>Single dimensional  arrays</li>
+  <li>Multi dimensional arrays</li>
+  <li>Jagged arrays</li>
+</ul>
+   
+  
+  <p>
+In c# arrays can be declared as fixed length or dynamic. Fixed length of arrays can store  predefined no.of items while the size of dynamic arrays increases as you add new items to the array.</p>
+
+<p>?
+We access the values of an array by index positions where the array index starts at zero that means 1st item of an array will be at 0th position and the position of last item will be total no.of items-1.
+</p>
+
+<strong>Single Dimensional arrays in C#</strong>
+<p> Single Dimensional arrays in c# are used to store the data in the form of a row.</p>
+<b>Syntax</b>
+
+<pre class="prettyprint csharp">
+  &lt;type&gt;[] &lt;name&gt; = new &lt;type&gt;[size];
+</pre>
+
+
+<b>Initializing Single Dimensional Arrays in c#</b>
+<p>Declaring an array does not initialize the array in the memory. When the array variable is initialized, you can assign values to the array.
+
+Array is a reference type, so you need to use the new keyword to create an instance of the array. See the below example,</p>
+<pre class="prettyprint">
+int[] arr = new int[4];
+                (or)
+  Int[] arr;
+  Arr = new int[3];
+                (or)
+  Int[] arr = {list of values};
+  
+</pre>
+ <b>Note:</b><p>
+      
+ In c# language, an array gets initialized either with the use of new keyword or assignment of values.
+</p>
+
+
+<strong>Example program of Single Dimensional Arrays in C#</strong>
+<pre class="prettyprint">
+Using System;
+class SDArray
+{
+static void Main()
+{
+int[] arr = new int[5];
+int x=0;
+for(int i=0; i< 5; i++)
+{
+        Console.WriteLine(“value of array :”+arr[i]+”  “);  // Printing values of an array using for loop.
+        Console.WriteLine();
+}
+for(int i=0; i< 5; i++)
+{
+        X+=10;
+arr[i]=x;   // Assigning values to array.
+}
+foreach(int i in arr)
+{
+        Console.WriteLine(“value of an array after assigning :”+arr[i]+ ”  “); // Printing values of an array using foreach loop.
+}
+
+</pre>
+
+
+<strong>Output</strong>
+<div class="alert alert-info">
+value of array :0<br />
+value of array :0<br />
+value of array :0<br />
+value of array :0<br />
+value of array :0<br />
+value of an array after assigning :10<br />
+value of an array after assigning :20<br />
+value of an array after assigning :30<br />
+value of an array after assigning :40<br />
+value of an array after assigning :50
+ 
+
+</div>
+
+<strong> Multidimensional  Arrays in C#</strong>
+<p>
+Multidimensional Array arrays are used to  store the data in the form of rows and columns.</p>
+
+<strong>Multidimensional  Array Syntax in C#</strong>
+<pre class="prettyprint csharp">
+  
+&lt;type&gt;[ , ] &lt;name&gt; = new &gt;type&gt;[rows, columns];
+</pre>
+ 
+
+<b>Initializing Multidimensional Arrays in C#</b>
+<p>Declaring an array does not initialize the array in the memory. When the array variable is initialized, you can assign values to the array.
+
+Array is a reference type, so you need to use the new keyword to create an instance of the array. See the below example,</p>
+<pre class="prettyprint csharp">
+  int[,] arr = new int[3,4];
+            (or)
+    Int[,] arr;
+    Arr = new int[2,3];
+            (or)
+    Int[,] arr = {list of values};
+</pre>
+ 
+
+
+ <strong>Example program for Multidimensional Arrays in C#</strong>
+ <pre class="prettyprint csharp">
+Using System;
+class TDArray
+{
+static void Main()
+{
+int[,] arr = new int[4,5];
+int x=0;
+foreach(int i in arr)
+{
+        Console.WriteLine(“value of Multidimensional Array array :”+arr[i]+”  “);  // Printing values of an array using for loop.
+        Console.WriteLine();
+}
+for(int i=0; i< arr.GetLength(0); i++)
+{
+for(int j=0; j< arr.GetLength(1); j++)
+{
+                X+=10;
+arr[i,j]=x; // Assigning values to array.
+}
+}
+for(int i=0; i< arr.GetLength(0); i++)
+{
+for(int j=0; j< arr.GetLength(1); j++)
+{
+                Console.WriteLine(“value of an Multidimensional Array array after assigning :”+arr[i,j]+ ”  “);  // Printing values of an array using foreach loop.
+}
+}
+
+ </pre>
+
+
+<strong>Output</strong>
+<div class="alert alert-info">
+value of Multidimensional Array array :0<br />
+value of Multidimensional Array array :0<br />
+value of Multidimensional Array array :0<br />
+value of Multidimensional Array array :0<br />
+value of Multidimensional Array array after assigning :10<br />
+value of Multidimensional Array array after assigning :20<br />
+value of Multidimensional Array array after assigning :30<br />
+value of Multidimensional Array array after assigning :40<br />
+value of Multidimensional Array array after assigning :50<br />
+value of Multidimensional Array array after assigning :60<br />
+value of Multidimensional Array array after assigning :70<br />
+<br />
+ 
+value of Multidimensional Array array after assigning :80<br />
+value of Multidimensional Array array after assigning :90<br />
+value of Multidimensional Array array after assigning :100<br />
+value of Multidimensional Array array after assigning :110<br />
+value of Multidimensional Array array after assigning :120<br />
+value of Multidimensional Array array after assigning :130<br />
+value of Multidimensional Array array after assigning :140<br />
+value of Multidimensional Array array after assigning :150<br />
+value of Multidimensional Array array after assigning :160<br />
+value of Multidimensional Array array after assigning :170<br />
+value of Multidimensional Array array after assigning :180<br />
+value of Multidimensional Array array after assigning :190<br />
+value of Multidimensional Array array after assigning :200<br />
+
+</div>
+
+<p>From the above example GetLength(0) represents no.of rows in a Multidimensional Array array and GetLength(1) represents no.of columns in a Multidimensional Array array
+</p>
+
+
+ <strong>Jagged arrays</strong>
+ <p>
+
+This is also same as a Multidimensional Array array but in a 2=D array all the rows will have equal no.of columns whereas column size varies from row to row.</p>
+
+<p>Jagged arrays in c# also called as the array of arrays. Because it is a combination of multiple single dimensional arrays with different sizes combined together to form a new array.     
+
+</p>
+
+
+<strong>Syntax for jagged arrays in C#:</strong>
+<pre class="prettyprint">
+  <type>[ ][ ] <name> = new <type>[rows][];
+ 
+</pre>
+<p>Declaring an array does not initialize the array in the memory. When the array variable is initialized, you can assign values to the array.
+
+Array is a reference type, so you need to use the new keyword to create an instance of the array. See the below example,</p>
+
+<strong>Initialiazing Jagged Arrays in C#</strong>
+<pre class="prettyprint csharp">
+ int[][] arr = new int[3][];
+                (or)
+  Int[][] arr = {list of values}; 
+</pre>
+
+<p>
+ 
+While declaring jagged arrays first we need to specify no.of rows we want to the array and then painting to each row  we must specify the no.of columns to that row.
+</p>
+
+
+<strong>Example program for jagged arrays in C#</strong>
+<pre class="prettyprint csharp">
+Using System;
+class JaggedArray
+{
+static void Main()
+{
+int[][] arr = new int[2][];
+arr[0] = new int[4];
+arr[1] = new int[2];
+ 
+for(int i=0; i< arr.GetLength(0); i++)
+{
+for(int j=0; j< arr[i].Length; j++)
+{
+                Console.WriteLine(“value of Jagged array :” + arr[i][j]);
+}
+}
+for(int i=0; i< arr.GetLength(0); i++)
+{
+for(int j=0; j< arr[i].Length; j++)
+{
+                Arr[i][j] = j+1;
+}
+}
+for(int i=0; i< arr.GetLength(0); i++)
+{
+foreach(int x in arr[i])
+{
+                Console.WriteLine(“value of an Jagged array after assigning :”+x+ ”  “);  // Printing values of an array using foreach loop.
+Console.WriteLine();
+}
+}
+}
+}
+
+</pre>
+
+<strong>Output</strong>
+<div class="alert alert-info">
+value of Jagged array :0<br />
+value of Jagged array :0<br />
+value of Jagged array :0<br />
+value of Jagged array :0<br />
+value of Jagged array :0<br />
+value of Jagged array :0<br />
+value of Multidimensional Array array after assigning :1<br />
+value of Multidimensional Array array after assigning :2<br />
+value of Multidimensional Array array after assigning :3<br />
+value of Multidimensional Array array after assigning :4<br />
+value of Multidimensional Array array after assigning :1<br />
+value of Multidimensional Array array after assigning :2<br />
+value of Multidimensional Array array after assigning :80<br />
+value of Multidimensional Array array after assigning :90<br />
+value of Multidimensional Array array after assigning :100<br />
+value of Multidimensional Array array after assigning :110<br />
+value of Multidimensional Array array after assigning :120<br />
+value of Multidimensional Array array after assigning :130<br />
+value of Multidimensional Array array after assigning :140<br />
+value of Multidimensional Array array after assigning :150<br />
+value of Multidimensional Array array after assigning :160<br />
+value of Multidimensional Array array after assigning :170<br />
+value of Multidimensional Array array after assigning :180<br />
+value of Multidimensional Array array after assigning :190<br />
+value of Multidimensional Array array after assigning :200<br />
+
+</div>
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
