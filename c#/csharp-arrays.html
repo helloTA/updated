@@ -138,6 +138,34 @@
 
 <img src="images/arrays.jpg"> <br />
 
+<h4>Initializing Arrays in C#</h4>
+<pre class="prettyprint csharp">
+  int[] amount = new int[40];
+</pre>
+
+<h4>Assigning Values to an Array</h4>
+
+<p>You can assign values to individual array elements, by using the index number, like:
+</p>
+<pre class="prettyprint">
+int[] amount = new int[10];
+amount[0] = 100;
+amount[1] = 200;
+amount[2] = 300;
+.
+.
+.
+.
+.
+amount[9] = 900;
+  
+</pre>
+
+<p>You can create and  initialize arrays in the same time, as below</p>
+<pre class="prettyprint csharp">
+  int [] numbers = new int[4]  { 55,  66, 77, 88};
+</pre>
+
 <p>Arrays in c# are simple data structures used to store data items of a specific types and a set of similar type values that are stored in a sequential order. In c#, we can arrange the data in arrays in 3 different ways.</p>
 
 <ul>
@@ -150,7 +178,7 @@
   <p>
 In c# arrays can be declared as fixed length or dynamic. Fixed length of arrays can store  predefined no.of items while the size of dynamic arrays increases as you add new items to the array.</p>
 
-<p>?
+<p>
 We access the values of an array by index positions where the array index starts at zero that means 1st item of an array will be at 0th position and the position of last item will be total no.of items-1.
 </p>
 

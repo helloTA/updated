@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> Strings in C#</title>
+<title> C# Structures</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -118,7 +118,7 @@
 <div class="content">
 
 
-<h1>Strings in C#</h1>
+<h1>C# Structures</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -130,220 +130,196 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>Strings in C#</h3>
-<p>A string is an object of type String whose value is text. which can be stored internally as a sequential collection of char objects. There is no null terminating character at the end of a C# string; therefore a C# string can contain any number of embedded null characters ('\0').
+<h4>What is Structure in C#</h4>
+<div class="alert alert-success">
+  A structure is a collection of variables under a single name. These variables can be of different types, and each has a name which is used to select it from the structure. A structure is a convenient way of grouping several pieces of related information together.
+</div>
 
+<p>
+Structures are used to represent a record. Suppose you want to keep track of your music album in a library. You might want to track the following attributes about each album:
+</p>
+<ul>
+  <li>Title</li>
+  <li>Director</li>
+  <li>Album Name</li>
+  <li>Album ID</li>
+  <li>Price</li>
+</ul>
+    
+    
+
+<h5>Syntax</h5>
+<pre class="prettyprint csharp">
+[<modifier>] struct &lt;name&gt;
+{
+  -- Define members
+}
+
+</pre>    
+
+<p><b>Code file: </b>To define a structure under the project we are not provided with the structure item template in the add new item window like a class and an interface item templates. so, to define the project we use the code file item template which provides you a blank file with .cs extension so that we can define either a class or a structure or an interface also.
+</p>
+    
+  <h4>Defining a Structure</h4>
+<p>
+To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member for your program.
+</p>
+
+<p>For example, here is the way you can declare the Music Album structure:</p>
+
+<pre class="prettyprint csharp">
+  struct Album
+{
+   public string title;
+   public string director;
+   public string album_name;
+   public int album_id;
+   public double price
+};  
+</pre>
+
+    
+    
+
+<strong>Example</strong>
+<pre class="prettyrpint csharp">
+  struct MyStruct
+   {
+  int x;
+  public MyStruct(int x)
+  {
+      this.x = x;
+  }
+  public void Display()
+  {
+      Console.WriteLine("Method under a structure :" + this.x);
+  }
+
+  static void Main()
+  {
+      MyStruct m1;
+      m1.x = 10;
+      m1.Display();
+      MyStruct m2 = new MyStruct(20);
+      m2.Display();
+
+      Console.ReadLine();
+  }
+}
+
+</pre>
+
+    <p>The above program prduces the following output</p>
+    <b>Output</b>
+    <div class="alert alert-info">
+      Method under a structure :10<br />
+      Method under a structure : 20
+
+    </div>
+
+
+<strong>Structure Vs Class:</strong>
+
+<ol>
+  <li>The structure is actually a value type meaning memory allocated only on the stack. so there is no automatic memory management like class.</li>
+  <li>Creating structure object is optional whereas in class is mandatory.</li>
+  <li>Structure are used for representing the smaller volume of data whereas in class is for representing the larger volume of data.</li>
+  <li>Zero argument constructor is optional in class, but it is mandatory in structure.</li>
+  <li>The structure doesn’t support both implementations of interface and inheritance. whereas in class possible.</li>
+</ol>
+
+<strong>Consuming as a structure:</strong>
+<p>
+Even if a structure doesn’t support inheritance we can still consume a structure from the structures or classes by creating it an object.</p>
+<p>To test this, try following program
+</p>
+<pre class="prettyprint csharp">
+  class TestStruct
+{
+    static void Main()
+{    
+        MyStruct obj = new MyStruct(80);
+        obj.Display();
+        Console.ReadLine();
+    }
+}
+
+</pre>
+
+<b>Note:</b><p> C# language suffers from a criticism that it is not fully object oriented programming language because of this support that it gives for structure and this structure doesn’t support inheritance.
 </p>
 <p>
-We can even check the length of the string by Length property. The Length property of a string represents the number of Char objects it contains, not the number of Unicode characters. To access the individual Unicode code points in a string, use the StringInfo object.
+We can not escape from structure because all the predefined data types that come undervalue type category like int, float, bool etc are implemented as a structures in the base class libraries (BCL) within the system name space as int32, single, boolean etc.
 </p>
 
-<b>Sytanx for creating strings in C#</b>
-<pre class="prettyprint">
- string &lt;name&gt; =  text;
 
+<h4>Structure Example in C#</h4>
+
+<pre class="prettyprint chsarp">
+using System;
+struct Albums
+{
+   public string title;
+   public string director;
+   public string album_name;
+   public int album_id;
+};  
+
+public class exampleStructure
+{
+   public static void Main(string[] args)
+   {
+
+      Albums Album1;   /* Declare Album1 of type Album */
+      Albums Album2;   /* Declare Album2 of type Album */
+
+      /* album 1 specification */
+      Album1.title = "Mama Africa";
+      Album1.director = "Akon"; 
+      Album1.album_name = "Mama Africa";
+      Album1.album_id = 407;
+
+      /* album 2 specification */
+      Album2.title = "Sorry, Blame It on Me";
+      Album2.director = "Akon";
+      Album2.album_name =  "Sorry, Blame It on Me";
+      Album2.album_id = 700;
+
+      /* print Album1 info */
+      Console.WriteLine( "Album 1 title : {0}", Album1.title);
+      Console.WriteLine("Album 1 director : {0}", Album1.director);
+      Console.WriteLine("Album 1 album_name : {0}", Album1.album_name);
+      Console.WriteLine("Album 1 album_id :{0}", Album1.album_id);
+
+         /* print Album2 info */
+      Console.WriteLine( "Album 2 title : {0}", Album2.title);
+      Console.WriteLine("Album 2 director : {0}", Album2.director);
+      Console.WriteLine("Album 2 album_name : {0}", Album2.album_name);
+      Console.WriteLine("Album 2 album_id :{0}", Album2.album_id);
+
+
+      Console.ReadKey();
+
+   }
+}
 </pre>
 
-
-
-<h4>Creating a Strings in C#</h4>
-
-<p>There are different ways to create string object in C#.Let's look at few ways</p>
-<h5>Assign a string literal to a String variable</h5>
-<b>Example</b>
-<pre class="prettyprint">
-  //string literal and string concatenation
-     string wifename, husbandname;
-     wifename = "Mary";
-     husbandname = "John";
-     
-     string couple = wifename + husbandname;
-     Console.WriteLine("Couple Name: {0}", couple);
-</pre>
-<b>Output</b>
 <p>The above program will produce the following output</p>
 <div class="alert alert-info">
-  Couple Name: MaryJohn
+Album 1 title : Mama Africa<br/>
+Album 1 director : Akon<br/>
+Album 1 album_name : Mama Africa<br/>
+Album 1 album_id :407<br/>
+
+Album 2 title : Sorry, Blame It on Me<br/>
+Album 2 director : Akon<br/>
+Album 2 album_name : Sorry, Blame It on Me<br/>
+Album 2 album_id :700
+
 </div>
 
 
 
-<h5> Using a String class constructor</h5>
-
-<b>Example</b>
-<pre class="prettyprint">
-  //Using string constructor
-   char[] letters = { 'G', 'o', 'o', 'd','n', 'i', 'g', 'h', 't' };
-   string greetings = new string(letters);
-   Console.WriteLine("Hello,: {0}", greetings);
-         
-</pre>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  Hello, Goodnight
-</div>
-
-<h5>
-
-Retrieving a property or calling a method that returns a string</h5>
-
-<pre class="prettyprint">
-  //methods returning string
-     string[] myarray = { "We", "Are", "Tutorials", "Academy" };
-     string message = String.Join(" ", myarray);
-     Console.WriteLine("Our Message: {0}", message);
-</pre>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  The Message: We Are Tutorials Academy
-</div>
-
- <p>The complete set of escape sequences is as follows:</p>
-
- <ul>
-     <li> \' - single quote, needed for character literals</li>
-     <li> \" - double quote, needed for string literals</li>
-     <li> \\ - backslash</li>
-     <li> \0 - Unicode character 0</li>
-     <li>\a - Alert (character 7)</li>
-     <li> \b - Backspace (character 8)</li>
-     <li>\f - Form feed (character 12)</li>
-     <li>\n - New line (character 10)</li>
-     <li>\r - Carriage return (character 13)</li>
-     <li>\t - Horizontal tab (character 9)</li>
-     <li>\v - Vertical quote (character 11)</li>
-     <li>\uxxxx - Unicode escape sequence for character with hex value xxxx</li>
- </ul>
-
-
-   
-<h4>How to initialize Strings in C#</h4>
-<pre class="prettyprint csharp">
-string s1 = "Hello ";
-string s2 = s1;
-s1 += "World";
-
-System.Console.WriteLine(s2);
-//Output: Hello
-
-</pre>
-   
-    
-    
-    
-    
-    
-    
-
-
-<p>There many string methods, we can apply in different situation in C# program.Let's look at them</p>
-
-
-
-<strong>List of String methods in C#</strong>
-<table class="table">
-    <thead>
-        <tr>
-            <th>String Method</th>
-            <th>Definitions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td>Clone()</td>
-            <td>Make clone of string.</td>
-        </tr>
-           <tr class="warning">
-            <td>Clone()</td>
-            <td>Make clone of string.</td>
-        </tr>
-                <tr class="info">
-            <td>CompareTo()</td>
-            <td>Compare two strings and returns integer value as output. It returns 0 for true and 1 for false.</td>
-        </tr>
-                <tr class="danger">
-            <td>Contains()</td>
-            <td>The C# Contains method checks whether specified character or string is exists or not in the string value.</td>
-        </tr>
-                <tr class="success">
-            <td>EndsWith()</td>
-            <td>This EndsWith Method checks whether specified character is the last character of string or not.</td>
-        </tr>
-                <tr class="warning">
-            <td>GetHashCode()</td>
-            <td>This method returns HashValue of specified string.</td>
-        </tr>
-                <tr class="danger">
-            <td>GetType()</td>
-            <td>It returns the System.Type of current instance.</td>
-        </tr>
-          <tr class="warning">
-            <td>GetTypeCode()</td>
-            <td>It returns the Stystem.TypeCode for class System.String.</td>
-        </tr>
-        <tr class="danger">
-            <td>IndexOf()</td>
-            <td>Returns the index position of first occurrence of specified character.</td>
-        </tr>
-        <tr class="success">
-            <td>ToLower() </td>
-            <td>Converts String into lower case based on rules of the current culture. </td>
-        </tr>
-          <tr class="info">
-            <td>ToUpper() </td>
-            <td>Converts String into Upper case based on rules of the current culture. </td>
-        </tr>
-        <tr class="warning">
-            <td>Insert() </td>
-            <td> Insert the string or character in the string at the specified position.</td>
-        </tr>
-        <tr class="success">
-            <td>IsNormalized() </td>
-            <td> This method checks whether this string is in Unicode normalization form C.</td>
-        </tr>
-        <tr class="danger">
-            <td> LastIndexOf()</td>
-            <td>Returns the index position of last occurrence of specified character. </td>
-        </tr>
-        <tr class="warning">
-            <td>Length </td>
-            <td> It is a string property that returns length of string</td>
-        </tr>
-        <tr class="info">
-            <td>Remove() </td>
-            <td> This method deletes all the characters from beginning to specified index position.</td>
-        </tr>
-        <tr class="warning">
-            <td>Replace() </td>
-            <td> This method replaces the character.</td>
-        </tr>
-        <tr class="danger">
-            <td> Split()</td>
-            <td> This method splits the string based on specified value.</td>
-        </tr>
-        <tr class="success">
-            <td>StartsWith() </td>
-            <td> It checks whether the first character of string is same as specified character.</td>
-        </tr>
-          <tr class="info">
-            <td>Substring() </td>
-            <td> This method returns substring.</td>
-        </tr>
-          <tr class="warning">
-            <td> ToCharArray()</td>
-            <td> Converts string into char array.</td>
-        </tr>
-          <tr class="danger">
-            <td>Trim() </td>
-            <td> It removes extra whitespaces from beginning and ending of string.</td>
-        </tr>
-
-        
-        
-
-
-
-</table> <br />
 
 <!-- CONTENT END HERE -->
 </div>
