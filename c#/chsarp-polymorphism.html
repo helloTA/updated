@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> Strings in C#</title>
+<title> C# Polymorphism</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -84,7 +84,7 @@
 <li><a target="_top" href="csharp-encapsulation.html">C# Encapsulation</a></li>
 <li><a target="_top" href="csharp-arrays.html">C# Arrays</a></li>
 <li><a target="_top" href="csharp-strings.html">C# Strings</a></li>
-<li><a target="_top" href="csharp-structures.html">C# Struct</a></li>
+<li><a target="_top" href="csharp-structures.html">C# Structures</a></li>
 <li><a target="_top" href="csharp-classes.html">C# Classes</a></li>
 <li><a target="_top" href="chsarp-inheritance.html">C# Inheritance</a></li>
 <li><a target="_top" href="chsarp-polymorphism.html">C# Polymorphism</a></li>
@@ -118,7 +118,7 @@
 <div class="content">
 
 
-<h1>Strings in C#</h1>
+<h1>C# Polymorphism</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -130,213 +130,132 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>Strings in C#</h3>
-<p>A string is an object of type String whose value is text. which can be stored internally as a sequential collection of char objects. There is no null terminating character at the end of a C# string; therefore a C# string can contain any number of embedded null characters ('\0').
 
+<h4>What is Polymorphism</h4>
+<div class="alert alert-success">
+  In object-oriented programming, polymorphism refers to a programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability to redefine methods for derived classes.
+</div>
+
+
+<p>Behaving in different ways depending up on input received is known as polymorphism i.e., whenever the input changes automatically output/behavior also changes.
 </p>
 <p>
-We can even check the length of the string by Length property. The Length property of a string represents the number of Char objects it contains, not the number of Unicode characters. To access the individual Unicode code points in a string, use the StringInfo object.
+ There are  different approaches to implementing the polymorphism in c# language.</p>
+
+<p>Method Overloading</p>
+<p>Operator Overloading</p><br />
+<p>
+
+
+It’s an approach of defining multiple methods in the class with same name by changing their signature.Changing the signature in the sense we can either change either no.of parameters being passed to the method or type of parameters being passed to the method or order of parameters being passed to the method.
 </p>
 
-<b>Sytanx for creating strings in C#</b>
+<h4>Example</h4>
 <pre class="prettyprint">
- string &lt;name&gt; =  text;
+public void show()
+public void show(int x)
+public void show(string x)
+public void show(int x, string y)
+public void show(string x, int y)
+
+
 
 </pre>
 
+<b>Note:</b><p> A change in the return type of a method will not be taken into consideration in overloading.<code>
+ public string show()  // invalid</code></p> 
+
+ <h4>Example</h4>
+ <p>This example program will explain more about the polymorphism</p>
+ <pre class="prettyprint csharp">
+  class LoadDemo
+  {
+    public void Show(int a)
+    {
+        Console.WriteLine("Only one variable to show here :  "+ a);
+    }
+    public void Show(int a, int b)
+    {
+        Console.WriteLine("Add result is:" + (a+b));
+    }
+    public void Show(int a, string b)
+    {
+        Console.WriteLine("Concatenate int with string result is : " + a +“ age, ”+ b);
+    }
+    static void Main()
+    {
+        LoadDemo obj = new LoadDemo();
+
+        obj.Show(34);
+        obj.Show(12, 45);
+        obj.Show(23,"Hi M.r Been");
 
 
-<h4>Creating a Strings in C#</h4>
+        Console.ReadLine();
+    }
+  }
 
-<p>There are different ways to create string object in C#.Let's look at few ways</p>
-<h5>Assign a string literal to a String variable</h5>
-<b>Example</b>
-<pre class="prettyprint">
-  //string literal and string concatenation
-     string wifename, husbandname;
-     wifename = "Mary";
-     husbandname = "John";
-     
-     string couple = wifename + husbandname;
-     Console.WriteLine("Couple Name: {0}", couple);
-</pre>
-<b>Output</b>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  Couple Name: MaryJohn
-</div>
+ </pre>
+
+ <p>When you run the above program it will produce the following output</p>
+ <div class="alert alert-info">
+  Only one variable to show here :  "+ a<br/>
+  Add result is: 57<br />
+  Concatenate int with string result is :23 age , Hi M.r Been
+
+ </div>
 
 
+<h4>Method Overloading</h4>
+<p>
 
-<h5> Using a String class constructor</h5>
+You can have multiple definitions for the same method name in the same scope. The definition of the method must differ from each other by the types and/or the number of arguments in the argument list. You cannot overload function declarations that differ only by return type.
 
-<b>Example</b>
-<pre class="prettyprint">
-  //Using string constructor
-   char[] letters = { 'G', 'o', 'o', 'd','n', 'i', 'g', 'h', 't' };
-   string greetings = new string(letters);
-   Console.WriteLine("Hello,: {0}", greetings);
-         
-</pre>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  Hello, Goodnight
-</div>
+The following example shows using method print() to print different data types:</p>
 
-<h5>
-
-Retrieving a property or calling a method that returns a string</h5>
-
-<pre class="prettyprint">
-  //methods returning string
-     string[] myarray = { "We", "Are", "Tutorials", "Academy" };
-     string message = String.Join(" ", myarray);
-     Console.WriteLine("Our Message: {0}", message);
-</pre>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  The Message: We Are Tutorials Academy
-</div>
-
- <p>The complete set of escape sequences is as follows:</p>
-
- <ul>
-     <li> \' - single quote, needed for character literals</li>
-     <li> \" - double quote, needed for string literals</li>
-     <li> \\ - backslash</li>
-     <li> \0 - Unicode character 0</li>
-     <li>\a - Alert (character 7)</li>
-     <li> \b - Backspace (character 8)</li>
-     <li>\f - Form feed (character 12)</li>
-     <li>\n - New line (character 10)</li>
-     <li>\r - Carriage return (character 13)</li>
-     <li>\t - Horizontal tab (character 9)</li>
-     <li>\v - Vertical quote (character 11)</li>
-     <li>\uxxxx - Unicode escape sequence for character with hex value xxxx</li>
- </ul>
-
-
-   
-<h4>How to initialize Strings in C#</h4>
+<h5>Example</h5>
 <pre class="prettyprint csharp">
-string s1 = "Hello ";
-string s2 = s1;
-s1 += "World";
+using System;
+namespace PolymorphismApplication
+{
+   class Printdata
+   {
+      void print(int i)
+      {
+         Console.WriteLine(" Integer value: {0}", i );
+      }
 
-System.Console.WriteLine(s2);
-//Output: Hello
+      void print(double f)
+      {
+         Console.WriteLine(" Floating point value: {0}" , f);
+      }
 
+      void print(string s)
+      {
+         Console.WriteLine("String value :  {0}", s);
+      }
+      static void Main(string[] args)
+      {
+         Printdata p = new Printdata();
+         
+         // Call print to print integer
+         p.print(100);
+         // Call print to print float
+         p.print(100.12);
+         
+         // Call print to print string
+         p.print("Welcome to Tutorials Academy");
+         Console.ReadKey();
+      }
+   }
+}
 </pre>
-   
-
-<p>There many string methods, we can apply in different situation in C# program.Let's look at them</p>
-
-
-
-<strong>List of String methods in C#</strong>
-<table class="table">
-    <thead>
-        <tr>
-            <th>String Method</th>
-            <th>Definitions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td>Clone()</td>
-            <td>Make clone of string.</td>
-        </tr>
-           <tr class="warning">
-            <td>Clone()</td>
-            <td>Make clone of string.</td>
-        </tr>
-                <tr class="info">
-            <td>CompareTo()</td>
-            <td>Compare two strings and returns integer value as output. It returns 0 for true and 1 for false.</td>
-        </tr>
-                <tr class="danger">
-            <td>Contains()</td>
-            <td>The C# Contains method checks whether specified character or string is exists or not in the string value.</td>
-        </tr>
-                <tr class="success">
-            <td>EndsWith()</td>
-            <td>This EndsWith Method checks whether specified character is the last character of string or not.</td>
-        </tr>
-                <tr class="warning">
-            <td>GetHashCode()</td>
-            <td>This method returns HashValue of specified string.</td>
-        </tr>
-                <tr class="danger">
-            <td>GetType()</td>
-            <td>It returns the System.Type of current instance.</td>
-        </tr>
-          <tr class="warning">
-            <td>GetTypeCode()</td>
-            <td>It returns the Stystem.TypeCode for class System.String.</td>
-        </tr>
-        <tr class="danger">
-            <td>IndexOf()</td>
-            <td>Returns the index position of first occurrence of specified character.</td>
-        </tr>
-        <tr class="success">
-            <td>ToLower() </td>
-            <td>Converts String into lower case based on rules of the current culture. </td>
-        </tr>
-          <tr class="info">
-            <td>ToUpper() </td>
-            <td>Converts String into Upper case based on rules of the current culture. </td>
-        </tr>
-        <tr class="warning">
-            <td>Insert() </td>
-            <td> Insert the string or character in the string at the specified position.</td>
-        </tr>
-        <tr class="success">
-            <td>IsNormalized() </td>
-            <td> This method checks whether this string is in Unicode normalization form C.</td>
-        </tr>
-        <tr class="danger">
-            <td> LastIndexOf()</td>
-            <td>Returns the index position of last occurrence of specified character. </td>
-        </tr>
-        <tr class="warning">
-            <td>Length </td>
-            <td> It is a string property that returns length of string</td>
-        </tr>
-        <tr class="info">
-            <td>Remove() </td>
-            <td> This method deletes all the characters from beginning to specified index position.</td>
-        </tr>
-        <tr class="warning">
-            <td>Replace() </td>
-            <td> This method replaces the character.</td>
-        </tr>
-        <tr class="danger">
-            <td> Split()</td>
-            <td> This method splits the string based on specified value.</td>
-        </tr>
-        <tr class="success">
-            <td>StartsWith() </td>
-            <td> It checks whether the first character of string is same as specified character.</td>
-        </tr>
-          <tr class="info">
-            <td>Substring() </td>
-            <td> This method returns substring.</td>
-        </tr>
-          <tr class="warning">
-            <td> ToCharArray()</td>
-            <td> Converts string into char array.</td>
-        </tr>
-          <tr class="danger">
-            <td>Trim() </td>
-            <td> It removes extra whitespaces from beginning and ending of string.</td>
-        </tr>
-
-        
-        
-
-
-
-</table> <br />
+<p>If you run the above code, it will produce the following output</p>
+<div class="alert alert-info">
+Integer value: 100<br />
+Floating point value: 100.12<br />
+String value :  Welcome to Tutorials Academy
+</div>
 
 <!-- CONTENT END HERE -->
 </div>

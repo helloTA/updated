@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> Strings in C#</title>
+<title> C# Inheritance</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -84,7 +84,7 @@
 <li><a target="_top" href="csharp-encapsulation.html">C# Encapsulation</a></li>
 <li><a target="_top" href="csharp-arrays.html">C# Arrays</a></li>
 <li><a target="_top" href="csharp-strings.html">C# Strings</a></li>
-<li><a target="_top" href="csharp-structures.html">C# Struct</a></li>
+<li><a target="_top" href="csharp-structures.html">C# Structures</a></li>
 <li><a target="_top" href="csharp-classes.html">C# Classes</a></li>
 <li><a target="_top" href="chsarp-inheritance.html">C# Inheritance</a></li>
 <li><a target="_top" href="chsarp-polymorphism.html">C# Polymorphism</a></li>
@@ -118,7 +118,7 @@
 <div class="content">
 
 
-<h1>Strings in C#</h1>
+<h1>C# Inheritance</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -130,213 +130,185 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>Strings in C#</h3>
-<p>A string is an object of type String whose value is text. which can be stored internally as a sequential collection of char objects. There is no null terminating character at the end of a C# string; therefore a C# string can contain any number of embedded null characters ('\0').
 
+<h4>What is Inheritance</h4>
+<div class="alert alert-success">
+    In object-oriented programming (OOP), inheritance is when an object or class is based on another object or class, using the same implementation (inheriting from a class) specifying implementation to maintain the same behavior (realizing an interface; inheriting behavior).s
+</div>
+
+<p>
+Acquiring the members of the class into one or more new classes is known as the inheritance which can be done by establishing the parent - child relationship between the classes.
 </p>
 <p>
-We can even check the length of the string by Length property. The Length property of a string represents the number of Char objects it contains, not the number of Unicode characters. To access the individual Unicode code points in a string, use the StringInfo object.
+It’s an approach which provides reusability of code i.e., the members that are defined under a class can be consumed from other classes by the parent- child relationship between the classes. So that the members of parent class can now be consumed under its child classes.
 </p>
 
-<b>Sytanx for creating strings in C#</b>
-<pre class="prettyprint">
- string &lt;name&gt; =  text;
+<p>In inheritance, we call parent class as base class and child class as derived class.
+</p>
+
+<img src="images/inheritace -basic.jpg">
+<br />
+
+<b>Syntax for C# Inheritance</b>
+<pre clas="prettyprint csharp">
+ [&lt;modifiers&gt;] class &lt; classname&gt; : &lt;parent class name&gt;
 
 </pre>
 
-
-
-<h4>Creating a Strings in C#</h4>
-
-<p>There are different ways to create string object in C#.Let's look at few ways</p>
-<h5>Assign a string literal to a String variable</h5>
-<b>Example</b>
-<pre class="prettyprint">
-  //string literal and string concatenation
-     string wifename, husbandname;
-     wifename = "Mary";
-     husbandname = "John";
-     
-     string couple = wifename + husbandname;
-     Console.WriteLine("Couple Name: {0}", couple);
-</pre>
-<b>Output</b>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  Couple Name: MaryJohn
-</div>
-
-
-
-<h5> Using a String class constructor</h5>
 
 <b>Example</b>
-<pre class="prettyprint">
-  //Using string constructor
-   char[] letters = { 'G', 'o', 'o', 'd','n', 'i', 'g', 'h', 't' };
-   string greetings = new string(letters);
-   Console.WriteLine("Hello,: {0}", greetings);
-         
-</pre>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  Hello, Goodnight
-</div>
-
-<h5>
-
-Retrieving a property or calling a method that returns a string</h5>
-
-<pre class="prettyprint">
-  //methods returning string
-     string[] myarray = { "We", "Are", "Tutorials", "Academy" };
-     string message = String.Join(" ", myarray);
-     Console.WriteLine("Our Message: {0}", message);
-</pre>
-<p>The above program will produce the following output</p>
-<div class="alert alert-info">
-  The Message: We Are Tutorials Academy
-</div>
-
- <p>The complete set of escape sequences is as follows:</p>
-
- <ul>
-     <li> \' - single quote, needed for character literals</li>
-     <li> \" - double quote, needed for string literals</li>
-     <li> \\ - backslash</li>
-     <li> \0 - Unicode character 0</li>
-     <li>\a - Alert (character 7)</li>
-     <li> \b - Backspace (character 8)</li>
-     <li>\f - Form feed (character 12)</li>
-     <li>\n - New line (character 10)</li>
-     <li>\r - Carriage return (character 13)</li>
-     <li>\t - Horizontal tab (character 9)</li>
-     <li>\v - Vertical quote (character 11)</li>
-     <li>\uxxxx - Unicode escape sequence for character with hex value xxxx</li>
- </ul>
-
-
-   
-<h4>How to initialize Strings in C#</h4>
 <pre class="prettyprint csharp">
-string s1 = "Hello ";
-string s2 = s1;
-s1 += "World";
+class ParentClass
+{
 
-System.Console.WriteLine(s2);
-//Output: Hello
+}
+class ChildClass : ParentClass
+{
+    consume all members of parent class
+}
+
 
 </pre>
+
+<strong>Note:</strong><p> Inheritance private members of a class can not be acquired by it’s child class.</p>
+
+
+<h4>Example program for C# Inheritance</h4>
+<pre class="prettyprint csharp">
+ class ClassA
+{
+    public void Add(int x, int y)
+    {
+        Console.WriteLine(“Addition of x and y is : ” + (x + y));
+    }
+}
+
+class ClassB : ClassA
+{
+    public void Multiply(int x, int y)
+    {
+        Console.WriteLine(“Multiplication of x and y is : ” + (x * y));
+    }
+    static void Main()
+    {
+        ClassB b = new ClassB();
+        b.Add(23, 90);
+   b.Multiply(3, 9);
+
+        Console.ReadLine();
+    }
+}
+
+</pre>
+<p>The above code will produce the following output</p>
+<div class="alert alert-info">
+Addition of x and y is : 113<br />
+Multiplication of x and y is : 27
+
+</div>
+
+
+
+<p>As we see the inheritance usage from the example program ClassB can consume the members of ClassA method ‘Add’.
+</p>
+
+<p>There are 2 types of inheritance</p>
+
+<p>Single Inheritance</p><br />
+<p>Multiple Inheritance</p><br />
+<p>
+
+    If a class has one immediate parent class to it we called as single inheritance and if a class has more than one immediate parent classes we call it as multiple inheritance.
+</p>
+
+<img src="images/inheritance.jpg">
+
+
+<h4>Initializing Base Class</h4>
+<p>
+
+The derived class inherits the base class member variables and member methods. Therefore the super class object should be created before the subclass is created. You can give instructions for superclass initialization in the member initialization list.
+</p>
+
+<p>The following program demonstrates this:
+</p>
+<pre class="prettyprint csharp">
+using System;
+namespace RectangleApplication
+{
+   class Rectangle
+   {
+      //member variables
+      protected double length;
+      protected double width;
+      public Rectangle(double l, double w)
+      {
+         length = l;
+         width = w;
+      }
+      
+      public double GetArea()
+      {
+         return length * width;
+      }
+      
+      public void Display()
+      {
+         Console.WriteLine("Length: {0}", length);
+         Console.WriteLine("Width: {0}", width);
+         Console.WriteLine("Area: {0}", GetArea());
+      }
+   }//end class Rectangle  
    
+   class Tabletop : Rectangle
+   {
+      private double cost;
+      public Tabletop(double l, double w) : base(l, w)
+      { }
+      public double GetCost()
+      {
+         double cost;
+         cost = GetArea() * 70;
+         return cost;
+      }
+      public void Display()
+      {
+         base.Display();
+         Console.WriteLine("Cost: {0}", GetCost());
+      }
+   }
+   class ExecuteRectangle
+   {
+      static void Main(string[] args)
+      {
+         Tabletop t = new Tabletop(4.5, 7.5);
+         t.Display();
+         Console.ReadLine();
+      }
+   }
+}
+</pre>
 
-<p>There many string methods, we can apply in different situation in C# program.Let's look at them</p>
-
-
-
-<strong>List of String methods in C#</strong>
-<table class="table">
-    <thead>
-        <tr>
-            <th>String Method</th>
-            <th>Definitions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td>Clone()</td>
-            <td>Make clone of string.</td>
-        </tr>
-           <tr class="warning">
-            <td>Clone()</td>
-            <td>Make clone of string.</td>
-        </tr>
-                <tr class="info">
-            <td>CompareTo()</td>
-            <td>Compare two strings and returns integer value as output. It returns 0 for true and 1 for false.</td>
-        </tr>
-                <tr class="danger">
-            <td>Contains()</td>
-            <td>The C# Contains method checks whether specified character or string is exists or not in the string value.</td>
-        </tr>
-                <tr class="success">
-            <td>EndsWith()</td>
-            <td>This EndsWith Method checks whether specified character is the last character of string or not.</td>
-        </tr>
-                <tr class="warning">
-            <td>GetHashCode()</td>
-            <td>This method returns HashValue of specified string.</td>
-        </tr>
-                <tr class="danger">
-            <td>GetType()</td>
-            <td>It returns the System.Type of current instance.</td>
-        </tr>
-          <tr class="warning">
-            <td>GetTypeCode()</td>
-            <td>It returns the Stystem.TypeCode for class System.String.</td>
-        </tr>
-        <tr class="danger">
-            <td>IndexOf()</td>
-            <td>Returns the index position of first occurrence of specified character.</td>
-        </tr>
-        <tr class="success">
-            <td>ToLower() </td>
-            <td>Converts String into lower case based on rules of the current culture. </td>
-        </tr>
-          <tr class="info">
-            <td>ToUpper() </td>
-            <td>Converts String into Upper case based on rules of the current culture. </td>
-        </tr>
-        <tr class="warning">
-            <td>Insert() </td>
-            <td> Insert the string or character in the string at the specified position.</td>
-        </tr>
-        <tr class="success">
-            <td>IsNormalized() </td>
-            <td> This method checks whether this string is in Unicode normalization form C.</td>
-        </tr>
-        <tr class="danger">
-            <td> LastIndexOf()</td>
-            <td>Returns the index position of last occurrence of specified character. </td>
-        </tr>
-        <tr class="warning">
-            <td>Length </td>
-            <td> It is a string property that returns length of string</td>
-        </tr>
-        <tr class="info">
-            <td>Remove() </td>
-            <td> This method deletes all the characters from beginning to specified index position.</td>
-        </tr>
-        <tr class="warning">
-            <td>Replace() </td>
-            <td> This method replaces the character.</td>
-        </tr>
-        <tr class="danger">
-            <td> Split()</td>
-            <td> This method splits the string based on specified value.</td>
-        </tr>
-        <tr class="success">
-            <td>StartsWith() </td>
-            <td> It checks whether the first character of string is same as specified character.</td>
-        </tr>
-          <tr class="info">
-            <td>Substring() </td>
-            <td> This method returns substring.</td>
-        </tr>
-          <tr class="warning">
-            <td> ToCharArray()</td>
-            <td> Converts string into char array.</td>
-        </tr>
-          <tr class="danger">
-            <td>Trim() </td>
-            <td> It removes extra whitespaces from beginning and ending of string.</td>
-        </tr>
-
-        
-        
+<p>If you run the above program it will produce the folloqing output</p>
+<b>Output</b>
+<div class="alert alert-info">
+Length: 4.5<br />
+Width: 7.5<br/>
+Area: 33.75<br />
+Cost: 2362.5
+</div>
 
 
 
-</table> <br />
+
+
+<h4>Multiple Inheritance in C#</h4>
+
+<p>C# does not support multiple inheritance. However, you can use interfaces to implement multiple inheritance. We will learn about the interfaces in the coming chapter</p>
+
+
+
+
 
 <!-- CONTENT END HERE -->
 </div>
