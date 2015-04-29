@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> CSS Units</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">CSS Tutorials</li>
+<li><a href="_top"  href="introduction-to-css.html">Introduction to CSS</li>
+<li><a href="_top"  href="css-basic-syntax.html">CSS - Syntax
+</li>
+<li><a href="_top"  href="css-inclusion.html">CSS - Inclusion</li>
+<li><a href="_top"  href="css-units.html">CSS - Units</li>
+<li><a href="_top"  href="css-backgrounds.html">CSS - Backgrounds
+</li>
+<li><a href="_top"  href="css-selectors.html">CSS Selectors</li>
+<li><a href="_top"  href="css-fonts.html">CSS - Fonts
+</li>
+<li><a href="_top"  href="css-texts.html">CSS - Text
+</li>
+<li><a href="_top"  href="css-images.html">CSS - Images</li>
+<li><a href="_top"  href="css-boxmodel.html">CSS Box Model</li>
+
+
+<li><a href="_top"  href="css-links.html">CSS - Links</li>
+<li><a href="_top"  href="css-borders.html">CSS - Tables</li>
+<li><a href="_top"  href="css-tables.html">CSS - Borders</li>
+<li><a href="_top"  href="css-margins.html">CSS - Margins</li>
+<li><a href="_top"  href="css-lists.html">CSS - Lists</li>
+<li><a href="_top"  href="css-padding.html">CSS - Padding
+</li>
+<li><a href="_top"  href="css-cursors.html">CSS - Cursors</li>
+<li><a href="_top"  href="css-dimensions.html">CSS - Dimension</li>
+<li><a href="_top"  href="css-positioning.html">CSS - Positioning</li>
+<li><a href="_top"  href="css-layers.html">CSS - Layers</li>
+<li><a href="_top"  href="css-pseudo-classes.html">CSS - Pseudo Classes</li>
+<li><a href="_top"  href="css-pseudo-elements.html">CSS - Pseudo Elements</li>
+<li><a href="_top"  href="css-effects.html">CSS - Text Effects</li>
+<li><a href="_top"  href="css-media-types.html">CSS - Media Types</li>
+<li><a href="_top"  href="css-printing.html">CSS - Printing
+</li>
+<li><a href="_top"  href="css-layouts.html">CSS - Layouts</li>
+<li><a href="_top"  href="css-validations.html">CSS - Validations</li>
+
+
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>CSS Units</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+
+<br />
+<h4>CSS Units</h4>
+
+<p>CSS has several different units for expressing a length for an element. For example the font size of a text, the button size  etc.. CSS Units are used to control the length of the elements in the html web page</p>
+<p>CSS properties has some length values like <code>width</code><code>padding</code>
+the size of a text like <code>font-size</code> the width of a page or a table etc...</p>
+
+<p>The length of a css property is defined using units such as <code>2px</code>
+<code>5em</code> etc..</p>
+<p>CSS properties can also contains the negative values as well.</p>
+
+<p>CSS has two different types of length units such as <b>relative</b> and <b>absolute</b></p>
+
+
+
+<h4>CSS Absolute Length Units</h4>
+<p>
+The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.</p>
+
+<p>If you are working with the screens then absolute units are not recommended , because screen sizes vary at some point of the time. However, they can be used if the output medium is known</p>
+
+
+<strong>Different Absolute Length Units</strong>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Unit </th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>cm</td>
+            <td>centimeters</td>
+            <td><a href="examples/cm-example.html" class=" btn btn-primary">Try It Yourself</a></td>
+        </tr>
+         <tr class="success">
+            <td>mm</td>
+            <td>millilmeters</td>
+            <td><a href="examples/mm-example.html" class=" btn btn-primary">Try It Yourself</a></td>
+        </tr>
+         <tr class="success">
+            <td>in</td>
+            <td>inches <p>note: 1 in = 96px = 2.4cm</td>
+            <td><a href="examples/im-example.html" class=" btn btn-primary">Try It Yourself</a></td>
+        </tr>
+        <tr class="success">
+            <td>px *</td>
+            <td>pixels <p>note:( 1px  = 1/96th of in)</td>
+            <td><a href="examples/px-example.html" class=" btn btn-primary">Try It Yourself</a></td>
+        </tr>
+        <tr class="success">
+            <td>pt </td>
+            <td>points <p>note:( 1pt  = 1/72 of  1 in)</td>
+            <td><a href="examples/pt-example.html" class=" btn btn-primary">Try It Yourself</a></td>
+        </tr>
+        <tr class="success">
+            <td>pc </td>
+            <td>picas <p>note:( 1pc  = 12 pt</td>
+            <td><a href="examples/pc-example.html" class=" btn btn-primary">Try It Yourself</a></td>
+        </tr>
+        
+    </tbody>
+</table> <br />
+
+
+<h4>Browser Support</h4>
+<p>Let's the browser support for each of the units</p>
+
+<p>The numbers in the table specify the first browser version that fully supports the length unit.</p>
+
+<strong>Browser Compatability</strong>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Length Unit </th>
+            <th>Google Chrome</th>
+            <th>Internet Explorer</th>
+            <th>Mozilla Firefox</th>
+            <th>Safari</th>
+            <th>Opera</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>em, ex, %, px, cm, mm, in, pt, pc</td>
+            <td>1.0</td>
+           <td>3.0</td>
+           <td>1.0</td>
+           <td>1.0</td>
+           <td>3.5</td>
+        </tr>
+        <tr class="success">
+            <td>ch </td>
+            <td>27.0</td>
+            <td>9.0</td>
+            <td>1.0</td>
+            <td>7.0</td>
+            <td>20.0</td>
+        </tr>
+        <tr class="success">
+            <td>rem </td>
+            <td>4.0</td>
+            <td>9.0</td>
+            <td>3.6</td>
+            <td>4.1</td>
+            <td>11.6</td>
+        </tr>
+        <tr class="success">
+            <td>vh, vw </td>
+            <td>20.0</td>
+            <td>9.0</td>
+            <td>19.0</td>
+            <td>6.0</td>
+            <td>20.0</td>
+        </tr>
+        <tr class="success">
+            <td>vmin    20.0    9.0*    19.0    6.0 20.0</td>
+            <td>20.0</td>
+            <td>9.0*</td>
+            <td>19.0</td>
+            <td>6.0</td>
+            <td>20.0</td>
+        </tr>
+         <tr class="success">
+            <td>vmax    20.0    9.0*    19.0    6.0 20.0</td>
+            <td>26.0</td>
+            <td>Not supported</td>
+            <td>19.0</td>
+            <td>Not Supported</td>
+            <td>20.0</td>
+        </tr>
+        
+    </tbody>
+</table> <br />
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
