@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> CSS Introduction</title>
+<title> CSS Backgrounds</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -116,7 +116,7 @@
 <div class="content">
 
 
-<h1>CSS Introduction</h1>
+<h1>CSS Backgrounds</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,39 +128,126 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+<h4>CSS Background</h4>
 
 
-<h4>What is CSS?</h4>
-
-<div class="alert alert-success">CSS stands for Cascading Style Sheets.  used for describing the look and formatting of a document written in a markup language.</div>
-
+<p>CSS background properties are used to style  the background effects of an element or a web page.</p>
+<p>CSS has five different background properties we can use. Let's look at each of them</p>
 <ol>
-  <li>CSS is mainly used to style the elements in a web page.</li>
-  <li>Using css you can change the content of the web page and add some colors and fonts etc..</li>
+    <li>background-color</li>
+    <li>background-image</li>
+    <li>background-repeat</li>
+    <li>background-attachment</li>
+    <li>background-position</li>
 </ol>
 
-<h4>Benefits of CSS</h4>
-<ol>
-<li>
-CSS controls the  layout of many documents from one single style sheet;</li>
-<li>CSS defines how HTML elements are to be displayed</li>
-<li>Styles were added to HTML 4.0 to solve a problem</li>
-<li>In Css, External Style Sheets are stored in CSS files
-</li>
-</ol>
 
-<p>CSS can be easly learned even for a beginner. But it is good to have the basic knowledge of HTML, since CSS is used to change the HTML elements</p>
-<P>CSS is easy to learn and understand but it provides powerful control over the presentation of an HTML document. Most commonly, CSS is combined with the markup languages HTML or XHTML.</P>
-
-<strong>Who Maintains the  CSS?</strong>
-<P>
-CSS is created and maintained through a group of people within the W3C called the CSS Working Group. The CSS Working Group creates documents called specifications. When a specification has been discussed and officially ratified by W3C members, it becomes a recommendation.</P>
-<P>
-
-These ratified specifications are called recommendations because the W3C has no control over the actual implementation of the language. Independent companies and organizations create that software.</P>
+<h4>CSS Background Color</h4>
+<p>
+The background-color property specifies the background color of an element. It is mainly used when we need to change or set the background-color of a web page or an element.</p>
 
 
+<h5>Example</h5>
+<pre class="prettyprint css">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+    body {
+        background-color: yellow;
+    }
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
+    &lt;h1&gt;Home Page&lt;/h1&gt;
+    &lt;p&gt;Welcome to Tutorials Academy.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre><br />
+<p>When you run the above code, it will produce the following output with the <code>background-color</code> as <code>yellow</code></p>
+
+<br />
+<img src="images/bg-color.png">
+<br />
+
+
+<br ><a href="examples/bg-color.html" class="btn btn-primary">Try It Yourself</a><br />
+<br></br>
+
+
+
+<p> You can actually use the HEX values to set the CSS colors</p>
+
+<p><code>
+a HEX value - like "#ff0000"</code>
+
+<code>an RGB value - like "rgb(255,0,0)"</code>
+<code>a color name - like "red"</code>
+</p>
+
+<p>Let's see an example to understand more about setting colors in CSS using HEX values</p>
+
+
+<pre class="prettyprint css">
+h1 {
+    background-color:#ff0000;
+}
+
+p {
+    background-color: #00ff00;
+}
+
+div {
+    background-color:  #0000ff;
+}
+</pre> <br />
+<p>When you run the above code, it will produce the following output</p>
+<img src="images/examples/bg-example.png"><br />
+
+<a href="examples/bg-example.html" class="btn btn-success">Try It Yourself</a>
+<p>Notice that, the &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; elements have different background colors:</p>
+
+
+<h4>CSS Background Image</h4>
+<P> The CSS background-image property is used to set a specific image as a background, instead
+of styling it . We need to give the file or image name</P>
+
+<p>By default, the image is repeated so it covers the entire element.</p>
+
+
+<h5>Example</h5>
+<pre class="prettyprint html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+    background-image: url("http://p1.pichost.me/i/20/1433003.jpg");
+}
+/* You can also set your image as background from your computer,
+ for example like this 
+ background-image: url("myfolder/images/wall.png");
+ */
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt; Welcome to Tutorials Academy&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+<p>When you run the above code , it will produce the following output</p>
+<br/>
+<img src="images/bg-image.png"><br />
+
+
+<br><a href="examples/bg-image.html" class="btn btn-primary">Try It Yourself</a>
 
 
 <!-- CONTENT END HERE -->
