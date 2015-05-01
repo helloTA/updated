@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> CSS Inclusion</title>
+<title> CSS Fonts</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -65,7 +65,6 @@
 </div>
 <ul class="menu">
 
-
 <li class="heading">CSS Tutorials</li>
 <li><a target="_top"  href="introduction-to-css.html">Introduction to CSS</a></li>
 <li><a target="_top"  href="css-basic-syntax.html">CSS - Syntax</a>
@@ -104,8 +103,6 @@
 <li><a target="_top"  href="css-validations.html">CSS - Validations</a></li>
 
 
-
-
 </ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
@@ -117,10 +114,9 @@
 
 <!-- CONTENT STARTS -->
 <div class="content">
-<br />
 
 
-<h1>How to include CSS?</h1>
+<h1>CSS Fonts</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -132,67 +128,177 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+<h4>CSS Fonts</h4>
 
-<h4>How to Include CSS in HTML</h4><br />
-<p>There is more than one way to add a Cascading Style Sheet (CSS) to your HTML document. In this tutorial we will see the different ways to include css in html.</p>
 
-<img src="images/css-inclusion.png"><br />
+<p>CSS Fonts are used to style the font of html elements. Like font-size, font-color, font-family etc..</p>
+<p>when they think “font” are thinking of the font face. The font face is the actual typeface that is used for the type. But technically, the font is everything about the type from the weight (boldness), size, line height, and so on</p>
 
-<b>Linking to a separate CSS file</b>
-<p>
-This is the most common method of attaching CSS rules to an HTML document. With this method all of your style rules are contained in a single text file that is saved with the .CSS extension. This file is saved on your server and you link to it directly from each HTML file. The link is just a simple line of HTML that you put in the <head> section of your HTML document, it looks like this:
-<pre class="prettyprint css">
-    
-&lt;link rel="stylesheet" type="text/css" href="mystyles.css" /&gt;
-</pre><br />
-<p>
-Make sure you include the correct path to your CSS file in the href. If the CSS file is in the same folder as your HTML file then no path is required (like the example above) but if it's saved in a folder, then specify it like this href="foldername/mystyles.css".
+<p>CSS has two different types of font familes.</p>
+<ol><li>Generic Family</li>
+<li>font family</li>
+</ol>
+
+<b>Generic Family</b>
+
+
+<p>If the user agent viewing your Web page does not have access to the font you have chosen, it will use a different font instead. If you indicate which generic font family you'd like the user agent to use, you can have a little more control over your Web page.
 </p>
-
-
-<b>Embedding CSS into the HTML</b>
 <p>
-You can also embed CSS rules directly into any HTML page. To do this you need to add the following code to the &lt;head&gt; of your HTML document:&lt;/head&gt;
-<pre class="prettyprint css">
-&lt;style media="screen" type="text/css"&gt;
-
- Add css styles rules here
-
-&lt;/style&gt;
+The generic fonts are:
+<ol>
+    <li>cursive</li>
+    <li>fantasy</li>
+    <li>monospace</li>
+    <li>sans-serif</li>
+    <li>serif</li>
+</ol>
     
-</pre><br />
-<p>All of your CSS rules go between the style tags. As before, the media can be "screen" for your computer screen or "print" for printing.</p>
 
-<div class="alert alert-danger">
-    The disadvantage with this approach is the styles must be downloaded every time someone visits the page, this can cause a slightly slower browsing experience. 
-</div>
+<h4>Font Family</h4>
+<p>The font family of a text is set with the font-family property.</p>
+
+<p>Some sample font families are 
+Times New Roman, Bodoni, Garamond, Minion Web, ITC Stone Serif, MS Georgia, Bitstream Cyberbit 
+
+<b>The 'font-family' property</b>
+
+<b>Syntax</b>
+<pre class="prettyprint css">
+    [[ &lt;family-name&gt; | &lt;generic-family&gt; ] [, &lt;family-name&gt;| &lt;generic-family&gt;]* ] | inherit
+</pre>
+
+
+<b>Example</b><br />
+<pre class="prettyprint css">
+    body { font-family: Gill, Helvetica, sans-serif }
+</pre>
 
 <b>
-Adding Inline CSS to HTML tags</b>
+&lt;family-name&gt;:</b>
 <p>
-Style rules can also be added directly to any HTML element. To do this you simply add a style parameter to the element and enter your style rules as the value. Here is an example of a heading with red text and a black background:
+    The name of a font family of choice. 
 </p>
+
+<b>&lt;generic-family&gt;:</b>
+<p>
+    The last value is a generic family name. The following generic families are defined:</p>
+    <ol><li>'serif' (e.g., Times)</li>
+    <li>sans-serif' (e.g., Helvetica)</li>
+    <li> 'monospace' (e.g., Courier)</li>
+    </ol>
+
+
+<h4>Example</h4>
+<pre class="prettyprint html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;CSS font-family&lt;/h1&gt;
+    &lt;p class="serif"&gt;Welcome to Tutprials Academy. This is Times New roman font &lt;/p&gt;
+    &lt;p class="sansserif"&gt;This is a paragraph, shown in the Arial font.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+<a href="examples/font-family.html" class="btn btn-primary">Try It Yourself</a>
+
+
+
+<h4>Font Style</h4>
+<p>The font style property is used style the fonts. Few common font styles are as follows.</p>
+
+<p><b>normal</b> Text will be shown in normal style</p><br/>
+<p><b>italic</b>Text will be shown in italic style</p>
+<p><b>oblique</b>It is simialr to oblique the text name is leaning.</p>
+
+
+<b>font-family Syntax</b>
 <pre class="prettyprint css">
-    &lt;h2 style="color:green;background:black;"&gt;This is a green heading with a black background&lt;/h2&gt;
+font-style: normal | italic | oblique | inherit
 </pre>
 
-<div class="alert alert-danger">
-    This is not a good method to use because it will bloat your HTML and make website maintenance a real headache
-
-</div>
-
-<br />
-<b>Importing a CSS file from within CSS</b>
-<p>
-Another interesting way to add CSS to a HTML page is with the import rule. This lets us attach a new CSS file from within CSS itself. </p>
-
-<p>Let's look at an example of how this is done then I will show a practical example of when you might use this method. To import a new CSS file from within CSS simply use the following rule:</p>
+<b>Example</b>
 <pre class="prettyprint css">
-  @import "newstyles.css";  
+    h1, h2 { font-style: italic; }
+    p {font-style: normal ;}
+
 </pre>
 
-<p>Just change "newstyles" to the name of your CSS file and be sure to include the correct path to the file too. 
+<h4>Example</h4>
+<pre class="prettyprint css">
+p.normal {
+    font-style: normal;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+</pre>
+
+<a href="examples/font-style.html" class="btn btn-primary">Try It Youreself</a>
+
+
+
+
+<h4>Font Size</h4>
+<p>
+
+The font-size property sets the size of the text. You can set the font-size to be either big or small etc..</p>
+
+
+<p>The font-size value can be an absolute, or relative size.
 </p>
+
+<b>Absolute size:</b>
+
+    <p>Absolute size sets the text to a specified size.
+    Absolute size is useful when the physical size of the output is known</p>
+
+
+
+<b>Relative size:</b>
+
+
+<p>Relative size sets the size relative to surrounding elements
+    Allows a user to change the text size in browsers</p>
+
+
+
+<b>Example</b>
+<pre class="prettyprint css">
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 10px;
+}
+</pre>    
+<a href="examples/font-size-example.html" class="btn btn-primary">Try It Yourself</a>
+
+
 
 
 <!-- CONTENT END HERE -->

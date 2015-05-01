@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> CSS Inclusion</title>
+<title> CSS Selectors</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -65,7 +65,6 @@
 </div>
 <ul class="menu">
 
-
 <li class="heading">CSS Tutorials</li>
 <li><a target="_top"  href="introduction-to-css.html">Introduction to CSS</a></li>
 <li><a target="_top"  href="css-basic-syntax.html">CSS - Syntax</a>
@@ -104,8 +103,6 @@
 <li><a target="_top"  href="css-validations.html">CSS - Validations</a></li>
 
 
-
-
 </ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
@@ -117,10 +114,9 @@
 
 <!-- CONTENT STARTS -->
 <div class="content">
-<br />
 
 
-<h1>How to include CSS?</h1>
+<h1>CSS Selectors</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -132,67 +128,198 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+<h4>CSS Selectors</h4>
 
-<h4>How to Include CSS in HTML</h4><br />
-<p>There is more than one way to add a Cascading Style Sheet (CSS) to your HTML document. In this tutorial we will see the different ways to include css in html.</p>
 
-<img src="images/css-inclusion.png"><br />
+<h4>What is a CSS Selector</h4>
+<div class="alert alert-success">
+<p>CSS selector is is property which is used target a specific element and apply the neccessary styles to that element. Imagine, there 100 paragraph elements in a webpage and you want to target 1 specific paragraph element change the <code>font-color</code> of that paragraph, how do you do that?. Thats where that CSS Selectors comes in</p>
+</div>
 
-<b>Linking to a separate CSS file</b>
-<p>
-This is the most common method of attaching CSS rules to an HTML document. With this method all of your style rules are contained in a single text file that is saved with the .CSS extension. This file is saved on your server and you link to it directly from each HTML file. The link is just a simple line of HTML that you put in the <head> section of your HTML document, it looks like this:
+
+<p>CSS selectors allow you to select and change the HTML elements on a web page very easily.</p>
+
+
+<p>CSS selectors are used to find or  select a specific  HTML elements based on their id, class, type, attribute, and more.</p>
+
+<p>CSS Selectors are different types which we can use in different times</p>
+
+<p>The most common CSS selectors are 3. Let's look at each of them</p>
+<ol>
+    <li>The Element Selector</li>
+    <li>The id Selector</li>
+    <li>The Class selector</li>
+</ol>
+
+<h4>CSS Element Selector</h4>
+
+<p>The css element selctor is used to target a specific element in a web page and apply the style. But when you have many selectors with the same name, css element selector is not a good choice.</p>
+
+<h4>Example</h4>
 <pre class="prettyprint css">
+h4 {
+
+ color: green; /* target h4 element and apply the style*/
+}
+
+p { 
+
+ color: red;     /* target the p element and apply the text color as red*/
+} 
+
+
+</pre>
+
+<p>The above css element selectors <code>h1, p</code> will be found </p>
+
+<p>If you run the above css selector example it will produce the following output</p>
+<img src="images/element-selector.png"><br />
+
+<br><a href="examples/element-selector.html" class="btn btn-primary">Try It Yourself</a>
+
+
+
+<h4>
+CSS id Selector</h4>
+<p>CSS id selector is used to overcome the problem raised in element selector. When you have many elements with the same name and you want to target each of the css elements it would be very difficult. </p>
+<p>So the css id selector is used to target each and every element or any no of elements in a web page by giving them uniq ids. Imagine, if you have 10 paragraphs you can give 10 different uniq names and target them using the id selector.</p>
+<p> Id selector is starts with <code>#</code> symbol followed by the selector name</p>
+
+<p>For example take look at the below example</p>
+<pre class="prettyprint html">
+    &lt;p id="mypara1"&gt; This is paragraph one&lt;/p&gt;
+    &lt;p id="mypara2"&gt;This is paragraph two &lt;/p&gt;
+</pre>
+
+<p>This is how you can give the selector name. See the below css selector code to to understand how you can target that <code>mypara1 and mypara2</code> ids</p>
+
+
+<pre class="prettyprint css">
+#mypara1 {
+color: green;
+}
+#mypara2 {
+color: red;
+}
+</pre>
+<b>Note:</b><p> Selector names must be unique</p>
+
+
+<h4>Example</h4>
+<pre class="prettyprint html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#mypara1 {
     
-&lt;link rel="stylesheet" type="text/css" href="mystyles.css" /&gt;
-</pre><br />
-<p>
-Make sure you include the correct path to your CSS file in the href. If the CSS file is in the same folder as your HTML file then no path is required (like the example above) but if it's saved in a folder, then specify it like this href="foldername/mystyles.css".
-</p>
+    color: green;
+}
 
-
-<b>Embedding CSS into the HTML</b>
-<p>
-You can also embed CSS rules directly into any HTML page. To do this you need to add the following code to the &lt;head&gt; of your HTML document:&lt;/head&gt;
-<pre class="prettyprint css">
-&lt;style media="screen" type="text/css"&gt;
-
- Add css styles rules here
-
+#mypara2 {
+color: red;
+}
 &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p id="mypara1"&gt;Hello World!&lt;/p&gt;
+&lt;p id="mypara2"&gt;This is effected by the selector&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre> <br/>
+
+<p>The style rule below will be applied to the HTML element with id="mypara1" and id="mypara2":
+</p>
+
+<br ><a href="examples/id-selector.html" class="btn btn-primary">Try It Yourself</a>
+
+
+
+<h4>
+CSs class Selector</h4>
+<p>Imagine, you have 10 elements and you want to apply the same styles to all the 10 elements.
+Of course, you can give 10 different uniq id names and apply the styles. But thats not a good practice!. Why? What if you have 1000? Do you give 1000 names. </p>
+<p>That's where the css class selector comes in. What it does is  it applys the same style for any no of elements which comes under the same class.</p>
+
+
+<p>See the below example to understand</p>
+<pre class="prettyprint html">
+!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.myclass {
+    text-align: center;
+    color: green;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="myclass"&gt;
+    &lt;p&gt;This is paragraph&lt;/p&gt;
+    &lt;h2&gt;This is heading&lt;/h2&gt;
+    &lt;p&gt;Another paragraph&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+<p>If you notice the above code, I put 2 paragraphs and 1 head tag under one class called myclass. And I applied the same style for all the three elements in a single shot.</p>
+<p>The CSS class syntax is <code>. </code>Dot symbol followed by the class name</p>
+
+<p>Awlays remember the class name can not be start a number</p><br />
+<br> <a href="examples/class-selector.html" class="btn btn-primary">Try It Yourself</a>
+
+
+
+<h4>CSS Group Selector</h4>
+
+<p>CSS group selector is used to group the list of elements and apply them the same style.</p>
+<p>For example, you have one <code>h2</code> and one <code>p,</code> and other tag. What you do is, just keep all the ids in one line seperated by a comma and apply the same style, like below example</p>
+
+
+<b>Before Grouping</b>
+
+<pre class="prettyprint css">
+h2 {
+  color: blue;
+}
+
+h3 {
+  
+    color: blue;
+}
+
+p {
     
-</pre><br />
-<p>All of your CSS rules go between the style tags. As before, the media can be "screen" for your computer screen or "print" for printing.</p>
-
-<div class="alert alert-danger">
-    The disadvantage with this approach is the styles must be downloaded every time someone visits the page, this can cause a slightly slower browsing experience. 
-</div>
-
-<b>
-Adding Inline CSS to HTML tags</b>
-<p>
-Style rules can also be added directly to any HTML element. To do this you simply add a style parameter to the element and enter your style rules as the value. Here is an example of a heading with red text and a black background:
-</p>
-<pre class="prettyprint css">
-    &lt;h2 style="color:green;background:black;"&gt;This is a green heading with a black background&lt;/h2&gt;
+    color: blue;
+}
 </pre>
 
-<div class="alert alert-danger">
-    This is not a good method to use because it will bloat your HTML and make website maintenance a real headache
-
-</div>
-
-<br />
-<b>Importing a CSS file from within CSS</b>
-<p>
-Another interesting way to add CSS to a HTML page is with the import rule. This lets us attach a new CSS file from within CSS itself. </p>
-
-<p>Let's look at an example of how this is done then I will show a practical example of when you might use this method. To import a new CSS file from within CSS simply use the following rule:</p>
+<b>After Grouping</b>
 <pre class="prettyprint css">
-  @import "newstyles.css";  
+h2, h3, p {
+
+color: blue;
+}
 </pre>
 
-<p>Just change "newstyles" to the name of your CSS file and be sure to include the correct path to the file too. 
-</p>
+<p>Grouping mainly reduces the no of lines of code we write.</p>
+
+<br><a href="examples/group-selector.html" class="btn btn-primary">Try It Yourself</a>
+
+
+
+
+
+
+
 
 
 <!-- CONTENT END HERE -->
