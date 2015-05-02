@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> CSS Inclusion</title>
+<title> CSS Links</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -79,7 +79,7 @@
 </li>
 <li><a target="_top"  href="css-texts.html">CSS - Text</a>
 </li>
-
+<li><a target="_top"  href="css-images.html">CSS - Images</a></li>
 <li><a target="_top" href="css-boxmodel.html">CSS Box Model</a></li>
 
 
@@ -104,8 +104,6 @@
 <li><a target="_top"  href="css-validations.html">CSS - Validations</a></li>
 
 
-
-
 </ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
@@ -117,10 +115,9 @@
 
 <!-- CONTENT STARTS -->
 <div class="content">
-<br />
 
 
-<h1>How to include CSS?</h1>
+<h1>CSS Links</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -133,68 +130,118 @@
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h4>How to Include CSS in HTML</h4><br />
-<p>There is more than one way to add a Cascading Style Sheet (CSS) to your HTML document. In this tutorial we will see the different ways to include css in html.</p>
+<h4>CSS Links</h4>
 
-<img src="images/css-inclusion.png"><br />
+<p>Every link we see on a web page, can be styled into different colors. We can style a link in blue color or red color or black color etc..</p>
 
-<b>Linking to a separate CSS file</b>
-<p>
-This is the most common method of attaching CSS rules to an HTML document. With this method all of your style rules are contained in a single text file that is saved with the .CSS extension. This file is saved on your server and you link to it directly from each HTML file. The link is just a simple line of HTML that you put in the <head> section of your HTML document, it looks like this:
+
+<p>Links can be styled with any CSS property (e.g. color, font-family, background, etc.).</p>
+
+<h4>Example</h4>
 <pre class="prettyprint css">
-    
-&lt;link rel="stylesheet" type="text/css" href="mystyles.css" /&gt;
-</pre><br />
-<p>
-Make sure you include the correct path to your CSS file in the href. If the CSS file is in the same folder as your HTML file then no path is required (like the example above) but if it's saved in a folder, then specify it like this href="foldername/mystyles.css".
-</p>
+  a {
+    color: #00ff00;
+}
+
+</pre>
+<br><a href="examples/link1.html" class="btn btn-primary">Try It Yourself</a>
 
 
-<b>Embedding CSS into the HTML</b>
-<p>
-You can also embed CSS rules directly into any HTML page. To do this you need to add the following code to the &lt;head&gt; of your HTML document:&lt;/head&gt;
+
+<h4>Example 2</h4>
 <pre class="prettyprint css">
-&lt;style media="screen" type="text/css"&gt;
+  a {
+    color: #ff0000;
+}
 
- Add css styles rules here
+</pre>
+<br><a href="examples/link2.html" class="btn btn-primary">Try It Yourself</a>
 
-&lt;/style&gt;
-    
-</pre><br />
-<p>All of your CSS rules go between the style tags. As before, the media can be "screen" for your computer screen or "print" for printing.</p>
 
-<div class="alert alert-danger">
-    The disadvantage with this approach is the styles must be downloaded every time someone visits the page, this can cause a slightly slower browsing experience. 
-</div>
 
-<b>
-Adding Inline CSS to HTML tags</b>
-<p>
-Style rules can also be added directly to any HTML element. To do this you simply add a style parameter to the element and enter your style rules as the value. Here is an example of a heading with red text and a black background:
-</p>
+<p>We can also style the links based on the based on the state of a link, if it visited apply one style, if not visited apply another style</p>
+
+
+<p>We have four different types of link states in CSS</p>
+
+
+
+<p><b> a:link</b> - a normal, unvisited link</p>
+
+<p><b>a:visited</b> - a link the user has visited</p>
+
+<p><b>a:hover</b> - a link when the user mouses over it</p>
+
+<p><b> a:active </b>- a link the moment it is clicked</p>
+
+
+<b>Target Attribute Values</b>
+
+<b>_blank:</b><p> Opens the linked document in a new window or tab</p>
+
+<b>_self:</b><p> Opens the linked document in the same frame as it was clicked (this is default)</p>
+
+<b>_parent:</b><p> Opens the linked document in the parent frame</p>
+
+<b>_top:</b><p> Opens the linked document in the full body of the window</p>
+
+<h4>Example</h4>
 <pre class="prettyprint css">
-    &lt;h2 style="color:green;background:black;"&gt;This is a green heading with a black background&lt;/h2&gt;
+/* selected link */
+a:active {
+    color:  #FF00FF;
+}
+
+/* visited link */
+a:visited {
+    color: #FF0000;
+}
+
+  /* unvisited link */
+a:link {
+    color:#00FF00; 
+}
+
+
+
+/* mouse over link */
+a:hover {
+    color:#0000FF;
+}
+
+
 </pre>
 
-<div class="alert alert-danger">
-    This is not a good method to use because it will bloat your HTML and make website maintenance a real headache
 
-</div>
+<br><a href="examples/links.html" class="btn btn-primary">Try It Yourself</a>
 
-<br />
-<b>Importing a CSS file from within CSS</b>
+
+<h4>Background Color</h4>
 <p>
-Another interesting way to add CSS to a HTML page is with the import rule. This lets us attach a new CSS file from within CSS itself. </p>
 
-<p>Let's look at an example of how this is done then I will show a practical example of when you might use this method. To import a new CSS file from within CSS simply use the following rule:</p>
+The background-color property specifies the background color for links:</p>
+
+<h4>Example</h4>
 <pre class="prettyprint css">
-  @import "newstyles.css";  
+  a:link {
+    background-color:#FF704D; 
+}
+
+a:visited {
+    background-color:#FF704D; 
+}
+
+a:hover {
+    background-color: #B2FF99;
+}
+
+a:active {
+    background-color: #FFFF85;
+} 
 </pre>
 
-<p>Just change "newstyles" to the name of your CSS file and be sure to include the correct path to the file too. 
-</p>
 
-
+<br><a href="examples/bg-links.html" class="btn btn-primary">Try It Yourself</a>
 <!-- CONTENT END HERE -->
 </div>
 </div>

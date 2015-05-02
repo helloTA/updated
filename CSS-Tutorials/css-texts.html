@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> CSS Inclusion</title>
+<title> CSS Text</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -79,7 +79,6 @@
 </li>
 <li><a target="_top"  href="css-texts.html">CSS - Text</a>
 </li>
-
 <li><a target="_top" href="css-boxmodel.html">CSS Box Model</a></li>
 
 
@@ -104,8 +103,6 @@
 <li><a target="_top"  href="css-validations.html">CSS - Validations</a></li>
 
 
-
-
 </ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
@@ -117,10 +114,9 @@
 
 <!-- CONTENT STARTS -->
 <div class="content">
-<br />
 
 
-<h1>How to include CSS?</h1>
+<h1>CSS Text</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -133,67 +129,219 @@
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h4>How to Include CSS in HTML</h4><br />
-<p>There is more than one way to add a Cascading Style Sheet (CSS) to your HTML document. In this tutorial we will see the different ways to include css in html.</p>
-
-<img src="images/css-inclusion.png"><br />
-
-<b>Linking to a separate CSS file</b>
-<p>
-This is the most common method of attaching CSS rules to an HTML document. With this method all of your style rules are contained in a single text file that is saved with the .CSS extension. This file is saved on your server and you link to it directly from each HTML file. The link is just a simple line of HTML that you put in the <head> section of your HTML document, it looks like this:
-<pre class="prettyprint css">
-    
-&lt;link rel="stylesheet" type="text/css" href="mystyles.css" /&gt;
-</pre><br />
-<p>
-Make sure you include the correct path to your CSS file in the href. If the CSS file is in the same folder as your HTML file then no path is required (like the example above) but if it's saved in a folder, then specify it like this href="foldername/mystyles.css".
-</p>
-
-
-<b>Embedding CSS into the HTML</b>
-<p>
-You can also embed CSS rules directly into any HTML page. To do this you need to add the following code to the &lt;head&gt; of your HTML document:&lt;/head&gt;
-<pre class="prettyprint css">
-&lt;style media="screen" type="text/css"&gt;
-
- Add css styles rules here
-
-&lt;/style&gt;
-    
-</pre><br />
-<p>All of your CSS rules go between the style tags. As before, the media can be "screen" for your computer screen or "print" for printing.</p>
-
-<div class="alert alert-danger">
-    The disadvantage with this approach is the styles must be downloaded every time someone visits the page, this can cause a slightly slower browsing experience. 
+<h4>What is CSS Text Formating</h4>
+<div class="alert alert-success">
+Every style on of text on the web page can be styled in different ways. The text can have many formats
+    This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
 </div>
 
-<b>
-Adding Inline CSS to HTML tags</b>
-<p>
-Style rules can also be added directly to any HTML element. To do this you simply add a style parameter to the element and enter your style rules as the value. Here is an example of a heading with red text and a black background:
-</p>
+
+
+<h4>Text Color</h4>
+<p>CSS text color is used to style the text with different colors. Imagine, you want to style the text on a web page with different colors. This is where you can the text colors. See the below web page for example</p>
+
+
+<img src="images/colors.png">
+
+
+<p>We CSS we can set colors in three different ways. Let's look at each of them.</p>
+
+<p><b>HEX Value:</b> For Example <code>"#00ff00;"</code></p>
+<p><b>RGB Value:</b> For Example<code>"rgb(255,0,0)"</code></p>
+<p><b>Color name:</b>For Example<code> "green"</code></p>
+
+
+
+<p>The default color for a page is defined in the body selector.</p>
+<b>Note:</b><p> If you define the color property, you must also define the background-color property.</p>
+
+
+<h4>Example</h4>
+<p>Let's take a look at an example to understaind how css color property works.</p>
+
 <pre class="prettyprint css">
-    &lt;h2 style="color:green;background:black;"&gt;This is a green heading with a black background&lt;/h2&gt;
+body {
+    color: red;
+}
+
+h1 {
+    color: #00ff00;
+}
+
+h2 {
+color: orange;
+}
+
+
+p.ex-two {
+color:blue ;
+}
+
+p {
+color: black; }
 </pre>
 
-<div class="alert alert-danger">
-    This is not a good method to use because it will bloat your HTML and make website maintenance a real headache
+<p>If you run the above example the body color will changed to <code>red</code> and <code>h2</code> color will be <code>orange</code> and paragraph color will be<code> black</code> and others respectively.</p>
 
+<br><a href="examples/color.html" class="btn btn-primary">Try It Yourself</a>
+<div>
+    
 </div>
 
-<br />
-<b>Importing a CSS file from within CSS</b>
+<br><h4>Text Alignment</h4>
+<p>CSS text alignment property is used to place the text on the web page in right order. Like I say, you can align the text wherever you want to!. That being said, you can align the text in <code>center</code> or <code>left</code> or <code>right</code> or <code>justify</code>.Each alignment has different meaning</p>
+
+<p>The text-align property is used to set the horizontal alignment of a text.</p>
+
+<p>Text can be centered, or aligned to the left or right, or justified.</p>
 <p>
-Another interesting way to add CSS to a HTML page is with the import rule. This lets us attach a new CSS file from within CSS itself. </p>
 
-<p>Let's look at an example of how this is done then I will show a practical example of when you might use this method. To import a new CSS file from within CSS simply use the following rule:</p>
-<pre class="prettyprint css">
-  @import "newstyles.css";  
-</pre>
-
-<p>Just change "newstyles" to the name of your CSS file and be sure to include the correct path to the file too. 
+When text-align is set to "justify", each line is stretched so that every line has equal width, and the left and right margins are straight 
 </p>
 
+<p>Take a look at the below example to understand these four css text alignments</p>
+
+<img src="images/align.png"><br />
+
+<h4>Example</h4>
+<pre class="prettyprint css">
+h1 {
+    text-align: center;
+}
+
+p.date {
+    text-align: right;
+}
+
+p.justify {
+    text-align: justify;
+}
+
+p.left {
+text-align: left;
+}
+
+</pre>
+
+<br><a href="examples/align.html" class="btn btn-primary">Try It Yourself</a>
+
+<div>
+    
+</div>
+
+<br><h4>Text Decoration</h4>
+<p>CSS text-decoration property is used to decorate the text or remove the decoration for the ext. CSS <code>text-decoration</code> property is mostly used to set or remove the underlines on the web page.</p>
+
+<p>In many case, when you wish to have no decoration for the text you can simply say <code>text-decoration: none;</code>. That makes the text to have no decoration .</p>
+
+
+<p>See the below example for more understanding</p>
+<img src="images/decoration.png">
+
+
+
+<h4>Example</h4>
+
+<pre class="prettyprint css">
+  h1 {
+    text-decoration: overline;
+}
+
+h2 {
+    text-decoration: line-through;
+}
+
+h3 {
+    text-decoration: underline;
+}  
+</pre>
+
+<a href="examples/text-decoration.html" class="btn btn-primary">Try It Yourself</a>
+
+<div>
+    
+</div>
+
+<br><h4>CSS Text Transformation</h4>
+<p>CSS text-transformation is used to style the text on the web page either to uppercase, or lowercase, or capitalize. There are some cases where you want to turn all the text into uppercase, or lowercase in that case youc an use the css<code>text-transformation</code> property</p>
+
+<div class="alert alert-success">
+
+The text-transform property is used to specify uppercase and lowercase letters in a text.</div>
+
+<h4>Example</h4>
+
+<pre class="prettyprint css">
+ p.uppercase {
+    text-transform: uppercase;   /* Transforms all text to UPPERCASE*/
+}
+
+p.lowercase {
+    text-transform: lowercase;    /* Transforms all text to UPPERCASE*/
+}
+
+p.capitalize {
+    text-transform: capitalize;   /* Transforms every letter in a word to capital*/
+}   
+</pre>
+
+
+<br><a href="examples/text-transform.html" class="btn btn-primary">Try It Yourself</a>
+
+<div>
+    
+</div>
+
+
+<br><h4>Other CSS Text Properties</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Deescription</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr class="success">
+        <td>direction </td>
+        <td>Specifies the text direction/writing direction</td>
+        <td><a href="examples/css-text/direction.html" class="btn btn-success">Try It</a> </td>
+    </tr>
+    <tr class="info">
+      <td>letter-spacing </td>
+      <td>Increases or decreases the space between characters in a text </td>
+      <td><a href="examples/css-text/letter-spacing.html" class="btn btn-success">Try It</a> </td>
+    </tr>
+     <tr class="danger">
+      <td>line-height </td>
+      <td>Sets the line height </td>
+      <td><a href="examples/css-text/line-height.html" class="btn btn-success">Try It</a> </td>
+    </tr>
+     <tr class="success">
+      <td>text-indent </td>
+      <td> Specifies the indentation of the first line in a text-block </td>
+      <td><a href="examples/css-text/text-indent.html" class="btn btn-success">Try It</a>  </td>
+    </tr>
+     <tr class="info">
+      <td>text-shadow </td>
+      <td>Specifies the shadow effect added to text </td>
+      <td><a href="examples/css-text/text-shadow.html" class="btn btn-success">Try It</a> </td>
+    </tr>
+     <tr class="warning">
+      <td>white-space</td>
+      <td>Specifies how white-space inside an element is handled </td>
+      <td><a href="examples/css-text/text-whitespace.html" class="btn btn-success">Try It</a> </td>
+    </tr>
+     <tr class="danger">
+      <td>word-spacing </td>
+      <td>Increases or decreases the space between words in a text </td>
+      <td><a href="examples/css-text/text-wordspacing.html" class="btn btn-success">Try It</a> </td>
+        
+</table>
+ <br />
+  
 
 <!-- CONTENT END HERE -->
 </div>

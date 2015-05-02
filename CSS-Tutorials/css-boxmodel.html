@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> CSS Inclusion</title>
+<title> CSS Box Model</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -79,7 +79,7 @@
 </li>
 <li><a target="_top"  href="css-texts.html">CSS - Text</a>
 </li>
-
+<li><a target="_top"  href="css-images.html">CSS - Images</a></li>
 <li><a target="_top" href="css-boxmodel.html">CSS Box Model</a></li>
 
 
@@ -104,8 +104,6 @@
 <li><a target="_top"  href="css-validations.html">CSS - Validations</a></li>
 
 
-
-
 </ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
@@ -117,10 +115,9 @@
 
 <!-- CONTENT STARTS -->
 <div class="content">
-<br />
 
 
-<h1>How to include CSS?</h1>
+<h1>CSS Box Model</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -133,65 +130,60 @@
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h4>How to Include CSS in HTML</h4><br />
-<p>There is more than one way to add a Cascading Style Sheet (CSS) to your HTML document. In this tutorial we will see the different ways to include css in html.</p>
+<h4>What is CSS Box Model</h4>
 
-<img src="images/css-inclusion.png"><br />
+<p>Everything you see on a web page is a box model. Infact, every button you see is also a box model. For example css box-model decides what is content on the webpage, and what is the border in the web page and what is padding on the web page. After setting all the <b>content, border, padding, on web page, it will become a complete web page with all necessary  alignments</b>
 
-<b>Linking to a separate CSS file</b>
 <p>
-This is the most common method of attaching CSS rules to an HTML document. With this method all of your style rules are contained in a single text file that is saved with the .CSS extension. This file is saved on your server and you link to it directly from each HTML file. The link is just a simple line of HTML that you put in the <head> section of your HTML document, it looks like this:
-<pre class="prettyprint css">
-    
-&lt;link rel="stylesheet" type="text/css" href="mystyles.css" /&gt;
-</pre><br />
-<p>
-Make sure you include the correct path to your CSS file in the href. If the CSS file is in the same folder as your HTML file then no path is required (like the example above) but if it's saved in a folder, then specify it like this href="foldername/mystyles.css".
+
+The box model allows us to add a border around elements, and to define space between elements.</p>
+
+
+<p>See the image below illustrates the box model. When you see the box model just imagine, the entire box as a web page.</p>
+
+<br>
+
+  <img src="images/box-model.svg">
+
+<div>
+  
+</div>
+
+<br ><p>Each part plays a different role on the web page. Let's see each of them</p>
+
+
+   <p><b> Content </b>-<p> The content of the box, where text and images appear on a web page</p>
+   <p><b>Padding</b> - Clears an area around the content around the web page</p>
+
+   <p><b> Border </b>- A border that goes around the padding and content on the web page</p>
+
+   <p><b> Margin</b> - Clears an area outside the border. The margin is transparent
 </p>
 
 
-<b>Embedding CSS into the HTML</b>
-<p>
-You can also embed CSS rules directly into any HTML page. To do this you need to add the following code to the &lt;head&gt; of your HTML document:&lt;/head&gt;
+<h4>Example</h4>
 <pre class="prettyprint css">
-&lt;style media="screen" type="text/css"&gt;
+  div {
+    background-color: lightgreen;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid red;
+    margin: 25px;
+}
+</pre>
+<a href="examples/box-model.html" class="btn btn-primary">Try It Yourself</a>
 
- Add css styles rules here
-
-&lt;/style&gt;
-    
-</pre><br />
-<p>All of your CSS rules go between the style tags. As before, the media can be "screen" for your computer screen or "print" for printing.</p>
-
-<div class="alert alert-danger">
-    The disadvantage with this approach is the styles must be downloaded every time someone visits the page, this can cause a slightly slower browsing experience. 
+<div>
+  
 </div>
 
-<b>
-Adding Inline CSS to HTML tags</b>
+<h4>Width and Height of an Element</h4>
+
 <p>
-Style rules can also be added directly to any HTML element. To do this you simply add a style parameter to the element and enter your style rules as the value. Here is an example of a heading with red text and a black background:
-</p>
-<pre class="prettyprint css">
-    &lt;h2 style="color:green;background:black;"&gt;This is a green heading with a black background&lt;/h2&gt;
-</pre>
+In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.</p>
 
-<div class="alert alert-danger">
-    This is not a good method to use because it will bloat your HTML and make website maintenance a real headache
+<b>Note:</b><p> When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
 
-</div>
-
-<br />
-<b>Importing a CSS file from within CSS</b>
-<p>
-Another interesting way to add CSS to a HTML page is with the import rule. This lets us attach a new CSS file from within CSS itself. </p>
-
-<p>Let's look at an example of how this is done then I will show a practical example of when you might use this method. To import a new CSS file from within CSS simply use the following rule:</p>
-<pre class="prettyprint css">
-  @import "newstyles.css";  
-</pre>
-
-<p>Just change "newstyles" to the name of your CSS file and be sure to include the correct path to the file too. 
 </p>
 
 
