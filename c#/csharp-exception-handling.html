@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> C# Type Conversion</title>
+<title>C# Exception Handling</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -105,7 +105,7 @@
 <li><a target="_top" href="csharp-events.html">C# Events</a></li>
 <li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
 <li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
-</ul>               
+</ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
 </ul>
@@ -113,10 +113,12 @@
 <div class="middle_right">
 <div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
-<!-- PRINTING STARTS HERE -->
+
 <!-- CONTENT STARTS -->
 <div class="content">
-<h1>C# Type Conversion</h1>
+
+
+<h1>C# Exception Handling</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,144 +130,232 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>What is type conversion in C# ?</h4>
-<div class ="alert alert-success">
- It is a way of implicitly or explicitly, changing an entity of one data type into another
- </div>
+<h4>What is Exception Handling</h4>
 
-<p>Type conversion in C# is nothing but converting one type of data to another type.
- There are 2 types of Type conversions exist in c# language.</p>
-
-
-<strong>Implicit type conversion in C#</strong> 
-<p>Implicit type conversions are basically handled by C# in a type-safe manner.In c#, we see smaller types and lager types or complex types</p>
-<p>conversion from smaller to larger integral types and conversion from derived classes to base classes.</p> <br />
-
-<strong>Explicit type conversion in C#</strong> 
-<p>Explicit type conversion are handled explicitly by programmers using the predefined functions. Explicit conversions require a cast operator.</p>
-<strong>Example:</strong>
-<pre class="prettyprint"><code class="language-php">
-static void Main(string[] args)
-    {
-        double price = 8980.09;
-        int cost;
-        // cast double to int.
-        cost = (int)price ;
-        Console.WriteLine(cost);
-        Console.ReadKey();
-    }
-</code></pre>
- 
-<p>From this example casting done explicitly from decimal type to integer type.</p>
-<h4>C# Type Conversion Methods</h4>
-<p>Let's look at another example to understand how type conversion works in C#.</p>
-
-
-<b>C# type conversion example for double to int</b>
-<pre clas"prettyprint"><code class="language-csharp">
-using System;
-namespace TypeConversionApplication 
-{
-   class ExplicitConversionExample 
-   {
-      static void Main(string[] args) 
-      {
-         double d = 7873.74; 
-         int i;
-         
-         // casting double to int.
-         i = (int)d;
-         Console.WriteLine(i);
-         Console.ReadKey();
-      }
-   }
-}
-</code></pre>
-<br />
-<Strong>Output</Strong><br>
-<div class="alert alert-info">
-    7873
+<div class="alert alert-success">
+    Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or exceptional conditions requiring special processing – often changing the normal flow of program execution. It is provided by specialized programming language constructs or computer hardware mechanisms.
 </div>
-<p>If you run the above example it will produce 7873 as output because it converted the
-double value to int. You can also try the same example for float to int as well.</p>
 
-<p>We have several methods to perform type conversion in C#. 
-C# provides the following built-in type conversion methods:</p><br />
-<table class="table">
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td><b>ToBoolean</b></td>
-            <td>Converts a type to a Boolean value, where possible.</td>
-        </tr>
 
-        <tr class="danger">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToChar</b></td>
-            <td>Converts a type to a single Unicode character, where possible.</td>
-        </tr>
-        <tr class="warning">
-            <td><b>ToDateTime</b></td>
-            <td>Converts a type (integer or string type) to date-time structures.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToDecimal</b></td>
-            <td>Converts a floating point or integer type to a decimal type.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToDouble</b></td>
-            <td>Converts a type to a double type.</td>
-        </tr>
-        <tr class="danger">
-            <td><b>ToInt16</b></td>
-            <td>Converts a type to a 16-bit integer.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToInt32</b></td>
-            <td>Converts a type to a 32-bit integer.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToInt64</b></td>
-            <td>Converts a type to a 64-bit integer.
-</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToSbyte</b></td>
-            <td>Converts a type to a signed byte type.</td>
-        </tr>
-         <tr class="danger">
-            <td><b>ToSingle</b></td>
-            <td>Converts a type to a small floating point number.</td>
-        </tr>
-         <tr class="warning">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-          <tr class="success">
-            <td><b>ToString</b></td>
-            <td>Converts a type to a string.
-</td>
-        </tr>
-          <tr class="info">
-            <td><b>ToType</b></td>
-            <td>Converts a type to a specified type.</td>
-        </tr>
-          <tr class="warning">
-            <td><b>ToUInt16</b></td>
-            <td>Converts a type to an unsigned int type.</td>
-        </tr>
-    </tbody>
-</table> <br />
+<p>The exception is an error which occurs in the program execution. Whenever we write a program there are chances of coming across 2 different types of errors in the program.
+</p>
+<ol>
+    <li>Compile-time errors</li>
+    <li>Runtime errors</li>
+</ol>
 
-<!-- CONTENT ENDS HERE -->
+
+
+<div class="alert alert-info">
+<p>An error which occurs in the program due to a syntactical mistake is a “Compile-time errors” and these errors are not at all dangerous. so we don’t require to take them into consideration at all.</p>
+</div>
+
+
+<div class="alert alert-danger">
+<p>An error which occurs in the program while the program execution is going on is known as “Runtime errors” and these errors due to various reasons like wrong implementation of logic missing of required resources, wrong input supply to the program etc.
+</p></div>
+
+<p>
+Runtime errors are very dangerous because whenever a runtime error occurs in the program, the program terminates abnormally on the same line without executing any other lines of code in the program.
+</p>
+<p>
+Exceptions are introduced and responsible for abnormal termination of programs when runtime errors occur in the program.
+</p>
+
+<b>What are Exceptions?</b>
+
+<p>
+An exception is a class which is implemented under base class libraries(BCL). Representing each and every different type of runtime error one exception class has been defined under BCL like</p>
+<ol>
+    <li>IndexOutOfRangeException,</li>
+    <li>NullReferenceException,</li>
+    <li>FormatException,</li>
+    <li>DividedByZeroException.</li>
+</ol>
+    
+    
+    
+    
+<p>
+When a runtime error occurs in a program the object of an appropriate exception class comes into the picture and first terminates the program abnormally on the line and displays an error message describing the error that got occurred.
+</p>
+
+<p>Exception classes are implemented internally as shown in following the figure.
+</p>
+
+<img src="images/exception.png" width="640" height="340"> <br>
+
+
+<br><b>Exception handling:</b>
+<p>
+As discussed above whenever a runtime error occurs our program will be terminating abnormally. If we wanted to stop this abnormal termination we need to go for handling exceptions. so that we will be getting the following benefits.
+</p>
+<ol>
+    <li>We can perform a corrective action to resolve the problem that got occurred because of the error Ex: roll backing the transaction ( money)
+</li>
+<li>We can display a user-friendly error message so that users can understand the error and also resolve it if possible. Ex: message will be given to user if user entered the wrong destination id</li>
+<li>As the abnormal termination is stopping over we can continue with the approach and executes the stat’s that are no way related with the error.
+</li>
+</ol>
+<img src="images/ech.JPG" width="640" height="340">
+
+
+<h3>Syntax</h3>
+<pre class="prettyprint csharp">
+try
+{
+   //  statements which will be causing runtime errors
+   //  statements which don't require execution when the runtime error occurs.
+}
+catch(&l;exception&gt; &lt;var&gt;)
+{
+   //  statements which require execution only when a runtime error occurs.
+}
+--- &lt; multiple catch blocks if required &gt;-----
+finally{
+ //statements to be executed even runtime error occurs
+}
+    
+</pre>
+
+
+
+<h3>Example</h3>
+<pre class="prettyprint csharp">
+class ExceptionDemo
+{
+static void Main()
+{
+    int x, y, z;
+
+    try
+    {
+        Console.WriteLine("enter x value:");
+        x = int.Parse(Console.ReadLine());
+        Console.WriteLine("enter y value:");
+        y = int.Parse(Console.ReadLine());
+
+        z = x / y;
+        Console.WriteLine(z);
+    }
+    catch (DivideByZeroException ex)
+    {
+        Console.WriteLine("result :Divided value can't be zero ");
+    }
+    catch (FormatException ex)
+    {
+        Console.WriteLine("result : Input must be numeric");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    finally
+    {
+        Console.WriteLine("End of the program and finally block gets executed");
+    }
+
+    Console.ReadLine();
+}
+}
+
+</pre>
+<p>If you run the above example code, it will produce the following output</p>
+
+<b>Output</b>
+<div class="alert alert-info">
+enter x value : 2<br />
+enter y value: 0<br />
+result : Divided value can't be zero<br /> 
+End of the program and finally block gets executed<br />
+
+enter x value : g<br />
+result: Input must be numeric<br />
+End of the program and finally block gets executed<br />
+
+</div>
+
+
+<p>We can use these 3 blocks in 3 different combinations</p>
+
+<p><b>try & catch:</b> in this case, if any runtime error occurs in the program exception will be caught stopping the abnormal termination.</p><br />
+
+<p><b>try, catch & </b>finally: in this case the behavior will be same as above and along with it the statements under finally block gets executed at any cost.</p>
+
+<p><b>try & finally</b>: In this case, if any runtime error occurs in the program abnormal termination will occur because there is no catch block to handle the exception but the statements under <b>finally</b> block will be still executed.
+</p>
+
+<b>
+How to raise an exception?
+</b>
+
+<p>Exceptions are of 2 types</p>
+<ol>
+    <li>System exceptions</li>
+    <li>Application exceptions
+</li>
+</ol> 
+
+
+<p>
+If an exception occurs in a program implicitly we call it as system exception where the implicit exception occurs basing on predefined conditions.</p>
+
+<p>example<code> DividedByZeroException</code>,<code> FormatException </code>etc</p>
+<p>
+
+If an exception occurs in a program which is explicitly raised by a program we call it as Application Exceptions
+</p>
+
+<p>If user wants to raise an exception in thr program they need to follow the below process
+</p>
+
+<p><b>step 1:</b> create the object of an exception class</p>
+
+<p><b>step 2:</b> throw the object i.e., created with the help of throw statement.></p>
+
+<pre class="prettyprint csharp">
+ex: FormatException ex = new FormatException();
+    throw ex;
+</pre>
+
+
+<h3>Example</h3>
+<pre class="prettyprint csharp">
+ class DividedByOddException : Exception
+{
+    public override string Message
+    {
+        get
+        {
+            return "attempted to divide by the odd number";
+        }
+    }
+}
+
+class ThrowDemo
+{
+    static void Main()
+    {
+        int x, y, z;
+        Console.WriteLine("enter x value:");
+        x = int.Parse(Console.ReadLine());
+        Console.WriteLine("enter y value:");
+        y = int.Parse(Console.ReadLine());
+
+        if (y % 2 > 0)
+            throw new DividedByOddException();
+        z = x / y;
+        Console.WriteLine(z);
+
+        Console.WriteLine("End of the program");
+        Console.ReadLine();
+        
+    }
+}
+</pre>
+
+
+<!-- CONTENT END HERE -->
 </div>
 </div>
 
@@ -315,7 +405,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
              Copyright &copy 2015 Tutorialsacademy.com
             </div>
         </div>
-       
+
     </div>
 </div>
 </body>

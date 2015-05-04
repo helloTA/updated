@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> C# Type Conversion</title>
+<title> C# Interfaces</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -105,7 +105,7 @@
 <li><a target="_top" href="csharp-events.html">C# Events</a></li>
 <li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
 <li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
-</ul>               
+</ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
 </ul>
@@ -113,10 +113,12 @@
 <div class="middle_right">
 <div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
-<!-- PRINTING STARTS HERE -->
+
 <!-- CONTENT STARTS -->
 <div class="content">
-<h1>C# Type Conversion</h1>
+
+
+<h1>C# Interfaces</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,144 +130,160 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>What is type conversion in C# ?</h4>
-<div class ="alert alert-success">
- It is a way of implicitly or explicitly, changing an entity of one data type into another
- </div>
 
-<p>Type conversion in C# is nothing but converting one type of data to another type.
- There are 2 types of Type conversions exist in c# language.</p>
-
-
-<strong>Implicit type conversion in C#</strong> 
-<p>Implicit type conversions are basically handled by C# in a type-safe manner.In c#, we see smaller types and lager types or complex types</p>
-<p>conversion from smaller to larger integral types and conversion from derived classes to base classes.</p> <br />
-
-<strong>Explicit type conversion in C#</strong> 
-<p>Explicit type conversion are handled explicitly by programmers using the predefined functions. Explicit conversions require a cast operator.</p>
-<strong>Example:</strong>
-<pre class="prettyprint"><code class="language-php">
-static void Main(string[] args)
-    {
-        double price = 8980.09;
-        int cost;
-        // cast double to int.
-        cost = (int)price ;
-        Console.WriteLine(cost);
-        Console.ReadKey();
-    }
-</code></pre>
- 
-<p>From this example casting done explicitly from decimal type to integer type.</p>
-<h4>C# Type Conversion Methods</h4>
-<p>Let's look at another example to understand how type conversion works in C#.</p>
-
-
-<b>C# type conversion example for double to int</b>
-<pre clas"prettyprint"><code class="language-csharp">
-using System;
-namespace TypeConversionApplication 
-{
-   class ExplicitConversionExample 
-   {
-      static void Main(string[] args) 
-      {
-         double d = 7873.74; 
-         int i;
-         
-         // casting double to int.
-         i = (int)d;
-         Console.WriteLine(i);
-         Console.ReadKey();
-      }
-   }
-}
-</code></pre>
-<br />
-<Strong>Output</Strong><br>
-<div class="alert alert-info">
-    7873
+<h4>What are Interfaces in Programming</h4>
+<div class="alert alert-success">
+    An interface is a description of the actions that an object can do... for example when you flip a light switch, the light goes on, you don't care how, just that it does. In Object Oriented Programming, an Interface is a description of all functions that an object must have in order to be an "X". Again, as an example, anything that "ACTS LIKE" a light, should have a turn_on() method and a turn_off() method. The purpose of interfaces is to allow the computer to enforce these properties and to know that an object of TYPE T (whatever the interface is ) must have functions called X,Y,Z, etc. 
 </div>
-<p>If you run the above example it will produce 7873 as output because it converted the
-double value to int. You can also try the same example for float to int as well.</p>
 
-<p>We have several methods to perform type conversion in C#. 
-C# provides the following built-in type conversion methods:</p><br />
-<table class="table">
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td><b>ToBoolean</b></td>
-            <td>Converts a type to a Boolean value, where possible.</td>
-        </tr>
+ <b>Interfaces in Object Oriented Programming Languages
+</b>
+<p>
+An interface is a programming structure/syntax that allows the computer to enforce certain properties on an object (class). For example, say we have a car class and a scooter class and a truck class. Each of these three classes should have a start_engine() action. How the "engine is started" for each vehicle is left to each particular class, but the fact that they must have a start_engine action is the domain of the interface. 
+</p>
 
-        <tr class="danger">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToChar</b></td>
-            <td>Converts a type to a single Unicode character, where possible.</td>
-        </tr>
-        <tr class="warning">
-            <td><b>ToDateTime</b></td>
-            <td>Converts a type (integer or string type) to date-time structures.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToDecimal</b></td>
-            <td>Converts a floating point or integer type to a decimal type.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToDouble</b></td>
-            <td>Converts a type to a double type.</td>
-        </tr>
-        <tr class="danger">
-            <td><b>ToInt16</b></td>
-            <td>Converts a type to a 16-bit integer.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToInt32</b></td>
-            <td>Converts a type to a 32-bit integer.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToInt64</b></td>
-            <td>Converts a type to a 64-bit integer.
-</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToSbyte</b></td>
-            <td>Converts a type to a signed byte type.</td>
-        </tr>
-         <tr class="danger">
-            <td><b>ToSingle</b></td>
-            <td>Converts a type to a small floating point number.</td>
-        </tr>
-         <tr class="warning">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-          <tr class="success">
-            <td><b>ToString</b></td>
-            <td>Converts a type to a string.
-</td>
-        </tr>
-          <tr class="info">
-            <td><b>ToType</b></td>
-            <td>Converts a type to a specified type.</td>
-        </tr>
-          <tr class="warning">
-            <td><b>ToUInt16</b></td>
-            <td>Converts a type to an unsigned int type.</td>
-        </tr>
-    </tbody>
-</table> <br />
 
-<!-- CONTENT ENDS HERE -->
+<p>It is also a user-defined type like a class or structure but can contain only abstract members in it.</p>
+
+<p><b>Interface:</b> only abstract methods</p>
+
+<p><b>abstract class:</b> both abstract and non- abstract methods</p>
+
+<p><b>non-abstract class:</b> only non-abstract methods.</p>
+
+<img src="images/basic- interface.png"  width="640" height="340"><br />
+<div>
+    
+</div>
+
+<p>
+
+All the abstract methods of the interface must be implemented by the child class of the interface i.e., a class which is inheriting from the interface need to implement the abstract methods of the interface.
+</p>
+
+<p>
+Inheritance is divided into 2 categories.</p>
+<ol>
+    <li>Implementation Inheritance.</li>
+    <li>Interface Inheritance</li>
+</ol>
+
+<p>Observe these two:</p>
+<div class="alert alert-info">
+If a class is inheriting from another class we call it as “Implementation Inheritance” and the main goal of this is consuming the members of parent classes under child classes.
+</div>
+<div class="alert alert-danger">
+If a class is inheriting from an interface we call it as “Interface Inheritance” and main goal of this is consumed though parents members under child class it is for implementing the parent’s abstract members under the child.
+</div>
+
+
+<b>Syntax for c# interfaces</b>
+<pre class="prettyprint csharp">
+[&lt;modifiers&gt;] interface &lt;name&gt;
+ {
+    // Abstract member declarations
+}
+
+</pre>
+
+
+<p>Few things to keep in mind about interfaces in C#</p>
+<ol>
+    <li>an interface can not contain any variable in it.</li>
+    <li>The default scope for the members of an interface is “public” whereas it is “private” in case of a class.</li>
+    <li>Every member of an interface is by default “abstract” no need of using abstract modifier again.</li>
+    <li>If required an interface can inherit from another interface but not from any class.</li>
+</ol>
+<br />
+<div>
+    
+</div>
+
+<img src="images/interface.png"  width="640" height="340">
+
+<h4>Example</h4>
+<pre class="prettyprint csharp">
+  interface Inter1
+{
+    void Add(int x, int y);
+    void Sub(int x, int y);
+}
+
+interface Inter2
+{
+    void Mul(int x, int y);
+    void Div(int x, int y);
+}
+
+
+
+class InterClass : Inter1, Inter2
+{
+    public void Add(int x, int y)
+    {
+        Console.WriteLine("Addition result :"+(x+y));
+    }
+    public void Sub(int x, int y)
+    {
+        Console.WriteLine("Substraction result :" + (x - y));
+    }
+    public void Mul(int x, int y)
+    {
+        Console.WriteLine("Multiplication result :" + (x * y));
+    }
+    public void Div(int x, int y)
+    {
+        Console.WriteLine("Division result :" + (x / y));
+    }
+
+    static void Main()
+    {
+        InterClass obj = new InterClass();
+        Inter1 i1 = obj;
+        Inter2 i2 = obj;
+
+        i1.Add(100, 20);
+        i1.Sub(100, 20);
+        i2.Mul(100, 20);
+        i2.Div(100, 20);
+
+        Console.ReadLine();
+
+    }
+}
+</pre>
+
+<p>If you run the above example it will produce the following output</p>
+
+<b>Output</b>
+<div class="alert alert-info">
+Addition result: 120<br/>
+Subtraction result: 80<br />
+Multiplication result: 2000<br />
+Division result: 5<br />
+
+</div>
+
+
+ <b>Note:</b><p> we can not create an object of interface same like an abstract class. but if required we can create a reference of the interface using its child classes objects and with that reference we can invoke the methods that ar corresponding to the interface.
+</p>
+
+<p>To test the above note, rewrite the code under main method of child class as following
+</p>
+<pre class="prettyprint csharp">
+InterClass obj = new InterClass()
+Inter1 i1 = obj;
+          Inter2 i2 = obj;
+    i1.Add(100,60);
+    i1.Sub(9,2);
+    i2.Mul(5,3);
+    i2.Div(10,2);
+</pre>
+
+
+
+
+<!-- CONTENT END HERE -->
 </div>
 </div>
 
@@ -315,7 +333,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
              Copyright &copy 2015 Tutorialsacademy.com
             </div>
         </div>
-       
+
     </div>
 </div>
 </body>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> C# Type Conversion</title>
+<title>C# File I/O</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -105,7 +105,7 @@
 <li><a target="_top" href="csharp-events.html">C# Events</a></li>
 <li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
 <li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
-</ul>               
+</ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
 </ul>
@@ -113,10 +113,12 @@
 <div class="middle_right">
 <div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
-<!-- PRINTING STARTS HERE -->
+
 <!-- CONTENT STARTS -->
 <div class="content">
-<h1>C# Type Conversion</h1>
+
+
+<h1>C# File I/O</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,144 +130,75 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>What is type conversion in C# ?</h4>
-<div class ="alert alert-success">
- It is a way of implicitly or explicitly, changing an entity of one data type into another
- </div>
+<h4>File I/O in C#</h4>
 
-<p>Type conversion in C# is nothing but converting one type of data to another type.
- There are 2 types of Type conversions exist in c# language.</p>
+<p>
+A file is a collection of data stored in a disk with a specific name along with a directory path. It becomes steam in c# language when it tries to open the file for Read/Write operations.
+</p>
+<p>
+The stream is actually the sequence of bytes passing through the communication path. Streams are of 2 types</p>
+<ol>
+    <li>Input stream: It is used to read the data from the file </li>
+    <li>Output Stream: It is used to write the data into a file.</li>
+</ol>
 
+<p>
+The classes in the namespace System.IO provides various classes and methods to retrieve and changes information about Files as well as Directories. 
+</p>
 
-<strong>Implicit type conversion in C#</strong> 
-<p>Implicit type conversions are basically handled by C# in a type-safe manner.In c#, we see smaller types and lager types or complex types</p>
-<p>conversion from smaller to larger integral types and conversion from derived classes to base classes.</p> <br />
+<p> In C# to perform a file, I/O operation, you can use the basics of</p>
+<ol>
+    <li>Create</li>
+    <li>Open</li>
+    <li>Read and Write</li>
+    <li>Close</li>
+</ol>
 
-<strong>Explicit type conversion in C#</strong> 
-<p>Explicit type conversion are handled explicitly by programmers using the predefined functions. Explicit conversions require a cast operator.</p>
-<strong>Example:</strong>
-<pre class="prettyprint"><code class="language-php">
-static void Main(string[] args)
-    {
-        double price = 8980.09;
-        int cost;
-        // cast double to int.
-        cost = (int)price ;
-        Console.WriteLine(cost);
-        Console.ReadKey();
-    }
-</code></pre>
- 
-<p>From this example casting done explicitly from decimal type to integer type.</p>
-<h4>C# Type Conversion Methods</h4>
-<p>Let's look at another example to understand how type conversion works in C#.</p>
+<img src="images/file-operation.png" width="640" width="340">
 
 
-<b>C# type conversion example for double to int</b>
-<pre clas"prettyprint"><code class="language-csharp">
-using System;
-namespace TypeConversionApplication 
+<h4>Example</h4>
+<pre class="prettyprint csharp">
+class FileIO
 {
-   class ExplicitConversionExample 
-   {
-      static void Main(string[] args) 
-      {
-         double d = 7873.74; 
-         int i;
-         
-         // casting double to int.
-         i = (int)d;
-         Console.WriteLine(i);
-         Console.ReadKey();
-      }
-   }
+public static void Main()
+{
+    FileStream fs = new FileStream("c:\\test.txt", FileMode.Open, FileAccess.Read);
+
+    StreamReader sr = new StreamReader(fs);
+
+    Console.WriteLine("Program to show content   of test file");
+    String buff = sr.ReadToEnd();
+    Console.WriteLine(buff);
+    Console.ReadLine();
+    sr.Close();
+    fs.Close();
 }
-</code></pre>
-<br />
-<Strong>Output</Strong><br>
-<div class="alert alert-info">
-    7873
-</div>
-<p>If you run the above example it will produce 7873 as output because it converted the
-double value to int. You can also try the same example for float to int as well.</p>
+}
 
-<p>We have several methods to perform type conversion in C#. 
-C# provides the following built-in type conversion methods:</p><br />
-<table class="table">
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td><b>ToBoolean</b></td>
-            <td>Converts a type to a Boolean value, where possible.</td>
-        </tr>
+</pre>
 
-        <tr class="danger">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToChar</b></td>
-            <td>Converts a type to a single Unicode character, where possible.</td>
-        </tr>
-        <tr class="warning">
-            <td><b>ToDateTime</b></td>
-            <td>Converts a type (integer or string type) to date-time structures.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToDecimal</b></td>
-            <td>Converts a floating point or integer type to a decimal type.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToDouble</b></td>
-            <td>Converts a type to a double type.</td>
-        </tr>
-        <tr class="danger">
-            <td><b>ToInt16</b></td>
-            <td>Converts a type to a 16-bit integer.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToInt32</b></td>
-            <td>Converts a type to a 32-bit integer.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToInt64</b></td>
-            <td>Converts a type to a 64-bit integer.
-</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToSbyte</b></td>
-            <td>Converts a type to a signed byte type.</td>
-        </tr>
-         <tr class="danger">
-            <td><b>ToSingle</b></td>
-            <td>Converts a type to a small floating point number.</td>
-        </tr>
-         <tr class="warning">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-          <tr class="success">
-            <td><b>ToString</b></td>
-            <td>Converts a type to a string.
-</td>
-        </tr>
-          <tr class="info">
-            <td><b>ToType</b></td>
-            <td>Converts a type to a specified type.</td>
-        </tr>
-          <tr class="warning">
-            <td><b>ToUInt16</b></td>
-            <td>Converts a type to an unsigned int type.</td>
-        </tr>
-    </tbody>
-</table> <br />
+<p>Classes present under System.IO namespace related file I/O operations as follow.
+</p>
+<ol>
+    <li>Directory Class</li>
+    <li>DirectoryInfo Class</li>
+    <li>File Class</li>
+    <li>FileInfo Class</li>
+    <li>BinaryWriter</li>
+    <li>BinaryReader Class</li>
+    <li>TextWriter Class</li>
+    <li>TextReader Class</li>
+</ol>
 
-<!-- CONTENT ENDS HERE -->
+
+
+
+
+
+
+
+<!-- CONTENT END HERE -->
 </div>
 </div>
 
@@ -315,7 +248,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
              Copyright &copy 2015 Tutorialsacademy.com
             </div>
         </div>
-       
+
     </div>
 </div>
 </body>

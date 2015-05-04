@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> C# Type Conversion</title>
+<title>C# Regular Expressions</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -105,7 +105,7 @@
 <li><a target="_top" href="csharp-events.html">C# Events</a></li>
 <li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
 <li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
-</ul>               
+</ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
 </ul>
@@ -113,10 +113,12 @@
 <div class="middle_right">
 <div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
-<!-- PRINTING STARTS HERE -->
+
 <!-- CONTENT STARTS -->
 <div class="content">
-<h1>C# Type Conversion</h1>
+
+
+<h1>C# Regular Expressions</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,144 +130,87 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>What is type conversion in C# ?</h4>
-<div class ="alert alert-success">
- It is a way of implicitly or explicitly, changing an entity of one data type into another
- </div>
 
-<p>Type conversion in C# is nothing but converting one type of data to another type.
- There are 2 types of Type conversions exist in c# language.</p>
-
-
-<strong>Implicit type conversion in C#</strong> 
-<p>Implicit type conversions are basically handled by C# in a type-safe manner.In c#, we see smaller types and lager types or complex types</p>
-<p>conversion from smaller to larger integral types and conversion from derived classes to base classes.</p> <br />
-
-<strong>Explicit type conversion in C#</strong> 
-<p>Explicit type conversion are handled explicitly by programmers using the predefined functions. Explicit conversions require a cast operator.</p>
-<strong>Example:</strong>
-<pre class="prettyprint"><code class="language-php">
-static void Main(string[] args)
-    {
-        double price = 8980.09;
-        int cost;
-        // cast double to int.
-        cost = (int)price ;
-        Console.WriteLine(cost);
-        Console.ReadKey();
-    }
-</code></pre>
- 
-<p>From this example casting done explicitly from decimal type to integer type.</p>
-<h4>C# Type Conversion Methods</h4>
-<p>Let's look at another example to understand how type conversion works in C#.</p>
-
-
-<b>C# type conversion example for double to int</b>
-<pre clas"prettyprint"><code class="language-csharp">
-using System;
-namespace TypeConversionApplication 
-{
-   class ExplicitConversionExample 
-   {
-      static void Main(string[] args) 
-      {
-         double d = 7873.74; 
-         int i;
-         
-         // casting double to int.
-         i = (int)d;
-         Console.WriteLine(i);
-         Console.ReadKey();
-      }
-   }
-}
-</code></pre>
-<br />
-<Strong>Output</Strong><br>
-<div class="alert alert-info">
-    7873
+<h4>What is a Regular Expression</h4>
+<div class="alert alert-success">
+  Regular Expression is a sequence of symbols and characters expressing a string or pattern to be searched for within a longer piece of text.
 </div>
-<p>If you run the above example it will produce 7873 as output because it converted the
-double value to int. You can also try the same example for float to int as well.</p>
 
-<p>We have several methods to perform type conversion in C#. 
-C# provides the following built-in type conversion methods:</p><br />
-<table class="table">
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td><b>ToBoolean</b></td>
-            <td>Converts a type to a Boolean value, where possible.</td>
-        </tr>
 
-        <tr class="danger">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToChar</b></td>
-            <td>Converts a type to a single Unicode character, where possible.</td>
-        </tr>
-        <tr class="warning">
-            <td><b>ToDateTime</b></td>
-            <td>Converts a type (integer or string type) to date-time structures.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToDecimal</b></td>
-            <td>Converts a floating point or integer type to a decimal type.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToDouble</b></td>
-            <td>Converts a type to a double type.</td>
-        </tr>
-        <tr class="danger">
-            <td><b>ToInt16</b></td>
-            <td>Converts a type to a 16-bit integer.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToInt32</b></td>
-            <td>Converts a type to a 32-bit integer.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToInt64</b></td>
-            <td>Converts a type to a 64-bit integer.
-</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToSbyte</b></td>
-            <td>Converts a type to a signed byte type.</td>
-        </tr>
-         <tr class="danger">
-            <td><b>ToSingle</b></td>
-            <td>Converts a type to a small floating point number.</td>
-        </tr>
-         <tr class="warning">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-          <tr class="success">
-            <td><b>ToString</b></td>
-            <td>Converts a type to a string.
-</td>
-        </tr>
-          <tr class="info">
-            <td><b>ToType</b></td>
-            <td>Converts a type to a specified type.</td>
-        </tr>
-          <tr class="warning">
-            <td><b>ToUInt16</b></td>
-            <td>Converts a type to an unsigned int type.</td>
-        </tr>
-    </tbody>
-</table> <br />
 
-<!-- CONTENT ENDS HERE -->
+
+<p>A regular expression is actually a pattern which can be matched with the given text. In C#, there is a support for performing the regular expression operations by.Net framework. A pattern consists of one or more character literals, operators, or constructs.
+</p>
+
+<p>In c#, Regex is a class that handles regular expressions. We specify patterns as string arguments. Methods (like Match and Replace) are available.
+</p>
+
+
+<h4>Example</h4>
+<pre class="prettyprint csharp">
+using System;
+using System.Text.RegularExpressions;
+class TestRegularExpressions
+{
+    static void Main()
+    {
+        string[] sentences = 
+
+        {
+            "java language code",
+            "code that return null when there is no data available",
+            "Unicode Character",
+            "no match here"
+        };
+
+        string sPattern = "code";
+
+        foreach (string s in sentences)
+        {
+            System.Console.Write("{0,24}", s);
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(s, sPattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+            {
+                System.Console.WriteLine("  (match for '{0}' found)", sPattern);
+            }
+            else
+            {
+                System.Console.WriteLine();
+            }
+        }
+
+        // Keep the console window open in debug mode.
+        System.Console.WriteLine("Press any key to exit.");
+        System.Console.ReadKey();
+
+    }
+}
+
+</pre>
+
+<b>Output</b>
+<div class="alert alert-info">
+C# code  (match for 'code' found)<br />
+Chapter 2: Writing Code  (match for 'code' found)<br />
+Unicode  (match for 'code' found)<br />
+no match here
+
+</div>
+
+
+<p>
+The above code is a console application that performs a simple case-insensitive
+A search of the strings in an array. 
+</p>
+<p>
+The static method Regex.IsMatch performs the search given the string to search and a string that contains the search pattern.
+</p>
+<p>
+ In this case, a third argument is used to indicate that the case should be ignored. For more information, see System.Text.RegularExpressions.RegexOptions.
+</p>
+
+
+<!-- CONTENT END HERE -->
 </div>
 </div>
 
@@ -315,7 +260,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
              Copyright &copy 2015 Tutorialsacademy.com
             </div>
         </div>
-       
+
     </div>
 </div>
 </body>

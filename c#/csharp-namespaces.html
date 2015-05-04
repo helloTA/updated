@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> C# Type Conversion</title>
+<title> C# Namespaces</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -105,7 +105,7 @@
 <li><a target="_top" href="csharp-events.html">C# Events</a></li>
 <li><a target="_top" href="csharp-generics.html">C# Generics</a></li>
 <li><a target="_top" href="csharp-multithreading.html">C# Multithreading</a></li>
-</ul>               
+</ul>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
 </ul>
@@ -113,10 +113,12 @@
 <div class="middle_right">
 <div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
-<!-- PRINTING STARTS HERE -->
+
 <!-- CONTENT STARTS -->
 <div class="content">
-<h1>C# Type Conversion</h1>
+
+
+<h1>C# Namespaces</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,144 +130,129 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>What is type conversion in C# ?</h4>
-<div class ="alert alert-success">
- It is a way of implicitly or explicitly, changing an entity of one data type into another
- </div>
 
-<p>Type conversion in C# is nothing but converting one type of data to another type.
- There are 2 types of Type conversions exist in c# language.</p>
-
-
-<strong>Implicit type conversion in C#</strong> 
-<p>Implicit type conversions are basically handled by C# in a type-safe manner.In c#, we see smaller types and lager types or complex types</p>
-<p>conversion from smaller to larger integral types and conversion from derived classes to base classes.</p> <br />
-
-<strong>Explicit type conversion in C#</strong> 
-<p>Explicit type conversion are handled explicitly by programmers using the predefined functions. Explicit conversions require a cast operator.</p>
-<strong>Example:</strong>
-<pre class="prettyprint"><code class="language-php">
-static void Main(string[] args)
-    {
-        double price = 8980.09;
-        int cost;
-        // cast double to int.
-        cost = (int)price ;
-        Console.WriteLine(cost);
-        Console.ReadKey();
-    }
-</code></pre>
- 
-<p>From this example casting done explicitly from decimal type to integer type.</p>
-<h4>C# Type Conversion Methods</h4>
-<p>Let's look at another example to understand how type conversion works in C#.</p>
-
-
-<b>C# type conversion example for double to int</b>
-<pre clas"prettyprint"><code class="language-csharp">
-using System;
-namespace TypeConversionApplication 
-{
-   class ExplicitConversionExample 
-   {
-      static void Main(string[] args) 
-      {
-         double d = 7873.74; 
-         int i;
-         
-         // casting double to int.
-         i = (int)d;
-         Console.WriteLine(i);
-         Console.ReadKey();
-      }
-   }
-}
-</code></pre>
-<br />
-<Strong>Output</Strong><br>
-<div class="alert alert-info">
-    7873
+<h4>What are namespaces in programming</h4>
+<div class="alert alert-success">
+    A namespace is a set of named symbols, usually variables. Names or identifiers are keys allowing to access symbol values. Namespaces provide a level of direction to specific identifiers, thus making it possible to distinguish between identical identifiers.
 </div>
-<p>If you run the above example it will produce 7873 as output because it converted the
-double value to int. You can also try the same example for float to int as well.</p>
 
-<p>We have several methods to perform type conversion in C#. 
-C# provides the following built-in type conversion methods:</p><br />
-<table class="table">
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="success">
-            <td><b>ToBoolean</b></td>
-            <td>Converts a type to a Boolean value, where possible.</td>
-        </tr>
 
-        <tr class="danger">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToChar</b></td>
-            <td>Converts a type to a single Unicode character, where possible.</td>
-        </tr>
-        <tr class="warning">
-            <td><b>ToDateTime</b></td>
-            <td>Converts a type (integer or string type) to date-time structures.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToDecimal</b></td>
-            <td>Converts a floating point or integer type to a decimal type.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToDouble</b></td>
-            <td>Converts a type to a double type.</td>
-        </tr>
-        <tr class="danger">
-            <td><b>ToInt16</b></td>
-            <td>Converts a type to a 16-bit integer.</td>
-        </tr>
-        <tr class="info">
-            <td><b>ToInt32</b></td>
-            <td>Converts a type to a 32-bit integer.</td>
-        </tr>
-        <tr class="success">
-            <td><b>ToInt64</b></td>
-            <td>Converts a type to a 64-bit integer.
-</td>
-        </tr>
-         <tr class="info">
-            <td><b>ToSbyte</b></td>
-            <td>Converts a type to a signed byte type.</td>
-        </tr>
-         <tr class="danger">
-            <td><b>ToSingle</b></td>
-            <td>Converts a type to a small floating point number.</td>
-        </tr>
-         <tr class="warning">
-            <td><b>ToByte</b></td>
-            <td>Converts a type to a byte.</td>
-        </tr>
-          <tr class="success">
-            <td><b>ToString</b></td>
-            <td>Converts a type to a string.
-</td>
-        </tr>
-          <tr class="info">
-            <td><b>ToType</b></td>
-            <td>Converts a type to a specified type.</td>
-        </tr>
-          <tr class="warning">
-            <td><b>ToUInt16</b></td>
-            <td>Converts a type to an unsigned int type.</td>
-        </tr>
-    </tbody>
-</table> <br />
 
-<!-- CONTENT ENDS HERE -->
+<p>Namespaces are used as logical container for the types which can help us in 2 different ways.</p>
+
+
+<ol>
+    <li>Grouping of related types i.e., under the BCL’s clients that are performing similar operations, are put under a separate namespace for easy identification as following.</li>
+    <img src="images/namespace1.png"  width="640" height="340"><br />
+
+    <li>We can use namespaces to overcome the problem of naming collision also i.e., Defining the multiple types in the same name under a project can be done by putting them under different namespaces as following</li>
+
+    <img src="images/namespace2.png"  width="640" height="340"><br/>
+</ol>
+
+
+
+<p>Suppose if a class is defined under a namespace whenever we want to consume that class anywhere, compulsory we need to refer to the class with its namespace.
+</p>
+<p>
+Using the namespace name always before the class name will be a little bit complex because volumes of code will be increased off.
+</p>
+<p>
+We can overcome above problem by importing a namespace i.e., whatever namespaces, classes we wanted to consume in the program we can specify those namespace names on the top of the program with the help of “using” statement. So that inside the class we can consume types of imported namespace directly. No need to prefix the type name with its namespace in it.
+</p>
+
+<p>Let us look at a sample namespace in c#</p>
+<pre class="prettyprint csharp">
+    namespace SampleNamespace
+{
+    class SampleClass { }
+
+    interface SampleInterface { }
+
+    struct SampleStruct { }
+
+    enum SampleEnum { a, b }
+
+    delegate void SampleDelegate(int i);
+
+    namespace SampleNamespace.Nested
+    {
+        class SampleClass2 { }
+    }
+}
+
+</pre>
+
+<p>Within a namespace, we can declare more than one of the following types:</p>
+<ol>
+    <li>another namespace</li>
+    <li>class</li>
+    <li>interface</li>
+    <li>struct</li>
+    <li>enum</li>
+    <li>delegate</li>
+</ol>
+
+
+<p>Whether or not you explicitly declare a namespace in a C# source file, the compiler adds a default namespace. This unnamed namespace, sometimes referred to as the global namespace, is present in every file. Any identifier in the global namespace is available for use in a named namespace.</p>
+<p>
+Namespaces implicitly have public access and this is not modifiable. For a discussion of the access modifiers, you can assign to elements in a namespace, see Access Modifiers (C# Reference).
+It is possible to define a namespace in two or more declarations. For example, the following example defines two classes as part of the MyCompany namespace:
+</p>
+
+<pre class="prettyprint csharp">
+    namespace MyCompany.Proj1
+{
+    class MyClass
+    {
+    }
+}
+
+namespace MyCompany.Proj1
+{
+    class MyClass1
+    {
+    }
+}
+
+</pre>
+
+
+<p> The following example shows how to call a static method in a nested namespace.</p>
+<pre class="prettyprint csharp">
+   
+
+namespace SomeNameSpace
+{
+    public class MyClass 
+    {
+        static void Main() 
+        {
+            Nested.NestedNameSpaceClass.SayHello();
+        }
+    }
+
+    // a nested namespace 
+    namespace Nested   
+    {
+        public class NestedNameSpaceClass 
+        {
+            public static void SayHello() 
+            {
+                Console.WriteLine("Hello");
+            }
+        }
+    }
+}
+
+</pre>
+
+<p>when you run the above example, it will produce the following output</p>
+<b>Output</b>
+<pre class="alert alert-info">
+    Hello
+</pre>
+<!-- CONTENT END HERE -->
 </div>
 </div>
 
@@ -315,7 +302,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
              Copyright &copy 2015 Tutorialsacademy.com
             </div>
         </div>
-       
+
     </div>
 </div>
 </body>
