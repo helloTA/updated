@@ -17,6 +17,13 @@ p{
 ol li{
 	margin:5px 25px;
 }
+
+ul li {
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+    display: list-item
+}
 p {
 	font-size: 10px;
 }
@@ -62,6 +69,8 @@ background-color: #0d83db;
     font-size: 15px;
     text-decoration: none;
 }
+
+
 
 .clr {
 	clear: both;

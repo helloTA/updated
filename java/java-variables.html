@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Variables</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+<li class="heading">C# Tutorials</li>
+<li><a target="_top" href="about.java.html">About Java</a></li>
+<li><a target="_top" href="java-datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java-variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-constants.html">Java Modifiers </a></li>
+<li><a target="_top" href="java-operators.html">Java Operators </a></li>
+<li><a target="_top" href="java-objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java-loops.html">Java Loops </a></li>
+<li><a target="_top" href="java-decision-making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java-numbers.html">Java Numbers </a></li>
+
+<li><a target="_top" href="java-characters.html">Java Characters</a></li>
+<li><a target="_top" href="java-strings.html">Java Strings</a></li>
+<li><a target="_top" href="java-arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java-methods.html">Java Methods</a></li>
+<li class="heading">Java Advanced Tutorials</li>
+<li><a target="_top" href="java-dates.html">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java-files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java-exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java-inheritance.html">Java Inheritance
+</a></li>
+<li><a target="_top" href="java-overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java-polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java-abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java-encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java-interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java-packages.html">Java Packages
+</a></li>
+<li><a target="_top" href="java-datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java-collections.html">Java Collections
+</a></li>
+<li><a target="_top" href="java-generics.html">Java Generics</a></li>
+<li><a target="_top" href="java-serialization.html">Java Serialization
+</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>Java Variables</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h4>What is a Variable</h4>
+<div class="alert alert-success">
+  In programming, a variable is a value that can change, depending on conditions or on information passed to the program. Typically, a program consists of instruction s that tell the computer what to do and data that the program uses when it is running.
+</div>
+
+<img src="images/car.png">
+
+
+
+<b>Java Variables</b>
+<p>
+Variables are type of value that are capable of storing the data in it. Each variable has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.</p>
+
+<p><b>Note:</b>  In java, You must declare variables before going to use them.
+</p>
+
+<b>Syntax</b>
+<pre class="prettyprint java">
+data type variable [ = value][, variable [= value] ...] ;
+
+</pre>
+
+
+<p>Here data type is one of Java's datatypes and variable is the name of the variable. To declare more than one variable of the specified type, you can use a comma-separated list.</p>
+
+<p>Following are valid examples of variable declaration and initialization in Java:
+
+<pre class="prettyprint java">
+int a, b, c;            // Declares three ints, a, b, and c.
+int a = 100, b = 22;  // Example of initialization
+byte B = 12;          // initializes a byte type variable B.
+double pi = 3.14159;  // declares and assigns a value of PI.
+char a = 'v';         // the char variable a is initialized with value 'v'
+</pre>
+
+
+<img src="images/basicvariable.png">
+
+
+<p>This chapter will explain various variable types available in Java Language. There are three kinds of variables in Java:
+</p>
+<ol>
+  <li>Local variables</li>
+  <li>Instance variables</li>
+  <li>Class/static variables</li>
+</ol>
+
+
+<b>Local variables:</b>
+
+<p>If a variable that is declared inside the method is called local variable.
+</p>
+
+
+<h4>Local Variable Example</h4>
+<pre class="prettyprint java">
+  public class Example{ 
+   public void myRank(){
+      int rank = 1;         // here rank is local variable
+      rank = rank + 3;      // the rank variable is accessible only within the myRank method
+      System.out.println("My Rank is : " + rank);
+   }
+   
+   public static void main(String args[]){
+      Example example = new Example();
+      example.myRank();
+   }
+}
+</pre>
+
+<p>When you run the above example, it will produce the following output</p>
+<b>Output</b>
+<pre class="prettyprint java">
+  My Rank is 4
+</pre>
+
+<b>Instance Variable in java</b>
+<p>An instance variable is a variable defined in a class (i.e. a member variable), for which each instantiated object of the class has a separate copy, or instance. An instance variable is similar to a class variable.</p>
+
+
+<h4>Example</h4>
+<pre class="prettyprint java">
+import java.io.*;
+
+public class Student{
+   // this instance variable is visible for any child class.
+   public String name;
+   
+   // marks  variable is visible in Student class only.
+   private int marks;
+   
+   // The name variable is assigned in the constructor. 
+   public Student (String stName){
+      name = stName;
+   }
+
+   // The marks variable is assigned a value.
+   public void setMarks(int stMarks){
+      marks = stMarks;
+   }
+   
+   // This method prints the Student details.
+   public void printSt(){
+      System.out.println("M.r  " + name + " got " + marks + " marks " );
+      System.out.println("M.r  " + name + " got " + marks + " marks " );
+      
+   }
+
+   public static void main(String args[]){
+      Student stOne = new Student("John");
+      stOne.setMarks(90);
+      stOne.printSt();
+      
+      Student stTwo = new Student("Michel");
+      stTwo.setMarks(65);
+      stTwo.printSt();
+   }
+}
+</pre>
+
+<b>Output</b>
+
+<pre class="prettyprint java">
+
+M.r  John got 90 marks 
+M.r  Michel got 65 marks 
+</pre>
+
+
+<b>Class/ or static variables in java:</b>
+<p>
+If avariable that is declared as static is called static variable. It cannot be local.</p>
+<p> Static variables are initialized in different ways.</p>
+
+<ol>
+  <li>Static variables gets initialized by the time of class is being loaded.</li>
+  <li>Static variables gets initialized before an object of that class created.</li>
+  <li>Static variables in a class are initialized before any static method of the class runs.</li>
+</ol>
+
+
+
+<p><b>Note:</b> Static variable’s value is same for all the object(or instances) of the class. 
+</p>
+
+
+<b>Example</b>
+<pre class="prettyprint java">
+import java.io.*;
+
+public class MathClass{
+   //   score variable is a private static variable
+   private static int score;
+
+   // MATHEMATICS is a constant
+   public static final String MATHEMATICS = "maths ";
+
+   public static void main(String args[]){
+      score = 96;
+      System.out.println(MATHEMATICS+"total score is :"+score);
+   }
+}
+</pre>
+<p>If you run the above example, it would produce the following output</p>
+<b>Output</b>
+<pre class="prettyprint java">
+  maths total score is :96
+</pre>
+
+
+
+<p>As you can see in the above example that both the objects of the class, are sharing a same copy of static variable that’s why they displayed the same value of count.
+</p>
+<p><b>
+Note: </b>If the variables are access from an outside class the constant should be accessed as <code>VariableDemo.value</code></p>
+
+
+
+
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

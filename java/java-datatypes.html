@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Data Types</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+<li class="heading">C# Tutorials</li>
+<li><a target="_top" href="about.java.html">About Java</a></li>
+<li><a target="_top" href="java-datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java-variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-constants.html">Java Modifiers </a></li>
+<li><a target="_top" href="java-operators.html">Java Operators </a></li>
+<li><a target="_top" href="java-objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java-loops.html">Java Loops </a></li>
+<li><a target="_top" href="java-decision-making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java-numbers.html">Java Numbers </a></li>
+
+<li><a target="_top" href="java-characters.html">Java Characters</a></li>
+<li><a target="_top" href="java-strings.html">Java Strings</a></li>
+<li><a target="_top" href="java-arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java-methods.html">Java Methods</a></li>
+<li class="heading">Java Advanced Tutorials</li>
+<li><a target="_top" href="java-dates.html">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java-files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java-exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java-inheritance.html">Java Inheritance
+</a></li>
+<li><a target="_top" href="java-overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java-polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java-abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java-encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java-interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java-packages.html">Java Packages
+</a></li>
+<li><a target="_top" href="java-datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java-collections.html">Java Collections
+</a></li>
+<li><a target="_top" href="java-generics.html">Java Generics</a></li>
+<li><a target="_top" href="java-serialization.html">Java Serialization
+</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>Java Data Types</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h4>What is a Data type</h4></h4>
+<div class="alert alert-success">
+    <p>A data type in a programming language is a set of data with values having predefined characteristics. The language usually specifies the range of values for a given data type, how the values are processed and how they are stored.</p>
+
+</div>
+
+<h4>Data Types in Java</h4>
+<p>Data types in Java are actually derived from the programming language ‘C’. In java, Data types are interlinked with variables where Variables are the one which stores the data and the operating system allocates memory when variable creation happens.
+<p>
+
+<p>Operating System decides what can be stored in the allocated memory depends on the datatype of a variable. We can store strings, integer, decimal and others types of variables by assigning different data types to them. 
+</p>
+
+
+
+<img src="images/datatype.png"><br>
+
+<div>
+    
+</div>
+
+<p>There 2 two data types available in Java:</p>
+<ol>
+    <li>Primitive Data Types</li>
+    <li>Reference/Object Data Types</li>
+</ol>
+
+<b>Primitive Data Types:</b>
+<p>
+Primitive Data types form the backbone to represent the properties/attributes of the objects. Any form of the data can be stored by using the primitive data types in Java.
+Java language supports 8 primitive data types. 
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>types</th>
+            <th>Description</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>byte(8 bit)</td>
+            <td>Used to save space in large arrays, mainly in place of integers, since a byte is four times smaller than an int.</td>
+            <td>-128 to 127</td>
+        </tr>
+        <tr class="info">
+            <td>short(16 bit) </td>
+            <td>Used to save memory as byte data type. A short is 2 times smaller than an int </td>
+            <td>-32768 to 32767 </td>
+      </tr>
+
+      <tr class="danger">
+      <td> int(32 bit)</td>
+      <td> Int is generally used as the default data type for integral values unless there is a concern about memory</td>
+      <td> -231 to 231-1</td>
+          
+      </tr>
+
+      <tr class="warning">
+          <td> long(64 bit) </td>
+          <td> Used when a wider range than int is needed</td>
+          <td> -- </td>
+      </tr>
+      <tr class="success">
+          <td> float(32 bit IEEE )</td>
+          <td> Used to save memory in large arrays of floating point numbers.</td>
+          <td> 0 to 65535</td>
+      </tr>
+      <tr class="info">
+          <td> double</td>
+          <td> Used as the default data type for decimal values, generally the default choice</td>
+          <td> 0 to 264-1</td>
+      </tr>
+
+      <tr class="danger">
+          <td> boolean</td>
+          <td> used for simple flags that track true/false conditions</td>
+          <td> true/false</td>
+      </tr>
+      <tr class="warning">
+          <td> char(16-bit Unicode character)</td>
+          <td> used to store any character</td>
+          <td> '\u0000' (or 0) to'\uffff' (or 65,535)</td>
+      </tr>
+
+    </tbody>
+
+</table> <br />
+
+<p>Let us look at some examples of primitive data types in java</p>
+
+<h4>Examples: </h4>
+
+<ul type="disc">
+    <li>byte a = 123, byte b = -90</li>
+    <li>short s = 3423, short r = -20000</li>
+    <li>int a = 4546, int b = -200000</li>
+    <li>long jimmy= 100000L, int b = -200000L</li>
+    <li>float distance= 51.5f</li>
+    <li>double d1 = 123.4 </li>
+    <li>boolean isMale= true</li>
+    <li>char ch='A'
+</li>
+</ul>
+
+<p>Now let us understand about the reference data types in java</p>
+
+<h4>Reference Data Types in Java:</h4>
+
+<p>A reference variable is declared to be of a specific type and that type can never be changed. Reference variables can be declared as static variables, instance variables, method parameters, or local variables.
+</p>
+<p>
+Class objects and various type of array variables come under reference data type.
+Default value of any reference variable is null.
+A reference variable can be used to refer to any object of the declared type or any compatible type.</p>
+
+<b>Example</b>
+<pre class="prettyprint java">
+ Company com= new Compant ("Tutorials Academy");
+
+</pre>
+
+
+
+
+
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
