@@ -112,14 +112,14 @@ Most of the DOM Traversal Methods do not modify the jQuery object and they are u
 
 
 
-<h4> .add():</h4>
+<h4> jQuery .add() Method</h4>
  
  <div class="alert alert-success">
      Create a new jQuery object with elements added to the set of matched elements.
  </div>
  <p>
 
-Given a jQuery object that represents a set of DOM elements, the .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method. The argument to .add() can be pretty much anything that $() accepts, including a jQuery selector expression, references to DOM elements or an HTML snippet.
+Given a jQuery object that represents a set of DOM elements, the jquery .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method. The argument to .add() can be pretty much anything that $() accepts, including a jQuery selector expression, references to DOM elements or an HTML snippet.
 </p>
 
 
@@ -134,7 +134,7 @@ Given a jQuery object that represents a set of DOM elements, the .add() method c
 
 <p>Below example program finds all divs and makes a border. Then adds all paragraphs to the jQuery object to set their backgrounds green.</p>
 <pre class="prettyprint jquery">
-    &lt;!doctype html&gt;
+&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"&gt;
@@ -176,18 +176,170 @@ $( "div" ).css( "border", "2px solid red" )
 
 <p>When you run the above jQuery .add() method example, it will produce the following output</p>
 
-<img src="images/examples/add.png"><br />
+<img src="images/examples/add.png">
 
-<br><a href="examples/add.html" class="btn btn-success">Try It Yourself</a>
+<br><a href="examples/add.html" class="btn btn-primary">Try It Now</a>
+<div>
+  
+</div>
 
-
-<h4>.addBack()</h4>
+<br><h4>jQuery .addBack() Method</h4>
 
 <div class="alert alert-success">
 Add the previous set of elements on the stack to the current set, optionally filtered by a selector.</div>
 
+<p><code>jQuery .addBack() method </code> adds DOM previous element to the current set and maintains them in the internal stack which will take care of changes to the matched set of elements. 
+</p>
 
-As described in the discussion for .end(), jQuery objects maintain an internal stack that keeps track of changes to the matched set of elements. When one of the DOM traversal methods is called, the new set of elements is pushed onto the stack. If the previous set of elements is desired as well, .addBack() can help.
+<p>A Set of new elements will be pushed onto the stack when DOM traversal method being called. The advantage with<code>jQuery  .addBack() method </code>is to get access on the previous set of elements.
+</p>
+
+
+<b>Syntax</b>
+
+<pre class="prettyprint jquery">
+ .addBack( [selector ] )
+</pre>
+
+
+<p>The below example explains how to use jQuery.addBack() method and also we will understand the difference before using jQuery addBack() method and after using jQuery addBack() method</p>
+
+<h4>Example</h4>
+<pre class="prettyprint jquery">
+  $( "div.left, div.right" ).find( "div, div > p" ).addClass( "border" );
+ 
+// First Example
+$( "div.before-addback" ).find( "p" ).addClass( "background" );
+ 
+// Second Example
+$( "div.after-addback" ).find( "p" ).addBack().addClass( "background" );
+
+</pre>
+
+<b>Output</b><br />
+
+<br><img src="examples/images/addBack.png">
+<br>
+<div>
+  
+</div>
+<br><a href="examples/traversal/addback.html" class="btn btn-primary">Try It Now</a>
+
+
+
+<h4>jQuery .children () Method</h4>
+
+<div class="alert alert-success">
+jQuery children() method is used to get the children of each and every element in the set of matched elements and constructs a new jQuery object from the matched elements in the DOM tree.
+</div>
+<p>
+In jQuery, <code>the children() method</code> is different from<code> jQuery find() method</code> method. meaning<code> .children()</code> method only travels a single level down the DOM tree where as <code>.find()</code> can traverse down multiple levels to select elements.
+</p>
+
+<p>It accepts optional parameter i.e., selector expression of the same type.
+</p>
+
+<b>Syntax</b>
+<pre class="prettyprint jquery">
+.children( [selector ] )
+
+</pre>
+
+
+<p>Let's look at an example of using the jQuery children() traversal method.</p>
+
+<pre class="prettyprint jquery">
+$( "#container" ).click(function ( event ) {
+  $( "*" ).removeClass( "hilite" );
+  var kids = $( event.target ).children();
+  var len = kids.addClass( "hilite" ).length;
+ 
+  $( "#results span:first" ).text( len );
+  $( "#results span:last" ).text( event.target.tagName );
+ 
+  event.preventDefault();
+});
+</pre>
+
+<b>Output</b><br />
+<br><img src="images/children.png"><br >
+
+<div>
+  
+</div>
+<br><a href="examples/traversal/children.html" class="btn btn-primary">Try It Now</a>
+
+
+
+
+<br><h4>jQuery closest() method </h4>
+
+<p>jQuery closest() method returns the first ancestors of the selected element that matched the selector in the DOM tree. It is able to find out the elements and their ancestors in the DOM tree and constructs a new jQuery object from the matched elements. </p>
+
+
+<p>In jQuery, <code>parents()</code> and <code>closest()</code> are similar in action both of them traverse the DOM tree.</p> 
+
+<b>Syntax</b>
+<pre class="prettyprint jquery">
+  closest([selector])
+
+</pre>
+
+
+<h4>Example</h4>
+<pre class="prettyprint jquery">
+  $( document ).on( "click", function( event ) {
+  $( event.target ).closest( "li" ).toggleClass( "hilight" );
+})
+</pre>
+
+<br><a href="examples/traversal/closest.html" class="btn btn-primary">Try It Now</a>
+
+<br><h4>jQuery each() method</h4>
+
+<div class="alert alert-success">
+
+.each() method is an iterator function for looping over a jQuery object meaning executes a function for each matched element. The looping will start from 0
+</div>
+
+<p>
+
+ Iterate over a jQuery object, executing a function for each matched element.
+</p>
+
+<p>The jquery <code>each()</code> method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.</p>
+
+<b>Syntax</b>
+<pre class="prettyprint jquery">
+  .each( function )
+</pre>
+
+<h4>Example</h4>
+<pre class="prettyprint jquery">
+  $( document.body ).click(function() {
+  $( "div" ).each(function( i ) {
+    if ( this.style.color !== "green" ) {
+      this.style.color = "red";
+    } else {
+      this.style.color = "";
+    }
+  });
+});
+
+</pre>
+
+<br><a href="examples/traversal/each.html" class="btn btn-primary">Try It Now</a>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
