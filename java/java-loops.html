@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Objects and Java Classes</title>
+<title>Java Loops</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -112,7 +112,7 @@
 <div class="content">
 
 
-<h1>Java Objects and Classes</h1>
+<h1>Java Loops</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -124,216 +124,223 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-
-<p>
-Java is a true Object Oriented language and, therefore, the underlying structure of all Java programs is classes.</p>
-
-
-<p><b>Object:</b> Anything we wish to represent in Java must be encapsulated in a class that defines the “state” and “behaviour” of the basic program components known as objects.
-</p>
-<img src="images/object.png">
-<p>
-Classes create objects and objects use methods to communicate between them. They provide a convenient method for packaging a group of logically related data items and functions that work on them.
-</p>
-
-
-<h3>Objects in Java</h3>
-
-
-<p>In Object oeriented programming, an object is referred to an entity which has some behavior and state. The behavior often changes based on the state. For example a Car is an object, it has a behavior like move left, move right, and state like idle(which means it is in parking state) and moving state(which means the car is currently running or active state).
-
-</p>
-
-<b>Every Object in Java has three characteristics:
-</b>
-<br />
-
-
-<p><b>state:</b> represents data (value) of an object.</p>
-
-<p><b>behavior:</b> represents the behavior (functionality) of an object such as move left, move right etc.</p>
-
-<p><b>identity:</b> Object identity is typically implemented via a unique ID. The value of the ID is not visible to the external user. But,it is used internally by the JVM to identify each object uniquely. For example car Id</p>
-
-<b>Syntax for creaing objects in java</b>
-<div>
-  
+<h4>What is a Loop</h4>
+<div class="alert alert-success">
+    A loop is group of statements we want to execute several times until  we say stop.
 </div>
-<br/>
-<pre class="prettyprint java">
-  Foo ref = new Foo();
-</pre>
+<p>A loop statement allows us to execute a statement or a group of statements multiple times:</p>
 
-<p>Creating an object is not limted to one way in java.</p>
-
-
-<h3>What are all the different ways to create an object in Java?</h3>
-
-<p>There are four different ways to create objects in java:</p>
+<p>Java provides 3 different loops that allows you to execute a block of code repeatedly until a certain condition is met. 
+</p>
 <ol>
-  <li>Using new keyword</li>
-  <li>Using Class.forName()</li>
-  <li>Using clone()</li>
-  <li>Using object deserialization</li>
+  <li>for loop</li>
+  <li>while loop</li>
+  <li>do-while loop</li>
 </ol>
 
-<p>Let us understaind the above four ways more clearly.</p>
-
-<h3>Using new keyword</h3>
-
-<p> This is the most common way to create an object in java, almost 99% of objects are created in this way.</p>
-<b>Syntax</b>
-<pre class="prettyprint java">
-MyObject object = new MyObject();
-</pre>
 
 
-<h3>Using Class.forName()</h3>
-<p> If we know the name of the class & if it has a public default constructor we can create an object in this way.</p>
-<pre class="prettyprint java">
-MyObject object = (MyObject) Class.forName("subin.rnd.MyObject").newInstance();
-</pre>
-
-<h3>Using clone() The clone()</h3>
-<p>It can be used to create a copy of an existing object.</p>
-<pre class="prettyprint java">
-MyObject anotherObject = new MyObject(); MyObject object = anotherObject.clone();
-</pre>
-
-<h3>Using object deserialization</h3>
-<p> Object deserialization is nothing but creating an object from its serialized form.</p>
-<pre class="prettyprint java">
-ObjectInputStream inStream = new ObjectInputStream(anInputStream ); MyObject object = (MyObject) inStream.readObject();
-</pre>
+<h4>for loop in java</h4>
 <p>
-Now you know how to create an object. But its advised to create objects only when it is necessary to do so.
+
+By using a for loop, you can run a statement or a block of statements repeatedly until a specified expression evaluates to false. This would be more useful for iterating over arrays and for other applications. 
 </p>
-<br />
+<img src="images/for-loop.png"> <br />
 
 
-<br><h4>Example program to create an object in java</h4>
+<h4>Java for loop syntax</h4>
 <pre class="prettyprint java">
-  public class Laptop{
 
-   public Laptop(String name){
-      // This constructor has one parameter, called Laptop's name.
-      System.out.println("The name of my laptop is :" + name ); 
-   }
-   public static void main(String []args){
-      // this below statement would create an object myLaptop
-      Laptop myLaptop = new Laptop( "MacBook Air" );
+ for(initialization; Boolean_expression; update)
+{
+   //Statements
+}
+
+</pre>
+
+
+<b>How does the for loop in java works?</b>
+<ol>
+  <li>The initialization step will be executed only once. </li>
+  <li>
+Boolean_expression: If expression is true, the body of the loop is executed. If it is false, the body of the loop does not execute and flow of control jumps to the next statement.
+ </li>
+ <li> After the body of the for loop executes, the flow of control jumps back up to the update statement. This statement allows you to update any loop control variables. This statement can be left blank, as long as a semicolon appears after the Boolean expression.</li>
+ <li> 
+The Boolean expression is now evaluated again. If it is true, the loop executes and the process repeats itself (body of loop, then update step, then Boolean expression). After the Boolean expression is false, the for loop terminates.
+</li>
+</ol>
+ 
+
+<h4>Java For loop Example</h4>
+<pre class="prettyprint java">
+  public class ForLoop {
+
+   public static void main(String args[]) {
+
+      for(int x = 5; x < 15; x = x+1) {
+         System.out.print("value of x : " + x );
+         System.out.print("\n");
+      }
    }
 }
 </pre>
+<p>The above java for loop program will produce the following output</p>
+<pre class="prettyprint">
+value of x : 5
+value of x : 6
+value of x : 7
+value of x : 8
+value of x : 9
+value of x : 10
+value of x : 11
+value of x : 12
+value of x : 13
+value of x : 14
+</pre>
+
+<br />
+<br><h4> While loop in Java</h4>
+<div class="alert alert-success">
+    
+The while loop simply executes a block of code as long as the condition you give it is true. 
+</div>
+
+<img src="images/whileloop.png">
+
+<br><h4>Java While Loop Syntax</h4>
+<pre class="prettyprint java">
+while(expression)
+{
+   //Statements
+}
+  
+</pre>
+
+<p>if the expression result is true, then the actions inside the loop will be executed. This will continue as long as the expression result is true.
+
+</p>
 
 
-<p>The above program creates an object called myLaptop.</p>
+<h4>Java While Loop Example</h4>
+<pre class="prettyprint java">
+public class WhileLoop {
+
+ public static void main(String args[]) {
+    int a = 5;
+
+    while( a < 11 ) {
+       System.out.print("value of a : " + a );
+       a++;
+       System.out.print("\n");
+    }
+ }
+}
+</pre>
+<p>If the a value is less than 11 than it will increase the value of a by 1 and prints the a value until the expression becomes false. In this case, until a value becomes more than 11</p>
+
 
 <b>Output</b>
-<pre class="prettyprint java">
-  The name of my laptop is: MacBook Air
+
+<pre class="prettyprint ">
+value of a : 5
+value of a : 6
+value of a : 7
+value of a : 8
+value of a : 9
+value of a : 10
 </pre>
-
-
 
 <br/>
-
-<br><h4>Classes in java</h4>
-
-<b>Class</b>
-
-<p>In an object-oriented programming language, a program is the collection of members like variables and functions. But those members are enclosed under a special container known as a “class”. Which gives the basic security for contents that are present inside and we call the class as the wrapper.
-</p>
-<p>
- A class is a user-defined data type very much same as a structure in our procedural programming languages.
-</p>
-<p>
-As a class is a data type to consume the class or call the members of class we must create an object.</p>
-
-<p>
-We can not consume a data type directly whether it is predefined or less defined. So, to consume a datatype first we need to create a copy of the type.
+<br><h4>do while loop in java</h4>
+<p>The function of do-while loop works exactly same as while loop but quite opposite. The do loop evaluates the condition after the loop has executed, which makes execute the code at least once.. 
 </p>
 
 
-<h3>Example</h3>
+<b>Java do while loop syntax</b>
 <pre class="prettyprint java">
-int = 100;             // invalid
-int x = 100;          //valid
+do
+{
+   //Statements
+}while(expression);
 </pre>
 
-<p>
-In the above case, x is a copy of type ‘int’ and the memory allocation is done for that x only. For the data type, there is no allocation of memory.
-</p>
 
-<p>
-Exactly in the same way if we define a class or a structure here also datatypes only but user defined. So, to consume them also we need to create a copy of types.
-</p>
-<p>
-Copies of simple types like int, float, char etc are known as variables whereas copies of complex types like user defined structures or class will be called as “object”.
-</p>
-
-
-<h3>Defining a Class in Java</h3>
-
-<p>The general syntax for defining a class in Java is shown below. 
- </p>
-
+<p>If the Boolean expression is true, the flow of control jumps back up to do, and the statements in the loop execute again. This process repeats until the Boolean expression is false.</p>
+<h4>Example program for java do while loop</h4>
 <pre class="prettyprint java">
-class MyClassName{
-  . . .
-} //End of class definition.
-</pre>
+  public class doWhile {
 
-<p>This syntax defines a class and creates a new type named MyClassName.
+   public static void main(String args[]){
+      int a = 1;
 
-The definitions of variables and methods are inserted between the opening and closing braces. 
-</p>
-
-
-
-<img src="images/class.png">
-
-<b>Syntax to define a class in Java:</b>
-<pre class="prettyprint java">
-
-&lt;modifier&gt; class &lt;class_name&gt;{  
-    data member;  
-    method;  
-}  
-</pre>
-<br />
-
-
-
-
-
-<br><h4>Example Program for Java Class</h4>
-<pre class="prettyprint java">
-  public class Car{     // access modifier and class name
-   String model;
-   double cost;
-   String color;  // data members
-
-   void fast(){ // Method 1
-   }
-   
-   void slow(){  // Method 2
-   }
-   
-   void turnright(){ // Method 3
-
-   }
-
-   void turnleft(){ // Method 4
-
-   }
-   void stop(){ // Method 5
+      do{
+         System.out.print("value of a : " + a );
+         a++;
+         System.out.print("\n");
+      }while( a < 5 );
    }
 }
 </pre>
 
-<p>Please note that a class may contain local variables, instance variable and class variables. </p>
-<p>Learn more about variables in java <a href="java-variables.html">Java Variables</a>
+<b>Output</b>
+<pre class="prettyprint ">
+value of a : 1
+value of a : 2
+value of a : 3
+value of a : 4
+</pre>
+
+
+<br />
+
+
+<br><h4>Java break Keyword:</h4>
+<div class="alert alert-success">
+The break keyword is used to stop the entire loop.
+The break keyword will stop the execution of the innermost loop and start executing the next line of code after the block.
+
+</div>
+
+
+<b>Syntax for java break statement</b> 
+
+
+<p>The syntax of a break is a single statement inside any loop:
+</p>
+<pre class="prettyprint java">
+break;  
+</pre>
+
+
+
+
+<br><h4>Java continue Keyword:</h4>
+
+
+<div class="alert alert-success">
+ It causes the loop to immediately jump to the next iteration of the loop.
+</div>
+<p>In a for loop, the continue keyword causes flow of control to immediately jump to the update statement.
+</p>
+<p>
+In a while loop or do/while loop, flow of control immediately jumps to the Boolean expression.
+</p>
+
+<b>java continue statement syntax:</b>
+
+
+<p>The syntax of a continue is a single statement inside any loop:
+</p>
+<pre class="prettyprint java">
+continue;
+</pre>
+
+
+
+
+
+
 <!-- CONTENT END HERE -->
 </div>
 </div>
@@ -389,3 +396,4 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 </body>
 </html>
+java-loops.html
