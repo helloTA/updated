@@ -144,18 +144,26 @@
 
 <p>CSS Selectors are different types which we can use in different times</p>
 
-<p>The most common CSS selectors are 3. Let's look at each of them</p>
+<p>The most common CSS selectors are as follows. </p>
 <ol>
     <li>The Element Selector</li>
     <li>The id Selector</li>
     <li>The Class selector</li>
+    <li> Descendant Combinator</li>
+    <li> Child Combinator</li>
+    <li>General Sibling Combinator </li>
+    <li>Adjacent Sibling Combinator </li>
+
 </ol>
+<p>Let's look at each of them</p>
+
 
 <h4>CSS Element Selector</h4>
 
 <p>The css element selctor is used to target a specific element in a web page and apply the style. But when you have many selectors with the same name, css element selector is not a good choice.</p>
 
 <h4>Example</h4>
+<p>Let’s see what the CSS code for this looks like:</p>
 <pre class="prettyprint css">
 h4 {
 
@@ -166,20 +174,28 @@ p {
 
  color: red;     /* target the p element and apply the text color as red*/
 } 
+</pre>
+<p>So, if we apply this selector to the following HTML:</p>
+<pre class="prettyprint html">
+&lt;body&gt;
+  &lt;h4&gt; CSS Selectors&lt;/h4&gt;
+  &lt;p&gt;Targeting this paragraph and apply the style.&lt;/p&gt;
 
-
+&lt;/body&gt;
 </pre>
 
-<p>The above css element selectors <code>h1, p</code> will be found </p>
 
 <p>If you run the above css selector example it will produce the following output</p>
-<img src="images/element-selector.png"><br />
+<b>Output</b>
 
-<br><a href="examples/element-selector.html" class="btn btn-primary">Try It Yourself</a>
+<br><img src="images/element-selector.png"><br />
+
+
+<br><a href="examples/element-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
-<h4>
+<br><h4>
 CSS id Selector</h4>
 <p>CSS id selector is used to overcome the problem raised in element selector. When you have many elements with the same name and you want to target each of the css elements it would be very difficult. </p>
 <p>So the css id selector is used to target each and every element or any no of elements in a web page by giving them uniq ids. Imagine, if you have 10 paragraphs you can give 10 different uniq names and target them using the id selector.</p>
@@ -194,6 +210,9 @@ CSS id Selector</h4>
 <p>This is how you can give the selector name. See the below css selector code to to understand how you can target that <code>mypara1 and mypara2</code> ids</p>
 
 
+
+<h2>Example</h2>
+<p>Let’s see what the CSS code for this looks like:</p>
 <pre class="prettyprint css">
 #mypara1 {
 color: green;
@@ -205,59 +224,49 @@ color: red;
 <b>Note:</b><p> Selector names must be unique</p>
 
 
-<h4>Example</h4>
 <pre class="prettyprint html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-#mypara1 {
-    
-    color: green;
-}
 
-#mypara2 {
-color: red;
-}
-&lt;/style&gt;
-&lt;/head&gt;
 &lt;body&gt;
 
 &lt;p id="mypara1"&gt;Hello World!&lt;/p&gt;
 &lt;p id="mypara2"&gt;This is effected by the selector&lt;/p&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;
 
 </pre> <br/>
 
 <p>The style rule below will be applied to the HTML element with id="mypara1" and id="mypara2":
 </p>
 
-<br ><a href="examples/id-selector.html" class="btn btn-primary">Try It Yourself</a>
+<p>After applying the css to the above html, it will produce the following result</p>
+<b>Output</b>
+<br><img src="images/id-selector.png">
+
+<br ><a href="examples/id-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
 <h4>
-CSs class Selector</h4>
+CSS class Selector</h4>
 <p>Imagine, you have 10 elements and you want to apply the same styles to all the 10 elements.
 Of course, you can give 10 different uniq id names and apply the styles. But thats not a good practice!. Why? What if you have 1000? Do you give 1000 names. </p>
 <p>That's where the css class selector comes in. What it does is  it applys the same style for any no of elements which comes under the same class.</p>
 
 
-<p>See the below example to understand</p>
+<h2>Example</h2>
+<p>Let’s see what the CSS code for this looks like:</p>
+
 <pre class="prettyprint html">
-!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
+
 .myclass {
     text-align: center;
     color: green;
 }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+
+</pre>
+
+<pre class="prettyprint html">
+  &lt;body&gt;
 
 &lt;div class="myclass"&gt;
     &lt;p&gt;This is paragraph&lt;/p&gt;
@@ -265,20 +274,24 @@ Of course, you can give 10 different uniq id names and apply the styles. But tha
     &lt;p&gt;Another paragraph&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;/body&gt;
-&lt;/html&gt;
-
+&lt;/body&gt;  
 </pre>
 
 <p>If you notice the above code, I put 2 paragraphs and 1 head tag under one class called myclass. And I applied the same style for all the three elements in a single shot.</p>
 <p>The CSS class syntax is <code>. </code>Dot symbol followed by the class name</p>
 
-<p>Awlays remember the class name can not be start a number</p><br />
-<br> <a href="examples/class-selector.html" class="btn btn-primary">Try It Yourself</a>
+<p>Always remember the class name can not be start a number</p><br />
+
+
+<p>After applying the css to the above html, it will produce the following result</p>
+<b>Output</b>
+<br><img src="images/class-selector.png">
+
+<br> <a href="examples/class-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
-<h4>CSS Group Selector</h4>
+<br><h3>CSS Group Selector</h3>
 
 <p>CSS group selector is used to group the list of elements and apply them the same style.</p>
 <p>For example, you have one <code>h2</code> and one <code>p,</code> and other tag. What you do is, just keep all the ids in one line seperated by a comma and apply the same style, like below example</p>
@@ -312,12 +325,193 @@ color: blue;
 
 <p>Grouping mainly reduces the no of lines of code we write.</p>
 
-<br><a href="examples/group-selector.html" class="btn btn-primary">Try It Yourself</a>
+<b>Output</b>
+<br><img src="images/group-selectors.png">
+
+<br><a href="examples/group-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
+<br><h3>CSS Descendant Combinator</h3>
 
 
+<p>The descendant selector or, more accurately, the descendant combinator lets you combine two or more selectors so you can be more specific in your selection method.</p>
+
+<p> Example:</p>
+
+<p>The CSS code for this looks like:</p>
+<pre class="prettyprint css">
+#myContainer .box {
+   float: left;
+   padding-bottom: 15px;
+color:red;
+}
+
+p {
+color: blue;
+}
+</pre>
+
+<p>So, if we apply this selector to the following HTML:</p>
+<pre class="prettyprint html">
+ &lt;body&gt;
+
+&lt;div id="myContainer"&gt;
+  &lt;div class="box"&gt; First Div&lt;/div&gt;
+
+  &lt;div class="box-2"&gt;Second Div&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="box"&gt;Third Div&lt;/div&gt;
+
+&lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt; The style is applied only to the immediate descedant child of myContainer. i.e the first Div&lt;/p&gt;
+&lt;/body&gt;   
+</pre>
+
+<p>
+
+This declaration block will apply to all elements that have a class of box that are inside an element with an ID of <code>myContainer</code>.
+<p><b>Note:</b> The .box element doesn’t have to be an immediate child: there could be another element wrapping .box, and the styles would still apply.</p>
+<p>After applying the css to the above html, it will produce the following result</p>
+<b>Output</b>
+<br><img src="images/descendant-selector.png">
+<br><a href="examples/descendant-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h3>CSS Child Combinator</h3>
+<p>
+
+A selector that uses the child combinator is similar to a selector that uses a descendant combinator, except it only targets immediate child elements:
+</p>
+
+<p>This is the same code from the descendant combinator example, but instead of a space character, we’re using the greater-than symbol</p>
+
+
+<h3>Example</h3>
+
+<p>In this example, the selector will match all elements that have a class of <code>box</code> and that are immediate children of the <code>#myContainer</code> element. That means, unlike the descendant combinator, there can’t be another element wrapping .box—it has to be a direct child element.</p>
+
+<p>The CSS code for this looks like:</p>
+<pre class="prettyprint css">
+
+#myContainer &gt; .box {
+   float: left;
+   padding-bottom: 15px;
+color: red;
+}
+
+</pre>
+
+<pre class="prettyprint html">
+ &lt;body&gt;
+
+&lt;div id="myContainer"&gt;
+  &lt;div class="box"&gt;Target One&lt;/div&gt;&lt;br /&gt;
+&lt;div class="box"&gt;Target Two&lt;/div&gt;
+&lt;br /&gt;
+  &lt;div&gt;
+    &lt;div class="box"&gt;Target Three&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;   
+</pre>
+
+<p>After applying the css to the above html, it will produce the following result</p>
+<b>Output</b>
+<br><img src="images/child-combinator.png">
+<br><a href="examples/child-combinator.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h3>General Sibling Combinator
+ </h3>
+
+<p>
+A selector that uses a general sibling combinator matches elements based on sibling relationships. That is to say, the selected elements are beside each other in the HTML.</p>
+
+
+<h2></h2>
+<pre class="prettyprint css">
+h2 ~ p {
+   margin-bottom: 20px;
+   color:green;
+}
+</pre>
+
+
+<p>
+This type of selector is declared using the tilde character (~). In this example, all paragraph elements (&lt;p&gt;) will be styled with the specified rules, but only if they are siblings of &lt;h2&gt; elements. There could be other elements in between the &lt;h2&gt;and&lt;p&gt;, and the styles would still apply.
+</p>
+
+
+<h2>Example</h2>
+<p> The CSS code for this looks like:</p>
+<pre class="prettyprint css">
+
+h2 ~ p {
+   margin-bottom: 20px;
+color: green;
+}
+
+</pre>
+
+
+<pre class="pretyprint html">
+  &lt;body&gt;
+&lt;h2&gt;My Heading&lt;/h2&gt;
+&lt;p&gt;Paragraph one&lt;/p&gt;
+&lt;p&gt;Paragraph two.&lt;/p&gt;
+&lt;p&gt;Paragraph three.&lt;/p&gt;
+&lt;div class="box"&gt;
+  &lt;p&gt;Paragraph four.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;  
+</pre>
+
+<p>After applying the css to the above html, it will produce the following result</p>
+<b>Output</b>
+
+<br><img src="images/general-sibling-selector.png">
+<br><a href="examples/general-sibling-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h3>Adjacent Sibling Combinator
+</h3>
+<p>
+A selector that uses the adjacent sibling combinator uses the plus symbol (+), and is almost the same as the general sibling selector. The difference is that the targeted element must be an immediate sibling, not just a general sibling. 
+</p>
+
+
+<p>
+
+This example will apply the specified styles only to paragraph elements that immediately follow other paragraph elements. This means the first paragraph element on a page would not receive these styles. Also, if another element appeared between two paragraphs, the second paragraph of the two wouldn’t have the styles applied.</p>
+
+<h3>Example</h3>
+Let’s see what the CSS code for this looks like:
+<pre class="prettyprint css">
+p + p {
+   text-indent: 1.5em;
+   margin-bottom: 0;
+}
+</pre>
+
+<p>So, if we apply this selector to the following HTML:</p>
+<pre class="prettyprint html">
+&lt;h2&gt;My Title&lt;/h2&gt;
+&lt;p&gt;Paragraph one.&lt;/p&gt;
+&lt;p&gt;Paragraph two.&lt;/p&gt;
+&lt;p&gt;Paragraph three&lt;/p&gt;
+
+&lt;div class="box"&gt;
+  &lt;p&gt;Paragraph four.&lt;/p&gt;
+  &lt;p&gt;Paragraph five.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>After applying the css to the above html, it will produce the following result</p>
+
+<b>Output</b>
+<br><img src="images/adj-sibling.png">
+<br><a href="examples/adj-sibling.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
