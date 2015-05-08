@@ -123,7 +123,7 @@ Given a jQuery object that represents a set of DOM elements, the jquery .add() m
 </p>
 
 
-<b>Syntax</b>
+<b>jQuery add() method Syntax</b>
 <pre class="prettyprint jquery">
  .add( selector )
 </pre>
@@ -133,6 +133,9 @@ Given a jQuery object that represents a set of DOM elements, the jquery .add() m
 <h4>Example</h4>
 
 <p>Below example program finds all divs and makes a border. Then adds all paragraphs to the jQuery object to set their backgrounds green.</p>
+
+
+<h1>jQuery add() method examples</h1>
 <pre class="prettyprint jquery">
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
@@ -195,7 +198,7 @@ Add the previous set of elements on the stack to the current set, optionally fil
 </p>
 
 
-<b>Syntax</b>
+<b>jQuery addBack() method Syntax</b>
 
 <pre class="prettyprint jquery">
  .addBack( [selector ] )
@@ -204,7 +207,7 @@ Add the previous set of elements on the stack to the current set, optionally fil
 
 <p>The below example explains how to use jQuery.addBack() method and also we will understand the difference before using jQuery addBack() method and after using jQuery addBack() method</p>
 
-<h4>Example</h4>
+<h4>jQuery addBack() method example</h4>
 <pre class="prettyprint jquery">
   $( "div.left, div.right" ).find( "div, div > p" ).addClass( "border" );
  
@@ -215,16 +218,16 @@ $( "div.before-addback" ).find( "p" ).addClass( "background" );
 $( "div.after-addback" ).find( "p" ).addBack().addClass( "background" );
 
 </pre>
+<div>
+  
+</div>
+
+<br><a href="examples/traversal/addback.html" class="btn btn-primary">Try It Now</a>
 
 <b>Output</b><br />
 
 <br><img src="examples/images/addBack.png">
 <br>
-<div>
-  
-</div>
-<br><a href="examples/traversal/addback.html" class="btn btn-primary">Try It Now</a>
-
 
 
 <h4>jQuery .children () Method</h4>
@@ -239,7 +242,7 @@ In jQuery, <code>the children() method</code> is different from<code> jQuery fin
 <p>It accepts optional parameter i.e., selector expression of the same type.
 </p>
 
-<b>Syntax</b>
+<b>children() method syntax</b>
 <pre class="prettyprint jquery">
 .children( [selector ] )
 
@@ -261,14 +264,14 @@ $( "#container" ).click(function ( event ) {
 });
 </pre>
 
-<b>Output</b><br />
-<br><img src="images/children.png"><br >
 
+<br><a href="examples/traversal/children.html" class="btn btn-primary">Try It Now</a>
 <div>
   
 </div>
-<br><a href="examples/traversal/children.html" class="btn btn-primary">Try It Now</a>
 
+<b>Output</b><br />
+<br><img src="images/children.png"><br >
 
 
 
@@ -279,14 +282,14 @@ $( "#container" ).click(function ( event ) {
 
 <p>In jQuery, <code>parents()</code> and <code>closest()</code> are similar in action both of them traverse the DOM tree.</p> 
 
-<b>Syntax</b>
+<b>jQuery closest() method syntax</b>
 <pre class="prettyprint jquery">
   closest([selector])
 
 </pre>
 
 
-<h4>Example</h4>
+<h4>jQuery closest() method example</h4>
 <pre class="prettyprint jquery">
   $( document ).on( "click", function( event ) {
   $( event.target ).closest( "li" ).toggleClass( "hilight" );
@@ -309,7 +312,7 @@ $( "#container" ).click(function ( event ) {
 
 <p>The jquery <code>each()</code> method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.</p>
 
-<b>Syntax</b>
+<b>jQuery each() method syntax</b>
 <pre class="prettyprint jquery">
   .each( function )
 </pre>
@@ -329,15 +332,240 @@ $( "#container" ).click(function ( event ) {
 </pre>
 
 <br><a href="examples/traversal/each.html" class="btn btn-primary">Try It Now</a>
+<br>
+<b>Output</b>
+
+<br><img src="images/each.png">
+
+<div>
+  
+</div>
+
+<br><h4>jQuery eq() Selector</h4>
+
+<b>.eq()</b>
+<p>
+The :eq() selector selects a HTML element with a specific index number. As we know that index starts from 0 not from 1. eq() method also start it’s index from 0 to select element. Here index represents that position of the element in the group.
+</p>
+<pre class="prettyprint jquery">
+  .eq(index)
+</pre>
+
+<p>
+The following example has 5 div html elements in which we can see selecting particular element by calling eq( 2 ) method by passing position of that element. 
+</p>
+
+<h4>Example</h4>
+<pre class="prettyprint jquery">
+  
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;eq demo is here&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    width: 100px;
+    height: 100px;
+    margin: 11px;
+    float: left;
+    border: 5px solid black;
+  }
+  .red{
+    background: red;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+
+ 
+&lt;script&gt;
+$( "body" ).find( "div" ).eq( 2 ).addClass( "red" );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+<br><a href="examples/traversal/eq-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br>
+<b>Output</b>
+<br><img src="images/example/eq.png"><br />
+
+
+<br><h4>jQuery find() Selector</h4>
+
+
+
+<p>The jQuery find() method in jQuery simply constructs a jQuery object which can be capable of holding the descendants of each element of selected element in the DOM tree. In jQuery <code>find()</code> and <code>children()</code> seems to be similar but only minor difference comes into picture in the case  of traverse a single level down the DOM tree[.children()].
+</p>
+
+<p><b>Note:</b> To get all of the descendant elements from the DOM tree, Try to use the "*" selector.
+A descendant is a child, grandchild, great-grandchild, and so on.
+</p>
+<pre class="prettyprint jquery">
+.find( selector )  
+</pre>
+
+
+<h4>jQuery find() selector Example Program</h4>
+
+<p>
+Here is the example to look into the usage of the .find() method in jQuery. In this example, keeping the <p> tag text as group of span elements for each word and finding the word which matches the letter ‘t’ in <p> tag to manipulating matched elements with CSS styles by using .find( ":contains('t')" ).
+</p>
+
+
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Jquery find demo here&lt;/title&gt;
+  &lt;style&gt;
+  p {
+    font-size: 40px;
+    width: 600px;
+    color: red;
+    font-weight: 900;
+    margin: 0 10px;
+  }
+  .titile{
+    background: black;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;
+  Here is the jQuery Demo of find() 
+  Learn it how to do it
+  Enjoy the experiance of it
+&lt;/p&gt;
+ 
+&lt;script&gt;
+var newText = $( "p" ).text().split( " " ).join( "&lt;/span&gt; &lt;span&gt;" );
+newText = "&lt;span&gt;" + newText + "&lt;/span&gt;";
+ 
+$( "p" )
+  .html( newText )
+  .find( "span" )
+    .hover(function() {
+      $( this ).addClass( "titile" );
+    }, function() {
+      $( this ).removeClass( "titile" );
+    })
+  .end()
+  .find( ":contains('t')" )
+    .css({
+      "font-style": "italic",
+      "font-weight": "bolder"
+    });
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+
+</pre>
 
 
 
 
+<a href="examples/traversal/find-example.html" class="btn btn-primary">Try It Now</a>
+<br>
+<b>Output</b>
+<br><img src="images/examples/find.png">
 
 
 
+<div>
+  
+</div>
+<br>
 
 
+
+<h4>jQuery prev() method </h4>
+<p>
+The prev() method constructs a jQuery object which will get the immediate sibling element of the selected element in DOM tree. Siblings are the elements which same parent element.</p>
+<h4>jQuery prev() method syntax</h4>
+<pre class="prettyprint jquery">
+prev( [selector ] )  
+</pre>
+
+
+<p>
+
+In the syntax, the selector is an optional parameter to pass and Specifies a selector expression to narrow down the previous sibling search.
+</p>
+<p>
+Let us look at the following example to understand about the .prev() jQuery method
+</p>
+
+<h4>jQuery prev () method example program</h4>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;prev demo&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    float: left;
+    border: 2px red solid;
+    padding: 2px;
+  }
+  span {
+    font-size: 18px;
+color:white;
+  }
+  p {
+    clear: left;
+    margin: 10px;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span&gt;Iam jQuery&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div id="start"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;button&gt;Click me to preview&lt;/button&gt;&lt;/p&gt;
+ 
+&lt;script&gt;
+var $curr = $( "#start" );
+$curr.css( "background", "#10b48f" );
+$( "button" ).click(function() {
+  $curr = $curr.prev();
+  $( "div" ).css( "background", "" );
+  $curr.css( "background", "#10b48f" );
+});
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+<br><br>Output</p>
+<img src="images/examples/prev.png">
+<br>
+<a href="examples/traversal/prev.html" class="btn btn-primary">Try It Now</a>
 
 
 

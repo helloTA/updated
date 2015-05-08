@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> jQuery Selectors</title>
+<title>jQuery Filters</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -91,7 +91,7 @@
 <div class="content">
   
 
-<h1>jQuery Introduction</h1>
+<h1>jQuery Filters</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -103,208 +103,59 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>jQuery Selectors</h4>
+<h4>jQuery Filters</h4>
+
+
+<h4>jQuery filter()  method </h4>
 <p>
-jQuery selectors are one of the most important key factors of the jQuery libraries. It  allows you to select and manipulate HTML element(s). jQuery selection of particular HTML element can be done based on their id, classes, types, attributes, values of attributes and much more. All selectors in jQuery start with the dollar sign and parentheses: $().
+.<p>jQuery filter() method constructs a jQuery object and holds the all elements which matches the given criteria. The criteria can be given as a selector, argument to <code>filter()</code> method. The filter() in jQuery completely opposite function of <code> not()</code> method. 
+</p>
+<h1> jQuery filter() method syntax</h1>
+<pre class="prettyprint jquery">
+  filter(selector)
+</pre>
+<p>
+Consider a web page with a simple list with 5 div elements, each one has class and whose name is middle <code>filter()</code> methods get all elements which matches the class name value is middle. Manipulation is going to be done by css styles for those who got matched the criteria.
 </p>
 
- <strong>jQuery Selector Overview</strong>
-<p>
-A jQuery selector is a string which decides which HTML elements to select. jQuery selector string passed as an argument to $() or jQuery() selection function.
-</p> <br />
-<p>
 
-jQuery selectors are very easy to learn if you have a good knowledge on CSS selectors. because of jQuery syntax is similar to CSS selectors.
-</p>
-
-<p>jQuery follows following criteria to select HTML elements</p>
-<ol>
-    <li>Element name (e.g. 'p', 'a', 'div' etc.)</li>
-    <li>Element id</li>
-    <li>Element CSS class</li>
-    <li>Element attributes</li>
-    <li>Element visibility</li>
-    <li>Element order</li>
-    <li>Form Fields</li>
-    <li>Element parents or children</li>
-    <li>Combinations of the above</li>
-</ol> 
-
-
-<h4> jQuery Selector Example</h4>
-
-<p>The following example illustrates the jQuery Selector</p>
-<pre class="prettyprint"><code class="language-jquery">
-$(document).ready(function(){
-    $("button").click(function(){
-        $("parenDiv").hide(); 
-    });
-});
-    
-</code></pre>
-
-
-
-<p>This example selects the div element with the id parenDiv, meaning the div element which has an id attribute with the value theDiv.
-</p>
-
-<h4>jQuery All Selector</h4>
-<p>The jQuery element selector selects elements based on the element name.</p>
-
-<p>You can select all &lt;h3&gt; elements on a page like this:</p>
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
-$("*")  
-</code></pre>
-
-
-<h5>Example</h5>
-
-<p>When a user clicks on a button, all &lt;h3&gt; elements will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $("button").click(function(){
-        $("*").hide();
-    });
-});
-
-</code></pre>
-
-
-<a href="element-selector.html" class="btn btn-primary">Try it yourself</a>
-<br />
-
-<h3>jQuery #id Selector</h3>
-<p>jQuery #id selector uses the id attribute of an HTML tag to find the specific element.</p>
-<div class="alert alert-info">
-id should be unique within a page<br />
-Use the #id selector when you want to find a single, unique element.
-
-</div>
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
- $("#myid")
-</code></pre>
-
-
-<h3>Example</h3>
-<p>
-When a user clicks on a button, the element with id="myid" will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#myid").hide();
-    });
-});
-
-</code></pre>
-<a href="id-selector-example.html" class="btn btn-primary">Try It Yourself</a>
-
-
-<h3>jQuery .class Selector</h3>
-<p>jQuery class selector finds elements with a specific class.</p>
-
-<div class="alert alet-info">
- Selects all elements with the given class. 
-</div>
-
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
- $(".test")
-</code></pre>
-
-
-
-<h4>Example</h4>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $( ".class-one" ).css( "border", "3px solid green" );
-    $(".class-two").css("border", "5px solid blue");
-    $(".class-three").css("border", "5px solid red");
-});
-</code></pre>
-<pre class="prettyprint xml">
+<h2>Example</h2>
+<pre class="prettyprint jquery">
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;class demo&lt;/title&gt;
+  &lt;title&gt;filter demo here&lt;/title&gt;
   &lt;style&gt;
-  div, span {
-    width: 100px;
-    height: 30px;
+  div {
+    width: 90px;
+    height: 90px;
+    margin: 9px;
     float: left;
-    padding: 30px;
-    margin: 5px;
-    background-color: #FFF;
+    border: 10px yellow solid;
   }
   &lt;/style&gt;
   &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
  
-&lt;div class="class-one"&gt;I am Class One"&lt;/div&gt;
-&lt;div class="class-two"&gt;I am Class Two&lt;/div&gt;
-&lt;div class="class-three"&gt;I am Class Three&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div class="middle"&gt;&lt;/div&gt;
+&lt;div class="middle"&gt;&lt;/div&gt;
+&lt;div class="middle"&gt;&lt;/div&gt;
+&lt;div class="middle"&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
  
 &lt;script&gt;
-$( ".class-one" ).css( "border", "3px solid green" );
-$(".class-two").css("border", "5px solid blue");
-$(".class-three").css("border", "5px solid red");
+$( "div" )
+  .css( "background", "#10b48f" )
+  .filter( ".middle" )
+    .css( "border-color", "blue" );
 &lt;/script&gt;
  
 &lt;/body&gt;
 &lt;/html&gt;
-</pre>
-<p>If you run the above jQuery class example code,  it will apply the green color for class-one and blue color to class-two and finally, red color to class-three. Run the below live example and see it in live.:</p>
 
-<a href="class-selector-example.html" class="btn btn-primary">Try It Yourself</a>
-
-<h4>jQuery this selector</h4>
-<p>Selects the current HTML element</p>
-<p>$(this) enables you to select the current HTML element. Here, meaning of this keyword is to refer the current element.
-</p>
-
-<h5>Syntax</h5>
-<pre class="prettyprint jquery">
-$(selector).action()
-</pre>
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-$(document).ready(function(){
-    $("button").click(function(){
-        $(this).hide();
-    });
-});
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;h2&gt;jQuery this selector&lt;/h2&gt;
-
-&lt;p&gt;First paragraph&lt;/p&gt;
-
-&lt;button&gt;If you click me, I will hide&lt;/button&gt;
-&lt;button&gt;Hide me&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-</pre>
-
-<a href="examples/this-selector-example.html" class="btn btn-primary">Try It Yourself</a>
-
-
- <h4>jQuery Multiple Selector (“selector1, selector2, selectorN”)</h4>
-<pre class="prettyprint">
-
-Selects the combined results of all the specified selectors.<br />
-<b>Syntax</b>
-jQuery( "selector1, selector2, selectorN" )
 </pre>
 
 
