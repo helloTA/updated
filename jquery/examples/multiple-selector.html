@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>multiple demo</title>
+<style>
+div, span, p {
+width: 126px;
+height: 60px;
+float: left;
+padding: 3px;
+margin: 2px;
+background-color: green;
+font-size: 14px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div>div</div>
+<p class="classOne">p class="classOne"</p>
+<p class="notMyClass">p class="notMyClass"</p>
+<span>span</span>
+<script>
+$( "div, span, p.classOne" ).css( "border", "3px solid blue" );
+</script>
+</body>
+</html>

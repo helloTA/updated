@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>not demo</title>
+  <style>
+  div {
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+    float: left;
+    background: blue;
+    border: 8px solid red;
+  }
+  .green {
+    background: #8f8;
+  }
+  .gray {
+    background: #000;
+  }
+  #blueone {
+    background: #eee;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div id="blueone"></div>
+<div></div>
+<div class="green"></div>
+<div class="green"></div>
+<div class="gray"></div>
+<div></div>
+ 
+<script>
+$( "div" ).not( ".green, #blueone" )
+  .css( "border-color", "yellow" );
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>delay demo here</title>
+  <style>
+  div {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    float: left;
+  }
+  .hi{
+    background-color: red;
+    left: 0;
+  }
+  .hello{
+    background-color: yellow;
+    left: 90px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p><button>Test me</button></p>
+<div class="hi"></div>
+<div class="hello"></div>
+ 
+<script>
+$( "button" ).click(function() {
+  $( "div.hi" ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+  $( "div.hello" ).slideUp( 300 ).fadeIn( 400 );
+});
+</script>
+ 
+</body>
+</html>

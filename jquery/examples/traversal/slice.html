@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slice demo</title>
+  <style>
+  div {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    float: left;
+    border: 8px solid red;
+  }
+  span {
+    color: green;
+    font-weight: 600;
+  }
+  button {
+    margin: 9px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p><button>Go on slice blue</button>
+  <span>Click the button!</span></p>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ 
+<script>
+function colorEm() {
+  var $div = $( "div" );
+  var start = Math.floor( Math.random() * $div.length );
+  var end = Math.floor( Math.random() * ( $div.length - start ) ) +
+    start + 1;
+  if ( end === $div.length ) {
+    end = undefined;
+  }
+  $div.css( "background", "" );
+  if ( end ) {
+    $div.slice( start, end ).css( "background", "blue" );
+  } else {
+    $div.slice( start ).css( "background", "blue" );
+  }
+  $( "span" ).text( "$( 'div' ).slice( " + start +
+    (end ? ", " + end : "") +
+    ").css( 'background', 'blue' );" );
+}
+ 
+$( "button" ).click( colorEm );
+</script>
+ 
+</body>
+</html>

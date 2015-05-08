@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> jQuery Selectors</title>
+<title> jQuery Content Filter Selectors</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -91,7 +91,7 @@
 <div class="content">
   
 
-<h1>jQuery Selectors</h1>
+<h1>jQuery Content Filter Selectors</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -103,185 +103,196 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>jQuery Selectors</h3>
-<p>
-jQuery selectors are one of the most important key factors of the jQuery libraries. It  allows you to select and manipulate HTML element(s). jQuery selection of particular HTML element can be done based on their id, classes, types, attributes, values of attributes and much more. All selectors in jQuery start with the dollar sign and parentheses: $().
-</p>
-
- <strong>jQuery Selector Overview</strong>
-<p>
-A jQuery selector is a string which decides which HTML elements to select. jQuery selector string passed as an argument to $() or jQuery() selection function.
-</p> <br />
-<p>
-
-jQuery selectors are very easy to learn if you have a good knowledge on CSS selectors. because of jQuery syntax is similar to CSS selectors.
-</p>
-
-<p>jQuery follows following criteria to select HTML elements</p>
-<ol>
-    <li>Element name (e.g. 'p', 'a', 'div' etc.)</li>
-    <li>Element id</li>
-    <li>Element CSS class</li>
-    <li>Element attributes</li>
-    <li>Element visibility</li>
-    <li>Element order</li>
-    <li>Form Fields</li>
-    <li>Element parents or children</li>
-    <li>Combinations of the above</li>
-</ol> 
+<h4>jQuery :contains() selector</h4>
 
 
-<h3> jQuery Selector Example</h3>
-
-<p>The following example illustrates the jQuery Selector</p>
-<pre class="prettyprint"><code class="language-jquery">
-$(document).ready(function(){
-    $("button").click(function(){
-        $("parenDiv").hide(); 
-    });
-});
-    
-</code></pre>
-
-<p>This example selects the div element with the id parenDiv, meaning the div element which has an id attribute with the value theDiv.
-</p>
-
-
-
-<h3>jQuery All Selector</h3>
-<p>The jQuery element selector selects elements based on the element name.</p>
-
-<p>You can select all &lt;h3&gt; elements on a page like this:</p>
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
-$("*")  
-</code></pre>
-
-
-<h2>Example</h2>
-
-<p>When a user clicks on a button, all &lt;h3&gt; elements will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $("button").click(function(){
-        $("*").hide();
-    });
-});
-
-</code></pre>
-
-<p>The above example produces the following output</p>
-<img src="images/examples/all-selector.png">
-
-<br><a href="examples/element-selector.html" class="btn btn-primary" target="_blank">Try It Now </a>
-<br />
-
-<br><h3>jQuery #id Selector</h3>
-<p>jQuery #id selector uses the id attribute of an HTML tag to find the specific element.</p>
-<div class="alert alert-info">
-id should be unique within a page<br />
-Use the #id selector when you want to find a single, unique element.
-
-</div>
-<h2>Syntax</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $("#myid")
-</code></pre>
-
-
-<h2>Example</h2>
-<p>
-When a user clicks on a button, the element with id="myid" will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#myid").hide();
-    });
-});
-
-</code></pre>
-
-<b>Output</b>
-<br><img src="images/examples/id-selector.png">
-<br>
-<a href="examples/id-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-<br><h3>jQuery .class Selector</h3>
-<p>jQuery class selector finds elements with a specific class.</p>
-
-<div class="alert alet-info">
- Selects all elements with the given class. 
+<div class="alert alert-success">
+  jQuery contains selector selects all elements that contain the specified text.
 </div>
 
-<h2>Syntax</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(".test")
-</code></pre>
-
-
-
-<h2>Example</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $( ".class-one" ).css( "border", "3px solid green" );
-    $(".class-two").css("border", "5px solid blue");
-    $(".class-three").css("border", "5px solid red");
-});
-</code></pre>
-
-<p>If you run the above jQuery class example code,  it will apply the green color for class-one and blue color to class-two and finally, red color to class-three. Run the below live example and see it in live.:</p>
-<b>Output</b>
-<br><img src="images/examples/class-selector.png">
-<br>
-<a href="examples/class-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-<br><h3>jQuery this selector</h3>
-<p>Selects the current HTML element</p>
-<p>$(this) enables you to select the current HTML element. Here, meaning of this keyword is to refer the current element.
-</p>
-
-<h2>Syntax</h2>
+<b>Syntax</b>
 <pre class="prettyprint jquery">
-$(selector).action()
-</pre>
-<h2>Example</h2>
-<pre class="prettyprint jquery">
-
-$(document).ready(function(){
-    $("button").click(function(){
-        $(this).hide();
-    });
-});
+  $( ":contains(text)" )
 </pre>
 
-<b>Output</b>
-<br><img src="images/examples/this-selector.png">
-<br>
 
-<a href="examples/this-selector-example.html" class="btn btn-primary" target="_blank" >Try It Now</a>
+<h4>Example</h4>
+<p>The below example underlines the names which contains <b>Gates</b> as text in it</p>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+  &lt;title&gt;contains demo&lt;/title&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;Bill Gates&lt;/div&gt;
+  &lt;div&gt; Melinda Gates&lt;/div&gt;
+
+  &lt;div&gt;Jennifer Katharine Gates&lt;/div&gt;
+  &lt;div&gt; Rory John Gates&lt;/div&gt;
+  &lt;div&gt;Steve Jobs&lt;/div&gt;
+  &lt;div&gt;Mark Zuckerberg&lt;/div&gt;
+&lt;script&gt;
+$( "div:contains('Gates')" ).css( "text-decoration", "underline" );
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<b>Output</b><br/>
+<img src="images/examples/contains.png"><br>
+<br><a href="examples/contains-selector.html" class="btn btn-primary">Try It Now</a><br />
+<div>
+  
+</div>
 
 
- <h3>jQuery Multiple Selector (“selector1, selector2, selectorN”)</h3>
- <p>Selects the combined results of all the specified selectors.</p><br />
-<h2>Syntax</h2>
+<br><h4>jQuery :empty Selector</h4>
+<div class="alert alert-success">
+  jQuery empty selector , selects all elements that have no children (including text nodes).
+</div>
+
+<b>Syntax</b>
+<pre class="prettyprint jquery">
+  $( ":empty" )
+</pre>
+
+<h4>Example</h4>
+<p>The below example finds all elements that are empty - they don't have child elements or text.</p>
+
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;empty demo&lt;/title&gt;
+&lt;style&gt;
+td {
+text-align: center;
+}
+&lt;/style&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;table border="1"&gt;
+  &lt;tr&gt;&lt;td&gt; #0&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt; #2&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;#5&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;script&gt;
+$( "td:empty" )
+.text( " Empty!" )
+.css( "background", "red" );
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>It will select all the empty table columns and adds <b>Empty</b> text in that fileds also it changes the background to red</p>
+
+<b>Output</b><br />
+<img src="images/examples/empty.png"><br >
+
+<br><a href="examples/empry.html" class="btn btn-primary">Try It Now</a><br />
+<div>
+  
+</div>
+
+<br><h4>jQuery :has() Selector</h4>
+<div class="alert alert-success">
+  jQuery has() selector, Selects elements which contain at least one element that matches the specified selector.
+</div>
+
+
+<b>Syntax</b>
+<pre class="prettyprint jquery">
+  $( ":has(selector)" )
+</pre>
+<h4>Example</h4>
+<p>The below example  adds blue border to the <code>div</code> which  has a paragraph of text</p>
+
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;has demo&lt;/title&gt;
+&lt;style&gt;
+.sample {
+border: 3px inset blue;
+}
+&lt;/style&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;&lt;p&gt;Hello in a paragraph&lt;/p&gt;&lt;/div&gt;
+  &lt;div&gt;Hello again! (with no paragraph)&lt;/div&gt;&lt;br/&gt;
+  &lt;div&gt;&lt;p&gt;Another text with a paragraph&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;
+  &lt;div&gt;Hello! (with no paragraph)&lt;/div&gt;&lt;br/&gt;
+&lt;script&gt;
+$( "div:has(p)" ).addClass( "sample" );
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+<br><img src="images/examples/has.png"><br/>
+<br><a href="examples/has-selector.html" class="btn btn-primary">Try It Now</a><br/>
+<div>
+  
+</div>
+
+<h4>:parent Selector</h4>
+
+<p>Select all elements that have at least one child node</p>
+<h5>Syntax</h5>
 <pre class="prettyprint">
-
-$( "selector1, selector2, selectorN" )
+ jQuery( ":parent" ) 
 </pre>
 
-<h2>Example</h2>
-<p>Finds the elements that match any of these three selectors.</p>
+<p>This is the inverse of :empty</p>
 
-<pre class="prettyprint jquery">
-$( "div, span, p.classOne" ).css( "border", "3px solid blue" );
+<h5>Example</h5>
+<p>Finds all tds with children, including text.</p>
+<pre class="prettyprint">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;parent demo&lt;/title&gt;
+  &lt;style&gt;
+  td {
+    width: 40px;
+    background: red;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;table border="1"&gt;
+  &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Value 4&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;Value 5&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+ 
+&lt;script&gt;
+$( "td:parent" ).fadeTo( 700, 0.7 );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
-<br>
-<b>Output</b>
-<br><img src="images/examples/multiple-selector.png">
-<br><a href="examples/multiple-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
+<a href="examples/parent-selector.html" class="btn btn-primary">Try It Now</a>
+<br/>
+<p><b>Output</b></p>
+<img src="images/examples/parent-selector.png">
 
 <!-- CONTENT END HERE -->
 </div>

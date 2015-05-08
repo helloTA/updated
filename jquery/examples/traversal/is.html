@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>is demo</title>
+  <style>
+  div {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    float: left;
+    border: 9px outset;
+    background: green;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .blue {
+    background: red;
+  }
+  .red {
+    background: yellow;
+  }
+  span {
+    color: white;
+    font-size: 16px;
+  }
+  p {
+    color: white;
+    font-weight: bolder;
+    background: black;
+    margin: 3px;
+    clear: left;
+    display: none;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div class="blue"></div>
+<div></div>
+<div class="red"></div>
+<div><br/><span>jQuery</span></div>
+<div class="blue"></div>
+<p>&nbsp;</p>
+ 
+<script>
+$( "div" ).one( "click", function() {
+  if ( $( this ).is( ":first-child" ) ) {
+    $( "p" ).text( "click me for first" );
+  } else if ( $( this ).is( ".blue,.red" ) ) {
+    $( "p" ).text( "click me for first" );
+  } else if ( $( this ).is( ":contains('jQuery')" ) ) {
+    $( "p" ).text( "came jQuery!" );
+  } else {
+    $( "p" ).html( "nothing <em>special</em>." );
+  }
+  $( "p" ).hide().slideDown( "fast" );
+  $( this ).css({
+    "border-style": "inset",
+    cursor: "default"
+  });
+});
+</script>
+ 
+</body>
+</html>
+

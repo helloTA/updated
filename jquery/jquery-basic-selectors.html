@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> jQuery Selectors</title>
+<title> jQuery Basic Selectors</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -91,7 +91,7 @@
 <div class="content">
   
 
-<h1>jQuery Introduction</h1>
+<h1>jQuery Basic Selectors</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -103,24 +103,25 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>jQuery Basic Selectors</h4>
+<h1>jQuery Basic Selectors</h1>
+<p>jQuery provides many selectors we can use on a webpage, in this chapter we will learn the basic selectors</p>
 
- <h3> jQuery :even Selector</h3>
+ <h3> jQuery even() Selector</h3>
 
 <p>Selects even elements, zero-indexed.</p>
 
-<h4>Example</h4>
+<h2>Example</h2>
 <pre class="prettyprint">
 $( "tr:even" )
 </pre>
 <p>It selects all the even tr elements</p>
 
-<pre class="prettyprint">
+<pre class="prettyprint jquery" >
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
-  &lt;head&gt;
-   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;even demo&lt;/title&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;even demo&lt;/title&gt;
 &lt;style&gt;
 table {
 background: #eee;
@@ -129,42 +130,43 @@ background: #eee;
 &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;table border="1"&gt;
-    &lt;tr&gt;&lt;td&gt;Row 0 Even&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 1 Odd&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 2 Even &lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 3 Odd&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 4 Even&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
+  &lt;table border="1"&gt;
+  &lt;tr&gt;&lt;td&gt;Row 0 Even&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 1 Odd&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 2 Even &lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 3 Odd&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 4 Even&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
 &lt;script&gt;
 $( "tr:even" ).css( "background-color", "red" );
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
+
 </pre>
-<a href="event-selector.html" class="btn btn-danger">Try It Yourself</a>
-<br />
+
 <br>
 <p>Output</p>
-<img src="images/examples/even-selector.png">
+<br><img src="images/examples/even-selector.png">
+<br><a href="examples/even-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-
- <h4>jQuery :odd Selector</h4>
+<br> <h3>jQuery odd () Selector</h3>
 
 <p>Selects odd elements, zero-indexed</p>
-<h5>Syntax</h5>
+<h2>Syntax</h2>
 <pre class="prettyprint">
 $( "tr:odd" )
 </pre>
 
-<h4>Example:</h4>
+<h2>Example:</h2>
 <p>Finds odd table rows, matching the second, fourth and so on</p>
-<pre class="prettyprint">
+<pre class="prettyprint jquery">
+
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
-  &lt;head&gt;
-   &lt;meta charset="utf-8"&gt;
-   &lt;title&gt;even demo&lt;/title&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;even demo&lt;/title&gt;
 &lt;style&gt;
 table {
 background: #eee;
@@ -172,86 +174,91 @@ background: #eee;
 &lt;/style&gt;
 &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
-   &lt;body&gt;
-    &lt;table border="1"&gt;
-    &lt;tr&gt;&lt;td&gt;Row 0 Even&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 1 Odd&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 2 Even &lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 3 Odd&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Row 4 Even&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
+&lt;body&gt;
+  &lt;table border="1"&gt;
+  &lt;tr&gt;&lt;td&gt;Row 0 Even&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 1 Odd&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 2 Even &lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 3 Odd&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Row 4 Even&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
 &lt;script&gt;
 $( "tr:odd" ).css( "background-color", "red" );
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<a href="odd-selector.html" class="btn btn-danger">Try it Yourself</a>
 
 <br />
 <p>Output</p>
-<img src="images/examples/odd-selector.png">
+<br><img src="images/examples/odd-selector.png">
 
-<h4>jQuery :eq() Selector</h4>
+<br><a href="examples/odd-selector.html" class="btn btn-primary" target="_blank">Try it Now</a>
+
+
+<br><h3>jQuery eq() Selector</h3>
 
 
 <p>Select the element at index n within the matched set.</p>
 
-<h4>Syntax</h4>
+<h2>Syntax</h2>
 <pre class="prettyprint">
 jQuery( ":eq(index)" )
 </pre>
 
-<h4>Example</h4>
+<h2>Example</h2>
 <pre class="prettyprint">
+
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
-  &lt;head&gt;
-   &lt;meta charset="utf-8"&gt;
-   &lt;title&gt;eq demo&lt;/title&gt;
-   &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;eq demo&lt;/title&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;table border="1"&gt;
-    &lt;tr&gt;&lt;td&gt;One&lt;/td&gt;&lt;td&gt;Two&lt;/td&gt;&lt;td&gt;Three&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Four&lt;/td&gt;&lt;td&gt;Five&lt;/td&gt;&lt;td&gt;Six&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;Seven&lt;/td&gt;&lt;td&gt;Eight&lt;/td&gt;&lt;td&gt;Nine&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
- &lt;script&gt;
- $( "td:eq( 2 )" ).css( "color", "green" );
- &lt;/script&gt;
- &lt;/body&gt;
+  &lt;table border="1"&gt;
+  &lt;tr&gt;&lt;td&gt;One&lt;/td&gt;&lt;td&gt;Two&lt;/td&gt;&lt;td&gt;Three&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Four&lt;/td&gt;&lt;td&gt;Five&lt;/td&gt;&lt;td&gt;Six&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Seven&lt;/td&gt;&lt;td&gt;Eight&lt;/td&gt;&lt;td&gt;Nine&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;script&gt;
+$( "td:eq( 2 )" ).css( "color", "green" );
+&lt;/script&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-<a href="examples/eq-selector-example.html" class="btn btn-success">Try It Yourself</a>
+
 
 <br />
-<p>Output <br >
-       <img src="images/examples/eq-selector.png">
-</p>
+<b>Output</b>
+ <br >
+      <img src="images/examples/eq-selector.png">
+<br><a href="examples/eq-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
- <h4>jQuery :first Selector</h4>
+
+<br> <h3>jQuery first() Selector</h3>
 
 
 <p>Selects the first matched element. It selects the first element among others and apply the
 requested styles</p>
 <b>Note</b><p>The <code>:first</code> pseudo-class is equivalent to <code> :eq( 0 )</code></p>
 
-<h5>Syntax</h5>
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
   jQuery( ":first" )
 </pre>
 
-<h4>Example</h4>
-<pre class="prettyprint">
+<h2>Example</h2>
+<pre class="prettyprint jquery">
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
-  &lt;head&gt;
-   &lt;meta charset="utf-8"&gt;
-   &lt;title&gt;first demo&lt;/title&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;first demo&lt;/title&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;table&gt;
@@ -262,40 +269,43 @@ requested styles</p>
   &lt;tr&gt;&lt;td&gt;Number 5&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;Number 6&lt;/td&gt;&lt;/tr&gt;
   &lt;/table&gt;
- &lt;script&gt;
-  $( "tr:first" ).css( "color", "red" );
- &lt;/script&gt;
- &lt;/body&gt;
+&lt;script&gt;
+$( "tr:first" ).css( "color", "red" );
+&lt;/script&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-<a href="first-selector.html" class="btn btn-primary">Try It Yourself</a>
+
 
 <br />
-<p>Output</p>
-<img src="images/examples/first-selector.png"><br />
+<b>Output</b>
+<br><img src="images/examples/first-selector.png">
 
-<h4>jQuery :last Selector</h4>
+<br><a href="examples/first-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h3>jQuery last () Selector</h3>
 
 
 <p>Selects the last matched element.</p>
 
 <p><b>Note:</b> <code>:last</code> selects a single element by filtering the current jQuery collection and matching the last element within it.</p>
 
-<h5>Syntax</h5>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   jQuery( ":last" )
 </pre>
 
-<h5>Example</h5>
+<h2>Example</h2>
 <p>Selects the last element</p>
-<pre class="prettyprint">
+<pre class="prettyprint jquery">
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;last demo&lt;/title&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;last demo&lt;/title&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;table&gt;
@@ -304,36 +314,41 @@ requested styles</p>
   &lt;tr&gt;&lt;td&gt;Last &lt;/td&gt;&lt;/tr&gt;
   &lt;/table&gt;
 &lt;script&gt;
- $( "tr:last" ).css({ backgroundColor: "green", fontWeight: "bolder" });
- &lt;/script&gt;
- &lt;/body&gt;
+$( "tr:last" ).css({ backgroundColor: "green", fontWeight: "bolder" });
+&lt;/script&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-<a href="last-selector-example.html" class="btn btn-success">Try It Yourself</a>
+
 <br />
 <b>Output</b> <br />
 <img src="images/examples/last-selector.png">
 
+<br><a href="examples/last-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<h4>jQuery :gt() Selector</h4>
+
+
+
+<br><h3>jQuery gt() Selector</h3>
 
 
 <p>Select all elements at an index greater than index within the matched set.</p>
 
-<h5>Syntax</h5>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   jQuery( ":gt(index)" )
 </pre>
 
-<h4>Example</h4>
+<h2>Example</h2>
 <pre class="prettyprint jquery">
+
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;gt demo&lt;/title&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;gt demo&lt;/title&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;table border="1"&gt;
@@ -341,33 +356,35 @@ requested styles</p>
   &lt;tr&gt;&lt;td&gt;TD #3&lt;/td&gt;&lt;td&gt;TD #4&lt;/td&gt;&lt;td&gt;TD #5&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;TD #6&lt;/td&gt;&lt;td&gt;TD #7&lt;/td&gt;&lt;td&gt;TD #8&lt;/td&gt;&lt;/tr&gt;
   &lt;/table&gt;
+&lt;br /&gt;
 &lt;script&gt;
- $( "td:gt(3)" ).css( "backgroundColor", "red" );
+$( "td:gt(3)" ).css( "backgroundColor", "red" );
 
- &lt;/script&gt;
- &lt;/body&gt;
+&lt;/script&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </pre>
 <p>It will select all the td elements whose id is greater than 3. In other words
 it will select all the td elements from the index 4</p>
-<a href="gt-selector-exmaple.html"  class="btn btn-primary">Try It Yourself</a>
+
 <br >
-<b>Output</b><br />
+<b>Output</b><br >
 <img src="images/examples/gt-selector.png">
 
-<h4>jQuery :lt() Selector</h4>
+<br><a href="examples/gt-selector.example.html"  class="btn btn-primary" target="_blank">Try It Now</a>
+<br><h3>jQuery :lt() Selector</h3>
 
 <p>Select all elements at an index less than index within the matched set. It works quite similar to
 jquery gt() selector but the only difference is it selects all the elements whose index is
 less then the index given
 </p>
 
-<h5>Syntax</h5>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   jQuery( ":lt(index)" )
 </pre>
 
-<h4>Example</h4>
+<h2>Example</h2>
 <p>Select all the td elements whose index is less than 5</p>
 
 <pre class="prettyprint">
@@ -390,25 +407,28 @@ less then the index given
  &lt;/script&gt;
  &lt;/body&gt;
 &lt;/html&gt;
-</pre> <br />
-<a href="lt-selector-example.html" class="btn btn-success">Try It Yourself</a>
+</pre>
 
-<br></br>
-<p><b>Output</b></p>
-<img src="images/examples/lt-selector.png">
 
-<h4>jQuery :not() Selector</h4>
+<br>
+<p><b>Output</b>
+<br><img src="images/examples/lt-selector.png">
+
+<br><a href="examples/lt-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h3>jQuery not() Selector</h3>
 
 <p>Selects all elements that do not match the given selector.
 </p>
-<h5>Syntax</h5>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   jQuery( ":not(selector)" )
 </pre>
 <p>All selectors are accepted inside <code>:not()</code>, for example:<code> :not(div a) and :not(div,a)</code>.</p>
 
 
-<h4>Example</h4>
+<h2>Example</h2>
 <pre class="prettyprint">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -436,22 +456,24 @@ $(document).ready(function(){
 </pre>
 
 <p>It will select all the elements and apply the green color except for sunday anf webdensday.</p>
-<a href="not-selecto-example.html" class="btn btn-success">Try It Yourself</a>
+
 
 <br />
-<b>Output</b> <br />
+<b>Output</b> <br >
 <img src="images/examples/not-selector.png">
 
-<h4>jQuery :focus Selector</h4>
+<br><a href="examples/not-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br>
+<h3>jQuery :focus Selector</h3>
 
 <p>Selects element if it is currently focused.
 </p>
-<h5>Syntax</h5>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   jQuery( ":focus" )
 </pre>
 
-<h5>Example</h5>
+<h2>Example</h2>
 <pre class="prettyprint">
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
@@ -489,9 +511,10 @@ elem.toggleClass( "focused", elem.is( ":focus" ) );
 &lt;/html&gt;
 </pre>
 
-<a href="examples/focus-selector.html" class="btn btn-success">Try It Yourself</a>
 <b>Output</b>
-<img src="images/examples/focus-selector.png">
+<br><img src="images/examples/focus-selector.png">
+
+<br><a href="examples/focus-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 <!-- CONTENT END HERE -->
 </div>

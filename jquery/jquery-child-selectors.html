@@ -104,11 +104,11 @@
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h3>jQuery :first-child Selector</h3>
+<h3>jQuery first-child Selector</h3>
 <p>Selects all elements that are the first child of their parent.
 </p>
 
-<h4>Syntax</h4>
+<h2>Syntax</h2>
 <pre class="prettyprint">
 $( ":first-child" )
 </pre>
@@ -116,7 +116,7 @@ $( ":first-child" )
 <p>When there many no of elements in a page, jquery <code> :first-child </code> selector
 can be used to select the first element of each parent in the webpage</p>
 
-<h4>Example</h4>
+<h2>Example</h2>
 <pre class="prettyprint">
     &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
@@ -161,25 +161,20 @@ $( "div span:first-child" )
 &lt;/html&gt;
 </pre>
 <b>Output</b><br />
-<img src="images/examples/child-first-selector.png"><br>
-<div>
-  
-</div>
+<br><img src="images/examples/child-first-selector.png"><br>
 
-<br><a href="child-first-selector.html" class="btn btn-primary">Try It Now</a> <br />
+<br><a href="examples/child-first-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> <br />
 
 
-<div>
-  
-</div>
 
-<br><h4>jQuery :last-child Selector</h4>
+
+<br><h3>jQuery :last-child Selector</h3>
 <p>Selects all elements that are the last child of their parent.
 </p>
 <p>When there are many no of elements in a webpage, and you want to select only the last element in
 each parent in such cases you can :last-child selector</p>
 
-<h3>Syntax</h3>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   $( ":last-child" )  
 </pre>
@@ -188,7 +183,7 @@ each parent in such cases you can :last-child selector</p>
  Note: <code> :last</code> matches only a single element, <code>:last-child</code> can match more than one: one for each parent.
 </div>
 
-<h5>Example</h5>
+<h2>Example</h2>
 <p>Find the last span in each matched div and add some css hover effect.</p>
 <pre class="prettyprint">
 &lt;!doctype html&gt;
@@ -236,28 +231,23 @@ $( "div span:last-child" )
 
 
 
-<br><a href="child-last-selector.html" class="btn btn-primary">Try It Now</a>
+<br><a href="examples/child-last-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<div>
-  
-</div>
-<br><h4>jQuery :first-of-type Selector</h4>
+<br><h3>jQuery :first-of-type Selector</h3>
 <p>The <code>:first-of-type</code> selector matches elements that have no other element with both the same parent and the same element name coming before it in the document tree.</p>
 
-<h3>Syntax</h3>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   jQuery( ":first-of-type" )
 </pre>
 
-<h4>Example:</h4>
-<p>It will find the first span in each matched div and add a class to it.</p>
-<h4>Syntax</h4>
-<pre class="prettyprint">
-  jQuery( ":first-of-type" )
-</pre>
+
+
+<p>When there are multiple elements with the same content or same value, jquery :first-of-type selector will select the first element of its type</p>
 
 <h4>Example</h4>
-<p>When there are multiple elements with the same content or same value, jquery :first-of-type selector will select the first element of its type</p>
+<p>It will find the first span in each matched div and add a class to it.</p>
+
 
 <pre class="prettyprint">
 &lt;!doctype html&gt;
@@ -305,15 +295,12 @@ $( "span:first-of-type" ).addClass( "change" );
 <b>Output</b><br>
 <img src="images/examples/first-of-type-selector.png"><br>
 
-<br><a href="examples/first-of-type-selector.html" class="btn btn-primary">Try It Now</a> <br />
-<div>
-  
-</div>
+<br><a href="examples/first-of-type-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> 
 <br>
 
-<h4>jQuery :last-of-type Selector</h4>
+<h3>jQuery :last-of-type Selector</h3>
 <p>The <code>:last-of-type</code> selector matches elements that have no other element with both the same parent and the same element name coming before it in the document tree.</p>
-<h4>Syntax</h4>
+<h2>Syntax</h2>
 <pre class="prettyprint">
   jQuery( ":last-of-type" )
 </pre>
@@ -322,7 +309,7 @@ $( "span:first-of-type" ).addClass( "change" );
 
 
 
-<h4>Example</h4>
+<h2>Example</h2>
 
 
 <p>It will find the last span in each matched div and add a class to it.</p>
@@ -373,18 +360,14 @@ $( "span:last-of-type" ).addClass( "change" );
 <img src="images/examples/last-of-type-selector.png"><br>
 
 
-<br><a href="examples/last-of-type-selector.html" class="btn btn-primary">Try It Now</a> <br />
+<br><a href="examples/last-of-type-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> 
 
-<div>
-  
-</div>
-
-<br><h4>jQuery :nth-child() Selector</h4>
+<br><h3>jQuery :nth-child() Selector</h3>
 <div class="alert alert-success">
   Matches all elements that are the nth-child of their parent or that are the parent's even or odd children.
 </div>
 
-<b>Syntax</b>
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
 $( ":nth-child(index/even/odd/equation)" )  
 </pre>
@@ -394,7 +377,7 @@ index: The index of each child to match, starting with 1, the string <code>even<
 </p>
 
 
-<h4>Example</h4>
+<h2>Example</h2>
 <p>The below example selects every second element in each parent of second child because in our case <code>:nth-child(2)</code></p>
 
 <pre class="prettyprint jquery">
@@ -449,7 +432,7 @@ $( "ul li:nth-child(2)" ).append( "&lt;span&gt; - 2nd!&lt;/span&gt;" );
 </pre>
 <b>Outpt</b><br/>
 <img src="images/examples/nth-child.png"><br>
-<br><a href="examples/nth-child.html" class="btn btn-primary">Try It Now</a>
+<br><a href="examples/nth-child.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 <!-- CONTENT END HERE -->

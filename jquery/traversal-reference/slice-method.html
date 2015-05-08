@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery Filters</title>
+<title>jQuery slice() Method</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -83,15 +83,21 @@
 <li class="heading">What to Learn Next</li>
 </ul>
 </div><!-- leftcol -->
+<br >
 <div class="middle_right">
-<div class="ads"><img src="images/ad1.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+
+
+
+
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
 <div class="content">
   
 
-<h1>jQuery Filters</h1>
+<h1>jQuery slice() Method</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -103,155 +109,8 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4>jQuery Filters</h4>
 
-
-<h4>jQuery filter()  method </h4>
-
-<p>jQuery filter() method constructs a jQuery object and holds the all elements which matches the given criteria. The criteria can be given as a selector, argument to <code>filter()</code> method. The filter() in jQuery completely opposite function of <code> not()</code> method. 
-</p>
-<h1> jQuery filter() method syntax</h1>
-<pre class="prettyprint jquery">
-  filter(selector)
-</pre>
-<p>
-Consider a web page with a simple list with 5 div elements, each one has class and whose name is middle <code>filter()</code> methods get all elements which matches the class name value is middle. Manipulation is going to be done by css styles for those who got matched the criteria.
-</p>
-
-
-<h2>Example</h2>
-<pre class="prettyprint jquery">
-
-$( "div" )
-  .css( "background", "#10b48f" )
-  .filter( ".middle" )
-    .css( "border-color", "blue" );
-
-</pre>
-
-<b>Output</b>
-<img src="images/examples/filter.png">
-<br><a href="examples/traversal/filter.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-<br><h4>jQuery first() method</h4>
-
-<p>jQuery <code>first()</code> method constructs a jQuery object which returns the first element in the group of DOM elements. It doesn't take any parameters.</p>
-<pre class="prettyprint jquery">
-first()  
-</pre>
-<p>
-Let’s take a following example in which the first div element out of 3 gets highlighted with red color 
-</p>
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-  $( "p span" ).first().addClass( "highlight" );
-</pre>
-
-<b>Output</b>
-<br><img src="images/examples/first.png">
-<br><a href="examples/traversal/first.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-
-
-<br><h4>jQuery has() method</h4>
-
-<p>
-The jQuery <code>has()</code> method constructs a jQuery object which selects all elements from a subset of the matching elements which matches the given specific selector.
-</p>
-<p>
-<b>Note:</b>
- To select an element that have multiple elements inside of it, use a comma.
- </p>
-
- <pre class="prettyprint jquery">
-  has( selector )
-  </pre>
-
-<p>Let us see an example ofjQuery has() method</p>
-<h4>jQuery has() method example</h4>
-<pre class="prettyprint jquery">
-  $( "ul" ).append( "&lt;li&gt;" +
-  ( $( "ul" ).has( "li" ).length ? "Add me" : "Don't add me" ) +
-  "&lt;/li&gt;" );
-$( "ul" ).has( "li" ).addClass( "full" );
-</pre>
-
-<b>Output</b>
-<br><img src="images/examples/has.png">
-<br><a href="examples/traversal/has.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-<br><h4>jQuery is() Method</h4>
-<p>
-The jQuery <code>is()</code> method checks the current selection against a selector and it returns true if at least one element of the selection matches the given selector. If it returns false means no elements matches or given selector is invalid to process.
-</p>
-<p><b>
-Note: </b> Like other methods .is() method doesn’t create any object.
-</p>
-<pre class="prettyprint jquery">
-is( selector )  
-</pre>
-
-<p>
-Let us see the following example which illustrates the usage of jQuery <code>is()</code> methods. 
-</p>
-
-
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-  $( "div" ).one( "click", function() {
-  if ( $( this ).is( ":first-child" ) ) {
-    $( "p" ).text( "click me for first" );
-  } else if ( $( this ).is( ".blue,.red" ) ) {
-    $( "p" ).text( "click me for first" );
-  } else if ( $( this ).is( ":contains('jQuery')" ) ) {
-    $( "p" ).text( "came jQuery!" );
-  } else {
-    $( "p" ).html( "nothing &lt;em&gt;special&lt;/em&gt;." );
-  }
-  $( "p" ).hide().slideDown( "fast" );
-  $( this ).css({
-    "border-style": "inset",
-    cursor: "default"
-  });
-});
-</pre>
-
-<b>Output</b>
-<br><img src="images/examples/is.png">
-
-<br><a href="examples/traversal/is.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-
-
-
-<br><h4>jQuery last () Method</h4>
-<p>
-The jQuery <code>last()</code> method constructs a jQuery object and selects the last element in the set of DOM elements.</p>
-<p><b>
-Note: </b>ThejQuery <code>last()</code> method can only select a single element from DOM tree.
-</p>
-<pre class="prettyprint jquery">
-last()
-</pre>
-<p>
-Below example describes the usage of .last() method in jQuery.
-</p>
-
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-  $( "p span" ).last().addClass( "highlight" );
-</pre>
-<b>Output</b>
-<br><img src="images/examples/last.png">
-<br><a href="examples/travesal/last.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-
-
-<br><h4>jQuery slice() Method</h4>
+<h4>jQuery slice() Method</h4>
 
 <p>The jQuery <code>slice()</code> method constructs a jQuery object which selects the subset of elements in the set by specified range of indices.</p>
 
@@ -293,27 +152,6 @@ $( "button" ).click( colorEm );
 <br><img src="images/examples/slice.png">
 <br><a href="examples/traversal/slice.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<br><h4>jQuery not () Method</h4>
-
-<p>
-
-jQuery <code>not()</code> method constructs a jQuery object which removes elements from the set of matched elements. The resultant of this method holds the element which doesn’t match the given selector.</p>
-<h3>jQuery not() method syntax</h3>
-<pre class="prettyprint jquery">
- .not( selector ) 
-</pre>
- 
- <h4>Example</h4>
- <pre class="prettyprint jquery">
-   $( "div" ).not( ".green, #blueone" )
-  .css( "border-color", "yellow" );
- </pre>
-
- <b>Output</b>
- <br><img src="images/examples/not.png">
- <br><a href="examples/traversal/not.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
- 
 
 <!-- CONTENT END HERE -->
 </div>
@@ -326,24 +164,29 @@ jQuery <code>not()</code> method constructs a jQuery object which removes elemen
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
 <a href="#"  class="glyphicon glyphicon-hand-right"></a>
 </div>
+<br>
+<div>
+  
+</div>
+<br>
 <div class="clearer"></div>
 </div>
-<div class="ads"><img src="images/ad2.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
+
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
+
+</div>
 </div><!-- middlecol -->
 <div id="rightcol">
 <div class="rightgooglead">
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 160;
-google_ad_height = 600;
-google_ad_format = "160x600_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
+
+<!-- START OF GOOGLE CODE-->
+ 
+<!-- END  OF GOOGLE CODE-->
 </div>
 </div><!-- rightcol -->
 <div style="clear:both;"></div>
