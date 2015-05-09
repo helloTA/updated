@@ -79,7 +79,6 @@
 </li>
 <li><a target="_top"  href="css-texts.html">CSS - Text</a>
 </li>
-<li><a target="_top"  href="css-images.html">CSS - Images</a></li>
 <li><a target="_top" href="css-boxmodel.html">CSS Box Model</a></li>
 
 
@@ -172,6 +171,295 @@ table, th, td {
 <br><img src="images/tables/border.png">
 
 <br><a href="examples/tables/border.html" class="btn btn-primary" target="_blank">Try It Now</a></p>
+
+<br><h3>Collapse Borders</h3>
+<div class="alert alert-success">
+  The css <code>border-collapse</code> property is used to set whether the table borders are collapsed into a single border or seperated
+</div>
+
+<p>The example HTML table would look like as follows</p>
+<pre class="prettyprint html">
+  &lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Student Name&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Michel&lt;/td&gt;
+    &lt;td&gt;64&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joy&lt;/td&gt;
+    &lt;td&gt;56&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p>Let's take a look at how the css would look like for the above HTML table</p>
+<pre class="prettyprint css">
+  table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 3px solid red;
+}
+</pre>
+<p>The above example would apply the css<code>border-collapse</code> to the table and sets its border as red with 3px</p>
+
+
+<b>Output</b>
+<br><img src="images/tables/collapse.png">
+<br><a href="examples/tables/collapse.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h3>Table Width and Height</h3>
+<div class="alert alert-success">
+  CSS <code>width</code> and <code>height</code> property is used to define the height and width of a table
+</div>
+
+<p>The example below sets the <code>width</code> of the table to 80%, and the <code>height</code> of the &lt;th&gt; elements to 40px:</p>
+
+<p>The example HTML table would look like this:</p>
+<h2>Example</h2>
+<pre class="prettyprint html">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Company&lt;/th&gt;
+    &lt;th&gt;Founder&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Facebook&lt;/td&gt;
+    &lt;td&gt;Mark Zuckerberg&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bill Gates&lt;/td&gt;
+    &lt;td&gt;Microsoft&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dropbox&lt;/td&gt;
+    &lt;td&gt;Drew Houston&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Infosys&lt;/td&gt;
+    &lt;td&gt;Narayana Murthy&lt;/td&gt;
+    &lt;td&gt;India&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;TATA&lt;/td&gt;
+    &lt;td&gt;J.D Tata&lt;/td&gt;
+    &lt;td&gt;India&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p>Let's look at the how the css code would look like for the above table using the css<code>width and height</code> property</p>
+
+
+<pre class="prettyprint css">
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    width: 80%;
+}
+
+th {
+    height: 40px;
+}
+</pre>
+
+<b>Output</b>
+<br><img src="images/tables/height-width.png">
+<br><a href="examples/tables/height-width.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+<br><h3>Horizontal Text Alignment</h3>
+<div class="alert alert-success">
+  If you notice, that the table headers are by default set to left. However using the css<code>text-align</code> property we can set the table headers to left, right or center.
+</div>
+
+
+
+
+<h2>Example</h2>
+
+<p>The following example right-aligns the text in &lt;th&gt; elements:</p>
+<p>The example HTML table would look like</p>
+
+<pre class="prettyprint html">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Company&lt;/th&gt;
+    &lt;th&gt;Founder&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Facebook&lt;/td&gt;
+    &lt;td&gt;Mark Zuckerberg&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bill Gates&lt;/td&gt;
+    &lt;td&gt;Microsoft&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dropbox&lt;/td&gt;
+    &lt;td&gt;Drew Houston&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Infosys&lt;/td&gt;
+    &lt;td&gt;Narayana Murthy&lt;/td&gt;
+    &lt;td&gt;India&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;TATA&lt;/td&gt;
+    &lt;td&gt;J.D Tata&lt;/td&gt;
+    &lt;td&gt;India&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<p>Now let's look at how the css code would look like for tha above table using css<code>text-align</code> property</p>
+
+
+<pre class="prettyprint css">
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: right;
+}
+</pre>
+
+<b>Output</b>
+<p>If the css property is set to  <code>text-align:right</code>  then the output would look like below</p>
+<p>Notice the table headers</p>
+<br><image src="images/tables/right-align.png">
+
+
+<p>If the css property is set to <code>text-align:left</code> then  the output would look like below</p>
+<br><image src="images/tables/left-align.png">
+
+<p>If the css property is set to <code>text-align:center</code> then the output would look like below</p>
+<br><image src="images/tables/center-align.png">
+<br><a href="examples/tables/text-align.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+
+<br><h3>Vertical Text Alignment</h3>
+<div class="alert alert-success">
+  The vertical-align property sets the vertical alignment, like top, bottom, or middle.
+</div>
+
+
+<p>
+
+The following example sets the vertical text alignment to bottom for &lt;td&gt; elements:</td>
+
+<p>The example html table would look like below:</p>
+
+<h3>Example</h3>
+<pre class="prettyprint html">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Company&lt;/th&gt;
+    &lt;th&gt;Founder&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Facebook&lt;/td&gt;
+    &lt;td&gt;Mark Zuckerberg&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bill Gates&lt;/td&gt;
+    &lt;td&gt;Microsoft&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dropbox&lt;/td&gt;
+    &lt;td&gt;Drew Houston&lt;/td&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Infosys&lt;/td&gt;
+    &lt;td&gt;Narayana Murthy&lt;/td&gt;
+    &lt;td&gt;India&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;TATA&lt;/td&gt;
+    &lt;td&gt;J.D Tata&lt;/td&gt;
+    &lt;td&gt;India&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt; 
+</pre>
+
+<p>Let's look at how the css code would look like after applying the css<code>vertical-align </code> property</p>
+
+<pre class="prettyprint css">
+table, td, th {
+    border: 1px solid black;
+}
+
+td {
+    height: 80px;
+    vertical-align: bottom;
+}
+</pre>
+
+<b>Output</b>
+<br><img src="images/tables/vertical-align.png">
+<br><a href="examples/tables/vertical-align.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h3>Table Color</h3>
+<div class="alert alert-success">
+The example below specifies the color of the borders, and the text and background color of &lt;th&gt; elements:
+</div>
+
+
+<h2>Example</h2>
+<p>Let's look at the css code for the above table with css table <code>color</code> property</p>
+
+<pre class="prettyprint css">
+  table, td, th {
+    border: 1px solid red;
+}
+
+th {
+    background-color: red;
+    color: black;
+}
+</pre>
+
+<b>Output</b>
+<br><img src="images/tables/table-color.png">
+<br><a href="examples/tables/table-color.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+
+
+
+
+
+
+
 
 <!-- CONTENT END HERE -->
 </div>
