@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo here</title>
+  <style>
+  div {
+    background: red;
+    width: 90px;
+    height: 80px;
+    margin: 2px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div></div>
+ 
+<script>
+for ( var i = 0; i < 5; i++ ) {
+  $( "<div>" ).appendTo( document.body );
+}
+$( "div" ).click(function() {
+  $( this ).hide( 3000, function() {
+    $( this ).remove();
+  });
+});
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>prev demo</title>
+  <style>
+  div {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    float: left;
+    border: 2px red solid;
+    padding: 2px;
+  }
+  span {
+    font-size: 18px;
+color:white;
+  }
+  p {
+    clear: left;
+    margin: 10px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div></div>
+<div><span>Iam jQuery</span></div>
+<div></div>
+<div></div>
+<div></div>
+<div id="start"></div>
+<p><button>Click me to preview</button></p>
+ 
+<script>
+var $curr = $( "#start" );
+$curr.css( "background", "#10b48f" );
+$( "button" ).click(function() {
+  $curr = $curr.prev();
+  $( "div" ).css( "background", "" );
+  $curr.css( "background", "#10b48f" );
+});
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>filter demo here</title>
+  <style>
+  div {
+    width: 90px;
+    height: 90px;
+    margin: 9px;
+    float: left;
+    border: 10px yellow solid;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div class="middle"></div>
+<div class="middle"></div>
+<div class="middle"></div>
+<div class="middle"></div>
+<div></div>
+ 
+<script>
+$( "div" )
+  .css( "background", "#10b48f" )
+  .filter( ".middle" )
+    .css( "border-color", "blue" );
+</script>
+ 
+</body>
+</html>

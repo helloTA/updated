@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>has demo</title>
+  <style>
+  .full {
+    border: 1px solid blue;
+color:red;
+font-size:50px
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<ul><li>Here is the benefit of using has()</li></ul>
+ 
+<script>
+$( "ul" ).append( "<li>" +
+  ( $( "ul" ).has( "li" ).length ? "Add me" : "Don't add me" ) +
+  "</li>" );
+$( "ul" ).has( "li" ).addClass( "full" );
+</script>
+ 
+</body>
+</html>

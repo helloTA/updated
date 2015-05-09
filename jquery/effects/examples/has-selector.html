@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>has demo</title>
+<style>
+.sample {
+border: 3px inset blue;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div><p>Hello in a paragraph</p></div>
+<div>Hello again! (with no paragraph)</div><br/>
+<div><p>Another text with a paragraph</p></div><br/>
+<div>Hello! (with no paragraph)</div><br/>
+<script>
+$( "div:has(p)" ).addClass( "sample" );
+</script>
+</body>
+</html>

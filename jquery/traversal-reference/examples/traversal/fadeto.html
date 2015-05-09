@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>fadeTo demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p>
+Click here to see fadeto some value
+</p>
+ 
+<p>
+Click here to see no fade
+</p>
+ 
+<script>
+$( "p:first" ).click(function() {
+  $( this ).fadeTo( "slow", 0.33 );
+});
+</script>
+ 
+</body>
+</html>

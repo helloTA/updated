@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>first-child demo</title>
+  <style>
+  span {
+    color: #008;
+  }
+  span.sogreen {
+    color: blue;
+    font-weight: bolder;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div>
+  <span>Apple,</span>
+  <span>Banana,</span>
+  <span>Mango</span>
+</div>
+<div>
+  <span>Orange</span>
+  <span>Grape</span>
+  <span>Carrot</span>
+</div>
+ 
+<script>
+$( "div span:first-child" )
+  .css( "color", "green" )
+  .hover(function() {
+    $( this ).addClass( "sogreen" );
+  }, function() {
+    $( this ).removeClass( "sogreen" );
+  });
+</script>
+ 
+</body>
+</html>

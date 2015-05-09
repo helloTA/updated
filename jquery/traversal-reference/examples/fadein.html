@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>fadeIn demo</title>
+  <style>
+  span {
+    color: black;
+    cursor: pointer;
+  }
+  div {
+    margin: 6px;
+    width: 90px;
+    display: none;
+    height: 90px;
+    float: left;
+  }
+  #one {
+    background: red;
+  }
+  #two {
+    background: green;
+  }
+  #three {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<span>Click me to see fading effect</span>
+<div id="one"></div>
+<div id="two"></div>
+<div id="three"></div>
+ 
+<script>
+$( document.body ).click(function() {
+  $( "div:hidden:first" ).fadeIn( "slow" );
+});
+</script>
+ 
+</body>
+</html>
