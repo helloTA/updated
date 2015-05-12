@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Decision Making</title>
+<title>Java Numbers</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -112,7 +112,7 @@
 <div class="content">
 
 
-<h1>Java Decision Making</h1>
+<h1>Java Numbers</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -125,296 +125,129 @@
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h2>What is Decision Making</h2>
+
+<h2>Java Numbers</h2>
+<p>
+This chapter begins with a discussion of the Number class in the java.lang package, its subclasses, and the situations where you would use instantiations of these classes rather than the primitive number types.
+</p>
+
+
+<strong>Value Types:</strong>
+<p>It’s store data on stack which is a place where data stores in fixed length such as int, float , char etc. Every program in execution as its own stack and no other program shares it.
+Stack works on the principles of Last In First Out (LIFO) and moreover stack will be under the control of Operating System.</p>
+
+<strong>Reference Types:</strong>
+
+<p>Reference types are stored on Heap memory which is another place where data can be stored.</p>
+
+
+<strong>Example:</strong>
+<pre class="prettyprint"><code class="language-java">
+// Example code for value type and reference type <br />
+int x = 100;        //  value type
+float f = 3.14f         //  value type
+string s = “hello”; // Reference type 
+</code></pre>
+
+
+<h2>Boxing and Unboxing in Java</h2>
+
+
+
+
+<b>What is Boxing in Java</b>
 <div class="alert alert-success">
-  When you are going to write some program it will be always necessary
-that you will have to put some code which has to be executed only when a
-specific condition is satisfied. These conditions are evaluated by the computer
-itself when the input is given by the user.
+  Boxing is the process of converting a value type to the type object or to any interface type implemented by this value type
 </div>
-
-
-<img src="images/decision-making.png">
-
-<p>Java provides  Four different types of conditional statements  which are as
-follows.
-</p>
-
-<ol>
-  <li>if Statement</li>
-  <li>if-else Statement </li>
-  <li> Nested if else </li>
-  <li>Switch Statement </li>
-</ol>
-
-
-<p>If you are confused on, which one to use!!! All the above four methods can be used for
-decision making but their application will vary, you will feel comfortable after
-making a few programs using them.</p>
-
-<b>if Statement</b>
-
-<p>As the word itself is clarifying its meaning, it is used to check a condition
-and perform a set of statements according to the result of the condition
-checked</p>
-<p>If condition generally works with the boolean expression.
-<b>Syntax: </b>
-<pre class="prettyprint java">   
- if(condition)
- {
- ....
- ....               // TRUE Block Statements
- }
-
- 
-</pre>
-
-<p>In the above syntax, the conition is a boolean expression. If the expression is true then it executes the block of code inside the curly bracs <code> { }</code>
-
-<h2>Example</h2>
-<pre class="prettyprint java">
-int age = 25;
-if (age > 20)
-{
-    System.out.println("Yes, age is Greater than 20");
-}
-</pre>
-
-<p>In the above example, the java if condition would prints the statement "Yes, age is Greater than 20" if the condition is really true. In our case, it is true. So the output would be like below.
-
-</p>
-
-<b>Output</b>
-<pre class="prettyprint java">
-Yes, age is Greater than 20
-</pre>
-
-
-
-
-<b>if-else Statement</b>
-<div class="alert alert-success">
-  If else statement works similar to the java if statement. But the only difference is, if the provided condition is wrong or false it we execute someother statement in the else block.
-  For example, if the age is > 20 print <code>He is elder</code> else print<code>He is not elder</code>. Thats how the if else statement works.
-</div>
-
-
-<p>If  condition generally works with the boolean expression.
-<b>Syntax: </b>
-<pre class="prettyprint java">   
- if(condition)
- {
- ....
- ....                   // TRUE Block Statements
- }
-
-else {
-  .....
-  .....                 // FALSE Block Statements
-}
-
- 
-</pre>
-
-In the
-above given syntax "condition" means any relational condition or
-any mathematical expression. If the condition given in the brackets
-(parenthesis) is TRUE then the statements within the BRACES executed.
-The statements given in BRACES after the "else" part are executed when
-the condition is false (not satisfied)</p>
-
-
-<h2>Example</h2>
-<pre class="prettyprint java">
-int age = 18;
-if (age > 20)
-{
-    System.out.println("He is Elder");
-}
-else
-{
-System.out.println("He is not Elder");
-}
-</pre>
-
-<p>The above example prints <code>He is not Elder</code> because the condition is FALSE</p>
-
-<b>Output</b>
-<pre class="prettyprint java">
-He is not Elder
-</pre>
-
-
-<h2>Example Program</h2>
-
-<pre class="prettyprint java">
-int var1=100, var2=200;
-if(var1 > var2)
- {
-  System.out.println("Variable 1 is bigger ");
- }
-else
- {
-  System.out.println("Variable 1 is smaller");
- }
-}
-</pre>
-
-
-
-<b>Explanation :</b>
-<p>
-There are two variables in the above program which are
-having some values.
-In the given example the value of val1 is smaller then
-var2, so the condition for if is false. According the program is going to print
-the output. You guessed right. The output will be "Variable 1 is smaller".
-</p>
-
-
-
-<b>Nested IF Statements</b>
-<p>
-There are times when it will be required to check more than one
-conditions and according to their collective results would
-like to perform
-various tasks. We can use IF statements within another if statements for any
-number of times required. Although there is not any separate syntax for if
-else statements.</p>
-
-<b>Syntax</b>
-<pre class="prettyprint java">
-if(condition1)
-{
-  if(condition2)
-  {
-  ...
-  //statements
-  }
-  else
-  {
-  ...
-  //statements
-  }
-}
-else
-{
-...
-//statements
-}
-</pre>
-
-
-<p>Let's take a look at example program for nested if statement</p>
-<pre class="prettyprint java">
-
-bool condition = true;
-bool check= true;
-if (condition)
-{
-if (check)
-    {
-      Console.WriteLine("The nested variable is set to true.");
-    }
-    else
-    {
-      Console.WriteLine("The nested variable is set to false.");
-    }
-}
-else
-{
-   Console.WriteLine("The variable is set to false.");
-}
-
-</pre>
-<b>Output</b>
-<pre class="prettyprint java">
-  The nested variable is set to true.
-</pre>
-
-
-<h2>Switch Statement</h2>
-<p>
-  Switch statement in java is used to check a good number of conditions and will work accordingly. Switch is a method which is going to take an integer parameter and depending upon that parameter will do the given operations.
-</p>
-
-
-<b>Syntax</b>
-<pre class="prettyprint java">
-  switch(value)
-  {
-   case value:
-   statements;
-   break;
-   case value:
-   statements;
-   break;
-   default;
-   statements;
-   break;
-  }
-</pre>
-<p>As the syntax shows that within parenthesis of switch we will always have to give some value as an integer and depending upon the value of that expression switch will select the equivalent case. After executing the case statements if the break is missing then all the statements below that case are also executed. If there is no case value which matches the value in the switch then statements in the default block will be executed.</p>
+<p>Converting a value type into reference type and string it in the managed heap memory is called as boxing in java</p>
 
 
 <b>Example</b>
+<p>This example converts an integer variable i to an object o by using boxing. Then, the value stored in the variable i is changed from 123 to 456.</p><br />
+
+<pre class="prettyprint"><code class="language-java">
+// Example of boxing <br />
+  int x = 123;
+  object obj = x;     // Boxing 
+</code></pre> <br />
+
+
+
+
+<b>What is Unboxing in Java</b> <br />
+
+<div class="alert alert-success">
+<p>Unboxing is an explicit conversion from the type object to a value type or from an interface type to a value type that implements the interface.
+</p>
+
+<p> An unboxing operation consists of:</p>
+<li>Checking the object instance to make sure that it is a boxed value of the given value type.</li>
+<li>Copying the value from the instance into the value-type variable.</li>
+
+<p> Note that,  Unboxing requires an explicit conversion and can not be performed directly.</p>
+
+<pre class="prettyprint"><code class="language-java">
+// Example of Unboxing <br />
+ int y = Convert.Toint32(obj);      // Unboxing 
+</code></pre> <br />
+
+<p>Note: A direct reference can never be converted into value type.</p>
+
+
+
+<strong>Alright, but why should you use boxing and Unboxing?</strong>
+
+<p>Think of it like this. You have a variable <code>o</code> of type <code>object</code>. And now you have an <code>int</code> and you want to put it into <code>o</code>. <code>o</code> is a reference to something somewhere, and the <code>int</code> is emphatically not a reference to something somewhere (after all, it's just a number). So, what you do is this: you make a new <code>object</code> that can store the <code>int</code> and then you assign a reference to that object to o. We call this process "boxing."</p>
+<p>I hope you understood the boxing and unboxing in Java by now</p>
+
+
+
+<h2>Example</h2>
 <pre class="prettyprint java">
+  public class NumbersDemo{
 
-/* Assume the days are as follows:
-     Sunday - 1
-     Monday - 2
-     Tuesday - 3
-     Wednesday -4
-     Thursday -5
-     Friday -6
-     Saturday -7 */
-
-     // Now, using the switch statement, we have to print the day based on the given
-     // condition. i.e value. If value is 1, it should print Sunday, if value is 2 it should 
-     // print Monday ...etc 
-
-int today = 3;
-switch (today)
-{
-  case 1:
-       Console.WriteLine("To day is Sunday");
-       break;
-  case 2:
-       Console.WriteLine(“Today is Monday");
-       break;
-  case 3:
-         Console.WriteLine(“Today is Tuesday");
-         break;
-  case 4:
-         Console.WriteLine(“Today is Wednesday");
-         break;
-  case 5:
-         Console.WriteLine(“Today is Thursday");
-         break;
-  case 6:
-         Console.WriteLine(“Today is Friday");
-         break;
-  case 7:
-         Console.WriteLine(“Today is Saturday");
-         break;
-
-   default:
-       Console.WriteLine("Day is not available!");
-       break;
+  public static void main(String args[]){
+     Integer x = 34;    // boxes int to an Integer object
+     x =  x + 53;          // unboxes the Integer to a int
+     System.out.println(x); 
+  }
 }
-
-</pre>
-<p>In the above example, the given day is today which has value 3. In the switch cases if the case is 3 it should print the third case which is <code>Today us Tuesday</code></p>
-
-
-<b>Output</b>
-<pre class="prettyprint java">
-  Today is Tuesday
 </pre>
 
 
 
+<p>The following table lists the instance methods that all the subclasses of the Number class implement.</p>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>+ </td>
+            <td>Plus</td>
+        </tr>
+        <tr class="success">
+            <td>+ </td>
+            <td>Plus</td>
+        </tr>
+        <tr class="success">
+            <td>+ </td>
+            <td>Plus</td>
+        </tr>
+        <tr class="success">
+            <td>+ </td>
+            <td>Plus</td>
+        </tr>
+       
+    </tbody>
+</table> <br />
+<style type="text/css">
+  
+</style>
 
 
 
