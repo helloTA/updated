@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery and CSS</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">jQuery Tutorials</li>
+<li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
+<li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
+<li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
+<li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
+<li><a target="_top" href="jquery-selectors.html">jQuery Selectors </a></li>
+<li><a target="_top" href="jquery-effects.html">jQuery Effects </a></li>
+<li><a target="_top" href="jquery-events.html">jQuery Events </a></li>
+<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
+<li><a target="_top" href="jquery-with-css.html">jQuery and CSS </a></li>
+<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
+<li><a target="_top" href="jquery-and-ajax.html">jQuery AJAX </a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<br >
+<div class="middle_right">
+<div class="ads">
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+  
+
+<h1>jQuery and CSS</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h2>jQuery addClass() Method</h2>
+
+<div class="alert alert-success">
+jQuery addClass() method in jQuery adds the more than one specific class to the each element present in the set of matched elements.</div>
+<p>
+This method doesn’t remove the existing class attributes but extends or adds the more that one  class attributes to existing class attribute.
+Note: If you want to mention more than one class attribute, you have to separate each class name by comma.</p>
+
+<b>Syntax for jQuery addClass() method</b>
+<pre class="prettyprint jquery">
+ $addClass( className )  
+</pre>
+
+
+<p>The following example illustrates the usage of jQuery<code> addClass()</code> method. In this example, it is going to add two more classes attributes to the existing &lt;p&gt; tag css attributes by calling <code>$( "p:last" ).addClass( "selected highlight" )</code> where selected and highlight are the css classes defined under the &lt;style&gt; tag.
+</p>
+
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;addClass demo&lt;/title&gt;
+  &lt;style&gt;
+  p {
+    margin: 10px;
+    font-size: 20px;
+  }
+  .selected {
+    color: white;
+  }
+  .highlight {
+    background: red;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;Hi&lt;/p&gt;
+&lt;p&gt;This is jQuery&lt;/p&gt;
+&lt;p&gt;Learning platform&lt;/p&gt;
+ 
+&lt;script&gt;
+$( "p:last" ).addClass( "selected highlight" );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery addClass() method" class="figure" style="height:359px; width:663px" title="jQuery addClass() method"
+src="jquery-and-css/images/add.png" >
+
+<a href="jquery-and-css/examples/addclass.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+<br><h2>jQuery css () Method</h2>
+<div class="alert alert-success">
+The CSS() method gets one or more style properties for the selected elements.
+</div>
+
+<p>The jQuery css() method simplest way to get the computed style property from the selected element. jQuery takes care of  CSS and DOM formatting of multiple word properties that are defined in jQuery css() method.
+</p>
+
+<h2>Syntax for jQuery css() method</h2>
+
+<pre class="prettyprint jquery">
+ .css( propertyName )
+</pre>
+
+
+<p>
+For Example, Both .css( "background-color" ) and .css( "backgroundColor" ) can be understood by jQuery and returns the correct value. Meaning; these mixed case has a special meaning but incase if we provide .css( "WiDtH" ) and .css( "width" ), jQuery ignores and  return correct value. </p>
+
+<p>
+
+The following example gives the clarity of how to use .css() method.</p>
+
+<h3>Example</h3>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;css demo&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    width: 100px;
+    height: 100px;
+    margin: 12px;
+    float: left;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;span id="result"&gt;&nbsp;&lt;/span&gt;
+&lt;div style="background-color:yellow;"&gt;&lt;/div&gt;
+&lt;div style="background-color:rgb(25,09,90);"&gt;&lt;/div&gt;
+&lt;div style="background-color:#042490;"&gt;&lt;/div&gt;
+&lt;div style="background-color:#f00;"&gt;&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "div" ).click(function() {
+  var color = $( this ).css( "background-color" );
+  $( "#result" ).html( "That div is &lt;span style='color:" +
+    color + ";'&gt;" + color + "&lt;/span&gt;." );
+});
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+<p>The above example produces the following output</p>
+<b>Output</b>
+
+<br><img  alt="jQuery .css() method" class="figure" style="height:359px; width:663px" title="jQuery .css() method" src="jquery-and-css/images/css.png" >
+<br><a href="jquery-and-css/examples/css.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>jQuery hasClass() Method</h2>
+
+<div class="alert alert-success">
+The hasClass() method in jQuery responsible for checking whether the selected element matches the specified class name or not. If matched hasClass() method returns true otherwise It returns false.</div>
+
+<b>Syntax for jQuery hasClass() method</b>
+<pre class="prettyprint jquery">
+ .hasClass(className)
+</pre>
+
+<p>
+Consider the example to check whether selected element matches the by class name
+
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;hasClass demo&lt;/title&gt;
+  &lt;style&gt;
+  p {
+    margin: 10px;
+    font-size: 25px;
+  }
+  .selected {
+    color: blue;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;jQuery has .hasClass() method &lt;/p&gt;
+&lt;p class="selected"&gt;jQuery has .hasClass() method.&lt;/p&gt;
+&lt;div id="result1"&gt;jQuery has .hasClass() method : &lt;/div&gt;
+&lt;div id="result2"&gt;jQuery has .hasClass() method : &lt;/div&gt;
+&lt;div id="result3"&gt;jQuery has .hasClass() method : &lt;/div&gt;
+ 
+&lt;script&gt;
+$( "#result1" ).append( $( "p:first" ).hasClass( "selected" ).toString() );
+$( "#result2" ).append( $( "p:last" ).hasClass( "selected" ).toString() );
+$( "#result3" ).append( $( "p" ).hasClass( "selected" ).toString() ) ;
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+<p>The above example will produce the following output</p>
+<b>Output</b>
+
+<br><img  alt="jQuery .hasClass() method" class="figure" style="height:359px; width:663px" title="jQuery .hasClass() method" src="jquery-and-css/images/css_hasClass.png" >
+<br><a href="jquery-and-css/examples/hasclass.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>jQuery height() Method</h2>
+
+<div class="alert alert-success">
+The height() method in jQuery gets the computed height of the matched element or Set the height of matched element.</div>
+
+<b>Syntax for jQuery .height() method</b>
+<pre class="prettyprint jquery">
+ .height()
+</pre>
+<p>
+The difference between<code> .css( "height" ) </code>and <code>jQuery .height()</code> is that the latter returns a unit-less pixel value (for example, 400) while the former returns a value with units intact (for example, 400px). The jQuery .height() method is recommended when an element's height needs to be used in a mathematical calculation.</p>
+<p>
+
+Here is an example to use the jQuery .height() method.</p>
+
+<h2>Example </h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;height demo&lt;/title&gt;
+  &lt;style&gt;
+  body {
+    background: gray;
+  }
+  button {
+    font-size: 18px;
+    margin: 8px;
+  }
+  p {
+    width: 190px;
+    border: 2px blue solid;
+  }
+  div {
+    color: white;
+    font-weight: bold;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;button id="getp"&gt;Paragraph Height&lt;/button&gt;
+&lt;button id="getd"&gt;Document Height&lt;/button&gt;
+&lt;button id="getw"&gt;Window Height&lt;/button&gt;
+ 
+&lt;div&gt;&nbsp;&lt;/div&gt;
+&lt;p&gt;
+  example to test height() method
+&lt;/p&gt;
+ 
+&lt;script&gt;
+function showHeight( element, height ) {
+  $( "div" ).text(element + " height : " + height + "px." );
+}
+$( "#getp" ).click(function() {
+  showHeight( "paragraph", $( "p" ).height() );
+});
+$( "#getd" ).click(function() {
+  showHeight( "document", $( document ).height() );
+});
+$( "#getw" ).click(function() {
+  showHeight( "window", $( window ).height() );
+});
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+<p>The above example code will produce the following output</p>
+<b>Output</b>
+
+<br><img  alt="jQuery .height() method" class="figure" style="height:359px; width:663px" title="jQuery .height() method" src="jquery-and-css/images/height.png" >
+<br><a href="jquery-and-css/examples/height.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>jQuery innerHeight() Method</h2>
+
+<div class="alert alert-success">
+The innerHeight() method in jQuery gets the computed inner height of the matched element or Set the height of matched element.
+</div>
+
+
+<b>Syntax for jQuery innerHeight() Method</b>
+<pre class="prettyprint jquery">
+  .innerHeight()
+
+</pre>
+
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;innerHeight demo&lt;/title&gt;
+  &lt;style&gt;
+  p {
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid #444;
+color:red
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;jQuery innerHeight() method&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+ 
+&lt;script&gt;
+var p = $( "p:first" );
+$( "p:last" ).text( "innerHeight:" + p.innerHeight() );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+<b>Output</b>
+<br><img  alt="jQuery .innerHeight() method" class="figure" style="height:359px; width:663px" title="jQuery .innerHeight() method" src="jquery-and-css/images/innerHeight.png" >
+<br><a href="jquery-and-css/examples/innerHeight.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>jQuery innerWidth() Method </h2>
+
+<div class="alert alert-success">
+Get the current computed inner width (including padding but not border) for the first element in the set of matched elements or set the inner width of every matched element.
+</div>
+
+<b>Syntax for jQuery innerwidth()</b>
+<pre class="prettyprint jquery">
+ .innerWidth()
+</pre>
+
+<p>Here is an example on how to use jQuery  innerWidth() Method</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;innerWidth demo&lt;/title&gt;
+  &lt;style&gt;
+  p {
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid #444;
+    color:blue
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;jQuery innerWidth() method&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+ 
+&lt;script&gt;
+var p = $( "p:first" );
+$( "p:last" ).text( "innerWidth of paragraph :" + p.innerWidth() );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+<b>Output</b>
+<br><img  alt="jQuery .innerWidth() method" class="figure" style="height:359px; width:663px" title="jQuery .innerWidth() method" src="jquery-and-css/images/innerWidth.png" >
+<br><a href="jquery-and-css/examples/innerWidth.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>jQuery offset() Method</h2>
+
+
+<div class="alert alert-success">
+
+jQuery offset() method in jQuery allows you to get or set the current coordinates of the first element from the matched elements in DOM tree.
+</div>
+
+<b>Syntax for jQuery offset() method</b>
+<pre class="prettyprint jquery">
+ .offset()
+</pre>
+
+<p>
+Basically, this method helps us to retrieve the current position of an element which is relative to the DOM.
+</p>
+<p>
+Here is the example to know how to get coordinates of the element by using offset() method.
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;offset demo&lt;/title&gt;
+  &lt;style&gt;
+  p {
+    margin-left: 30px;
+color: green;
+font-size:30px;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;jQuery offset method&lt;/p&gt;&lt;p&gt;Learn it&lt;/p&gt;
+ 
+&lt;script&gt;
+var p = $( "p:last" );
+var offset = p.offset();
+p.html( "left: " + offset.left + ", top: " + offset.top );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+<b>Output</b>
+<br><img  alt="jQuery offset() method" class="figure" style="height:359px; width:663px" title="jQuery offset() method" src="jquery-and-css/images/offset.png" >
+<br><a href="jquery-and-css/examples/offset.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+<h2>jQuery outerHeight() Method</h2>
+
+<div class="alert alert-succcess">
+
+Get the current computed height for the first element in the set of matched elements, including padding, border, and optionally margin. Returns a number (without "px") representation of the value or null if called on an empty set of elements.
+</div>
+<p>
+Get the current computed height for the first element in the set of matched elements or set the inner width of every matched element.</p>
+<b>Syntax for jQuery outerHeight() Method</b>
+<pre class="prettyprint jquery">
+ .outerWidth()
+</pre>
+
+<p>
+Here is an example to use jQuery outerWidth()
+</p>
+
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;outerHeight demo&lt;/title&gt;
+&lt;style&gt;
+p {
+margin: 10px;
+padding: 5px;
+border: 2px solid #666;
+}
+&lt;/style&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;script&gt;
+var p = $( "p:first" );
+$( "p:last" ).text(
+"outerHeight:" + p.outerHeight() +
+" , outerHeight( true ):" + p.outerHeight( true ) );
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+
+<p>The above example code gets the outer height of the paragraph</p>
+<b>Output</b>
+<br><img  alt="jQuery outerHeight() method" class="figure" style="height:359px; width:663px" title="jQuery outerHeight() method" src="jquery-and-css/images/outerHeight.png" >
+<br><a href="jquery-and-css/examples/outerHeight.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<br>
+<div>
+  
+</div>
+<br>
+<div class="clearer"></div>
+</div>
+<div class="ads">
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
+
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
+
+
+</div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
+
+<!-- START OF GOOGLE CODE-->
+ <!--script type="text/javascript"--><!--
+// google_ad_client = "pub-7133395778201029";
+// google_ad_width = 160;
+// google_ad_height = 600;
+// google_ad_format = "160x600_as";
+// google_ad_type = "image";
+// google_ad_channel ="";
+// //--><!--/script>
+// <script type="text/javascript"
+// src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+// </script>
+<!-- END  OF GOOGLE CODE-->
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

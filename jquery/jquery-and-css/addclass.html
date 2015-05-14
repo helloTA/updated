@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>addClass demo</title>
+  <style>
+  p {
+    margin: 10px;
+    font-size: 20px;
+  }
+  .selected {
+    color: white;
+  }
+  .highlight {
+    background: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p>Hi</p>
+<p>This is jQuery</p>
+<p>Learning platform</p>
+ 
+<script>
+$( "p:last" ).addClass( "selected highlight" );
+</script>
+ 
+</body>
+</html>
