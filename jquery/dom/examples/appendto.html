@@ -4,8 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Try It Now Editor</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -47,7 +45,7 @@ width: 100%;
 <tr>
 <td width="50%" scope="col"></td>
 <td width="50%" align="left" scope="col"> <br>
-<input onclick="runCode();" type="button" value="Run Code" class="btn btn-primary" style="float: right;">
+<input onclick="runCode();" type="button" value="Run Code" class="btn btn-danger" style="float: right;">
 </td>
 </tr>
 <tr>
@@ -56,38 +54,32 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
-<!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>addClass demo</title>
+  <title>append demo here</title>
   <style>
   p {
-    margin: 10px;
-    font-size: 20px;
+    background: cyan;
+font-size: 30px;
+font-weight:bold;
   }
-  .selected {
-    color: white;
-  }
-  .highlight {
-    background: red;
-  }
+span{font-weight:normal}
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-
-<p>Hi</p>
-<p>This is jQuery</p>
-<p>Learning platform</p>
-
+ 
+<span>Learn jQuery on Tutorials Academy!!!</span>
+<p>Here is the append demo </p>
+ 
 <script>
-$( "p:last" ).addClass( "selected highlight" );
+$( "span" ).appendTo( $( "p" ) );
 </script>
-
+ 
 </body>
 </html>
-
 
 
 

@@ -4,8 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Try It Now Editor</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -47,7 +45,7 @@ width: 100%;
 <tr>
 <td width="50%" scope="col"></td>
 <td width="50%" align="left" scope="col"> <br>
-<input onclick="runCode();" type="button" value="Run Code" class="btn btn-primary" style="float: right;">
+<input onclick="runCode();" type="button" value="Run Code" class="btn btn-danger" style="float: right;">
 </td>
 </tr>
 <tr>
@@ -60,31 +58,37 @@ width: 100%;
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>addClass demo</title>
+  <title>toggleClass demo here</title>
   <style>
   p {
-    margin: 10px;
-    font-size: 20px;
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
   }
-  .selected {
-    color: white;
+  .blue {
+    color: black;
   }
   .highlight {
-    background: red;
+    background: cyan;
+font-size:45px
   }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-
-<p>Hi</p>
-<p>This is jQuery</p>
-<p>Learning platform</p>
-
+ 
+<p class="blue">toggle me</p>
+<p class="blue highlight">highlight me</p>
+<p class="blue">learn it</p>
+<p class="blue">enjoy in development</p>
+ 
 <script>
-$( "p:last" ).addClass( "selected highlight" );
+$( "p" ).click(function() {
+  $( this ).toggleClass( "highlight" );
+});
 </script>
-
+ 
 </body>
 </html>
 

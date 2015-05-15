@@ -350,13 +350,13 @@ background-color: #3B5998;
     width: 980px;
 }
 .text5 {
-    color: #ffffff;
+    color: white;
     font-family: Verdana,Geneva,sans-serif;
     font-size: 12px;
     text-decoration: none;
 }
 .text6 {
-    color: #ffffff;
+    color: white;
     font-family: Verdana,Geneva,sans-serif;
     font-size: 21px;
 }
@@ -402,7 +402,7 @@ background-color: #3B5998;
     margin-top: 5px;
 }
 #leftcol ul.menu li.heading {
-    background: none repeat scroll 0 0 #92142a !important;
+    background: none repeat scroll 0 0 #3b5998 !important;
     border: 1px solid #92142a !important;
 }
 #leftcol ul.menu li.heading {

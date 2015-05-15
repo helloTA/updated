@@ -4,8 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Try It Now Editor</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -47,7 +45,7 @@ width: 100%;
 <tr>
 <td width="50%" scope="col"></td>
 <td width="50%" align="left" scope="col"> <br>
-<input onclick="runCode();" type="button" value="Run Code" class="btn btn-primary" style="float: right;">
+<input onclick="runCode();" type="button" value="Run Code" class="btn btn-danger" style="float: right;">
 </td>
 </tr>
 <tr>
@@ -56,38 +54,52 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>addClass demo</title>
+  <title>val demo here</title>
   <style>
   p {
-    margin: 10px;
-    font-size: 20px;
+    color: black;
+    margin: 4px;
   }
-  .selected {
-    color: white;
-  }
-  .highlight {
-    background: red;
+  b {
+    color: orange;
   }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-
-<p>Hi</p>
-<p>This is jQuery</p>
-<p>Learning platform</p>
-
+ 
+<p></p>
+ 
+<select id="single">
+  <option>select option1</option>
+  <option>select option2</option>
+</select>
+ 
+<select id="multiple" multiple="multiple">
+  <option selected="selected">option1</option>
+  <option>option2</option>
+  <option selected="selected">option3</option>
+</select>
+ 
 <script>
-$( "p:last" ).addClass( "selected highlight" );
+function displayVals() {
+  var singleValues = $( "#single" ).val();
+  var multipleValues = $( "#multiple" ).val() || [];
+  $( "p" ).html( "<b>Single selection :</b> " + singleValues +
+    " <b>Multi selection :</b> " + multipleValues.join( ", " ) );
+}
+ 
+$( "select" ).change( displayVals );
+displayVals();
 </script>
-
+ 
 </body>
 </html>
-
 
 
 

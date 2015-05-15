@@ -4,8 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Try It Now Editor</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -47,7 +45,7 @@ width: 100%;
 <tr>
 <td width="50%" scope="col"></td>
 <td width="50%" align="left" scope="col"> <br>
-<input onclick="runCode();" type="button" value="Run Code" class="btn btn-primary" style="float: right;">
+<input onclick="runCode();" type="button" value="Run Code" class="btn btn-danger" style="float: right;">
 </td>
 </tr>
 <tr>
@@ -60,33 +58,39 @@ width: 100%;
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>addClass demo</title>
+  <title>removeClass demo here</title>
   <style>
   p {
-    margin: 10px;
-    font-size: 20px;
+    margin: 8px;
+    font-size: 22px;
+    font-weight: bolder;
   }
-  .selected {
-    color: white;
+  .blue {
+    color: red;
+  }
+  .under {
+    text-decoration: underline;
   }
   .highlight {
-    background: red;
+    background: green;color:white
   }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-
-<p>Hi</p>
-<p>This is jQuery</p>
-<p>Learning platform</p>
-
+ 
+<p class="blue under">In jQuery</p>
+<p class="blue under highlight">remove() method </p>
+<p class="blue under">removes </p>
+<p class="blue under">the classes</p>
+ 
 <script>
-$( "p:last" ).addClass( "selected highlight" );
+$( "p:even" ).removeClass( "blue" );
 </script>
-
+ 
 </body>
 </html>
+
 
 
 

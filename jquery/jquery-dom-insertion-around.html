@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery DOM Insertion Around
+</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #3b5998">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">jQuery Tutorials</li>
+<li><a target="_top" href="jquery-introduction.html" >
+Introduction to jQuery</a></i>
+</li>
+<li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
+<li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
+<li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
+<li><a target="_top" href="jquery-selectors.html">jQuery Selectors </a></li>
+<li><a target="_top" href="jquery-effects.html">jQuery Effects </a></li>
+<li><a target="_top" href="jquery-events.html">jQuery Events </a></li>
+<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
+<li><a target="_top" href="jquery-with-css.html">jQuery and CSS </a></li>
+<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
+<li><a target="_top" href="jquery-and-ajax.html">jQuery AJAX </a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<br >
+<div class="middle_right">
+<div class="ads">
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+  
+
+<h1>jQuery DOM Insertion Around</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<br><h2>jQuery wrap() Method</h2>
+<div class="alert alert-success">
+jQuery wrap() method in jQuery wraps an HTML structure around each element in the group of matched element in DOM tree.
+</div>
+
+<br><b>Syntax for jQuery wrap() Method</b>
+<pre class="prettyprint jquery">
+  .wrap(wrappingElement)
+</pre>
+<p>
+The jQuery  wrap() method takes a parameter as  any type of string or object. HTML structure will be wrapped around each of the elements in DOM tree matched elements.</p>
+<p>
+
+<p>Consider the below HTML code</p>
+
+<pre class="prettyprint jquery">
+&lt;p&gt;Here is the jQuery&lt;/p&gt;
+&lt;p&gt;wrap demo&lt;/p&gt;
+&lt;p&gt;Learn it&lt;/p&gt;
+</pre>
+
+<p>By using the jquery <code>.wrap() </code>method we wrap some html content around it like below</p>
+<pre class="prettyprint jquery">
+  $( "p" ).wrap( "&lt;div&gt;&lt;/div&gt;" );
+</pre>
+
+
+<p>Here is a complete example to use jQuery wrap() method</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;wrap demo here&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    border: 5px solid red;
+  }
+  p {
+    background: green;
+    margin: 10px; color:white
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;Here is the jQuery&lt;/p&gt;
+&lt;p&gt;wrap demo&lt;/p&gt;
+&lt;p&gt;Learn it&lt;/p&gt;
+ 
+&lt;script&gt;
+$( "p" ).wrap( "&lt;div&gt;&lt;/div&gt;" );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre> 
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery wrap() method" class="figure" style="height:359px; width:663px" title="jQuery wrap() method"
+src="jquery/dom/images/wrap.png" >
+
+<br><a href="dom/examples/wrap.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+<h2>jQuery unwrap() Method</h2>
+
+<div class="alert alert-success">
+
+The jQuery unwrap() method removes the element's parent. This is effectively the inverse of the jQuery <code>wrap()</code> method. The matched elements (and their siblings, if any) replace their parents within the DOM structure.
+</div>
+
+<br><b>Syntax for jQuery unwrap() method</b>
+<pre class="prettyprint jquery">
+ .unwrap()
+</pre>
+
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;unwrap demo&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    border: 8px solid red;
+  }
+  p {
+    background: cyan;
+    margin: 10px;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;button&gt;wrap me/unwrap me&lt;/button&gt;
+&lt;p&gt;Hello&lt;/p&gt;
+&lt;p&gt;cruel&lt;/p&gt;
+&lt;p&gt;World&lt;/p&gt;
+&lt;script&gt;
+var pTags = $( "p" );
+$( "button" ).click(function() {
+  if ( pTags.parent().is( "div" ) ) {
+    pTags.unwrap();
+  } else {
+    pTags.wrap( "&lt;div&gt;&lt;/div&gt;" );
+  }
+});
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery unwrap() method" class="figure" style="height:359px; width:663px" title="jQuery unwrap() method"
+src="dom/images/unwrap.png" >
+
+<br><a href="dom/examples/unwrap.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h2>jQuery wrapAll() Method</h2>
+
+
+
+<div class="alert alert-success">
+jQuery wrap() method in jQuery wraps an HTML structure around all elements in the group of matched element in DOM tree.
+</div>
+
+
+<br><b>Syntax for jQuery wrapaAll() Method</b>
+<pre class="prettyprint jquery">
+  .wrapAll(wrappingElement)
+</pre>
+
+<p>
+The jQuery wrapAll() method takes a parameter as  any type of string or object. HTML structure will be wrapped around of all elements in DOM tree matched elements.</p>
+<p>
+Below is the example program on how to use .wrapAll() method in jQuery</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;wrapAll demo here&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    border: 5px solid red;
+  }
+  p {
+    background: green;
+    margin: 10px; color:white
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;Here is the jQuery&lt;/p&gt;
+&lt;p&gt;wrapAll demo&lt;/p&gt;
+&lt;p&gt;Learn it&lt;/p&gt;
+ 
+&lt;script&gt;
+$( "p" ).wrapAll( "&lt;div&gt;&lt;/div&gt;" );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre> 
+
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery wrapAll() method" class="figure" style="height:359px; width:663px" title="jQuery wrapAll() method"
+src="dom/images/wrapAll.png" >
+
+<br><a href="dom/examples/wrapall.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<br><h2>jQuery wrapInner() Method</h2>
+
+<div class="alert alert-success">
+jQuery wrapInner() method in jQuery wraps an HTML structure around the content of each element in the group of matched element in DOM tree.
+</div>
+
+<br><b>Syntax for jQuery wrapInner() Method</b>
+<pre class="prettyprint jquery">
+ .wrapInner(wrappingElement)
+</pre>
+
+
+<p>Consider the following HTML:</p>
+<pre class="prettyprint jquery">
+&lt;div class="container"&gt;
+  &lt;div class="inner"&gt;Tutorials&lt;/div&gt;
+  &lt;div class="inner"&gt;Academy&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+Using <code>.wrapInner()</code>, we can insert an HTML structure around the content of each inner &lt;div&gt; elements like so:
+
+<pre class="prettyprint jquery">
+$( ".inner" ).wrapInner( "&lt;div class='new'&lt;/div&gt;");
+
+</pre>
+<p>See the below example for more understanding</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;wrapInner demo&lt;/title&gt;
+  &lt;style&gt;
+  p {
+    background: #bbf;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;p&gt;Welcome to&lt;/p&gt;
+&lt;p&gt;Tutorials Academy&lt;/p&gt;
+
+ 
+&lt;script&gt;
+$( "p" ).wrapInner( "&lt;b&gt;&lt;/b&gt;" );
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+</pre>
+
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery wrapInner() method" class="figure" style="height:359px; width:663px" title="jQuery wrapInner() method"
+src="dom/images/wrapinner.png" >
+
+<br><a href="dom/examples/wrapinner.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<br>
+<div>
+  
+</div>
+<br>
+<div class="clearer"></div>
+</div>
+<div class="ads">
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
+
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
+
+
+</div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
+
+<!-- START OF GOOGLE CODE-->
+ 
+<!-- END  OF GOOGLE CODE-->
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#3b5998">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
