@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Home</title>
+<title>Java Strings</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -31,6 +31,31 @@
             }).eq(0).mouseover();
         });
     </script>
+
+    <style type="text/css">
+
+
+
+
+table, td, th {
+    border: 0.001px solid black ;}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 40px;
+}
+
+td {
+    height: 80px;
+    vertical-align: bottom;
+}
+th {
+text-align: center;
+}
+    </style>
 </head>
 
 <body>
@@ -112,7 +137,7 @@
 <div class="content">
 
 
-<h1>Java Home</h1>
+<h1>Java Strings</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -125,6 +150,104 @@
 <div>
 <!-- CONTENT STARTS HERE -->
 
+
+<h2>Java Strings</h2>
+<div class="alert alert-info">
+    A string is any finite sequence of characters (i.e., letters, numerals, symbols and punctuation marks)
+</div>
+
+The easiest way to create a string as follows:
+<pre class="prettyprint java">
+
+String name = "Vijay";
+</pre>
+
+<img src="images/strings.jpg" alt="Java Strings" title="Java Strings" height="600" width="900">
+
+<p>
+
+We can create String objects by using the new keyword and a constructor. The String class has thirteen constructors that allow you to provide the initial value of the string using different sources, such as an array of characters:
+</p>
+<b>Example</b>
+<pre class="prettyprint java">
+char[] array= { 'H', 'e','l','l','o','W','o','r','l','d' };
+String myString = new String(myArray);
+System.out.println(myString);
+
+</pre>
+
+<p>This would produce the following result:</p>
+<pre class="prettyprint java">
+HelloWorld
+</pre>
+<p>
+The last line of this code snippet displays HelloWorld</p>
+<div class="alert alert-info">
+<strong>Note!</strong> The String class is immutable, so that once it is created a String object cannot be changed.  String objects are stored in a special memory area known as string constant pool.</div>
+
+
+
+<h2>Java String Length() Method</h2>
+
+<p>A Java string literal is a reference to a String object. Since a String literal is a reference, it can be manipulated like any other String reference. i.e. it can be used to invoke methods of String class.
+</p>
+
+<p>For example</p>
+<pre class="prettyprint java">
+int mystringLength = "Hello world".length();  // the length of the string is 11
+</pre>
+
+
+
+<p>The following table lists some of the most useful string methods in java string class</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td><a href="java-strings/java-string-charAt-method.html" target="_blank" ><b>char charAt(int index)</b></a>
+             </td>
+            <td>charAt() method returns the index of a specific character in a given string.</td>
+            <td><a href="java-strings/java-string-charAt-method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+
+         <tr class="warning">
+            <td><a href="java-strings/java-string-compareTo-method.html" target="_blank" ><b>int compareTo(Object o)</b></a>
+             </td>
+            <td>Comapares one string with other string.</td>
+            <td><a href="java-strings/java-string-compareTo-method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+        <tr class="danger">
+            <td><a href="java-strings/java-string-concat-method.html" target="_blank" ><b>String concat()</b></a>
+             </td>
+            <td>Concatenates one string with other string</td>
+            <td><a href="java-strings/java-string-concat-method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+        <tr class="success">
+            <td><a href="java-strings/java-string-length-method.html" target="_blank" ><b>int length()</b></a>
+             </td>
+            <td>Returns the length of this string.</td>
+            <td><a href="java-strings/java-string-length-method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+        <tr class="info">
+            <td><a href="java-strings/java-string-endswith-method.html" target="_blank" ><b>int length()</b></a>
+             </td>
+            <td>Returns the length of this string.</td>
+            <td><a href="java-strings/java-string-endswith-method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+        
+        
+
+       
+       
+    </tbody>
+</table> <br />
 
 <!-- CONTENT END HERE -->
 </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Home</title>
+<title>Java String length() Method</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -31,6 +31,31 @@
             }).eq(0).mouseover();
         });
     </script>
+
+    <style type="text/css">
+
+
+
+
+table, td, th {
+    border: 0.001px solid black ;}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 40px;
+}
+
+td {
+    height: 80px;
+    vertical-align: bottom;
+}
+th {
+text-align: center;
+}
+    </style>
 </head>
 
 <body>
@@ -67,37 +92,37 @@
 
 <li class="heading">Java Tutorials</li>
 <li><a target="_top" href="about.java.html">About Java</a></li>
-<li><a target="_top" href="java_datatypes.html">Java Datatypes </a></li>
-<li><a target="_top" href="java_variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java-variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-modifiers.html">Java Modifiers </a></li>
+<li><a target="_top" href="java-operators.html">Java Operators </a></li>
+<li><a target="_top" href="java-objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java-loops.html">Java Loops </a></li>
+<li><a target="_top" href="java-decision-making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java-numbers.html">Java Numbers </a></li>
 
-<li><a target="_top" href="java_operators.html">Java Operators </a></li>
-<li><a target="_top" href="java_objects.html">Java Objects and  Classes</a></li>
-<li><a target="_top" href="java_loops.html">Java Loops </a></li>
-<li><a target="_top" href="java_decision_making.html">Java Decision Making</a> </li>
-<li><a target="_top" href="java_numbers.html">Java Numbers </a></li>
-
-<li><a target="_top" href="java_characters.html">Java Characters</a></li>
-<li><a target="_top" href="java_strings.html">Java Strings</a></li>
-<li><a target="_top" href="java_arrays.html">Java Arrays</a></li>
-<li><a target="_top" href="java_methods.html">Java Methods</a></li>
+<li><a target="_top" href="java-characters.html">Java Characters</a></li>
+<li><a target="_top" href="java-strings.html">Java Strings</a></li>
+<li><a target="_top" href="java-arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java-methods.html">Java Methods</a></li>
 <li class="heading">Java Advanced Tutorials</li>
-<li><a target="_top" href="java_dates.html">Java _ Date &amp; Time</a></li>
-<li><a target="_top" href="java_files.html">Java Files and I/O</a></li>
-<li><a target="_top" href="java_exceptions.html">Java Exceptions</a></li>
-<li><a target="_top" href="java_inheritance.html">Java Inheritance
+<li><a target="_top" href="java-dates.html">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java-files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java-exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java-inheritance.html">Java Inheritance
 </a></li>
-<li><a target="_top" href="java_overiding.html">Java Overriding</a></li>
-<li><a target="_top" href="java_polymorphism.html">Java Polymorphism</a></li>
-<li><a target="_top" href="java_abstraction.html">Java Abstraction</a></li>
-<li><a target="_top" href="java_encapsulation.html">Java Encapsulation</a></li>
-<li><a target="_top" href="java_interfaces.html">Java Interfaces</a></li>
-<li><a target="_top" href="java_packages.html">Java Packages
+<li><a target="_top" href="java-overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java-polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java-abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java-encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java-interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java-packages.html">Java Packages
 </a></li>
-<li><a target="_top" href="java_datastructures.html">Java Data Structures</a></li>
-<li><a target="_top" href="java_collections.html">Java Collections
+<li><a target="_top" href="java-datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java-collections.html">Java Collections
 </a></li>
-<li><a target="_top" href="java_generics.html">Java Generics</a></li>
-<li><a target="_top" href="java_serialization.html">Java Serialization
+<li><a target="_top" href="java-generics.html">Java Generics</a></li>
+<li><a target="_top" href="java-serialization.html">Java Serialization
 </a></li>
 </ul>
 <ul class="menu">
@@ -112,7 +137,7 @@
 <div class="content">
 
 
-<h1>Java Home</h1>
+<h1>Java String length() Method</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -124,6 +149,44 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+
+
+<h2>Java String length() Method</h2>
+
+<div class="alert alert-info">
+    Java String length() method Returns the length of this string.
+</div>
+
+<h2>Syntax of String length() Method</h2>
+
+<pre class="prettyprint java">
+
+public int length()
+</pre>
+
+<h2>Basic Example</h2>
+<pre class="prettyprint java">
+/*
+  Java String Length Example
+  This example shows how to get a length of a given String object.
+*/
+ 
+public class StringLengthExample {
+ 
+  public static void main(String[] args) {
+    //declare the String object
+    String str = "Hello World";
+   
+    //length() method of String returns the length of a String.
+    int length = str.length();
+    System.out.println("Length of a String is : " + length);
+  }
+}
+</pre>
+<b>Output</b>
+<pre class="prettyprint java">
+  Length of a String is : 11
+</pre>
 
 
 <!-- CONTENT END HERE -->

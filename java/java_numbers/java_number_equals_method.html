@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Home</title>
+<title>Java equals() Method</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -31,6 +31,31 @@
             }).eq(0).mouseover();
         });
     </script>
+
+    <style type="text/css">
+
+
+
+
+table, td, th {
+    border: 0.001px solid black ;}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 40px;
+}
+
+td {
+    height: 80px;
+    vertical-align: bottom;
+}
+th {
+text-align: center;
+}
+    </style>
 </head>
 
 <body>
@@ -67,37 +92,37 @@
 
 <li class="heading">Java Tutorials</li>
 <li><a target="_top" href="about.java.html">About Java</a></li>
-<li><a target="_top" href="java_datatypes.html">Java Datatypes </a></li>
-<li><a target="_top" href="java_variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java-variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-modifiers.html">Java Modifiers </a></li>
+<li><a target="_top" href="java-operators.html">Java Operators </a></li>
+<li><a target="_top" href="java-objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java-loops.html">Java Loops </a></li>
+<li><a target="_top" href="java-decision-making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java-numbers.html">Java Numbers </a></li>
 
-<li><a target="_top" href="java_operators.html">Java Operators </a></li>
-<li><a target="_top" href="java_objects.html">Java Objects and  Classes</a></li>
-<li><a target="_top" href="java_loops.html">Java Loops </a></li>
-<li><a target="_top" href="java_decision_making.html">Java Decision Making</a> </li>
-<li><a target="_top" href="java_numbers.html">Java Numbers </a></li>
-
-<li><a target="_top" href="java_characters.html">Java Characters</a></li>
-<li><a target="_top" href="java_strings.html">Java Strings</a></li>
-<li><a target="_top" href="java_arrays.html">Java Arrays</a></li>
-<li><a target="_top" href="java_methods.html">Java Methods</a></li>
+<li><a target="_top" href="java-characters.html">Java Characters</a></li>
+<li><a target="_top" href="java-strings.html">Java Strings</a></li>
+<li><a target="_top" href="java-arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java-methods.html">Java Methods</a></li>
 <li class="heading">Java Advanced Tutorials</li>
-<li><a target="_top" href="java_dates.html">Java _ Date &amp; Time</a></li>
-<li><a target="_top" href="java_files.html">Java Files and I/O</a></li>
-<li><a target="_top" href="java_exceptions.html">Java Exceptions</a></li>
-<li><a target="_top" href="java_inheritance.html">Java Inheritance
+<li><a target="_top" href="java-dates.html">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java-files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java-exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java-inheritance.html">Java Inheritance
 </a></li>
-<li><a target="_top" href="java_overiding.html">Java Overriding</a></li>
-<li><a target="_top" href="java_polymorphism.html">Java Polymorphism</a></li>
-<li><a target="_top" href="java_abstraction.html">Java Abstraction</a></li>
-<li><a target="_top" href="java_encapsulation.html">Java Encapsulation</a></li>
-<li><a target="_top" href="java_interfaces.html">Java Interfaces</a></li>
-<li><a target="_top" href="java_packages.html">Java Packages
+<li><a target="_top" href="java-overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java-polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java-abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java-encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java-interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java-packages.html">Java Packages
 </a></li>
-<li><a target="_top" href="java_datastructures.html">Java Data Structures</a></li>
-<li><a target="_top" href="java_collections.html">Java Collections
+<li><a target="_top" href="java-datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java-collections.html">Java Collections
 </a></li>
-<li><a target="_top" href="java_generics.html">Java Generics</a></li>
-<li><a target="_top" href="java_serialization.html">Java Serialization
+<li><a target="_top" href="java-generics.html">Java Generics</a></li>
+<li><a target="_top" href="java-serialization.html">Java Serialization
 </a></li>
 </ul>
 <ul class="menu">
@@ -112,7 +137,7 @@
 <div class="content">
 
 
-<h1>Java Home</h1>
+<h1>Java equals() Method</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -124,6 +149,86 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+
+
+<h2>Java equals() Method</h2>
+
+<div class="alert alert-success">
+    It checks whether the two arguments are equal or not. If both are equal it returns TRUE else FALSE.
+</div>
+
+<h2>Syntax for java equals() Method</h2>
+<pre class="prettyprint java">
+    public boolean equals(Object x)
+</pre>
+
+
+
+
+<p>For example see the below example</p>
+<pre class="prettyprint java">
+  int marks = 65;
+  int marks_required_to_get_first_class = 75
+  System.out.println(marks.compareTo(marks_required_to_get_first_class));
+
+  // In the above example the student got 65 marks
+  // But to get first class certificate he/she needs to score 75.
+  // using the java equals() method the above code checks if the marks equals to 75 or not.
+  // Since the above condition is not met, it returns FALSE.
+</pre>
+
+
+<h2>Example</h2>
+<pre class="prettyprint java">
+
+ /* The below example returns the student results.
+  The student got different marks in different subjects.
+ but the passmark is 35. If the marks in specific subject is equals to
+ the passmark_for_every_subject then it returns TRUE otherwise it returns FALSE. */ 
+
+
+  public class Test{ 
+
+   public static void main(String args[]){
+      Integer mymarks_in_english = 55;
+
+      Integer mymarks_in_chemistry = 20;
+
+      Integer mymarks_marks_in_programming = 65;
+
+      Integer mymarks_in_algebra = 21;
+
+      Integer passmark_for_every_subject = 35;
+
+
+     // If mymarks_in_english is equals to passmark_for_every_subject then it returns TRUE
+      System.out.println(mymarks_in_english.equals(passmark_for_every_subject));  
+
+     // If mymarks_in_chemistry is equals to passmark_for_every_subject then it returns TRUE
+      System.out.println( mymarks_in_chemistry.equals(passmark_for_every_subject));
+
+     // If mymarks_in_programming is equals to passmark_for_every_subject then it returns TRUE
+      System.out.println(mymarks_marks_in_programming.equals(passmark_for_every_subject));
+
+     // If mymarks_in_algebra is equals to passmark_for_every_subject then it returns TRUE
+      System.out.println(mymarks_in_algebra.equals(passmark_for_every_subject));
+     }
+}
+
+
+</pre>
+
+<p>The above example produces the following result</p>
+<b>Output</b>
+<pre class="prettyprint java">
+true
+false
+true
+false
+
+</pre>
+
+
 
 
 <!-- CONTENT END HERE -->

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Home</title>
+<title>Java String concat() Method</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -31,6 +31,31 @@
             }).eq(0).mouseover();
         });
     </script>
+
+    <style type="text/css">
+
+
+
+
+table, td, th {
+    border: 0.001px solid black ;}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 40px;
+}
+
+td {
+    height: 80px;
+    vertical-align: bottom;
+}
+th {
+text-align: center;
+}
+    </style>
 </head>
 
 <body>
@@ -67,37 +92,37 @@
 
 <li class="heading">Java Tutorials</li>
 <li><a target="_top" href="about.java.html">About Java</a></li>
-<li><a target="_top" href="java_datatypes.html">Java Datatypes </a></li>
-<li><a target="_top" href="java_variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java-variables.html">Java Variables </a></li>
+<li><a target="_top" href="java-modifiers.html">Java Modifiers </a></li>
+<li><a target="_top" href="java-operators.html">Java Operators </a></li>
+<li><a target="_top" href="java-objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java-loops.html">Java Loops </a></li>
+<li><a target="_top" href="java-decision-making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java-numbers.html">Java Numbers </a></li>
 
-<li><a target="_top" href="java_operators.html">Java Operators </a></li>
-<li><a target="_top" href="java_objects.html">Java Objects and  Classes</a></li>
-<li><a target="_top" href="java_loops.html">Java Loops </a></li>
-<li><a target="_top" href="java_decision_making.html">Java Decision Making</a> </li>
-<li><a target="_top" href="java_numbers.html">Java Numbers </a></li>
-
-<li><a target="_top" href="java_characters.html">Java Characters</a></li>
-<li><a target="_top" href="java_strings.html">Java Strings</a></li>
-<li><a target="_top" href="java_arrays.html">Java Arrays</a></li>
-<li><a target="_top" href="java_methods.html">Java Methods</a></li>
+<li><a target="_top" href="java-characters.html">Java Characters</a></li>
+<li><a target="_top" href="java-strings.html">Java Strings</a></li>
+<li><a target="_top" href="java-arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java-methods.html">Java Methods</a></li>
 <li class="heading">Java Advanced Tutorials</li>
-<li><a target="_top" href="java_dates.html">Java _ Date &amp; Time</a></li>
-<li><a target="_top" href="java_files.html">Java Files and I/O</a></li>
-<li><a target="_top" href="java_exceptions.html">Java Exceptions</a></li>
-<li><a target="_top" href="java_inheritance.html">Java Inheritance
+<li><a target="_top" href="java-dates.html">Java - Date &amp; Time</a></li>
+<li><a target="_top" href="java-files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java-exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java-inheritance.html">Java Inheritance
 </a></li>
-<li><a target="_top" href="java_overiding.html">Java Overriding</a></li>
-<li><a target="_top" href="java_polymorphism.html">Java Polymorphism</a></li>
-<li><a target="_top" href="java_abstraction.html">Java Abstraction</a></li>
-<li><a target="_top" href="java_encapsulation.html">Java Encapsulation</a></li>
-<li><a target="_top" href="java_interfaces.html">Java Interfaces</a></li>
-<li><a target="_top" href="java_packages.html">Java Packages
+<li><a target="_top" href="java-overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java-polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java-abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java-encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java-interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java-packages.html">Java Packages
 </a></li>
-<li><a target="_top" href="java_datastructures.html">Java Data Structures</a></li>
-<li><a target="_top" href="java_collections.html">Java Collections
+<li><a target="_top" href="java-datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java-collections.html">Java Collections
 </a></li>
-<li><a target="_top" href="java_generics.html">Java Generics</a></li>
-<li><a target="_top" href="java_serialization.html">Java Serialization
+<li><a target="_top" href="java-generics.html">Java Generics</a></li>
+<li><a target="_top" href="java-serialization.html">Java Serialization
 </a></li>
 </ul>
 <ul class="menu">
@@ -112,7 +137,7 @@
 <div class="content">
 
 
-<h1>Java Home</h1>
+<h1>Java String concat() Method</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -124,6 +149,82 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+
+
+<h2>Java String concat() Method</h2>
+
+<div class="alert alert-info">
+    Java String concat() method Concatenates one string with other string
+    </div>
+
+<h2>Syntax of String concat() Method</h2>
+
+<pre class="prettyprint java">
+
+public String concat(String s)
+</pre>
+
+<h2>Basic Example</h2>
+<pre class="prettyprint java">
+public class Test {
+
+   public static void main(String args[]) {
+      String str1 = "Today is";
+      str2 = str1.concat(" Sunday");
+      System.out.println(str2);
+   }
+}
+</pre>
+<b>Output</b>
+<pre class="prettyprint java">
+  Today is Sunday
+</pre>
+
+
+<p>You can use java string concat in different ways</p>
+<h5>Java concat() Method Example</h5>
+<pre class="prettyprint java">
+/*
+  Java String Concat Example.
+  This Java String concat example shows how to concat String in Java.
+  */
+
+  public class JavaStringConcat {
+  public static void main(String args[]){
+          /*
+           * String concatenation can be done in different ways in Java.
+           */
+         
+          String str1 = "Tutorials";
+          String str2 = " Academy";
+         
+          //1. Using + operator
+          String str3 = str1 + str2;
+          System.out.println("Learn Java at : " + str3);
+
+         
+         
+          //2. Using String.concat() method
+          String str4 = str1.concat(str2);
+          System.out.println("Learn Java at  : " + str4);
+         
+          //3. Using StringBuffer.append method
+          String str5 = new StringBuffer().append(str1).append(str2).toString();         
+          System.out.println("Learn Java at : " + str5);
+  }      
+ 
+}
+
+</pre>
+
+<b>Output</b>
+<pre class="prettyprint java">
+Learn Java at : Tutorials Academy
+Learn Java at : Tutorials Academy
+Learn Java at : Tutorials Academy
+</pre>
+
+
 
 
 <!-- CONTENT END HERE -->

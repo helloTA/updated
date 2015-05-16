@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Operators</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+<li class="heading">Java Tutorials</li>
+<li><a target="_top" href="about.java.html">About Java</a></li>
+<li><a target="_top" href="java_datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java_variables.html">Java Variables </a></li>
+
+<li><a target="_top" href="java_operators.html">Java Operators </a></li>
+<li><a target="_top" href="java_objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java_loops.html">Java Loops </a></li>
+<li><a target="_top" href="java_decision_making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java_numbers.html">Java Numbers </a></li>
+
+<li><a target="_top" href="java_characters.html">Java Characters</a></li>
+<li><a target="_top" href="java_strings.html">Java Strings</a></li>
+<li><a target="_top" href="java_arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java_methods.html">Java Methods</a></li>
+<li class="heading">Java Advanced Tutorials</li>
+<li><a target="_top" href="java_dates.html">Java _ Date &amp; Time</a></li>
+<li><a target="_top" href="java_files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java_exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java_inheritance.html">Java Inheritance
+</a></li>
+<li><a target="_top" href="java_overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java_polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java_abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java_encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java_interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java_packages.html">Java Packages
+</a></li>
+<li><a target="_top" href="java_datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java_collections.html">Java Collections
+</a></li>
+<li><a target="_top" href="java_generics.html">Java Generics</a></li>
+<li><a target="_top" href="java_serialization.html">Java Serialization
+</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>Java Operators</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h4>Java Operators</h4>
+<p>An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations.</p>
+
+
+
+<p>Basic arithmetic operators in Java include addition (+), subtraction (-), multiplication (*), division (/) and the assignment operator (=), all of which constitute the binary operators, and, with the exception of the assignment operator, are evaluated from left to right. The assignment operator is evaluated from right to left; it is a way of saying take this value on the right and assign it to the variable on the left.</p>
+
+<p>Java provides the following type of operators:</p>
+
+<ol>
+  <li>Arithmetic Operators</li>
+  <li>Assignment Operators</li>
+  <li>Relational Operators</li>
+  <li>Bitwise Operators</li>
+  <li>Logical Operators</li>
+</ol>
+
+
+<p>In java, arithmetic operators have the same use as in algebra.  Given below table consist of list of arithmetic operators :</p>
+
+
+
+<h4>Arithematic Operators</h4>
+
+<p>Basic arithmetic operators include addition (+) also used for concatenating Strings, subtraction (-), multiplication (*), division (/) and the modulus operator (%) which produces the remainder from an integer division.</p>
+
+
+<h4>Arithmetic Operators in Java</h4>
+  <table class="table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>+ </td>
+            <td>Plus</td>
+            <td>Adds two operands</td>
+            <td>x=2, y= 3<br /> x+y = 5</td>
+        </tr>
+        <tr class="danger">
+            <td>-</td>
+            <td>Minus</td>
+            <td>Subtracts second operand from the first</td>
+            <td>x = 3, y =2 <br /> x-y =1</td>
+        </tr>
+         <tr class="info">
+            <td>*</td>
+            <td>Times</td>
+            <td>Multiplies both operands</td>
+            <td>x = 5, y = 4 <br /> x*y=20</td>
+        </tr>
+        <tr class="warning">
+            <td>*</td>
+            <td>Times</td>
+            <td>Multiplies both operands</td>
+            <td>x = 5, y = 4 <br /> x*y=20</td>
+        </tr>
+        <tr class="success">
+            <td>% </td>
+            <td>Module</td>
+            <td> modulo operation finds the remainder after division of one number by another </td>
+            <td>x = 10, y = 20 <br /> x/y=0</td>
+        </tr>
+        <tr class="danger">
+            <td>++</td>
+            <td>Increment</td>
+            <td>Increment operator increases integer value by one</td>
+            <td>x = 500<br /> x++ = 501</td>
+        </tr>
+        <tr class="info">
+            <td>--</td>
+            <td>Decrement</td>
+            <td>Decrement operator decreses integer value by one</td>
+            <td>x = 500<br /> x-- = 499</td>
+        </tr>
+    </tbody>
+</table> <br />
+
+
+<h3>Example Program for Java Arithematic Operators</h3>
+<pre class="prettyprint java">
+// Example program for java arithematic operators
+  public class ArithematicOperatorsExample {
+
+  public static void main(String args[]) {
+     int a = 100;
+     int b = 200;
+     int c = 300;
+     int d = 400;
+     System.out.println("The total value of a + b = " + (a + b) );
+     System.out.println("The total value of a - b = " + (a - b) );
+     System.out.println("The total value of a * b = " + (a * b) );
+     System.out.println("The total value of b / a = " + (b / a) );
+     System.out.println("The total value of b % a = " + (b % a) );
+     System.out.println(" The total value of c % a = " + (c % a) );
+     System.out.println("The total value of a++   = " +  (a++) );
+     System.out.println("The total value of b--   = " +  (a--) );
+     
+     System.out.println("The total value of d++   = " +  (d++) );
+     System.out.println("The total value of ++d   = " +  (++d) );
+  }
+} 
+</pre>
+
+<p>The above program produces the following output</p>
+
+<b>Output</b>
+<pre class="prettyprint java">
+The total value of a + b = 300
+The total value of a - b = -100
+The total value of a * b = 20000
+The total value of b / a = 2
+The total value of b % a = 0
+The total value of c % a = 0
+The total value of a++   = 100
+The total value of b--   = 101
+The total value of d++   = 400
+The total value of ++d   = 402
+</pre>
+
+
+<div>
+  
+</div>
+<br><h3>Assignment Operators in Java</h3>
+
+<p>The assignment operator (=) is a way of copying a value on the right-hand side (rvalue), to a variable on the left-hand side (lvalue). The rvalue can be any constant, variable, or any expression that produces a value, while the lvalue must be a distinctly named variable that possesses the capacity to hold to a value. For instance, we may assign a value, 20 to a variable x in the following way:-
+</p>
+
+<pre class="prettyprint java">
+x = 500;
+</pre>
+<p>or an expression to a variable:</p>
+<pre class="prettyprint java">
+x = 500 + 200;
+</pre>
+
+<p>
+However we can not assign a variable to a constant; this is to say a constant cannot be an lvalue, for instance, the following expression would incite a compiler error:-
+</p>
+<pre class="prettyprint java">
+200 = x; //! Error
+</pre>
+
+
+<p>These are following assignment operators supported by C#:</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>= </td>
+            <td>Assignment</td>
+            <td>Assigns values from right side operands to left side operand</td>
+            <td>a = 2</td>
+        </tr>
+        <tr class="danger">
+            <td>+=</td>
+            <td>Add AND assignment operator</td>
+            <td>adds right operand to the left operand and assign the result to left operand</td>
+            <td>x+=y => x= x+y</td>
+        </tr>
+         <tr class="info">
+            <td>-=</td>
+            <td>Subtract AND assignment operator</td>
+            <td>subtracts right operand from the left operand and assign the result to left operand</td>
+            <td>x-= y => x= x-y</td>
+        </tr>
+        <tr class="warning">
+            <td>*=</td>
+            <td>Multiply AND assignment operator</td>
+            <td>multiplies right operand with the left operand and assign the result to left operand</td>
+            <td>x*=y => x= x*y</td>
+        </tr>
+        <tr class="danger">
+            <td>/=</td>
+            <td>Divide AND assignment operator</td>
+            <td>divides left operand with the right operand and assign the result to left operand/td>
+            <td>x/=y => x =x/y</td>
+        </tr>
+         <tr class="success">
+            <td>%=</td>
+            <td>Modulus AND assignment operator</td>
+            <td>takes modulus using two operands and assign the result to left operand</td>
+            <td>x%=y => x = x%y</td>
+        </tr>
+         <tr class="info">
+            <td>/=</td>
+            <td>Divide AND assignment operator</td>
+            <td>divides left operand with the right operand and assign the result to left operand/td>
+            <td>x/=y => x =x/y</td>
+        </tr>
+         <tr class="danger">
+            <td> >>=</td>
+            <td>Right shift AND assignment operator</td>
+            <td>--</td>
+            <td>x >>3 => x = x>>3</td>
+        </tr>
+         <tr class="success">
+            <td><<=</td>
+            <td>Left shift AND assignment operator</td>
+            <td>--</td>
+            <td>x <<3 => x = x<<3</td>
+        </tr>
+
+    </tbody>
+</table> <br />
+
+<h3>Java Assignment Operators Example</h3>
+<pre class="prettyprint java">
+// Example program for java assignment operators
+  public class Test {
+
+  public static void main(String args[]) {
+     int x = 100; 
+     int y = 200;
+     int z = 0;
+
+     z = x + y;
+
+     System.out.println("The value of z = x + y = " + z ); // z = x + y = 300
+
+     z += x ;
+     System.out.println("The value of  z += x  = " + z ); //z += x  = 400
+
+     z -= x ;
+     System.out.println(" The value of z -= x = " + z ); //z -= x = 300
+
+     z *= x ;
+     System.out.println(" The value of z *= x = " + z ); //z *= x = 30000
+
+     x = 100;
+     z = 15;
+     z /= x ;
+     System.out.println(" The value of  z /= x = " + z ); // z /= x = 0
+
+     x = 100;
+     z = 15;
+     z %= x ;
+     System.out.println(" The value of z %= x  = " + z ); // z %= x  = 15
+
+     z <<= 2 ;
+     System.out.println(" The value of z <<= 2 = " + z ); // z <<= 2 = 60
+
+     z >>= 2 ;
+     System.out.println(" The value of z >>= 2 = " + z );  // z >>= 2 = 15
+
+     z >>= 2 ;
+     System.out.println(" The value of  z >>= x = " + z ); // z >>= x = 3
+
+     z &= x ;
+     System.out.println(" The value of  z &= 2  = " + z ); // z &= 2  = 0
+  
+     z ^= x ;
+     System.out.println(" The value of  z ^= x   = " + z ); // z ^= x   = 100
+
+     z |= x ;
+     System.out.println(" The value of  z |= x   = " + z ); // z |= x   = 100
+  }
+} 
+</pre>
+
+<p>The above example program will produce the following output</p>
+<b>Ouput</b>
+<pre class="prettyprint java">
+The value of  z = x + y = 300
+The value of  z += x  = 400
+The value of  z -= x = 300
+The value of  z *= x = 30000
+The value of  z /= x = 0
+The value of  z %= x  = 15
+The value of  z <<= 2 = 60
+The value of  z >>= 2 = 15
+The value of  z >>= x = 3
+The value of  z &= 2  = 0
+The value of  z ^= x   = 100
+The value of  z |= x   = 100
+</pre>
+
+<div>
+  
+</div>
+<br>
+
+<h3>Java Relational Operators</h3>
+<p>A relational operator is a programming language construct or operator that tests or defines some kind of relation between two entities. These include numerical equality (e.g., 5 = 5) and inequalities (e.g., 4 ≥ 3).</p>
+
+<b>Examples of Relational Operators</b>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>== </td>
+            <td>Equals</td>
+            <td>If the values of two operands is same then it returns true.</td>
+            <td>a = 100, b=100<br>(a==b) returns true</td>
+        </tr>
+        <tr class="danger">
+            <td>||</td>
+            <td>Logical OR</td>
+            <td>Subtracts second operand from the first</td>
+            <td>x = 0, y =2 <br /> (x||y =0) returns true</td>
+        </tr>
+         <tr class="info">
+            <td>!</td>
+            <td>Logical NOT</td>
+            <td>It reverses the condition of the operands</td>
+            <td>x = 5, y = 5 <br /> !(x&amp;&amp;y=5) returns false</td>
+        </tr>
+    </tbody>
+</table> <br />
+
+<h3>Java Relational Operators Example</h3>
+<pre class="prettyprint java">
+  
+
+// Example program for java relational operators
+public class RelationalOperatorsExample {
+
+  public static void main(String args[]) {
+     int x = 444;
+     int y = 222;
+     System.out.println("The value of x == y = " + (x == y) ); //x == y = false
+     System.out.println("The value of  x != y = " + (x != y) ); // x != y = true
+     System.out.println(" The value of  x > y = " + (x > y) ); // x > y = true
+     System.out.println("The value of  x < y = " + (x < y) ); // x < y = false
+     System.out.println(" The value of  y >= x = " + (y >= x) ); //  y >= x = false
+     System.out.println(" The value of  y <= x = " + (y <= x) ); //  y <= x = true
+  }
+} 
+</pre>
+<p>The above example program produces the following output</p>
+
+
+<pre class="prettyprint java">
+The value of x == y = false
+The value of  x != y = true
+The value of  x > y = true
+The value of  x < y = false
+The value of  y >= x = false
+The value of  y <= x = true
+</pre>
+<div>
+  
+</div>
+<br>
+
+<h4>Bitwise Operators in Java </h4>
+<p>Bitwise operators are used to change individual bits in an operand.</p>
+
+<p>A bitwise operation operates on one or more bit patterns or binary numerals at the level of their individual bits. It is a fast, primitive action directly supported by the processor, and is used to manipulate values for comparisons and calculations.</p>
+
+<p>The following operators are available in C#:</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Operator</th><br />
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>op1 & op2 </td>
+            <td>The AND operator compares two bits and generates a result of 1 if both bits are 1; otherwise, it returns 0.</td>
+        </tr>
+        <tr class="danger">
+            <td>op1 | op2</td>
+            <td>The OR operator compares two bits and generates a result of 1 if the bits are complementary; otherwise, it returns 0.</td>
+        </tr>
+         <tr class="info">
+            <td>op1^ op2</td>
+            <td>The EXCLUSIVE-OR operator compares two bits and returns 1 if either of the bits are 1 and it gives 0 if both bits are 0 or 1.</td>
+        </tr>
+         <tr class="info">
+            <td>~op1</td>
+            <td>The COMPLEMENT operator is used to invert all of the bits of the operand.</td>
+        </tr>
+         <tr class="info">
+            <td>op1 >> op2</td>
+            <td>The SHIFT RIGHT operator moves the bits to the right, discards the far right bit, and assigns the leftmost bit a value of 0. Each move to the right effectively divides op1 in half.</td>
+        </tr>
+        <tr class="info">
+            <td>op1 << op2 </td>
+            <td>The SHIFT LEFT operator moves the bits to the left, discards the far left bit, and assigns the rightmost bit a value of 0. Each move to the left effectively multiplies op1 by 2.
+Note Both operands associated with the bitwise operator must be integers.</td>
+        </tr>
+    </tbody>
+</table> <br />
+
+<div>
+  
+</div>
+<br>
+
+<h4>Logical Operators in Java</h4>
+<p>Logical operators are typically used with Boolean (logical) values. When they are, they return a Boolean value. </p>
+
+<b>Examples of logical operators</b>
+
+  <table class="table">
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>&amp;&amp; </td>
+            <td>Logical and</td>
+            <td>If any of the two operands is true then condition becomes true.</td>
+            <td>x=0, y= 0<br /> (x&amp;&amp;y = 0)<br />returns true</td>
+        </tr>
+        <tr class="danger">
+            <td>||</td>
+            <td>Logical OR</td>
+            <td>Subtracts second operand from the first</td>
+            <td>x = 0, y =2 <br /> (x||y =0) returns true</td>
+        </tr>
+         <tr class="info">
+            <td>!</td>
+            <td>Logical NOT</td>
+            <td>It reverses the condition of the operands</td>
+            <td>x = 5, y = 5 <br /> !(x&amp;&amp;y=5) returns false</td>
+        </tr>
+    </tbody>
+</table> <br />
+
+<div>
+    
+</div>
+<br>
+
+<strong>What is operator precendece ?</strong>
+<div class="alert alert-success">
+    Operator precedence describes the order in which operations are performed when an expression is evaluated. Operations with a higher precedence are performed before those with a lower precedence
+</div>
+<p>For example, many times a multiplication operator will execute before the addition operator</p>
+
+<p>For example, in the expression "5+6*7 " the operators are addition and multiplication (5, 6, and 7 are the operands). If the addition is performed first, the result is 77, but if multiplication is performed first, the result is 47. Order of operations dictates that the correct answer is 47 because multiplication and division must always be performed before addition and subtraction.</p>
+
+
+
+<h3>Java Operator Precedence </h3>
+
+<p>Operator precedence is rules by which we may determine the order of operations when operators of equal precedence appear within the same expression.
+</p>
+<p>
+The easiest way to remember the order of precedence rule, with respect to the basic arithmetic operators is to think of the mnemonic commonly used in mathematics, that is BODMAS, which provides that operations proceed in the following order:-
+</p>
+<ul>
+    <li>Brackets</li>
+    <li>Order</li>
+    <li>Division</li>
+    <li>Multiplication</li>
+    <li>Addition</li>
+    <li>Subtraction</li>
+</ul>
+
+
+
+
+
+<p>
+However, one should be careful to understand that these operators are in actuality grouped by classes of precedence, where division and multiplication have the same precedence, as do addition and subtraction; making it possible to arrange the operators within these two groups in whatever order one may find convenient to one's purposes. In such circumstances, it is often necessary, as well as within the bounds of convention, to use parenthesis to make the order of evaluation explicit. 
+</p>
+<p>
+Java provides many more operators for which the BODMAS rule constitutes an inadequate framework within which they may be properly expressed.
+For example, x = 2 + 3 * 5; here x is assigned 17, not 25 because operator * has higher precedence than +, so it first gets multiplied with 3*5 and then adds into 7.
+</p>
+
+<p>Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.
+</p>
+
+ <table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Operator</th>
+            <th>Associativity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>Postfix </td>
+            <td>() [] . (dot operator)</td>
+            <td>Left to right</td>
+        </tr>
+
+        <tr class="info">
+            <td> Unary </td>
+            <td>++ - - ! ~</td>
+            <td>Right to left</td>
+        </tr>
+
+        <tr class="warning">
+            <td> Multiplicative  </td>
+            <td>* / % </td>
+            <td>Left to right </td>
+        </tr>
+
+        <tr class="danger">
+            <td>Additive  </td>
+            <td>+ - </td>
+            <td>Left to right </td>
+        </tr>
+
+        <tr class="success">
+            <td>Shift   </td>
+            <td>>> >>> <<  </td>
+            <td>Left to right </td>
+        </tr>
+        <tr class="info">
+            <td>Relational</td>
+            <td>> >= < <=   </td>
+            <td>Left to right </td>
+        </tr>
+
+        <tr class="warning">
+            <td>Equality  </td>
+            <td>== !=  </td>
+            <td>Left to right  </td>
+        </tr>
+
+        <tr class="danger">
+            <td>Bitwise AND </td>
+            <td> & </td>
+            <td> Left to right </td>
+        </tr>
+
+        <tr class="success">
+            <td>Bitwise XOR  </td>
+            <td>^ </td>
+            <td>Left to right  </td>
+        </tr>
+
+        <tr class="warning">
+            <td>Bitwise OR  </td>
+            <td>|  </td>
+            <td> Left to right</td>
+        </tr>
+
+        <tr class="info">
+            <td>Logical AND  </td>
+            <td>&& </td>
+            <td>Left to right  </td>
+        </tr>
+
+        <tr class="danger">
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr class="success">
+            <td>Logical OR </td>
+            <td>||  </td>
+            <td> Left to right </td>
+        </tr>
+
+        <tr class="warning">
+            <td>Conditional  </td>
+            <td>?: </td>
+            <td> Right to left </td>
+        </tr>
+
+        <tr class="info">
+            <td> Assignment</td>
+            <td>= += -= *= /= %= >>= <<= &= ^= |=  </td>
+            <td>Right to left  </td>
+        </tr>
+
+        <tr class="danger">
+            <td>Comma  </td>
+            <td> ,</td>
+            <td>Left to right  </td>
+        </tr>
+    </tbody>
+</table> <br />
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

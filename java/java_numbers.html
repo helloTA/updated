@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Numbers</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+
+    <style type="text/css">
+
+
+
+
+table, td, th {
+    border: 0.001px solid black ;}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 40px;
+}
+
+td {
+    height: 80px;
+    vertical-align: bottom;
+}
+th {
+text-align: center;
+}
+    </style>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+<li class="heading">Java Tutorials</li>
+<li><a target="_top" href="about.java.html">About Java</a></li>
+<li><a target="_top" href="java_datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java_variables.html">Java Variables </a></li>
+
+<li><a target="_top" href="java_operators.html">Java Operators </a></li>
+<li><a target="_top" href="java_objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java_loops.html">Java Loops </a></li>
+<li><a target="_top" href="java_decision_making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java_numbers.html">Java Numbers </a></li>
+
+<li><a target="_top" href="java_characters.html">Java Characters</a></li>
+<li><a target="_top" href="java_strings.html">Java Strings</a></li>
+<li><a target="_top" href="java_arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java_methods.html">Java Methods</a></li>
+<li class="heading">Java Advanced Tutorials</li>
+<li><a target="_top" href="java_dates.html">Java _ Date &amp; Time</a></li>
+<li><a target="_top" href="java_files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java_exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java_inheritance.html">Java Inheritance
+</a></li>
+<li><a target="_top" href="java_overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java_polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java_abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java_encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java_interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java_packages.html">Java Packages
+</a></li>
+<li><a target="_top" href="java_datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java_collections.html">Java Collections
+</a></li>
+<li><a target="_top" href="java_generics.html">Java Generics</a></li>
+<li><a target="_top" href="java_serialization.html">Java Serialization
+</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>Java Numbers</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+
+<h2>Java Numbers</h2>
+<p>
+This chapter begins with a discussion of the Number class in the java.lang package, its subclasses, and the situations where you would use instantiations of these classes rather than the primitive number types.
+</p>
+
+
+<strong>Value Types:</strong>
+<p>It’s store data on stack which is a place where data stores in fixed length such as int, float , char etc. Every program in execution as its own stack and no other program shares it.
+Stack works on the principles of Last In First Out (LIFO) and moreover stack will be under the control of Operating System.</p>
+
+<strong>Reference Types:</strong>
+
+<p>Reference types are stored on Heap memory which is another place where data can be stored.</p>
+
+
+<strong>Example:</strong>
+<pre class="prettyprint"><code class="language-java">
+// Example code for value type and reference type <br />
+int x = 100;        //  value type
+float f = 3.14f         //  value type
+string s = “hello”; // Reference type 
+</code></pre>
+
+
+<h2>Boxing and Unboxing in Java</h2>
+
+
+
+
+<b>What is Boxing in Java</b>
+<div class="alert alert-info">
+  Boxing is the process of converting a value type to the type object or to any interface type implemented by this value type
+</div>
+<p>Converting a value type into reference type and string it in the managed heap memory is called as boxing in java</p>
+
+
+<b>Example</b>
+<p>This example converts an integer variable i to an object o by using boxing. Then, the value stored in the variable i is changed from 123 to 456.</p><br />
+
+<pre class="prettyprint"><code class="language-java">
+// Example of boxing <br />
+  int x = 123;
+  object obj = x;     // Boxing 
+</code></pre> <br />
+
+
+
+
+<b>What is Unboxing in Java</b> <br />
+
+<div class="alert alert-success">
+<p>Unboxing is an explicit conversion from the type object to a value type or from an interface type to a value type that implements the interface.
+</p>
+</div>
+
+<p> An unboxing operation consists of:</p>
+<li>Checking the object instance to make sure that it is a boxed value of the given value type.</li>
+<li>Copying the value from the instance into the value-type variable.</li>
+
+<p> Note that,  Unboxing requires an explicit conversion and can not be performed directly.</p>
+
+<pre class="prettyprint"><code class="language-java">
+// Example of Unboxing <br />
+ int y = Convert.Toint32(obj);      // Unboxing 
+</code></pre> <br />
+
+<p>Note: A direct reference can never be converted into value type.</p>
+
+
+
+<strong>Alright, but why should you use boxing and Unboxing?</strong>
+
+<p>Think of it like this. You have a variable <code>o</code> of type <code>object</code>. And now you have an <code>int</code> and you want to put it into <code>o</code>. <code>o</code> is a reference to something somewhere, and the <code>int</code> is emphatically not a reference to something somewhere (after all, it's just a number). So, what you do is this: you make a new <code>object</code> that can store the <code>int</code> and then you assign a reference to that object to o. We call this process "boxing."</p>
+<p>I hope you understood the boxing and unboxing in Java by now</p>
+
+
+
+<p>Let us look at example of boxing and unboxing in java</p>
+
+
+<h2>Example</h2>
+<pre class="prettyprint java">
+ public class ExampleProgram{
+
+   public static void main(String args[]){     // main declaration
+      Integer mynumber = 2; // boxes int to an Integer object
+      mynumber =  mynumber + 1;   // unboxes the Integer to a int
+      System.out.println(x); 
+   }
+}
+</pre>
+<p>The above exmple program prints 3 as out put.</p>
+
+
+<p>Number class provides set of methods we can use in our program. Below table explains list of java number methods</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td><a href="java_numbers/java_number_compareTo_method.html" target="_blank" >compareTo()</a>
+             </td>
+            <td>compareTo() method is used to compare one argument with other argument. it returs the output based on the condition.</td>
+            <td><a href="java_numbers/java_number_compareTo_method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+
+        <tr class="warning">
+            <td><a href="java_numbers/java_number_equals_method.html" target="_blank"  >equals()</a>  </td>
+            <td>It checks whether the two arguments are equal or not. If both are equal it returns TRUE else FALSE.</td>
+            <td><a href="java_numbers/java_number_equals_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="danger">
+            <td> <a href="java_numbers/java_number_valueOf_method.html" target="_blank"  >valueOf()</a> </td>
+            <td>Returns the exact number that the number object is holding the value passed to its argument.</td>
+            <td><a href="java_numbers/java_number_valueOf_method.html" target="_blank" class="btn btn-primary" >Example</a> </td>
+        </tr>
+        <tr class="success">
+            <td>  <a href="java_numbers/java_number_toString_method.html" target="_blank"  >toString()</a> </td>
+            <td> It is used to represent any object as a string, using toString() method</td>
+            <td> <a href="java_numbers/java_number_toString_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+         <tr class="warning">
+            <td> <a href="java_numbers/java_number_parseInt_method.html" target="_blank" >parseInt()</a> </td>
+            <td> It is used primarily in parsing a String method argument into an Integer object.  </td>
+            <td> <a href="java_numbers/java_number_parseInt_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="success">
+            <td> <a href="java_numbers/java_number_abs_method.html" target="_blank"  >abs() </a></td>
+            <td>The method gives the absolute value of the argument  </td>
+            <td> <a href="java_numbers/java_number_abs_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="warning">
+            <td> <a href="java_numbers/java_number_random_method.html" target="_blank"  >random()</a> </td>
+            <td>The method is used to generate a random number between 0.0 and 1.0.  </td>
+            <td> <a href="java_numbers/java_number_random_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="danger">
+            <td> <a href="java_numbers/java_number_sqrt_method.html" target="_blank" >sqrt()</a></td>
+            <td>It returns the square root of the argument.  </td>
+            <td> <a href="java_numbers/java_number_sqrt_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="info">
+            <td> <a href="java_numbers/java_number_pow_method.html" target="_blank"  >pow()</a></td>
+            <td>It returns the value of the first argument raised to the power of the second argument.  </td>
+            <td> <a href="java_numbers/java_number_pow_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+         <tr class="success">
+            <td> <a href="java_numbers/java_number_min_method.html" target="_blank"  >min()</a></td>
+            <td>It returns the minimum value among the set of values or two values. </td>
+            <td> <a href="java_numbers/java_number_min_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+         <tr class="warning">
+            <td> <a href="java_numbers/java_number_max_method.html" target="_blank"  >max()</a></td>
+            <td>It returns the maximum value among the set of values or two values. </td>
+            <td> <a href="java_numbers/java_number_max_method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+       
+    </tbody>
+</table> <br />
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+s

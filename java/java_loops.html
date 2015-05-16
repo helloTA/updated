@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Home</title>
+<title>Java Loops</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -112,7 +112,7 @@
 <div class="content">
 
 
-<h1>Java Home</h1>
+<h1>Java Loops</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -124,6 +124,221 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+<h4>What is a Loop</h4>
+<div class="alert alert-success">
+    A loop is group of statements we want to execute several times until  we say stop.
+</div>
+<p>A loop statement allows us to execute a statement or a group of statements multiple times:</p>
+
+<p>Java provides 3 different loops that allows you to execute a block of code repeatedly until a certain condition is met. 
+</p>
+<ol>
+  <li>for loop</li>
+  <li>while loop</li>
+  <li>do-while loop</li>
+</ol>
+
+
+
+<h4>for loop in java</h4>
+<p>
+
+By using a for loop, you can run a statement or a block of statements repeatedly until a specified expression evaluates to false. This would be more useful for iterating over arrays and for other applications. 
+</p>
+<img src="images/for-loop.png"> <br />
+
+
+<h4>Java for loop syntax</h4>
+<pre class="prettyprint java">
+
+ for(initialization; Boolean_expression; update)
+{
+   //Statements
+}
+
+</pre>
+
+
+<b>How does the for loop in java works?</b>
+<ol>
+  <li>The initialization step will be executed only once. </li>
+  <li>
+Boolean_expression: If expression is true, the body of the loop is executed. If it is false, the body of the loop does not execute and flow of control jumps to the next statement.
+ </li>
+ <li> After the body of the for loop executes, the flow of control jumps back up to the update statement. This statement allows you to update any loop control variables. This statement can be left blank, as long as a semicolon appears after the Boolean expression.</li>
+ <li> 
+The Boolean expression is now evaluated again. If it is true, the loop executes and the process repeats itself (body of loop, then update step, then Boolean expression). After the Boolean expression is false, the for loop terminates.
+</li>
+</ol>
+ 
+
+<h4>Java For loop Example</h4>
+<pre class="prettyprint java">
+  public class ForLoop {
+
+   public static void main(String args[]) {
+
+      for(int x = 5; x < 15; x = x+1) {
+         System.out.print("value of x : " + x );
+         System.out.print("\n");
+      }
+   }
+}
+</pre>
+<p>The above java for loop program will produce the following output</p>
+<pre class="prettyprint">
+value of x : 5
+value of x : 6
+value of x : 7
+value of x : 8
+value of x : 9
+value of x : 10
+value of x : 11
+value of x : 12
+value of x : 13
+value of x : 14
+</pre>
+
+<br />
+<br><h4> While loop in Java</h4>
+<div class="alert alert-success">
+    
+The while loop simply executes a block of code as long as the condition you give it is true. 
+</div>
+
+<img src="images/whileloop.png">
+
+<br><h4>Java While Loop Syntax</h4>
+<pre class="prettyprint java">
+while(expression)
+{
+   //Statements
+}
+  
+</pre>
+
+<p>if the expression result is true, then the actions inside the loop will be executed. This will continue as long as the expression result is true.
+
+</p>
+
+
+<h4>Java While Loop Example</h4>
+<pre class="prettyprint java">
+public class WhileLoop {
+
+ public static void main(String args[]) {
+    int a = 5;
+
+    while( a < 11 ) {
+       System.out.print("value of a : " + a );
+       a++;
+       System.out.print("\n");
+    }
+ }
+}
+</pre>
+<p>If the a value is less than 11 than it will increase the value of a by 1 and prints the a value until the expression becomes false. In this case, until a value becomes more than 11</p>
+
+
+<b>Output</b>
+
+<pre class="prettyprint ">
+value of a : 5
+value of a : 6
+value of a : 7
+value of a : 8
+value of a : 9
+value of a : 10
+</pre>
+
+<br/>
+<br><h4>do while loop in java</h4>
+<p>The function of do-while loop works exactly same as while loop but quite opposite. The do loop evaluates the condition after the loop has executed, which makes execute the code at least once.. 
+</p>
+
+
+<b>Java do while loop syntax</b>
+<pre class="prettyprint java">
+do
+{
+   //Statements
+}while(expression);
+</pre>
+
+
+<p>If the Boolean expression is true, the flow of control jumps back up to do, and the statements in the loop execute again. This process repeats until the Boolean expression is false.</p>
+<h4>Example program for java do while loop</h4>
+<pre class="prettyprint java">
+  public class doWhile {
+
+   public static void main(String args[]){
+      int a = 1;
+
+      do{
+         System.out.print("value of a : " + a );
+         a++;
+         System.out.print("\n");
+      }while( a < 5 );
+   }
+}
+</pre>
+
+<b>Output</b>
+<pre class="prettyprint ">
+value of a : 1
+value of a : 2
+value of a : 3
+value of a : 4
+</pre>
+
+
+<br />
+
+
+<br><h4>Java break Keyword:</h4>
+<div class="alert alert-success">
+The break keyword is used to stop the entire loop.
+The break keyword will stop the execution of the innermost loop and start executing the next line of code after the block.
+
+</div>
+
+
+<b>Syntax for java break statement</b> 
+
+
+<p>The syntax of a break is a single statement inside any loop:
+</p>
+<pre class="prettyprint java">
+break;  
+</pre>
+
+
+
+
+<br><h4>Java continue Keyword:</h4>
+
+
+<div class="alert alert-success">
+ It causes the loop to immediately jump to the next iteration of the loop.
+</div>
+<p>In a for loop, the continue keyword causes flow of control to immediately jump to the update statement.
+</p>
+<p>
+In a while loop or do/while loop, flow of control immediately jumps to the Boolean expression.
+</p>
+
+<b>java continue statement syntax:</b>
+
+
+<p>The syntax of a continue is a single statement inside any loop:
+</p>
+<pre class="prettyprint java">
+continue;
+</pre>
+
+
+
+
 
 
 <!-- CONTENT END HERE -->
@@ -181,3 +396,4 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 </body>
 </html>
+java-loops.html

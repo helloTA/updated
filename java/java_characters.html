@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Java Home</title>
+<title>Java Characters</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -31,6 +31,31 @@
             }).eq(0).mouseover();
         });
     </script>
+
+    <style type="text/css">
+
+
+
+
+table, td, th {
+    border: 0.001px solid black ;}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 40px;
+}
+
+td {
+    height: 80px;
+    vertical-align: bottom;
+}
+th {
+text-align: center;
+}
+    </style>
 </head>
 
 <body>
@@ -112,7 +137,7 @@
 <div class="content">
 
 
-<h1>Java Home</h1>
+<h1>Java Characters</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -124,6 +149,136 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+
+
+<h2>Java Characters</h2>
+<p>In java programming, we use a single character value which is primitive char type. Character can be utilized in java as follow</p>
+
+
+<pre class="prettyprint java">
+char ch = 'z';        
+char uniChar = '\u02B6';  // an array of chars
+char[] charArray = { 'a', 'b', 'c', 'd', 'e' }; 
+
+</pre>
+<p>
+
+The Character class provides an object wrapper for Character data values and serves as a place for character-oriented operations. A wrapper is useful because most of Java's utility classes require the use of objects.
+</p>
+
+<p>Character class offers a number of useful class (i.e., static) methods for manipulating characters.
+</p>
+<p>
+You can create a Character object with the Character constructor:</p>
+<pre class="prettyprint java">
+Character ch = new Character('a');
+</pre>
+
+
+<div class="alert alert-info">
+<strong>Note!</strong> The Character class is immutable so that once it is created, a Character object cannot be changed.</div>
+
+
+<h2>Escape Sequences:</h2>
+
+
+<p>A character preceded by a backslash (\) is an escape sequence and has special meaning to the compiler. The following table shows the Java escape sequences:
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Escape Sequence</th>
+            <th>Description</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+    <tr class="info">
+        <td>\t</td>
+        <td> It will insert a tab in the text at this point. </td>
+    </tr>
+    <tr class="danger">
+        <td> \b</td>
+        <td>  It will insert a backspace in the text at this point.</td>
+    </tr>
+    <tr class="success">
+        <td> \n</td>
+        <td>It will insert a newline in the text at this point. </td>
+    </tr>
+    <tr class="warning">
+        <td> \r</td>
+        <td> It will insert a carriage return in the text at this point. </td>
+    </tr>
+    <tr class="success">
+        <td> \f</td>
+        <td> It will insert a formfeed in the text at this point.</td>
+    </tr>
+     <tr class="danger">
+        <td> \'</td>
+        <td>  It will insert a single quote character in the text at this point.</td>
+    </tr>
+     <tr class="info">
+        <td> \"</td>
+        <td>It will insert a double quote character in the text at this point. </td>
+    </tr>
+     <tr class="success">
+        <td> \\</td>
+        <td> It will insert a backslash character in the text at this point. </td>
+    </tr>
+    </tbody>
+    </table>
+
+
+
+
+<p>The following table lists some of the most useful methods in the Character class</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td><a href="java_characters/java_character_toLowerCase_method.html" target="_blank" >toLowerCase()</a>
+             </td>
+            <td>toLowerCase() method is used to convert the Uppercase characters into lowercase.</td>
+            <td><a href="java_characters/java_character_toLowerCase_method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+         <tr class="warning">
+            <td><a href="java_characters/java_character_isLowerCase_method.html" target="_blank" >isLowerCase()</a>
+             </td>
+            <td>isLowerCase() method determines whether the given charater is lowercase or not</td>
+            <td><a href="java_characters/java_character_isLowerCase_method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+         <tr class="danger">
+            <td><a href="java_characters/java_character_toUpperCase_method.html" target="_blank" >toUpperCase()</a>
+             </td>
+            <td>toUpperCase() method is used to convert the lowercase characters into uppercase</td>
+            <td><a href="java_characters/java_character_toUpperCase_method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+        <tr class="success">
+            <td><a href="java_characters/java_character_isUpperCase_method.html" target="_blank" >isUpperCase()</a>
+             </td>
+            <td>isUpperCase() method determines whether the given charater is uppercase or not</td>
+            <td><a href="java_characters/java_character_isUpperCase_method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+         <tr class="info">
+            <td><a href="java_characters/java_character_isLetter_method.html" target="_blank" >isLetter()</a>
+             </td>
+            <td>isLetter() determines whether the specified char value is a letter.</td>
+            <td><a href="java_characters/java_character_isLetter_method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
+
+       
+       
+    </tbody>
+</table> <br />
+
 
 
 <!-- CONTENT END HERE -->

@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Decision Making</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+<li class="heading">Java Tutorials</li>
+<li><a target="_top" href="about.java.html">About Java</a></li>
+<li><a target="_top" href="java_datatypes.html">Java Datatypes </a></li>
+<li><a target="_top" href="java_variables.html">Java Variables </a></li>
+
+<li><a target="_top" href="java_operators.html">Java Operators </a></li>
+<li><a target="_top" href="java_objects.html">Java Objects and  Classes</a></li>
+<li><a target="_top" href="java_loops.html">Java Loops </a></li>
+<li><a target="_top" href="java_decision_making.html">Java Decision Making</a> </li>
+<li><a target="_top" href="java_numbers.html">Java Numbers </a></li>
+
+<li><a target="_top" href="java_characters.html">Java Characters</a></li>
+<li><a target="_top" href="java_strings.html">Java Strings</a></li>
+<li><a target="_top" href="java_arrays.html">Java Arrays</a></li>
+<li><a target="_top" href="java_methods.html">Java Methods</a></li>
+<li class="heading">Java Advanced Tutorials</li>
+<li><a target="_top" href="java_dates.html">Java _ Date &amp; Time</a></li>
+<li><a target="_top" href="java_files.html">Java Files and I/O</a></li>
+<li><a target="_top" href="java_exceptions.html">Java Exceptions</a></li>
+<li><a target="_top" href="java_inheritance.html">Java Inheritance
+</a></li>
+<li><a target="_top" href="java_overiding.html">Java Overriding</a></li>
+<li><a target="_top" href="java_polymorphism.html">Java Polymorphism</a></li>
+<li><a target="_top" href="java_abstraction.html">Java Abstraction</a></li>
+<li><a target="_top" href="java_encapsulation.html">Java Encapsulation</a></li>
+<li><a target="_top" href="java_interfaces.html">Java Interfaces</a></li>
+<li><a target="_top" href="java_packages.html">Java Packages
+</a></li>
+<li><a target="_top" href="java_datastructures.html">Java Data Structures</a></li>
+<li><a target="_top" href="java_collections.html">Java Collections
+</a></li>
+<li><a target="_top" href="java_generics.html">Java Generics</a></li>
+<li><a target="_top" href="java_serialization.html">Java Serialization
+</a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>Java Decision Making</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+
+<h2>What is Decision Making</h2>
+<div class="alert alert-success">
+  When you are going to write some program it will be always necessary
+that you will have to put some code which has to be executed only when a
+specific condition is satisfied. These conditions are evaluated by the computer
+itself when the input is given by the user.
+</div>
+
+
+<img src="images/decision-making.png">
+
+<p>Java provides  Four different types of conditional statements  which are as
+follows.
+</p>
+
+<ol>
+  <li>if Statement</li>
+  <li>if-else Statement </li>
+  <li> Nested if else </li>
+  <li>Switch Statement </li>
+</ol>
+
+
+<p>If you are confused on, which one to use!!! All the above four methods can be used for
+decision making but their application will vary, you will feel comfortable after
+making a few programs using them.</p>
+
+<b>if Statement</b>
+
+<p>As the word itself is clarifying its meaning, it is used to check a condition
+and perform a set of statements according to the result of the condition
+checked</p>
+<p>If condition generally works with the boolean expression.
+<b>Syntax: </b>
+<pre class="prettyprint java">   
+ if(condition)
+ {
+ ....
+ ....               // TRUE Block Statements
+ }
+
+ 
+</pre>
+
+<p>In the above syntax, the conition is a boolean expression. If the expression is true then it executes the block of code inside the curly bracs <code> { }</code>
+
+<h2>Example</h2>
+<pre class="prettyprint java">
+int age = 25;
+if (age > 20)
+{
+    System.out.println("Yes, age is Greater than 20");
+}
+</pre>
+
+<p>In the above example, the java if condition would prints the statement "Yes, age is Greater than 20" if the condition is really true. In our case, it is true. So the output would be like below.
+
+</p>
+
+<b>Output</b>
+<pre class="prettyprint java">
+Yes, age is Greater than 20
+</pre>
+
+
+
+
+<b>if-else Statement</b>
+<div class="alert alert-success">
+  If else statement works similar to the java if statement. But the only difference is, if the provided condition is wrong or false it we execute someother statement in the else block.
+  For example, if the age is > 20 print <code>He is elder</code> else print<code>He is not elder</code>. Thats how the if else statement works.
+</div>
+
+
+<p>If  condition generally works with the boolean expression.
+<b>Syntax: </b>
+<pre class="prettyprint java">   
+ if(condition)
+ {
+ ....
+ ....                   // TRUE Block Statements
+ }
+
+else {
+  .....
+  .....                 // FALSE Block Statements
+}
+
+ 
+</pre>
+
+In the
+above given syntax "condition" means any relational condition or
+any mathematical expression. If the condition given in the brackets
+(parenthesis) is TRUE then the statements within the BRACES executed.
+The statements given in BRACES after the "else" part are executed when
+the condition is false (not satisfied)</p>
+
+
+<h2>Example</h2>
+<pre class="prettyprint java">
+int age = 18;
+if (age > 20)
+{
+    System.out.println("He is Elder");
+}
+else
+{
+System.out.println("He is not Elder");
+}
+</pre>
+
+<p>The above example prints <code>He is not Elder</code> because the condition is FALSE</p>
+
+<b>Output</b>
+<pre class="prettyprint java">
+He is not Elder
+</pre>
+
+
+<h2>Example Program</h2>
+
+<pre class="prettyprint java">
+int var1=100, var2=200;
+if(var1 > var2)
+ {
+  System.out.println("Variable 1 is bigger ");
+ }
+else
+ {
+  System.out.println("Variable 1 is smaller");
+ }
+}
+</pre>
+
+
+
+<b>Explanation :</b>
+<p>
+There are two variables in the above program which are
+having some values.
+In the given example the value of val1 is smaller then
+var2, so the condition for if is false. According the program is going to print
+the output. You guessed right. The output will be "Variable 1 is smaller".
+</p>
+
+
+
+<b>Nested IF Statements</b>
+<p>
+There are times when it will be required to check more than one
+conditions and according to their collective results would
+like to perform
+various tasks. We can use IF statements within another if statements for any
+number of times required. Although there is not any separate syntax for if
+else statements.</p>
+
+<b>Syntax</b>
+<pre class="prettyprint java">
+if(condition1)
+{
+  if(condition2)
+  {
+  ...
+  //statements
+  }
+  else
+  {
+  ...
+  //statements
+  }
+}
+else
+{
+...
+//statements
+}
+</pre>
+
+
+<p>Let's take a look at example program for nested if statement</p>
+<pre class="prettyprint java">
+
+bool condition = true;
+bool check= true;
+if (condition)
+{
+if (check)
+    {
+      Console.WriteLine("The nested variable is set to true.");
+    }
+    else
+    {
+      Console.WriteLine("The nested variable is set to false.");
+    }
+}
+else
+{
+   Console.WriteLine("The variable is set to false.");
+}
+
+</pre>
+<b>Output</b>
+<pre class="prettyprint java">
+  The nested variable is set to true.
+</pre>
+
+
+<h2>Switch Statement</h2>
+<p>
+  Switch statement in java is used to check a good number of conditions and will work accordingly. Switch is a method which is going to take an integer parameter and depending upon that parameter will do the given operations.
+</p>
+
+
+<b>Syntax</b>
+<pre class="prettyprint java">
+  switch(value)
+  {
+   case value:
+   statements;
+   break;
+   case value:
+   statements;
+   break;
+   default;
+   statements;
+   break;
+  }
+</pre>
+<p>As the syntax shows that within parenthesis of switch we will always have to give some value as an integer and depending upon the value of that expression switch will select the equivalent case. After executing the case statements if the break is missing then all the statements below that case are also executed. If there is no case value which matches the value in the switch then statements in the default block will be executed.</p>
+
+
+<b>Example</b>
+<pre class="prettyprint java">
+
+/* Assume the days are as follows:
+     Sunday - 1
+     Monday - 2
+     Tuesday - 3
+     Wednesday -4
+     Thursday -5
+     Friday -6
+     Saturday -7 */
+
+     // Now, using the switch statement, we have to print the day based on the given
+     // condition. i.e value. If value is 1, it should print Sunday, if value is 2 it should 
+     // print Monday ...etc 
+
+int today = 3;
+switch (today)
+{
+  case 1:
+       Console.WriteLine("To day is Sunday");
+       break;
+  case 2:
+       Console.WriteLine(“Today is Monday");
+       break;
+  case 3:
+         Console.WriteLine(“Today is Tuesday");
+         break;
+  case 4:
+         Console.WriteLine(“Today is Wednesday");
+         break;
+  case 5:
+         Console.WriteLine(“Today is Thursday");
+         break;
+  case 6:
+         Console.WriteLine(“Today is Friday");
+         break;
+  case 7:
+         Console.WriteLine(“Today is Saturday");
+         break;
+
+   default:
+       Console.WriteLine("Day is not available!");
+       break;
+}
+
+</pre>
+<p>In the above example, the given day is today which has value 3. In the switch cases if the case is 3 it should print the third case which is <code>Today us Tuesday</code></p>
+
+
+<b>Output</b>
+<pre class="prettyprint java">
+  Today is Tuesday
+</pre>
+
+
+
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+java-loops.html
