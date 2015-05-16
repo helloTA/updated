@@ -228,62 +228,94 @@ string s = “hello”; // Reference type
 
 
 
+<p>Let us look at example of boxing and unboxing in java</p>
+
+
 <h2>Example</h2>
 <pre class="prettyprint java">
-  public class NumbersDemo{
+ public class ExampleProgram{
 
-  public static void main(String args[]){
-     Integer x = 34;    // boxes int to an Integer object
-     x =  x + 53;          // unboxes the Integer to a int
-     System.out.println(x); 
-  }
+   public static void main(String args[]){     // main declaration
+      Integer mynumber = 2; // boxes int to an Integer object
+      mynumber =  mynumber + 1;   // unboxes the Integer to a int
+      System.out.println(x); 
+   }
 }
 </pre>
+<p>The above exmple program prints 3 as out put.</p>
 
 
-
-<p>The following table lists the instance methods that all the subclasses of the Number class implement.</p>
+<p>Number class provides set of methods we can use in our program. Below table explains list of java number methods</p>
 
 <table class="table">
     <thead>
         <tr>
             <th>Method</th>
             <th>Description</th>
+            <th>Example</th>
         </tr>
     </thead>
     <tbody>
         <tr class="success">
-            <td>
-            <ul>
-                <li>byte byteValue()</li>
-                <li>short shortValue()</li>
-                <li>int intValue()</li>
-                <li>long longValue()</li>
-                <li>float floatValue()</li>
-                <li>double doubleValue()</li>
-            </ul>
+            <td><a href="java-examples/java-compareTo-method.html" target="_blank" >compareTo()</a>
+             </td>
+            <td>compareTo() method is used to compare one argument with other argument. it returs the output based on the condition.</td>
+            <td><a href="java-examples/java-compareTo-method.html" target="_blank" class="btn btn-primary">Example</a> </td>
+        </tr>
 
-            </td>
-            <td></td>
+        <tr class="warning">
+            <td><a href="java-examples/java-equals-method.html" target="_blank"  >equals()</a>  </td>
+            <td>It checks whether the two arguments are equal or not. If both are equal it returns TRUE else FALSE.</td>
+            <td><a href="java-examples/java-equals-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="danger">
+            <td> <a href="java-examples/java-value-of-method.html" target="_blank"  >valueOf()</a> </td>
+            <td>Returns the exact number that the number object is holding the value passed to its argument.</td>
+            <td><a href="java-examples/java-value-of-method.html" target="_blank" class="btn btn-primary" >Example</a> </td>
         </tr>
         <tr class="success">
-            <td>+ </td>
-            <td>Plus</td>
+            <td>  <a href="java-examples/java-to-string-method.html" target="_blank"  >toString()</a> </td>
+            <td> It is used to represent any object as a string, using toString() method</td>
+            <td> <a href="java-examples/java-to-string-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+         <tr class="warning">
+            <td> <a href="java-examples/java-parseint-method.html" target="_blank" >parseInt()</a> </td>
+            <td> It is used primarily in parsing a String method argument into an Integer object.  </td>
+            <td> <a href="java-examples/java-parseint-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
         </tr>
         <tr class="success">
-            <td>+ </td>
-            <td>Plus</td>
+            <td> <a href="java-examples/java-abs-method.html" target="_blank"  >abs() </a></td>
+            <td>The method gives the absolute value of the argument  </td>
+            <td> <a href="java-examples/java-abs-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
         </tr>
-        <tr class="success">
-            <td>+ </td>
-            <td>Plus</td>
+        <tr class="warning">
+            <td> <a href="java-examples/java-random-method.html" target="_blank"  >random()</a> </td>
+            <td>The method is used to generate a random number between 0.0 and 1.0.  </td>
+            <td> <a href="java-examples/java-random-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="danger">
+            <td> <a href="java-examples/java-sqrt-method.html" target="_blank" >sqrt()</a></td>
+            <td>It returns the square root of the argument.  </td>
+            <td> <a href="java-examples/java-sqrt-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+        <tr class="info">
+            <td> <a href="java-examples/java-pow-method.html" target="_blank"  >pow()</a></td>
+            <td>It returns the value of the first argument raised to the power of the second argument.  </td>
+            <td> <a href="java-examples/java-pow-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+         <tr class="success">
+            <td> <a href="java-examples/java-min-method.html" target="_blank"  >min()</a></td>
+            <td>It returns the minimum value among the set of values or two values. </td>
+            <td> <a href="java-examples/java-min-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
+        </tr>
+         <tr class="warning">
+            <td> <a href="java-examples/java-max-method.html" target="_blank"  >max()</a></td>
+            <td>It returns the maximum value among the set of values or two values. </td>
+            <td> <a href="java-examples/java-max-method.html" target="_blank" class="btn btn-primary" >Example</a></td>
         </tr>
        
     </tbody>
 </table> <br />
-<style type="text/css">
-  
-</style>
 
 
 
@@ -342,4 +374,3 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 </body>
 </html>
-java-loops.html
