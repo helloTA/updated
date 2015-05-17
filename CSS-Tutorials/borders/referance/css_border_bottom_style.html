@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CSS border-color Property</title>
+<title>CSS border-bottom-style Property</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -116,7 +116,7 @@
 <div class="content">
 
 
-<h1>CSS border-color Property</h1>
+<h1>CSS border-bottom-style Property</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -128,14 +128,14 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h4> CSS border-color Property</h4>
+<h4> CSS border-bottom-style Property</h4>
 
 
 <div class="alert alert-info">
-  CSS border-color  property is used to set the css border color for an element four borders
+  CSS border-bottom-style property is used to style the bottom of the css border
 </div>
 
-<h2>CSS Border Syntax</h2>
+<h2>CSS border-bottom-style Syntax</h2>
 <pre class="prettyprint css">
 border-color: color;
 </pre>
@@ -144,67 +144,49 @@ border-color: color;
 
 <p>Settings all four borders as pink</p>
 <pre class="prettyprint css">
- border-color:pink;
+border-bottom-style:none;
+or
+border-bottom-style:hidden;
+or 
+border-bottom-style: dashsed;
+or
+border-bottom-style: solid;
+or 
+border-bottom-style: double;
+or
+border-bottom-style:dotted;
+or
+border-bottom-style: groove;
+or
+border-bottom-style: ridge;
+or
+border-bottom-style: inset;
+or
+border-bottom-style: outset;
+or
+border-bottom-style: initial;
+or
+border-bottom-style: inherit;
+
 </pre>
-
-
-<p>Setting top and bottom borders as pink,right and left borders as blue
-</p>
-<pre class="prettyprint css">
- border-color:pink green;
-</pre>
-
-
-<p>Setting  top border as pink,  right and left borders as green, bottom border as blue</p>
-<pre class="prettyprint css">
-    border-color:pink green blue;
-</pre>
-
-<p>Setting top border as red, right border as green,  bottom border as blue, left border as pink</p>
-<pre class="prettyprint css">
-    border-color:red green blue pink; 
-</pre>
-        
-        
-       
-        
-
-    
-       
-       
-        
-   
-        
-        
-    
-        
-
-
+<p><strong>Note! You use any of the above mentioned properties to style but all for the same style.</strong>
 
 <h2>Example</h2>
 <pre class="prettyprint css">
-p.one {
-    border-style: solid;
-    border-color: #FF3399;
-}
+p.none {border-style: none;}
+p.dotted {border: 1px dotted blue ;padding:3px;}
+p.dashed {border-style: dashed;}
+p.solid {border: 1px solid blue ;padding:3px;}
+p.double { border: 3px double blue;padding:3px; }
+p.groove {border: 7px groove blue ;padding:3px;}
+p.ridge {border: 7px ridge blue ;padding:3px;}
+p.inset {border: 7px inset blue ;padding:3px;}
+p.outset {border: 7px outset blue ;padding:3px;}
+p.hidden {border: 7px hidden blue ;padding:3px;}
 
-p.two {
-    border-style: solid;
-    border-color: #FF3399 #0000ff;
-}
-
-p.three {
-    border-style: solid;
-    border-color: #FF3399 #00ff00 #0000ff;
-}
-
-p.four {
-    border-style: solid;
-    border-color: #ff0000 #00CC00 #FF3399 #000000;
-}
 </pre>
 
-<a href="examples/css_border_color_example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<a href="examples/css_border_bottom_style_example.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 

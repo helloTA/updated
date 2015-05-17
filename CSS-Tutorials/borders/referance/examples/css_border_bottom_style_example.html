@@ -58,42 +58,34 @@ width: 100%;
 <html>
 <head>
 <style>
-p.one {
-    border-style: solid;
-    border-color: #FF3399;
-}
+p.none {border-style: none;}
+p.dotted {border: 1px dotted blue ;padding:3px;}
+p.dashed {border-style: dashed;}
+p.solid {border: 1px solid blue ;padding:3px;}
+p.double { border: 3px double blue;padding:3px; }
+p.groove {border: 7px groove blue ;padding:3px;}
+p.ridge {border: 7px ridge blue ;padding:3px;}
+p.inset {border: 7px inset blue ;padding:3px;}
+p.outset {border: 7px outset blue ;padding:3px;}
+p.hidden {border: 7px hidden blue ;padding:3px;}
 
-p.two {
-    border-style: solid;
-    border-color: #FF3399 #0000ff;
-}
-
-p.three {
-    border-style: solid;
-    border-color: #FF3399 #00ff00 #0000ff;
-}
-
-p.four {
-    border-style: solid;
-    border-color: #ff0000 #00CC00 #FF3399 #000000;
-}
 </style>
 </head>
 <body>
 
-<p class="one">Sample ping color border on four sides</p>
-<p class="two">Blue color on left, right and pink color on top and bottom</p>
-<p class="three">Pink color on top, blue color on bottom and green color on left, right</p>
-<p class="four">red color on top, pink color on bottom, black color on left and green color on right</p>
-
-<h1>Observe the different colors on each side of the borders</h1>
+<p class="none">No border.</p>
+<p class="dotted">This is a dotted border.</p>
+<p class="dashed">This is a dashed border.</p>
+<p class="solid">This is a solid border.</p>
+<p class="double">This is a double border.</p>
+<p class="groove">This is a groove border.</p>
+<p class="ridge">This is a ridge border.</p>
+<p class="inset">This is an inset border.</p>
+<p class="outset">This is an outset border.</p>
+<p class="hidden">This is a hidden border.</p>
 
 </body>
 </html>
-
-
-
-
 
 
 </textarea>
