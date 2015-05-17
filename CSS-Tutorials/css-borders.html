@@ -183,12 +183,156 @@ The border properties allow you to specify how the border of the box representin
 
 <br>
 <p>Click the below button to see all the css border-styles in action</p>
-<a href="borders/all_borders_example.html" target="_blank" class="btn btn-primary">Try It Now</a>
+<a href="borders/all_borders_style_example.html" target="_blank" class="btn btn-primary">Try It Now</a>
 
 
   <h2>CSS border-color property</h2>
   <p>border-color property is used to style the color of a border. For example see the below
   borders with different colors</p>
+
+  <p>The border-color property can be set in 3 different ways.</p>
+
+  <ul>
+    <li><b>name</b> -  You can set the color of the border, for example <code>border-color:green;</code></li>
+    <li><b>RGB</b>- You can set the color of the border with RGB value, for example<code> rgb(132, 57,57 )</code></li>
+    <li><b>HEX</b>- You can set the color of the border with HEX value, for example <code> #FFCCE5</code></li>
+  </ul>
+<p>
+  The border-color property allows you to change the color of the border surrounding an element. You can individually change the color of the bottom, left, top and right sides of an element's border using the properties:</p><br>
+<h2>CSS Border Color Example</h2>
+<pre class="prettyprint css">
+  p.one {
+    border-style: groove;
+    border-color: green;
+}
+
+p.two {
+    border-style: solid;
+    border-color: yellow;
+} 
+</pre>
+<a href="borders/css_border_color.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+<p>Below is the list of css border-color properties</p>
+
+
+  <p> <b>border-bottom-color:</b> It chanes the color of bottom border </p>
+  <pre class="prettyprint css">
+    p  {
+    border-style: solid;
+    border-bottom-color: green;
+   }
+  </pre>
+   <a href="borders/css_border_bottom_color.html" class="btn btn-primary" target="_blank">Try It</a>
+   <div>
+     
+   </div>
+
+  <br><p><b>border-top-color:</b> It changes the color of the top border </p>
+  <pre class="prettyprint css">
+    p  {
+    border-style: solid;
+    border-top-color: red;
+  }
+  </pre>
+   <a href="borders/css_border_top_color.html" class="btn btn-primary" target="_blank">Try It</a><div>
+     
+   </div>
+   <br><p><b>border-left-color:</b>It changes the color of left border</p>
+   <pre class="prettyprint css">
+     p  {
+    border-style: solid;
+    border-left-color: yellow;
+    }
+   </pre>
+       <a href="borders/css_border_left_color.html" class="btn btn-primary" target="_blank">Try It</a><div>
+         
+       </div>
+  <br><p><b>border-right-color:</b>It changes the color of the right border</p>
+  <pre class="prettyprint css">
+    p  {
+    border-style: solid;
+    border-right-color: blue;
+  }
+  </pre>  <a href="borders/css_border_right_color.html" class="btn btn-primary" target="_blank">Try It</a>
+
+
+
+<h2>Border Width Property</h2>
+
+<p>The CSS Border Width Property is used to set the border width. See the below image for more understanding</p>
+
+<img src="images/border-width.png" alt="css border width" title="css border width property">
+
+
+<p> CSS width property can be set in two different ways as follows</p>
+<ul>
+  <li>You can set the border with using pixels</li>
+  <li>Using pre-defined values, like <code>thin, medium, thick</code></li>
+</ul>
+
+
+<p><strong class="btn btn-danger">Note!</strong> The "border-width" property does not work if it is used alone. Use the "border-style" property to set the borders first.
+</p>
+
+
+<h2>CSS Border Width Example</h2>
+<pre class="prettyprint css">
+  p.first {
+    border-style: solid;
+    border-width: 15px;
+   border-color: green;
+}
+
+p.second {
+    border-style: solid;
+    border-width: medium;
+    border-color: red;
+}
+
+p.third {
+    border-style: solid;
+    border-width: 5px;
+    border-color: blue;
+}
+</pre>
+<a href="borders/css_border_width.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>All CSS Border Properties</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Border </th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><a href="borders/referance/css_border.html" target="_blank">border </td>
+      <td> Used to set the border in a single declaration</td>
+      <td><a href="borders/referance/examples/css_border.html" class="btn btn-primary" target="_blank">Try It Now</a></td>
+    </tr>
+    <tr>
+      <td><a href="borders/referance/css_border_color.html" target="_blank">border-color </td>
+      <td> Used to set the css border color of  an element four borders </td>
+      <td><a href="borders/referance/examples/css_border_color_example.html" class="btn btn-primary" target="_blank">Try It Now</a></td>
+    </tr>
+    <tr>
+      <td><a href="borders/referance/css_border_bottom.html" target="_blank">border-bottom </td>
+      <td> Used to set the css bottom border</td>
+      <td><a href="borders/referance/examples/css_border_bottom.html" class="btn btn-primary" target="_blank">Try It Now</a></td>
+    </tr>
+     <tr>
+      <td><a href="borders/referance/css_border_bottom_color.html" target="_blank">border-bottom-color </td>
+      <td> Used to set the color of css border bottom </td>
+      <td><a href="borders/referance/examples/css_border_bottom_color_example.html" class="btn btn-primary" target="_blank">Try It Now</a></td>
+    </tr>
+    </tbody>
+</table>
 
 
 
