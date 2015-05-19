@@ -54,31 +54,47 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
+
+
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>append demo here</title>
+  <title>html demo here</title>
   <style>
   p {
-    background: cyan;
-font-size: 30px;
+    margin: 10px;
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
   }
-span{font-weight:bold;}
+  b {
+    text-decoration: underline;
+  }
+  button {
+    cursor: pointer;
+  }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+
+Here is the example to see html content
  
-<span>Wanna know more about jQuery!!!</span>
-<p>Here is the append demo </p>
+<p>
+  <b>Click</b> to see the <span id="tag">html content</span>
+</p>
+
  
 <script>
-$( "p" ).append( $( "span" ) );
+$( "p" ).click(function() {
+  var htmlString = $( this ).html();
+  $( this ).text( htmlString );
+});
 </script>
  
 </body>
 </html>
-
 
 
 

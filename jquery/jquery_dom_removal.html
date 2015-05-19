@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery DOM Insertion Around
+<title>jQuery DOM Removal
 </title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
@@ -97,7 +97,7 @@ Introduction to jQuery</a></i>
 <div class="content">
   
 
-<h1>jQuery DOM Insertion Around</h1>
+<h1>jQuery DOM Removal</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -110,145 +110,152 @@ Introduction to jQuery</a></i>
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h2>jQuery append() Method</h2>
+<h2>jQuery .detach() Method</h2>
 
-<div class="alert alert-success">
-The jQuery append() method in jQuery inserts specified content at the end of the selected elements which is specified by the parameter.
-</div>
+<p>jQuery 
+.detach() method in jQuery removes selected elements from the DOM tree.
+</p>
 
-<br><b>Syntax</b>
-<br><pre class="prettyprint jquery">
- .append(content ) 
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+ .detach()
+
 </pre>
 
-
 <p>
- 
-The jQuery .append() method inserts the specified content as the last child of each element in the jQuery collection.
+The jquery .detach() method is the same as jquery <code> .remove()</code> but the only difference is detached method keeps the data of removed elements. If you want to reinsert removed element to DOM, it can be possible by .detach() method.</p>
+
+<p>Here is an example to use .text() method 
 </p>
 
 
 <h2>Example</h2>
 <pre class="prettyprint jquery">
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;append demo here&lt;/title&gt;
-  &lt;style&gt;
-  p {
-    background: cyan;
-font-size: 30px;
-  }
-span{font-weight:bold;}
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- 
-&lt;span&gt;Wann know more about jQuery!!!&lt;/span&gt;
-&lt;p&gt;Here is the append demo &lt;/p&gt;
- 
-&lt;script&gt;
-$( "p" ).append( $( "span" ) );
-&lt;/script&gt;
- 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-
- 
-<p>The above example will produce the following output</p>
-<br><img  alt="jQuery append() method" class="figure" style="height:100px; width:463px" title="jQuery append() method"
-src="dom/images/append.png" >
-
-<a href="dom/examples/append.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-
-<br><h2>jQuery appendTo() Method</h2>
-
-<div class="alert alert-success">
-The append() method in jQuery inserts HTML elements at the end of the selected elements which is specified by the parameter.
-</div>
-
-<br><b>Syntax for jQuery appendTo() method</b>
-<pre class="prettyprint jquery">
-.appendTo(content)
-
-</pre>
-
-<p>
-The jQuery <code>.append()</code> and jQuery <code>.appendTo()</code> methods in jQuery performs the same task. The main difference is syntax i.e., placing content and target.
-</p>
-
-<h2>Example</h2>
-
-<pre class="prettyprint jquery">
-
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;append demo here&lt;/title&gt;
-  &lt;style&gt;
-  p {
-    background: cyan;
-font-size: 30px;
-font-weight:bold;
-  }
-span{font-weight:normal}
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- 
-&lt;span&gt;Learn jQuery on Tutorials Academy&lt;/span&gt;
-&lt;p&gt;Here is the append demo &lt;/p&gt;
- 
-&lt;script&gt;
-$( "span" ).appendTo( $( "p" ) );
-&lt;/script&gt;
- 
-&lt;/body&gt;
-&lt;/html&gt;
-
-</pre>
-
-<p>The above example will produce the following output</p>
-<br><img  alt="jQuery appendTo() method" class="figure" style="height:359px; width:663px" title="jQuery appendTo() method"
-src="dom/images/appendto.png" >
-
-<br><a href="dom/examples/appendto.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-<h2>jQuery .html() Method</h2>
-
-
-<p>JQuery .html() method is used to get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element</p>
-
-<h4>Syntax for jQuery .html() Method</h4>
-
-<pre class="prettyprint jquery">
- .html()
-</pre>
-
-<p>
-In an HTML document, .html() can be used to get the contents of any element. If the selector expression matches more than one element, only the first match will have its HTML content returned.
-</p>
-
-
-<h2>Example for jquery .html() method</h2>
-<pre class="prettyprint jquery">
-  $( "p" ).click(function() {
-  var htmlString = $( this ).html();
-  $( this ).text( htmlString );
+$( "p" ).click(function() {
+  $( this ).toggleClass( "off" );
 });
+var p;
+$( "button" ).click(function() {
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
+  } else {
+    p = $( "p" ).detach();
+  }
+});
+
+</pre>
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery detach() method" class="figure" style="height:200px; width:363px" title="jQuery text() method"
+src="dom/images/detach.png" >
+
+<br><a href="dom/examples/detach.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+<h2>jQuery .empty() Method</h2>
+
+<p>
+
+jQuery .empty() method in jQuery removes all child nodes of matched elements from the DOM tree.</p>
+
+<p>empty() method removes childelements and as well as text specific content in the matched element.</p>
+
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+    .empty()
 </pre>
 
-<p>The above example will produce the following output</p>
-<br><img  alt="jQuery html() method" class="figure" style="height:259px; width:563px" title="jQuery html() method"
-src="dom/images/html.png" >
+<p>Here is an example to use .empty() method </p>
 
-<br><a href="dom/examples/dothtml.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+$( "button" ).click(function() {
+  $( "p" ).empty();
+});    
+</pre>
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery empty() method" class="figure" style="height:200px; width:463px" title="jQuery empty() method"
+src="dom/images/empty.png" >
+
+<br><a href="dom/examples/empty.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+<h2>jQuery .remove() Method</h2>
+
+<p>jQuery 
+.remove() method in jQuery remove matched elements from the DOM tree.
+</p>
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+  .remove()
+</pre>
+<p>
+jQuery remove() method also similar behaviour of .empty(). Here the difference is .remove() method additionally removes all bound events and jQuery data associated with elements.</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+  $( "button" ).click(function() {
+  $( "p" ).remove();
+});
+
+</pre>
+
+
+<br><a href="dom/examples/remove.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>jQuery .replaceWith() Method</h2>
+
+<p>jQuery 
+
+.replaceWith() method in jQuery replace each element with new content from matched elements in the DOM tree and finally returns the elements which was removed.
+</p>
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+  .replaceWith()
+</pre>
+
+<p>The jquery .replaceWith() method removes content from the DOM and inserts new content in its place with a single call.
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+$( "button" ).click(function() {
+  $( this ).replaceWith( "&lt;div&gt;" + $( this ).text() + "&lt;/div&gt;" );
+});
+
+</pre>
+
+<b>Output</b>
+<br><a href="dom/examples/replaceWith.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+<h2>jQuery .replaceAll() Method</h2>
+
+<p>jQuery 
+.replaceAll() method in jQuery replaces each target element from matched elements in the DOM tree.</p>
+
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+  .replaceAll()
+</pre>
+
+<p>
+The jquery .replaceAll() method is similar to .replaceWith(), but with the source and target reversed.
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+    $( "&lt;b&gt;textReplaced   &lt;/b&gt;" ).replaceAll( "p" );
+    // each and every paragraph will be replaced with the textReplaced content.
+
+</pre>
+<b>Output</b>
+<br><a href="dom/examples/replaceAll.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
 
 <!-- CONTENT END HERE -->
 </div>

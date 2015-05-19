@@ -54,35 +54,48 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
+
+
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>append demo here</title>
+  <title>detach demo</title>
   <style>
   p {
     background: cyan;
-font-size: 30px;
+    margin: 6px 0;
   }
-span{font-weight:bold;}
+  p.off {
+    background: cyan;
+  }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
  
-<span>Wanna know more about jQuery!!!</span>
-<p>Here is the append demo </p>
+<p>Here is the demo of </p>
+detach() method
+<p>Learn it</p>
+<button>Attach/detach element</button>
  
 <script>
-$( "p" ).append( $( "span" ) );
+$( "p" ).click(function() {
+  $( this ).toggleClass( "off" );
+});
+var p;
+$( "button" ).click(function() {
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
+  } else {
+    p = $( "p" ).detach();
+  }
+});
 </script>
  
 </body>
 </html>
-
-
-
-
-
 
 </textarea>
 </form>

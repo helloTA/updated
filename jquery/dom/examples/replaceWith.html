@@ -54,34 +54,43 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
+
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>append demo here</title>
+  <title>replaceWith demo</title>
   <style>
-  p {
-    background: cyan;
-font-size: 30px;
+  button {
+    display: block;
+    margin: 3px;
+    color: blue;
+    width: 200px;
   }
-span{font-weight:bold;}
+  div {
+    color: blue;
+    border: 5px solid red;
+    width: 200px;
+    margin: 3px;
+    text-align: center;
+  }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
  
-<span>Wanna know more about jQuery!!!</span>
-<p>Here is the append demo </p>
+<button>Sample click 1</button>
+<button>Sample click 2</button>
+<button>Sample click 3</button>
  
 <script>
-$( "p" ).append( $( "span" ) );
+$( "button" ).click(function() {
+  $( this ).replaceWith( "<div>" + $( this ).text() + "</div>" );
+});
 </script>
  
 </body>
 </html>
-
-
-
-
 
 
 </textarea>

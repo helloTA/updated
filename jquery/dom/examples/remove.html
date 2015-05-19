@@ -54,34 +54,35 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
+
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>append demo here</title>
+  <title>remove demo</title>
   <style>
   p {
     background: cyan;
-font-size: 30px;
+    margin: 10px 0;font-size:30px
   }
-span{font-weight:bold;}
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
  
-<span>Wanna know more about jQuery!!!</span>
-<p>Here is the append demo </p>
+<p>Here is the demo of</p>
+remove method
+<p>Try to understand</p>
+<button>Click me</button>
  
 <script>
-$( "p" ).append( $( "span" ) );
+$( "button" ).click(function() {
+  $( "p" ).remove();
+});
 </script>
  
 </body>
 </html>
-
-
-
-
 
 
 </textarea>

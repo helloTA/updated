@@ -54,34 +54,39 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
+
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>append demo here</title>
+  <title>empty demo here</title>
   <style>
   p {
-    background: cyan;
-font-size: 30px;
+    background: cyan;font-size:25px;
   }
-span{font-weight:bold;}
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
  
-<span>Wanna know more about jQuery!!!</span>
-<p>Here is the append demo </p>
+<p>
+  Here is the <span>demo of</span> <em>empty() method</em>.
+</p>
+
+<p>
+  Learn it 
+</p>
+ 
+<button>click me to empty all elements</button>
  
 <script>
-$( "p" ).append( $( "span" ) );
+$( "button" ).click(function() {
+  $( "p" ).empty();
+});
 </script>
  
 </body>
 </html>
-
-
-
-
 
 
 </textarea>
