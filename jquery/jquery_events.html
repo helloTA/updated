@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery Show Method</title>
+<title> jQuery Events</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -83,21 +83,15 @@
 <li class="heading">What to Learn Next</li>
 </ul>
 </div><!-- leftcol -->
-<br >
 <div class="middle_right">
-<div class="ads">
-<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
-
-
-
-
+<div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
 <div class="content">
   
 
-<h1>jQuery Show Method</h1>
+<h1>jQuery Events</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -109,49 +103,95 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+<h3>jQuery Events</h3>
+
+<p>jQuery makes it straightforward to set up event-driven responses on page elements. These events are often triggered by the end user's interaction with the page, such as when text is entered into a form element or the mouse pointer is moved. In some cases, such as the page load and unload events, the browser itself will trigger the event.</p>
 
 
-<h4>jQuery Show () Method </h4>
-<p>
-jQuery show() method in jQuery display the selected html element. The show() method functions by calling .css( "display", "block") where display is a css property and block is the value to display element. This method doesn’t have animation.</p>
-<h4>Syntax</h4>
+<h2>jQuery bind() Event</h2>
+
+<p>jQuery .bind() event in jQuery attach a handler to an event for the elements.  
+</p>
+
+<h2>Syntax jQuery bind() Event Syntax</h2>
 <pre class="prettyprint jquery">
- .show()   
+ bind( eventType [, eventData ], handler )
 </pre>
- 
- <p>
-<b>Note:</b> In css, If the element has the !important property in inline css styles we need to override it by appending !important to the value of display attribute.<code> .css( "display", "block !important").</code>
 
-</p>
-<p>Consider the following example and which contains p tag 
-</p>
-<h4>Example</h4>
+<p>
+The jQuery .bind() method is responsible for attaching an event handler directly to elements. Basically, Handlers are attached to the currently selected elements in the jQuery object, so those elements must exist when call <code>.bind()</code>.</p>
+
+
+
+<h2>Example</h2>
+
 <pre class="prettyprint jquery">
-  $( "button" ).click(function() {
-  $( "p" ).show( "slow" );
+$("p").bind("click", function( event ) {
+  var str = "(" + event.pageX + ", " + event.pageY + ")";
+  $("span").text( "Single Click done " + str );
+});
+$("p").bind("dblclick", function() {
+  $("span").text( "Double Click done in " + this.nodeName );
+});
+$("p").bind( "mouseenter mouseleave", function( event ) {
+  $(this).toggleClass("over");
 });
 </pre>
 
+
+<p>The above jQuery bind() event example produces the following result</p>
+
+
 <b>Output</b>
-<br><img src="images/examples/show.png">
-
-<br><a href="examples/traversal/show.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-<br/>
-<div>
-    
-</div>
-<br>
-<b>Related Questions asked about other programmers</b>
-<br><br>
-<a href="#">How to animate jquery effects simultaneously</a><br>
-<br><a href="#">Multiple jQuery Effects with one .click</a><br>
-<br><a href="#"> How to implement jQuery slide left and show</a><br>
-<br><a href="#">jQuery Syntax Error</a><br> 
-<br>
+<br><img src="examples/images/bind.png">
+<br><a href="examples/bind.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
-<a href="#" class="btn btn-success btn-lg" align="left">Ask a Question about this Topic</a>
+<h2>jQuery .error() Event</h2>
+<p>jQuery 
+.error() event in jQuery used to bind an event handler to an “error” javascript event.
+</p>
+
+
+<h2>jQuery error() Event Syntax</h2>
+<pre class="prettyprint jquery">
+error(handler )
+
+</pre>
+
+<p>
+Basically .error() method will be called when an element is not loaded properly such as images. So the error event sent to html element which are loaded by the browser and referenced by document.
+</p>
+
+
+<p><b>Note:</b> The event handler must be attached before the browser fires the error event, which is why the example sets the src attribute after attaching the handler. Also, the error event may not be correctly fired when the page is served locally; error relies on HTTP status codes and will generally not be triggered if the URL uses the file: protocol.</p>
+<p>
+
+Here is an example to use jquery  error() method. In this example we will come to see error event will be raised when an unwanted image source url given to image
+
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+  $(document).ready(function(){
+  $("img").error(function(){
+      alert('error occured loading image');
+  });
+  $("button").click(function(){
+      $("img").error();
+  });
+});
+
+</pre>
+<br><a href="examples/error.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+<div class="alert alert-success fade in">
+  <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+  <i class="fa fa-check-circle fa-fw fa-lg"></i>
+  Thanks! Your submission will be reviewed shortly. Submit another?</div>
+
+
+
 
 
 <!-- CONTENT END HERE -->
@@ -165,29 +205,24 @@ jQuery show() method in jQuery display the selected html element. The show() met
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
 <a href="#"  class="glyphicon glyphicon-hand-right"></a>
 </div>
-<br>
-<div>
-  
-</div>
-<br>
 <div class="clearer"></div>
 </div>
-<div class="ads">
-<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
-
-<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
-
-</div>
+<div class="ads"><img src="images/ad2.png" /></div>
 </div><!-- middlecol -->
 <div id="rightcol">
 <div class="rightgooglead">
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-
-<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
-
-<!-- START OF GOOGLE CODE-->
- 
-<!-- END  OF GOOGLE CODE-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 </div>
 </div><!-- rightcol -->
 <div style="clear:both;"></div>

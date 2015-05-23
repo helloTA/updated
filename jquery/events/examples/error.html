@@ -1,0 +1,24 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("img").error(function(){
+        alert('error occured loading image');
+    });
+    $("button").click(function(){
+        $("img").error();
+    });
+});
+</script>
+</head>
+<body>
+
+<img src="img_pulpitrock.jpg" alt="Pulpit rock" width="300" height="300"><br>
+
+<button>Set image</button>
+
+</body>
+</html>

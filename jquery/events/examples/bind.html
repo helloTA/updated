@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>bind demo</title>
+  <style>
+  p {
+    background: cyan;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;font-size:30px;
+  }
+  p.over {
+     background: #ccc;
+  }
+  span {
+    color: blue;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p>Click/Double click me.</p>
+<span></span>
+ 
+<script>
+$( "p" ).bind( "click", function( event ) {
+  var str = "( " + event.pageX + ", " + event.pageY + " )";
+  $( "span" ).text( "Single Click done " + str );
+});
+$( "p" ).bind( "dblclick", function() {
+  $( "span" ).text( "Double Click done in " + this.nodeName );
+});
+$( "p" ).bind( "mouseenter mouseleave", function( event ) {
+  $( this ).toggleClass( "over" );
+});
+</script>
+ 
+</body>
+</html>
