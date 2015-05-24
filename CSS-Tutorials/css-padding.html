@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS Padding</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+<li class="heading">CSS Tutorials</li>
+<li><a target="_top"  href="introduction-to-css.html">Introduction to CSS</a></li>
+<li><a target="_top"  href="css-basic-syntax.html">CSS - Syntax</a>
+</li>
+<li><a target="_top"  href="css-inclusion.html">CSS - Inclusion</a></li>
+<li><a target="_top"  href="css-units.html">CSS - Units</a></li>
+<li><a target="_top"  href="css-backgrounds.html">CSS - Backgrounds</a>
+</li>
+<li><a target="_top"  href="css-selectors.html">CSS Selectors</a></li>
+<li><a target="_top"  href="css-fonts.html">CSS - Fonts</a>
+</li>
+<li><a target="_top"  href="css-texts.html">CSS - Text</a>
+</li>
+
+<li><a target="_top" href="css-boxmodel.html">CSS Box Model</a></li>
+
+
+<li><a target="_top"  href="css-links.html">CSS - Links</a></li>
+<li><a target="_top"  href="css-tables.html">CSS - Tables</a></li>
+<li><a target="_top"  href="css-tables.html">CSS - Borders</a></li>
+<li><a target="_top" href="css-margins.html">CSS - Margins</a></li>
+<li><a target="_top"  href="css-lists.html">CSS - Lists</a></li>
+<li><a target="_top"  href="css-padding.html">CSS - Padding</a>
+</li>
+<li><a target="_top"  href="css-cursors.html">CSS - Cursors</a></li>
+<li><a target="_top"  href="css-dimensions.html">CSS - Dimension</a></li>
+<li><a target="_top"  href="css-positioning.html">CSS - Positioning</a></li>
+<li><a target="_top"  href="css-layers.html">CSS - Layers</a></li>
+<li><a target="_top"  href="css-pseudo-classes.html">CSS - Pseudo Classes</a></li>
+<li><a target="_top" href="css-pseudo-elements.html">CSS - Pseudo Elements</a></li>
+<li><a target="_top"  href="css-effects.html">CSS - Text Effects</a></li>
+<li><a target="_top"  href="css-media-types.html">CSS - Media Types</a></li>
+<li><a target="_top" href="css-printing.html">CSS - Printing</a>
+</li>
+<li><a target="_top"  href="css-layouts.html">CSS - Layouts</a></li>
+<li><a target="_top"  href="css-validations.html">CSS - Validations</a></li>
+
+
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+
+
+<h1>CSS Padding</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+<h4>CSS Padding</h4>
+
+<div class="alert alert-info">
+The padding property in CSS defines the innermost portion of the box model, creating space around an element's content, inside of any defined margins and/or borders.
+</div>
+<p>
+Padding values are set using lengths or percentages, and cannot accept negative values. The initial, or default, value for all padding properties is 0.
+</p>
+
+<p>
+The top, right, bottom, and left padding can be changed independently using separate properties.</p>
+
+ A shorthand padding property can also be used, to change all paddings at once.
+
+
+<pre class="prettyprint css">
+.box {
+  padding: 0 1.5em 0 1.5em;
+}
+</pre>
+
+
+<p>
+The example above is using the padding shorthand property, which accepts up to four values, shown here:
+</p>
+
+<pre class="prettyprint css">
+.box {
+  padding: &llt;padding-top&gt; || &lt;padding-right&gt; || &lt;padding-bottom&gt; || &lt;padding-left&gt;
+}
+
+</pre>
+
+<p>If fewer than four values are set, the missing values are assumed based on the ones that are defined</p>
+
+
+<p>if only one value is defined, this sets all four padding properties to the same value:
+</p>
+<pre class="prettyprint css">
+
+.box {
+  padding: 70px;
+}
+</pre>
+<br>
+<b>Output</b>
+<img src="padding/examples/images/css-padding-four-sides.png" title="css padding" alt="css padding" width="750" height="400">
+<br>
+
+<br>
+<a href="padding/examples/css_padding_four_sides.html" target="_blank" class="btn btn-primary">Try It Now</a>
+
+<br>
+
+
+<p>If three values are declared, it is padding: <code>[top] [left-and-right] [bottom];.
+</code></p>
+
+<h2>Example</h2>
+<pre class="prettyprint css">
+  p {
+    background-color: yellow;
+}
+
+.box {
+    padding: 25px 50px 70px ;
+}
+</pre>
+<br>
+<b>Output</b>
+<img src="padding/examples/images/css-padding-three-sides.png" title="css padding" alt="css padding" width="750" height="400">
+<br>
+<br>
+<a href="padding/examples/css_padding_three_sides.html" target="_blank" class="btn btn-primary">Try It Now</a>
+
+
+<br>
+<p>
+Any of the individual padding properties can be declared using longhand, in which case you would define only one value per property. So the previous example could be rewritten as follows:
+</p>
+<pre class="prettyprint css">
+.box {
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 70px;
+}
+</pre>
+
+<b>Output</b>
+<img src="padding/examples/images/css-padding-all-sides.png" title="css padding" alt="css padding" width="550" height="300">
+<br>
+<br>
+<a href="padding/examples/css_padding_all_sides.html" target="_blank" class="btn btn-primary">Try It Now</a>
+
+
+<h2>Padding in more clearly</h2>
+
+<b>padding: 50px;</b>
+<p>all four paddings are 50px</p>
+
+
+<b>padding: 50px 100px;</b>
+
+<ul>
+  <li>top and bottom paddings are 50px</li>
+  <li>right and left paddings are 100px </li>
+</ul>
+
+<b>padding: 15px 30px 75px;</b>
+<ul>
+  <li>top padding is 15px</li>
+  <li>right and left paddings are 30px </li>
+  <li>  bottom padding is 75px</li>
+</ul>
+
+
+<b>padding: 25px 50px 75px 100px;</b>
+<ul>
+  <li>top padding is 25px </li>
+  <li>right padding is 50px</li>
+  <li> bottom padding is 75px</li>
+  <li>left padding is 100px</li>
+</ul>
+
+    
+    
+    
+
+    <h2>All CSS Padding Properties</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr class="success">
+      <td><a href="padding/referance/css_padding_property.html" target="_blank">padding</a> </td>
+      <td> A shorthand property for setting all the padding properties in one declaration</td>
+      <td><a href="padding/referance/examples/css_padding_property.html" target="_blank" class="btn btn-primary">Try It Now</a></td>
+    </tr>
+    <tr class="success">
+      <td><a href="padding/referance/css-padding-bottom-property.html" target="_blank">padding-bottom</a> </td>
+      <td> Used to set the padding for the bottom of an element</td>
+      <td><a href="padding/referance/examples/css-padding-bottom-property.html" target="_blank" class="btn btn-primary">Try It Now</a></td>
+    </tr>
+    <tr class="success">
+      <td><a href="padding/referance/css-padding-top-property.html" target="_blank">padding-bottom</a> </td>
+      <td> Used to set the padding for the top of an element</td>
+      <td><a href="padding/referance/examples/css-padding-top-property.html" target="_blank" class="btn btn-primary">Try It Now</a></td>
+    </tr>
+    <tr class="success">
+      <td><a href="padding/referance/css-padding-left-property.html" target="_blank">padding-left</a> </td>
+      <td> Used to set the padding for left side of an element</td>
+      <td><a href="padding/referance/examples/css-padding-left-property.html" target="_blank" class="btn btn-primary">Try It Now</a></td>
+    </tr>
+    <tr class="success">
+      <td><a href="padding/referance/css-padding-right-property.html" target="_blank">padding-right</a> </td>
+      <td> Used to set the padding for right side of an element</td>
+      <td><a href="padding/referance/examples/css-padding-right-property.html" target="_blank" class="btn btn-primary">Try It Now</a></td>
+    </tr>
+    </tbody>
+    </table>
+    
+    
+
+  
+    
+   
+    
+    
+
+
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer" style=" background:#92142a;">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
