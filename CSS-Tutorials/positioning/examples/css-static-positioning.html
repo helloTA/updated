@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Try It Now Editor</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+textarea, iframe {
+border: 2px solid #ddd;
+height: 500px;
+width: 100%;
+}
+.btn {
+  padding-top: 10px;
+  width: 300px;
+}
+
+
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td width="80%" scope="col">
+<!--img src="../../images/ads.png"  height= "60" width="600" -->
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg"  width="640" alt="" border="0" /></a>
+</td><hr>
+<td width="80%" scope="col">
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_37.gif"  width="640" alt="" border="0" /></a>
+
+
+
+<!--img src="../../images/ads.png"  height= "60" width="600" -->
+</td>
+</td>
+</tr>
+<tr>
+<td width="50%" scope="col"></td>
+<td width="50%" align="left" scope="col"> <br>
+<input onclick="runCode();" type="button" value="Run Code" class="btn btn-danger" style="float: right;">
+</td>
+</tr>
+<tr>
+<td>
+<form>
+<strong>Code</strong>
+<i> [ You can edit the example code and play with it! ]</i>
+<textarea name="sourceCode" id="sourceCode">
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div {
+    position: static;;
+    bottom: 5px;
+    left:5px;
+}
+div {
+    background-color: blue;;
+    width: 70px;
+    padding: 50px;
+    border: 25px ;
+    margin: 25px;
+    
+}
+</style>
+</head>
+<body>
+
+
+<div></div>
+<h2> CSS position :static; </h2> 
+
+</body>
+</html>
+
+
+
+
+</textarea>
+</form>
+</td>
+<td><strong>Output</strong><iframe name="targetCode" id="targetCode"></iframe></td>
+</tr>
+</table>
+<script type="text/javascript">
+function runCode()
+{
+var content = document.getElementById('sourceCode').value;
+var iframe = document.getElementById('targetCode');
+iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+iframe.document.open();
+iframe.document.write(content);
+iframe.document.close();
+return false;
+}
+runCode();
+</script>
+</body>
+</html>
