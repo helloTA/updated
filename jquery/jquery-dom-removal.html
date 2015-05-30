@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery DOM Insertion Around
+<title>jQuery DOM Removal
 </title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
@@ -63,7 +63,7 @@
 <div class="wrapper">
 <div id="leftcol">
 <div class="mini-logo">
-<img src="images/php-logo.png" width="100%"/>
+<img src="dom/images/logo.png" width="100%"/>
 </div>
 <ul class="menu">
 
@@ -97,7 +97,7 @@ Introduction to jQuery</a></i>
 <div class="content">
   
 
-<h1>jQuery DOM Insertion Around</h1>
+<h1>jQuery DOM Removal</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -110,256 +110,151 @@ Introduction to jQuery</a></i>
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<br><h2>jQuery wrap() Method</h2>
-<div class="alert alert-success">
-jQuery wrap() method in jQuery wraps an HTML structure around each element in the group of matched element in DOM tree.
-</div>
+<h2>jQuery .detach() Method</h2>
 
-<br><b>Syntax for jQuery wrap() Method</b>
+<p>jQuery 
+.detach() method in jQuery removes selected elements from the DOM tree.
+</p>
+
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
-  .wrap(wrappingElement)
+ .detach()
+
 </pre>
+
 <p>
-The jQuery  wrap() method takes a parameter as  any type of string or object. HTML structure will be wrapped around each of the elements in DOM tree matched elements.</p>
-<p>
+The jquery .detach() method is the same as jquery <code> .remove()</code> but the only difference is detached method keeps the data of removed elements. If you want to reinsert removed element to DOM, it can be possible by .detach() method.</p>
 
-<p>Consider the below HTML code</p>
-
-<pre class="prettyprint jquery">
-&lt;p&gt;Here is the jQuery&lt;/p&gt;
-&lt;p&gt;wrap demo&lt;/p&gt;
-&lt;p&gt;Learn it&lt;/p&gt;
-</pre>
-
-<p>By using the jquery <code>.wrap() </code>method we wrap some html content around it like below</p>
-<pre class="prettyprint jquery">
-  $( "p" ).wrap( "&lt;div&gt;&lt;/div&gt;" );
-</pre>
-
-
-<p>Here is a complete example to use jQuery wrap() method</p>
-
-<h2>Example</h2>
-<pre class="prettyprint jquery">
-&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;wrap demo here&lt;/title&gt;
-  &lt;style&gt;
-  div {
-    border: 5px solid red;
-  }
-  p {
-    background: green;
-    margin: 10px; color:white
-  }
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- 
-&lt;p&gt;Here is the jQuery&lt;/p&gt;
-&lt;p&gt;wrap demo&lt;/p&gt;
-&lt;p&gt;Learn it&lt;/p&gt;
- 
-&lt;script&gt;
-$( "p" ).wrap( "&lt;div&gt;&lt;/div&gt;" );
-&lt;/script&gt;
- 
-&lt;/body&gt;
-&lt;/html&gt;
-
-</pre> 
-<p>The above example will produce the following output</p>
-<br><img  alt="jQuery wrap() method" class="figure" style="height:359px; width:663px" title="jQuery wrap() method"
-src="jquery/dom/images/wrap.png" >
-
-<br><a href="dom/examples/wrap.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-<h2>jQuery unwrap() Method</h2>
-
-<div class="alert alert-success">
-
-The jQuery unwrap() method removes the element's parent. This is effectively the inverse of the jQuery <code>wrap()</code> method. The matched elements (and their siblings, if any) replace their parents within the DOM structure.
-</div>
-
-<br><b>Syntax for jQuery unwrap() method</b>
-<pre class="prettyprint jquery">
- .unwrap()
-</pre>
+<p>Here is an example to use .text() method 
+</p>
 
 
 <h2>Example</h2>
 <pre class="prettyprint jquery">
-&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;unwrap demo&lt;/title&gt;
-  &lt;style&gt;
-  div {
-    border: 8px solid red;
-  }
-  p {
-    background: cyan;
-    margin: 10px;
-  }
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;button&gt;wrap me/unwrap me&lt;/button&gt;
-&lt;p&gt;Hello&lt;/p&gt;
-&lt;p&gt;cruel&lt;/p&gt;
-&lt;p&gt;World&lt;/p&gt;
-&lt;script&gt;
-var pTags = $( "p" );
+$( "p" ).click(function() {
+  $( this ).toggleClass( "off" );
+});
+var p;
 $( "button" ).click(function() {
-  if ( pTags.parent().is( "div" ) ) {
-    pTags.unwrap();
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
   } else {
-    pTags.wrap( "&lt;div&gt;&lt;/div&gt;" );
+    p = $( "p" ).detach();
   }
 });
-&lt;/script&gt;
- 
-&lt;/body&gt;
-&lt;/html&gt;
 
 </pre>
 <p>The above example will produce the following output</p>
-<br><img  alt="jQuery unwrap() method" class="figure" style="height:359px; width:663px" title="jQuery unwrap() method"
-src="dom/images/unwrap.png" >
+<br><img  alt="jQuery detach() method" class="figure" style="height:200px; width:363px" title="jQuery text() method"
+src="dom/images/detach.png" >
 
-<br><a href="dom/examples/unwrap.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-<br><h2>jQuery wrapAll() Method</h2>
+<br><a href="dom/examples/detach.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
-<div class="alert alert-success">
-jQuery wrap() method in jQuery wraps an HTML structure around all elements in the group of matched element in DOM tree.
-</div>
+<h2>jQuery .empty() Method</h2>
 
+<p>
 
-<br><b>Syntax for jQuery wrapaAll() Method</b>
+jQuery .empty() method in jQuery removes all child nodes of matched elements from the DOM tree.</p>
+
+<p>empty() method removes childelements and as well as text specific content in the matched element.</p>
+
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
-  .wrapAll(wrappingElement)
+    .empty()
 </pre>
 
-<p>
-The jQuery wrapAll() method takes a parameter as  any type of string or object. HTML structure will be wrapped around of all elements in DOM tree matched elements.</p>
-<p>
-Below is the example program on how to use .wrapAll() method in jQuery</p>
+<p>Here is an example to use .empty() method </p>
 
 <h2>Example</h2>
 <pre class="prettyprint jquery">
-&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;wrapAll demo here&lt;/title&gt;
-  &lt;style&gt;
-  div {
-    border: 5px solid red;
-  }
-  p {
-    background: green;
-    margin: 10px; color:white
-  }
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- 
-&lt;p&gt;Here is the jQuery&lt;/p&gt;
-&lt;p&gt;wrapAll demo&lt;/p&gt;
-&lt;p&gt;Learn it&lt;/p&gt;
- 
-&lt;script&gt;
-$( "p" ).wrapAll( "&lt;div&gt;&lt;/div&gt;" );
-&lt;/script&gt;
- 
-&lt;/body&gt;
-&lt;/html&gt;
-
-</pre> 
-
+$( "button" ).click(function() {
+  $( "p" ).empty();
+});    
+</pre>
 <p>The above example will produce the following output</p>
-<br><img  alt="jQuery wrapAll() method" class="figure" style="height:359px; width:663px" title="jQuery wrapAll() method"
-src="dom/images/wrapAll.png" >
+<br><img  alt="jQuery empty() method" class="figure" style="height:200px; width:463px" title="jQuery empty() method"
+src="dom/images/empty.png" >
 
-<br><a href="dom/examples/wrapall.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="dom/examples/empty.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
-<br><h2>jQuery wrapInner() Method</h2>
 
-<div class="alert alert-success">
-jQuery wrapInner() method in jQuery wraps an HTML structure around the content of each element in the group of matched element in DOM tree.
-</div>
+<h2>jQuery .remove() Method</h2>
 
-<br><b>Syntax for jQuery wrapInner() Method</b>
+<p>jQuery 
+.remove() method in jQuery remove matched elements from the DOM tree.
+</p>
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
- .wrapInner(wrappingElement)
+  .remove()
 </pre>
-
-
-<p>Consider the following HTML:</p>
-<pre class="prettyprint jquery">
-&lt;div class="container"&gt;
-  &lt;div class="inner"&gt;Tutorials&lt;/div&gt;
-  &lt;div class="inner"&gt;Academy&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
 <p>
-Using <code>.wrapInner()</code>, we can insert an HTML structure around the content of each inner &lt;div&gt; elements like so:
-
-<pre class="prettyprint jquery">
-$( ".inner" ).wrapInner( "&lt;div class='new'&lt;/div&gt;");
-
-</pre>
-<p>See the below example for more understanding</p>
+jQuery remove() method also similar behaviour of .empty(). Here the difference is .remove() method additionally removes all bound events and jQuery data associated with elements.</p>
 
 <h2>Example</h2>
 <pre class="prettyprint jquery">
-&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;wrapInner demo&lt;/title&gt;
-  &lt;style&gt;
-  p {
-    background: #bbf;
-  }
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- 
-&lt;p&gt;Welcome to&lt;/p&gt;
-&lt;p&gt;Tutorials Academy&lt;/p&gt;
-
- 
-&lt;script&gt;
-$( "p" ).wrapInner( "&lt;b&gt;&lt;/b&gt;" );
-&lt;/script&gt;
- 
-&lt;/body&gt;
-&lt;/html&gt;
-
+  $( "button" ).click(function() {
+  $( "p" ).remove();
+});
 
 </pre>
 
-<p>The above example will produce the following output</p>
-<br><img  alt="jQuery wrapInner() method" class="figure" style="height:359px; width:663px" title="jQuery wrapInner() method"
-src="dom/images/wrapinner.png" >
 
-<br><a href="dom/examples/wrapinner.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="dom/examples/remove.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
+<h2>jQuery .replaceWith() Method</h2>
+
+<p>jQuery 
+
+.replaceWith() method in jQuery replace each element with new content from matched elements in the DOM tree and finally returns the elements which was removed.
+</p>
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+  .replaceWith()
+</pre>
+
+<p>The jquery .replaceWith() method removes content from the DOM and inserts new content in its place with a single call.
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+$( "button" ).click(function() {
+  $( this ).replaceWith( "&lt;div&gt;" + $( this ).text() + "&lt;/div&gt;" );
+});
+
+</pre>
+
+<b>Output</b>
+<br><a href="dom/examples/replaceWith.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+<h2>jQuery .replaceAll() Method</h2>
+
+<p>jQuery 
+.replaceAll() method in jQuery replaces each target element from matched elements in the DOM tree.</p>
+
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+  .replaceAll()
+</pre>
+
+<p>
+The jquery .replaceAll() method is similar to .replaceWith(), but with the source and target reversed.
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+    $( "&lt;b&gt;textReplaced   &lt;/b&gt;" ).replaceAll( "p" );
+    // each and every paragraph will be replaced with the textReplaced content.
+
+</pre>
+<b>Output</b>
+<br><a href="dom/examples/replaceAll.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 <!-- CONTENT END HERE -->

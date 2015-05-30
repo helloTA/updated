@@ -2,14 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery .class Selector</title>
+<title>jQuery Show Method</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!-- EXAMPELE CODE  -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -32,6 +31,27 @@
             }).eq(0).mouseover();
         });
     </script>
+
+    <style>
+   .Qbox {
+    background-color: lightgrey;
+    width: 625px;
+    height: 50px
+    padding: 45px;
+    border-top: 7px  solid #07c;
+    border-bottom: 3px  solid #07c;
+    border-left: 3px  solid #07c;
+    border-right: 3px  solid #07c;
+   background-color: #FFFFFF; 
+    margin: 0px;
+    line-height: 33px;
+    
+}
+a {
+color: #07c;
+font-size: 20px;
+}
+</style>
 </head>
 
 <body>
@@ -65,23 +85,68 @@
 <img src="images/php-logo.png" width="100%"/>
 </div>
 <ul class="menu">
-
-
 <li class="heading">jQuery Tutorials</li>
-<li><a target="_top" href="jquery-introduction.html" >
-Introduction to jQuery</a></i>
-</li>
+<li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
 <li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
 <li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
-<li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
-<li><a target="_top" href="jquery-selectors.html">jQuery Selectors </a></li>
-<li><a target="_top" href="jquery-effects.html">jQuery Effects </a></li>
-<li><a target="_top" href="jquery-events.html">jQuery Events </a></li>
-<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
-<li><a target="_top" href="jquery-with-css.html">jQuery and CSS </a></li>
-<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
-<li><a target="_top" href="jquery-and-ajax.html">jQuery AJAX </a></li>
+</ul>                                                                                                                   
+<ul class="menu">
+<li class="heading">jQuery Selectors </li>
+<li><a target="_top" href="jquery-selectors.html">jQuery Selectors</a></li>
+<li><a target="_top" href="jquery-basic-selectors.html">jQuery Basic Selectors</a></li>
+<li><a target="_top" href="jquery-child-selectors.html">jQuery Child Selectors</a></li>
+<li><a target="_top" href="jquery-jquery-content-filter-selectors.html">jQuery Content Filter Selectors</a></li>
 </ul>
+
+<ul class="menu">
+<li class="heading">jQuery Effects</li>
+<li><a target="_top" href="jquery-effects.html">jQuery Effects</a></li>
+<li><a target="_top" href="jquery-basic-effects.html">jQuery Basic Effects</a></li>
+<li><a target="_top" href="jquery-fading-effects.html">jQuery Fading Effects</a></li>
+<li><a target="_top" href="jquery-jquery-sliding-effects.html">jQuery Sliding Effects</a></li>
+<li><a target="_top" href="jquery-jquery-custom-effects.html">jQuery Custom Effects</a></li>
+</ul>
+
+
+<ul class="menu">
+<li class="heading">jQuery Traversal</li>
+<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
+<li><a target="_top" href="jquery-traversal-filters.html">jQuery Traversal Filters</a></li>
+<li><a target="_top" href="jquery-traversal-methods.html">jQuery Traversal Methods</a></li>
+</ul>
+
+
+<ul class="menu">
+<li class="heading">jQuery and DOM </li>
+<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
+<li><a target="_top" href="jquery-dom-removal.html">jQuery DOM removal</a></li>
+<li><a target="_top" href="jquery-dom-insertion-inside.html">jQuery DOM insertion inside</a></li>
+<li><a target="_top" href="jquery-dom-insertion-outside.html">jQuery DOM insertion insertion outside</a></li>
+<li><a target="_top" href="jquery-dom-insertion-around.html">jQuery DOM insertion around</a></li>
+
+</ul>
+<ul class="menu">
+<li class="heading">jQuery Events
+</li>
+<li><a target="_top" href="jquery-events.html">jQuery Events</a></li>
+<li><a target="_top" href="jquery-document-events.html">jQuery Document Events</a></li>
+<li><a target="_top" href="jquery-browser-events.html">jQuery Browser Events</a></li>
+<li><a target="_top" href="jquery-keyboard-events.html">jQuery Keyboard Events</a></li>
+<li><a target="_top" href="jquery-form-events.html">jQuery Form Events</a></li>
+<li><a target="_top" href="jquery-mouse-events.html">jQuery Mouse Events</a></li>
+<li><a target="_top" href="jquery-event-handler.html">jQuery Event Handler</a></li>
+</ul>
+
+<ul class="menu">
+<li class="heading">jQuery with CSS
+</li>
+<li><a target="_top" href="jquery-with-css.html">jQuery with CSS</a></li>
+<li><a target="_top" href="jquery-global-ajax.html">jQuery Gloabl Ajax</a></li>
+<li><a target="_top" href="jquery-ajax-functions.html">jQuery Ajax functions</a></li>
+<li><a target="_top" href="jquery-shorthand-methods.html">jQuery Shorthand Methods</a></li>
+<li><a target="_top" href="jquery-attributes.html">jQuery Attributes</a></li>
+</ul>
+<br>
 <ul class="menu">
 <li class="heading">What to Learn Next</li>
 </ul>
@@ -90,13 +155,17 @@ Introduction to jQuery</a></i>
 <div class="middle_right">
 <div class="ads">
 <a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+
+
+
+
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
 <div class="content">
   
 
-<h1>jQuery .class Selector</h1>
+<h1>jQuery Show Method</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -108,34 +177,53 @@ Introduction to jQuery</a></i>
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>jQuery .class Selector</h3>
-<p>jQuery class selector finds elements with a specific class.</p>
 
-<div class="alert alet-info">
- Selects all elements with the given class. 
+
+<h4>jQuery Show () Method </h4>
+<p>
+jQuery show() method in jQuery display the selected html element. The show() method functions by calling .css( "display", "block") where display is a css property and block is the value to display element. This method doesn’t have animation.</p>
+<h4>Syntax</h4>
+<pre class="prettyprint jquery">
+ .show()   
+</pre>
+ 
+ <p>
+<b>Note:</b> In css, If the element has the !important property in inline css styles we need to override it by appending !important to the value of display attribute.<code> .css( "display", "block !important").</code>
+
+</p>
+<p>Consider the following example and which contains p tag 
+</p>
+<h4>Example</h4>
+<pre class="prettyprint jquery">
+  $( "button" ).click(function() {
+  $( "p" ).show( "slow" );
+});
+</pre>
+
+<b>Output</b>
+<br><img src="images/examples/show.png">
+
+<br><a href="examples/traversal/show.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+<br/>
+<div>
+    
 </div>
 
-<h2>Syntax</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(".test")
-</code></pre>
 
-
-
-<h2>Example</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $( ".class-one" ).css( "border", "3px solid green" );
-    $(".class-two").css("border", "5px solid blue");
-    $(".class-three").css("border", "5px solid red");
-});
-</code></pre>
-
-<p>If you run the above jQuery class example code,  it will apply the green color for class-one and blue color to class-two and finally, red color to class-three. Run the below live example and see it in live.:</p>
-<b>Output</b>
-<br><img src="images/examples/class-selector.png">
 <br>
-<a href="examples/class-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<h1>Few Questions Asked about This Topic by Other Programmers</h1>
+<b>Go ahead and advance your skills in this topic</b>
+<div class="Qbox">
+<a href="#"> Q) How to animate jquery effects simultaneously ?</a><br>
+<br><a href="#"> Q) Multiple jQuery Effects with one .click ?</a><br>
+<br><a href="#"> Q)  How to implement jQuery slide left and show ?</a><br>
+<br><a href="#"> Q) jQuery Syntax Error ?</a><br> 
+</div>
+<br>
+
+<p>Do you have a question to ask about this topic?. Please Go ahead and ask!. Our interactive Question and Answer (Q/A) forum is built with a mission to solve your coding problems and make your expert in every programming concept you learn</p>
+<a href="#" class="btn btn-primary btn-lg" align="left">Ask a Question about this Topic</a>
 
 
 <!-- CONTENT END HERE -->
@@ -161,7 +249,6 @@ Introduction to jQuery</a></i>
 
 <a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
 
-
 </div>
 </div><!-- middlecol -->
 <div id="rightcol">
@@ -178,7 +265,7 @@ Introduction to jQuery</a></i>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div id="footer" style=" background:#3b5998">
+<div id="footer">
     <div class="main ">
         <div class="footer_middle">
                 <ul>

@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery .class Selector</title>
+<title>jQuery DOM Insertion Outside
+</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -35,7 +36,7 @@
 </head>
 
 <body>
-<div class="menulist">
+<div class="menulist" style=" background: none repeat scroll 0 0 #3b5998">
 <div class="all_width">
 <div class="fleft logo"><a href="#">Tutorials Academy </a></div>
 <div class="fleft">
@@ -62,7 +63,7 @@
 <div class="wrapper">
 <div id="leftcol">
 <div class="mini-logo">
-<img src="images/php-logo.png" width="100%"/>
+<img src="dom/images/logo.png" width="100%"/>
 </div>
 <ul class="menu">
 
@@ -96,7 +97,7 @@ Introduction to jQuery</a></i>
 <div class="content">
   
 
-<h1>jQuery .class Selector</h1>
+<h1>jQuery DOM Insertion Outside</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -108,35 +109,43 @@ Introduction to jQuery</a></i>
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>jQuery .class Selector</h3>
-<p>jQuery class selector finds elements with a specific class.</p>
 
-<div class="alert alet-info">
- Selects all elements with the given class. 
-</div>
+<h2>jQuery text() Method</h2>
+
+
+<p>
+
+Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
+</p>
 
 <h2>Syntax</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(".test")
-</code></pre>
+<pre class="prettyprint jquery">
+ .text()
+</pre>
+<p>
+Apart from the <cpde>.html()</cpde> method, <code>.text()</code> can be used in both XML and HTML documents. The result of the .text() method is a string containing the combined text of all matched elements.
+
+</p>
 
 
+<p>Here is an example to use .text() method 
+</p>
 
 <h2>Example</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $( ".class-one" ).css( "border", "3px solid green" );
-    $(".class-two").css("border", "5px solid blue");
-    $(".class-three").css("border", "5px solid red");
+
+<pre class="prettyprint jquery">
+  $( "p" ).click(function() {
+  var htmlString = $( this ).html();
+  $( this ).text( htmlString );
 });
-</code></pre>
 
-<p>If you run the above jQuery class example code,  it will apply the green color for class-one and blue color to class-two and finally, red color to class-three. Run the below live example and see it in live.:</p>
-<b>Output</b>
-<br><img src="images/examples/class-selector.png">
-<br>
-<a href="examples/class-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+</pre>
 
+<p>The above example will produce the following output</p>
+<br><img  alt="jQuery text() method" class="figure" style="height:259px; width:563px" title="jQuery text() method"
+src="dom/images/text.png" >
+
+<br><a href="dom/examples/text.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 <!-- CONTENT END HERE -->
 </div>

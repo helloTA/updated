@@ -2,14 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery .class Selector</title>
+<title> jQuery Events</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!-- EXAMPELE CODE  -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -35,7 +34,7 @@
 </head>
 
 <body>
-<div class="menulist">
+<div class="menulist" style=" background: none repeat scroll 0 0 #92142a;">
 <div class="all_width">
 <div class="fleft logo"><a href="#">Tutorials Academy </a></div>
 <div class="fleft">
@@ -68,9 +67,7 @@
 
 
 <li class="heading">jQuery Tutorials</li>
-<li><a target="_top" href="jquery-introduction.html" >
-Introduction to jQuery</a></i>
-</li>
+<li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
 <li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
 <li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
 <li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
@@ -86,17 +83,15 @@ Introduction to jQuery</a></i>
 <li class="heading">What to Learn Next</li>
 </ul>
 </div><!-- leftcol -->
-<br >
 <div class="middle_right">
-<div class="ads">
-<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+<div class="ads"><img src="images/ad1.png" /></div>
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
 <div class="content">
   
 
-<h1>jQuery .class Selector</h1>
+<h1>jQuery Events</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -108,34 +103,95 @@ Introduction to jQuery</a></i>
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>jQuery .class Selector</h3>
-<p>jQuery class selector finds elements with a specific class.</p>
+<h3>jQuery Events</h3>
 
-<div class="alert alet-info">
- Selects all elements with the given class. 
-</div>
+<p>jQuery makes it straightforward to set up event-driven responses on page elements. These events are often triggered by the end user's interaction with the page, such as when text is entered into a form element or the mouse pointer is moved. In some cases, such as the page load and unload events, the browser itself will trigger the event.</p>
 
-<h2>Syntax</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(".test")
-</code></pre>
+
+<h2>jQuery bind() Event</h2>
+
+<p>jQuery .bind() event in jQuery attach a handler to an event for the elements.  
+</p>
+
+<h2>Syntax jQuery bind() Event Syntax</h2>
+<pre class="prettyprint jquery">
+ bind( eventType [, eventData ], handler )
+</pre>
+
+<p>
+The jQuery .bind() method is responsible for attaching an event handler directly to elements. Basically, Handlers are attached to the currently selected elements in the jQuery object, so those elements must exist when call <code>.bind()</code>.</p>
 
 
 
 <h2>Example</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(document).ready(function(){
-    $( ".class-one" ).css( "border", "3px solid green" );
-    $(".class-two").css("border", "5px solid blue");
-    $(".class-three").css("border", "5px solid red");
-});
-</code></pre>
 
-<p>If you run the above jQuery class example code,  it will apply the green color for class-one and blue color to class-two and finally, red color to class-three. Run the below live example and see it in live.:</p>
+<pre class="prettyprint jquery">
+$("p").bind("click", function( event ) {
+  var str = "(" + event.pageX + ", " + event.pageY + ")";
+  $("span").text( "Single Click done " + str );
+});
+$("p").bind("dblclick", function() {
+  $("span").text( "Double Click done in " + this.nodeName );
+});
+$("p").bind( "mouseenter mouseleave", function( event ) {
+  $(this).toggleClass("over");
+});
+</pre>
+
+
+<p>The above jQuery bind() event example produces the following result</p>
+
+
 <b>Output</b>
-<br><img src="images/examples/class-selector.png">
-<br>
-<a href="examples/class-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img src="examples/images/bind.png">
+<br><a href="examples/bind.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h2>jQuery .error() Event</h2>
+<p>jQuery 
+.error() event in jQuery used to bind an event handler to an “error” javascript event.
+</p>
+
+
+<h2>jQuery error() Event Syntax</h2>
+<pre class="prettyprint jquery">
+error(handler )
+
+</pre>
+
+<p>
+Basically .error() method will be called when an element is not loaded properly such as images. So the error event sent to html element which are loaded by the browser and referenced by document.
+</p>
+
+
+<p><b>Note:</b> The event handler must be attached before the browser fires the error event, which is why the example sets the src attribute after attaching the handler. Also, the error event may not be correctly fired when the page is served locally; error relies on HTTP status codes and will generally not be triggered if the URL uses the file: protocol.</p>
+<p>
+
+Here is an example to use jquery  error() method. In this example we will come to see error event will be raised when an unwanted image source url given to image
+
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+  $(document).ready(function(){
+  $("img").error(function(){
+      alert('error occured loading image');
+  });
+  $("button").click(function(){
+      $("img").error();
+  });
+});
+
+</pre>
+<br><a href="examples/error.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+<div class="alert alert-success fade in">
+  <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+  <i class="fa fa-check-circle fa-fw fa-lg"></i>
+  Thanks! Your submission will be reviewed shortly. Submit another?</div>
+
+
+
 
 
 <!-- CONTENT END HERE -->
@@ -149,36 +205,30 @@ Introduction to jQuery</a></i>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
 <a href="#"  class="glyphicon glyphicon-hand-right"></a>
 </div>
-<br>
-<div>
-  
-</div>
-<br>
 <div class="clearer"></div>
 </div>
-<div class="ads">
-<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
-
-<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
-
-
-</div>
+<div class="ads"><img src="images/ad2.png" /></div>
 </div><!-- middlecol -->
 <div id="rightcol">
 <div class="rightgooglead">
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-
-<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
-
-<!-- START OF GOOGLE CODE-->
- 
-<!-- END  OF GOOGLE CODE-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 </div>
 </div><!-- rightcol -->
 <div style="clear:both;"></div>
 </div>
 </div>
-<div id="footer" style=" background:#3b5998">
+<div id="footer" style=" background:#92142a;">
     <div class="main ">
         <div class="footer_middle">
                 <ul>

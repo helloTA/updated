@@ -361,6 +361,14 @@ background-color: #3B5998;
     font-size: 21px;
 }
 
+#footer {
+    background: #3b5998 ;
+}
+
+.menulist {
+    background: none repeat scroll 0 0 #3b5998;
+}
+
 
 
 /*inner page*/

@@ -363,6 +363,14 @@ background-color: #3B5998;
 
 
 
+#footer {
+    background: #3b5998 ;
+}
+
+.menulist {
+    background: none repeat scroll 0 0 #3b5998;
+}
+
 /*inner page*/
 
 .wrapper {
