@@ -53,30 +53,45 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
-s
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <title>scroll demo</title>
+  <style>
+  div {
+    color: red;
+  }
+  p {
+    color: black;
+height:100px;
+  }
+  span {
+    color: blue;
+    display: none;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body >
+ 
+<div>Try scrolling the iframe.</div>
+<div >
+<p>See the scroll Demo- <span>Scroll is going on</span></p>
+ </div>
 <script>
-$(document).ready(function(){
-    $("img").error(function(){
-        alert('error occured loading image');
-    });
-    $("button").click(function(){
-        $("img").error();
-    });
+$( "p" ).clone().appendTo( document.body );
+$( "p" ).clone().appendTo( document.body );
+$( "p" ).clone().appendTo( document.body );
+$( window ).scroll(function() {
+  $( "span" ).css( "display", "inline" ).fadeOut(5000);
 });
 </script>
-</head>
-<body>
-
-<img src="img_pulpitrock.jpg" alt="Pulpit rock" width="300" height="300"><br>
-
-<button>Set image</button>
-
+ 
 </body>
 </html>
+
+
 
 </textarea>
 </form>

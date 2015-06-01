@@ -53,27 +53,26 @@ width: 100%;
 <strong>Code</strong>
 <i> [ You can edit the example code and play with it! ]</i>
 <textarea name="sourceCode" id="sourceCode">
-s
 <!DOCTYPE html>
 <html>
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("img").error(function(){
-        alert('error occured loading image');
+ <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+   $( window ).resize(function() {
+   $( "body" ).prepend( "<div> window size : " + $( window ).width() + "</div>" );
     });
-    $("button").click(function(){
-        $("img").error();
-    });
-});
-</script>
+   });
+ </script>
+ <style>
+ div {
+  color:blue;font-size:23px;
+  }
+</style>
 </head>
-<body>
+<body style='color:red;font-size:23px;'>
 
-<img src="img_pulpitrock.jpg" alt="Pulpit rock" width="300" height="300"><br>
-
-<button>Set image</button>
+Here is the demo of resize() demo. 
 
 </body>
 </html>

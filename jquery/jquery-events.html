@@ -103,17 +103,17 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>jQuery Events</h3>
+<h2>jQuery Events</h2>
 
 <p>jQuery makes it straightforward to set up event-driven responses on page elements. These events are often triggered by the end user's interaction with the page, such as when text is entered into a form element or the mouse pointer is moved. In some cases, such as the page load and unload events, the browser itself will trigger the event.</p>
 
 
-<h2>jQuery bind() Event</h2>
+<h1>jQuery bind() Event</h1>
 
 <p>jQuery .bind() event in jQuery attach a handler to an event for the elements.  
 </p>
 
-<h2>Syntax jQuery bind() Event Syntax</h2>
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
  bind( eventType [, eventData ], handler )
 </pre>
@@ -143,17 +143,17 @@ $("p").bind( "mouseenter mouseleave", function( event ) {
 
 
 <b>Output</b>
-<br><img src="examples/images/bind.png">
-<br><a href="examples/bind.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img src="events/examples/images/bind.png">
+<br><a href="events/examples/bind.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
-<h2>jQuery .error() Event</h2>
+<h1>jQuery error() Event</h1>
 <p>jQuery 
-.error() event in jQuery used to bind an event handler to an “error” javascript event.
+error() event is used to bind an event handler to an “error” in javascript event.
 </p>
 
 
-<h2>jQuery error() Event Syntax</h2>
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
 error(handler )
 
@@ -183,12 +183,67 @@ Here is an example to use jquery  error() method. In this example we will come t
 });
 
 </pre>
-<br><a href="examples/error.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="events/examples/error.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<div class="alert alert-success fade in">
-  <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-  <i class="fa fa-check-circle fa-fw fa-lg"></i>
-  Thanks! Your submission will be reviewed shortly. Submit another?</div>
+<h1>jQuery resize() Event</h1>
+
+<p>
+Basically jQuery <code>resize() </code>method will be called when a browser window size is changed such as images. So the error event sent to HTML element which are loaded by the browser and referenced by the document.
+</p>
+
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+    resize(handler )
+</pre>
+<p>
+Note: The event will be continuously sent to an element as long as the window resizing is in progress. jQuery <code>resize()</code> method doesn’t depend on how many times this handler is being called.</p>
+
+
+<p>Here is an example to use jQuery <code>resize()</code> method. In this example, we will come to see the resizing value printed when browser window resized.
+</p>
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+$(document).ready(function(){
+ $( window ).resize(function() {
+  $( "body" ).prepend( "<div> window size : " + $( window ).width() + "</div>" );
+  });
+});
+</pre>
+
+<a href="events/examples/resize.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+<h1>jQuery scroll() Event</h1>
+
+<p>jQuery <code>scroll()</code> event is used to bind an event handler to a “scroll” javascript event or to trigger that event on an element.</p>
+
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+ scroll(handler )
+</pre>
+
+<p>
+The jQuery <code> scroll()</code> method will be called when scroll position is being changed. The jQuery <code>scroll()</code> event also raised when click up on the mouse, drag up on scrollbar, dragging inside the element, pressing the arrow keys or mouse scroll wheel.
+</p>
+<p>
+Here is an example to use the jquery<code>scroll()</code> method. In this example, we will come to see the fading effect which indicates that when a scroll position is being changed.
+</p>
+
+<h1>Example</h1>
+<pre class="prettyprint jquery">
+$( "p" ).clone().appendTo( document.body );
+$( "p" ).clone().appendTo( document.body );
+$( "p" ).clone().appendTo( document.body );
+$( window ).scroll(function() {
+  $( "span" ).css( "display", "inline" ).fadeOut(5000);
+});
+</pre>
+<b>Output</b>
+<br><img src="events/examples/images/scroll.png"><br>
+<br><a href="events/examples/scroll.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
 
 
 
