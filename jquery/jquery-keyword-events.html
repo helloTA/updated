@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Keyword Events</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/desert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/hint.min.css"></link>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- EXAMPELE CODE  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--prettyprint -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- EXAMPELE CODE  -->
+<script type="text/javascript">
+        $(function() {
+            var $items = $('#vtab>ul>li');
+            $items.mouseover(function() {
+                $items.removeClass('selected');
+                $(this).addClass('selected');
+
+                var index = $items.index($(this));
+                $('#vtab>div').hide().eq(index).show();
+            }).eq(0).mouseover();
+        });
+    </script>
+</head>
+
+<body>
+<div class="menulist" >
+<div class="all_width">
+<div class="fleft logo"><a href="#">Tutorials Academy </a></div>
+<div class="fleft">
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">C</a></li>
+<li><a href="#">C#</a></li>
+<li><a href="#">Java</a></li>
+<li><a href="#">Python</a></li>
+<li><a href="#">PHP</a></li>
+<li><a href="#">Ruby</a></li>
+<li><a href="#">HTML</a></li>
+<li><a href="#">CSS</a></li>
+<li><a href="#">Javascript</a></li>
+<li><a href="#">jQuery</a></li>
+<li><a href="#">SQL</li>
+<li><a href="#">MySQL</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="wrapper">
+<div id="leftcol">
+<div class="mini-logo">
+<img src="images/php-logo.png" width="100%"/>
+</div>
+<ul class="menu">
+
+
+<li class="heading">jQuery Tutorials</li>
+<li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
+<li><a target="_top" href="jquery-overview.html">jQuery Overview</a> </li>
+<li><a target="_top" href="jquery-installation.html">jQuery Installation</a> </li>
+<li><a target="_top" href="jquery-document-ready.html">jQuery document.ready()</a></li>
+<li><a target="_top" href="jquery-selectors.html">jQuery Selectors </a></li>
+<li><a target="_top" href="jquery-effects.html">jQuery Effects </a></li>
+<li><a target="_top" href="jquery-events.html">jQuery Events </a></li>
+<li><a target="_top" href="jquery-traversal.html">jQuery Traversal</a></li>
+<li><a target="_top" href="jquery-with-css.html">jQuery and CSS </a></li>
+<li><a target="_top" href="jquery-and-dom.html">jQuery and DOM</a></li>
+<li><a target="_top" href="jquery-and-ajax.html">jQuery AJAX </a></li>
+</ul>
+<ul class="menu">
+<li class="heading">What to Learn Next</li>
+</ul>
+</div><!-- leftcol -->
+<div class="middle_right">
+<div class="ads"><img src="images/ad1.png" /></div>
+<div id="middlecol">
+
+<!-- CONTENT STARTS -->
+<div class="content">
+  
+
+<h1>jQuery Keyword Events</h1>
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+</div>
+<div class="clearer"></div><br />
+<div class="inner_content"><br />
+<div>
+<!-- CONTENT STARTS HERE -->
+<h1>jQuery Keyword Events</h1>
+
+
+<p>Keyword events are focused on the user keyword while interacting with the web. It will make sure what needs to be done when the key on keyboard is pressed, what needs to be done when the downkeyword on keyboard is pressed, what needs to be done when up arrow keyword is pressed?? etc...</p>
+
+
+<p>jQuery provides many keyword methods. Let's see each of those jquery keyword events in detail</p>
+
+<h2>jQuery keydown() Event</h2>
+
+<p>jQuery 
+
+keydown() event is used to bind an event handler to an “keydown” javascript event or trigger that event on an element.</p>
+
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+keydown(handler )
+</pre>
+
+<p>jQuery keydown() method behaviour can also be performed by<code> .on( "keydown", handler ) </code> and <code> trigger( "keydown" )</code>. Basically<code> keydown() </code>event will be fired when user presses a key from keyboard.</p>
+
+<p>
+
+Here is an example to use jquery <code>keydown()</code> method. In this example, the no.of times the event occurs will be shown as result when user try to presses the key on keyboard. 
+</p>
+
+<h3>Example</h3>
+<pre class="prettyprint jquery">
+  var xTriggered = 0;
+$( "#target" ).keydown(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+  $("div").html(msg);
+});
+</pre>
+
+<b>Output</b>
+<br><img alt="jquery keydown() method" class="figure"  style="height:359px; width:663px" title="jQuery keydown() method "src="events/examples/images/jquery-keydown-method.png"><br>
+<br><a href="events/examples/jquery-keydown-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+<h2>jQuery keypress() Event</h2>
+
+
+<p>jQuery keypress() event is used to bind an event handler to a “keypress” javascript event or trigger that event on an element.</p>
+
+<h2>Syntax</h2>
+
+<pre class="prettyprint jquery">
+keypress(handler )
+</pre>
+
+<p>jQuery <code>keypress()</code> method behaviour can also be performed by <code>on( "keypress", handler )  </code>and  jQuery <code>trigger( "keypress" )</code>. Basically jQuery <code> keydown()</code> event will be fired when browser register keyboard event.</p>
+
+<p>jQuery <code>keypress()</code>event is similar to the jquery<code> keydown() </code>event, except that modifier and non-printing keys such as Shift, Esc, and delete trigger key down events but not keypress events. Other differences between the two events may arise depending on platform and browser.</p>
+
+<p>
+
+Here is an example on how to use jquery <code>keypress()</code> method. </p>
+
+
+
+
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+var xTriggered = 0;
+$( "#target" ).keypress(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
+  $("div").html(msg);
+});
+</pre>
+<p>In this example, the no.of times the event occurs will be shown as a result when user try to press the key on the keyboard.</p>
+
+
+<b>Output</b>
+<br><img alt="jquery keypress() method" class="figure"  style="height:359px; width:663px" title="jQuery keypress() method "src="events/examples/images/jquery-keypress-method.png"><br>
+<br><a href="events/examples/jquery-keypress-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+
+<h2>jQuery keyup() Event</h2>
+
+<p>jQuery keyup() event is used to bind an event handler to a “key” javascript event or trigger that event on an element.</p>
+
+<h2>Syntax</h2>
+
+<pre class="prettyprint jquery">
+keyup(handler )
+</pre>
+
+<p>jQuery  <code>keyup()</code> method behaviour can also be performed by<code> .on( "keyup", handler )  </code> and  jquery <code>trigger( "keyup" )</code>. The jquery <code>key down()</code> event will be fired when the user releases a  key on the keyboard. This event only sent to the element that has the focus.
+
+</p>
+
+
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+var xTriggered = 0;
+$( "#target" ).keyup(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
+  $("div").html(msg);
+});
+
+</pre>
+<p>
+ In this example, the no.of times the event occurs will be shown as a result when the user releases the key on the keyboard. 
+</p>
+
+
+
+<b>Output</b>
+<br><img alt="jquery keyup() method" class="figure"  style="height:359px; width:663px" title="jQuery keyup() method "src="events/examples/images/jquery-keyup-method.png"><br>
+<br><a href="events/examples/jquery-keyup-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+
+<!-- CONTENT END HERE -->
+</div>
+</div>
+
+<hr />
+<div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
+  <a href="" class="glyphicon glyphicon-hand-left"></a>
+</div>
+<div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
+<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="ads"><img src="images/ad2.png" /></div>
+</div><!-- middlecol -->
+<div id="rightcol">
+<div class="rightgooglead">
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- rightcol -->
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="footer">
+    <div class="main ">
+        <div class="footer_middle">
+                <ul>
+                    <li style="float:left;"><a href="#" class="text5">About Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Courses</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Advertise with Us</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Privacy Policy</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Disclaimer</a></li>
+                    <li style="float:left;"><a href="#" class="text5">Terms & Conditions</a></li>
+                </ul>
+            <div>
+             <p class="text5" style="margin-top:10px;margin-bottom:0px;text-align:center;">
+             Copyright &copy 2015 Tutorialsacademy.com
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
