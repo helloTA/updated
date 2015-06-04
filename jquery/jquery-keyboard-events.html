@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery Traversal Filters</title>
+<title>jQuery keyboard Events</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -34,7 +34,7 @@
 </head>
 
 <body>
-<div class="menulist">
+<div class="menulist" >
 <div class="all_width">
 <div class="fleft logo"><a href="#">Tutorials Academy </a></div>
 <div class="fleft">
@@ -63,6 +63,7 @@
 <div class="mini-logo">
 <img src="images/logo.png" width="100%"/>
 </div>
+
 <ul class="menu">
 <li class="heading">jQuery Tutorials</li>
 <li><a target="_top" href="jquery-introduction.html">Introduction to jQuery</a></li>
@@ -130,7 +131,7 @@
 <div class="content">
   
 
-<h1>jQuery Filters</h1>
+<h1>jQuery keyboard Events</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
   <a href="#" class="glyphicon glyphicon-hand-left"></a>
@@ -142,217 +143,137 @@
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
+<h1>jQuery Keyboard Events</h1>
 
 
+<p>keyboard events are focused on the user keyboard while interacting with the web. It will make sure what needs to be done when the key on keyboard is pressed, what needs to be done when the downkeyboard on keyboard is pressed, what needs to be done when up arrow keyboard is pressed?? etc...</p>
 
-<h4>jQuery filter()  method </h4>
 
-<p>jQuery filter() method constructs a jQuery object and holds the all elements which matches the given criteria. The criteria can be given as a selector, argument to <code>filter()</code> method. The filter() in jQuery completely opposite function of <code> not()</code> method. 
-</p>
-<h1> jQuery filter() method syntax</h1>
+<p>jQuery provides many keyboard methods. Let's see each of those jquery keyboard events in detail</p>
+
+<h2>jQuery keydown() Event</h2>
+
+<p>jQuery 
+
+keydown() event is used to bind an event handler to an “keydown” javascript event or trigger that event on an element.</p>
+
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
-  filter(selector)
-</pre>
-<p>
-Consider a web page with a simple list with 5 div elements, each one has class and whose name is middle <code>filter()</code> methods get all elements which matches the class name value is middle. Manipulation is going to be done by css styles for those who got matched the criteria.
-</p>
-
-
-<h2>Example</h2>
-<pre class="prettyprint jquery">
-
-$( "div" )
-  .css( "background", "#10b48f" )
-  .filter( ".middle" )
-    .css( "border-color", "blue" );
-
+keydown(handler )
 </pre>
 
-<b>Output</b>
-<img src="images/examples/filter.png">
-<br><a href="examples/traversal/filter.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-<br><h4>jQuery first() method</h4>
-
-<p>jQuery <code>first()</code> method constructs a jQuery object which returns the first element in the group of DOM elements. It doesn't take any parameters.</p>
-<pre class="prettyprint jquery">
-first()  
-</pre>
-<p>
-Let’s take a following example in which the first div element out of 3 gets highlighted with red color 
-</p>
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-  $( "p span" ).first().addClass( "highlight" );
-</pre>
-
-<b>Output</b>
-<br><img src="images/examples/first.png">
-<br><a href="examples/traversal/first.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-
-
-<br><h4>jQuery has() method</h4>
+<p>jQuery keydown() method behaviour can also be performed by<code> .on( "keydown", handler ) </code> and <code> trigger( "keydown" )</code>. Basically<code> keydown() </code>event will be fired when user presses a key from keyboard.</p>
 
 <p>
-The jQuery <code>has()</code> method constructs a jQuery object which selects all elements from a subset of the matching elements which matches the given specific selector.
+
+Here is an example to use jquery <code>keydown()</code> method. In this example, the no.of times the event occurs will be shown as result when user try to presses the key on keyboard. 
 </p>
-<p>
-<b>Note:</b>
- To select an element that have multiple elements inside of it, use a comma.
- </p>
 
- <pre class="prettyprint jquery">
-  has( selector )
-  </pre>
-
-<p>Let us see an example ofjQuery has() method</p>
-<h4>jQuery has() method example</h4>
+<h3>Example</h3>
 <pre class="prettyprint jquery">
-  $( "ul" ).append( "&lt;li&gt;" +
-  ( $( "ul" ).has( "li" ).length ? "Add me" : "Don't add me" ) +
-  "&lt;/li&gt;" );
-$( "ul" ).has( "li" ).addClass( "full" );
-</pre>
-
-<b>Output</b>
-<br><img src="images/examples/has.png">
-<br><a href="examples/traversal/has.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-<br><h4>jQuery is() Method</h4>
-<p>
-The jQuery <code>is()</code> method checks the current selection against a selector and it returns true if at least one element of the selection matches the given selector. If it returns false means no elements matches or given selector is invalid to process.
-</p>
-<p><b>
-Note: </b> Like other methods .is() method doesn’t create any object.
-</p>
-<pre class="prettyprint jquery">
-is( selector )  
-</pre>
-
-<p>
-Let us see the following example which illustrates the usage of jQuery <code>is()</code> methods. 
-</p>
-
-
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-  $( "div" ).one( "click", function() {
-  if ( $( this ).is( ":first-child" ) ) {
-    $( "p" ).text( "click me for first" );
-  } else if ( $( this ).is( ".blue,.red" ) ) {
-    $( "p" ).text( "click me for first" );
-  } else if ( $( this ).is( ":contains('jQuery')" ) ) {
-    $( "p" ).text( "came jQuery!" );
-  } else {
-    $( "p" ).html( "nothing &lt;em&gt;special&lt;/em&gt;." );
+  var xTriggered = 0;
+$( "#target" ).keydown(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
   }
-  $( "p" ).hide().slideDown( "fast" );
-  $( this ).css({
-    "border-style": "inset",
-    cursor: "default"
-  });
+  xTriggered++;
+  var msg = "Handler for .keydown() called " + xTriggered + " time(s).";
+  $("div").html(msg);
 });
 </pre>
 
 <b>Output</b>
-<br><img src="images/examples/is.png">
-
-<br><a href="examples/traversal/is.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
+<br><img alt="jquery keydown() method" class="figure"  style="height:359px; width:663px" title="jQuery keydown() method "src="events/examples/images/jquery-keydown-method.png"><br>
+<br><a href="events/examples/jquery-keydown-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
+<h2>jQuery keypress() Event</h2>
 
-<br><h4>jQuery last () Method</h4>
+
+<p>jQuery keypress() event is used to bind an event handler to a “keypress” javascript event or trigger that event on an element.</p>
+
+<h2>Syntax</h2>
+
+<pre class="prettyprint jquery">
+keypress(handler )
+</pre>
+
+<p>jQuery <code>keypress()</code> method behaviour can also be performed by <code>on( "keypress", handler )  </code>and  jQuery <code>trigger( "keypress" )</code>. Basically jQuery <code> keydown()</code> event will be fired when browser register keyboard event.</p>
+
+<p>jQuery <code>keypress()</code>event is similar to the jquery<code> keydown() </code>event, except that modifier and non-printing keys such as Shift, Esc, and delete trigger key down events but not keypress events. Other differences between the two events may arise depending on platform and browser.</p>
+
 <p>
-The jQuery <code>last()</code> method constructs a jQuery object and selects the last element in the set of DOM elements.</p>
-<p><b>
-Note: </b>ThejQuery <code>last()</code> method can only select a single element from DOM tree.
-</p>
+
+Here is an example on how to use jquery <code>keypress()</code> method. </p>
+
+
+
+
+
+<h2>Example</h2>
 <pre class="prettyprint jquery">
-last()
-</pre>
-<p>
-Below example describes the usage of .last() method in jQuery.
-</p>
-
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-  $( "p span" ).last().addClass( "highlight" );
-</pre>
-<b>Output</b>
-<br><img src="images/examples/last.png">
-<br><a href="examples/traversal/last.html" class="btn btn-primary" target="_blank">Try It Now</a>
-
-
-
-
-<br><h4>jQuery slice() Method</h4>
-
-<p>The jQuery <code>slice()</code> method constructs a jQuery object which selects the subset of elements in the set by specified range of indices.</p>
-
-<p> The start index in slice method identifies the position of particular element in the set and  if end is omitted, all elements after this one will be included in the result
-</p>
-<h4>Syntax</h4>
-<pre class="prettyprint jquery">
-  .slice( start [, end ] )
-
-</pre>
-<p>Look at the below jquery <code>slice()</code> method example code as shown below.
-</p>
-
-<h4>Example</h4>
-<pre class="prettyprint jquery">
-  function colorEm() {
-  var $div = $( "div" );
-  var start = Math.floor( Math.random() * $div.length );
-  var end = Math.floor( Math.random() * ( $div.length - start ) ) +
-    start + 1;
-  if ( end === $div.length ) {
-    end = undefined;
+var xTriggered = 0;
+$( "#target" ).keypress(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
   }
-  $div.css( "background", "" );
-  if ( end ) {
-    $div.slice( start, end ).css( "background", "blue" );
-  } else {
-    $div.slice( start ).css( "background", "blue" );
-  }
-  $( "span" ).text( "$( 'div' ).slice( " + start +
-    (end ? ", " + end : "") +
-    ").css( 'background', 'blue' );" );
-}
- 
-$( "button" ).click( colorEm );
+  xTriggered++;
+  var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
+  $("div").html(msg);
+});
 </pre>
+<p>In this example, the no.of times the event occurs will be shown as a result when user try to press the key on the keyboard.</p>
+
 
 <b>Output</b>
-<br><img src="images/examples/slice.png">
-<br><a href="examples/traversal/slice.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img alt="jquery keypress() method" class="figure"  style="height:359px; width:663px" title="jQuery keypress() method "src="events/examples/images/jquery-keypress-method.png"><br>
+<br><a href="events/examples/jquery-keypress-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<br><h4>jQuery not () Method</h4>
 
-<p>
 
-jQuery <code>not()</code> method constructs a jQuery object which removes elements from the set of matched elements. The resultant of this method holds the element which doesn’t match the given selector.</p>
-<h3>jQuery not() method syntax</h3>
+
+<h2>jQuery keyup() Event</h2>
+
+<p>jQuery keyup() event is used to bind an event handler to a “key” javascript event or trigger that event on an element.</p>
+
+<h2>Syntax</h2>
+
 <pre class="prettyprint jquery">
- .not( selector ) 
+keyup(handler )
 </pre>
- 
- <h4>Example</h4>
- <pre class="prettyprint jquery">
-   $( "div" ).not( ".green, #blueone" )
-  .css( "border-color", "yellow" );
- </pre>
 
- <b>Output</b>
- <br><img src="images/examples/not.png">
- <br><a href="examples/traversal/not.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<p>jQuery  <code>keyup()</code> method behaviour can also be performed by<code> .on( "keyup", handler )  </code> and  jquery <code>trigger( "keyup" )</code>. The jquery <code>key down()</code> event will be fired when the user releases a  key on the keyboard. This event only sent to the element that has the focus.
 
- 
+</p>
+
+
+
+<h2>Example</h2>
+<pre class="prettyprint jquery">
+var xTriggered = 0;
+$( "#target" ).keyup(function( event ) {
+  if ( event.which == 13 ) {
+   event.preventDefault();
+  }
+  xTriggered++;
+  var msg = "Handler for .keypress() called " + xTriggered + " time(s).";
+  $("div").html(msg);
+});
+
+</pre>
+<p>
+ In this example, the no.of times the event occurs will be shown as a result when the user releases the key on the keyboard. 
+</p>
+
+
+
+<b>Output</b>
+<br><img alt="jquery keyup() method" class="figure"  style="height:359px; width:663px" title="jQuery keyup() method "src="events/examples/images/jquery-keyup-method.png"><br>
+<br><a href="events/examples/jquery-keyup-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
 
 <!-- CONTENT END HERE -->
 </div>
@@ -388,7 +309,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <div style="clear:both;"></div>
 </div>
 </div>
-<div id="footer" >
+<div id="footer">
     <div class="main ">
         <div class="footer_middle">
                 <ul>
@@ -409,3 +330,4 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 </body>
 </html>
+s
