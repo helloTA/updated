@@ -115,10 +115,12 @@
 <li><a target="_top" href="jquery-with-css.html">jQuery with CSS</a></li>
 </ul>
 <br>
-
 </div><!-- leftcol -->
+<br >
 <div class="middle_right">
-<div class="ads"><img src="images/ad1.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
@@ -128,30 +130,31 @@
 <h1>jQuery Selectors</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-installation.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-basic-selectors.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>jQuery Selectors</h3>
+<h1>jQuery Selectors</h1>
 <p>
-jQuery selectors are one of the most important key factors of the jQuery libraries. It  allows you to select and manipulate HTML element(s). jQuery selection of particular HTML element can be done based on their id, classes, types, attributes, values of attributes and much more. All selectors in jQuery start with the dollar sign and parentheses: $().
+jQuery selectors are one of the powerful tools to manipulate HTML elements on a web page . It allows you to select and manipulate <code>HTML</code> element(s). jQuery selectors target a  particular <code>HTML</code> element  and change it's behavior. jQuery selectors must be matched with the existing HTML ids, class names, and type values. All selectors in the jQuery start with the dollar sign and parentheses: <code>$()</code>. 
 </p>
 
- <strong>jQuery Selector Overview</strong>
+ <h2>What are jQuery Selcetors ?</h2>
 <p>
-A jQuery selector is a string which decides which HTML elements to select. jQuery selector string passed as an argument to $() or jQuery() selection function.
+
+A jQuery selector is a string which decides which HTML elements to target and manipulate it's data. jQuery selector string passed as an argument to<code> $()</code> or<code> jQuery()</code> selection function.
 </p> <br />
 <p>
 
-jQuery selectors are very easy to learn if you have a good knowledge on CSS selectors. because of jQuery syntax is similar to CSS selectors.
+jQuery selectors are very easy to learn if you have a good knowledge on CSS selectors. Almost the syntax in CSS selectors and jQuery selectors is same.
 </p>
 
-<p>jQuery follows following criteria to select HTML elements</p>
+<p>jQuery follows below criteria to select HTML elements</p>
 <ol>
     <li>Element name (e.g. 'p', 'a', 'div' etc.)</li>
     <li>Element id</li>
@@ -168,154 +171,240 @@ jQuery selectors are very easy to learn if you have a good knowledge on CSS sele
 <h3> jQuery Selector Example</h3>
 
 <p>The following example illustrates the jQuery Selector</p>
-<pre class="prettyprint"><code class="language-jquery">
+<pre class="prettyprint jquery">
 $(document).ready(function(){
-    $("button").click(function(){
-        $("parenDiv").hide(); 
+    $("#show").click(function(){
+        $("p").show();
     });
 });
     
-</code></pre>
+</pre>
 
-<p>This example selects the div element with the id parenDiv, meaning the div element which has an id attribute with the value theDiv.
+
+<p>This example selects the div element with the id <code>#show</code>, meaning the div element which has an id attribute with the value p.
 </p>
+<b>Output</b>
+<br><img alt="jQuery show() method" title="jquery show() method" src="images/examples/jquery-show-method.png">
+<br>
+<a href="examples/jquery-show-and-hide.html" target="_blank" class="btn btn-primary">Try It Now</a><br><br/>
 
 
 
-<h3>jQuery Universal Selector</h3>
-<p>The jQuery universal selector selects elements based on the element name.</p>
+<h2>jQuery Universal Selector</h2>
+<p>The jQuery universal selector is used to select all the elements on the webpage. Be sure when to use the jquery<code> universal selector</code>. If you misuse this universal selector it will change all the elements on the webpage.</p>
+
+<h4>Syntax</h4>
+<pre class="prettyprint jquery">
+$("*")  
+</pre>
+
+
+<p>Let's say if there 4 &lt;h3&gt; selsectors on a webpage and you want all selectors with one click.</p>
+<b>HTML</b>
+<pre class="prettyprint jquery">
+&lt;body&gt;
+&lt;h3&gt; Main Heading&lt;/h3&gt;
+&lt;h3&gt;This is a heading 3.&lt;/h3&gt;
+&lt;h3&gt;This is a heading 3.&lt;/h3&gt;
+&lt;h3&gt;This is a heading 3.&lt;/h3&gt;
+&lt;/body&gt;
+</pre>
 
 <p>You can select all &lt;h3&gt; elements on a page like this:</p>
-<h4>Syntax</h4>
-<pre class="prettyprint"><code class="language-jquery">
-$("*")  
-</code></pre>
 
 
 <h2>Example</h2>
-
-<p>When a user clicks on a button, all &lt;h3&gt; elements will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
+<b>jQuery</b>
+<pre class="prettyprint jquery">
  $(document).ready(function(){
     $("button").click(function(){
-        $("*").hide();
+        $("*").hide();     // Select elements on the webpage
     });
 });
+</pre>
+<p>When you click on <code>click me</code>button, all &lt;h3&gt; elements will be hidden:</p>
 
-</code></pre>
 
 <p>The above example produces the following output</p>
-<img src="images/examples/all-selector.png">
+<img alt="jquery univeral selector" title ="jquery univeral selector" src="images/examples/jquery-universal-selector.png">
 
-<br><a href="examples/element-selector.html" class="btn btn-primary" target="_blank">Try It Now </a>
+<br><a href="examples/jquery-universal-selector.html" class="btn btn-primary" target="_blank">Try It Now </a>
 <br />
 
-<br><h3>jQuery id Selector</h3>
-<p>jQuery #id selector uses the id attribute of HTML tag to find the specific element.</p>
+
+
+<br><h2>jQuery id Selector</h2>
+<p>jQuery #id selector uses the id attribute of a HTML tag to find the specific element.</p>
 <div class="alert alert-info">
 id should be unique within a page<br />
-Use the #id selector when you want to find a single, unique element.
+Use the #id selector when you want to find a single or unique element.
 
 </div>
-<h2>Syntax</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $("#myid")
-</code></pre>
 
+
+<h2>Syntax</h2>
+<pre class="prettyprint jquery">
+ $("#myid")
+</pre>
+
+<p>Let's say if there 4 <code>h3</code> selectors on a webpage and you want all selectors with one click.</p>
 
 <h2>Example</h2>
-<p>
-When a user clicks on a button, the element with id="myid" will be hidden:</p>
-<pre class="prettyprint"><code class="language-jquery">
+<B>HTML</B>
+<pre class="prettyprint jquery">
+&lt;body&gt;
+  &lt;h2&gt;Id Selector Example&lt;/h2&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;p id="myid"&gt;I am going to hide if you click on the below button&lt;/p&gt;
+  &lt;button&gt;Click me&lt;/button&gt;
+&lt;/body&gt;
+</pre>
+<p>In the above example code, we have a paragraph with an id called <code>myid</code>. Using the below jquery <code>id selector</code> we can simply target that <code>myid</code> element and apply the required styles we need. 
+
+</p>
+<b>jQuery</b>
+<pre class="prettyprint jquery">
 $(document).ready(function(){
     $("button").click(function(){
         $("#myid").hide();
     });
 });
+</pre>
+<p>
 
-</code></pre>
+When the clicks on button, the element with<code> id=myid</code> will be hidden:</p>
 
 <b>Output</b>
-<br><img src="images/examples/id-selector.png">
+<br><img alt="jquery id selector" title="jQuery id selector" src="images/examples/jquery-id-selector.png">
 <br>
-<a href="examples/id-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<a href="examples/jquery-id-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
-<br><h3>jQuery .class Selector</h3>
-<p>jQuery class selector finds elements with a specific class.</p>
-
-<div class="alert alet-info">
- Selects all elements with the given class. 
+<br><h2>jQuery class Selector</h2>
+<div class="alert alert-info">
+<p>jQuery class selector is used to find all the elements which has same class name. Remember a class name what you initially give to your<code>HTML</code> elements.</p>
 </div>
 
+<p>The jQuery class selector is can be called using <code>. (DOT)</code> operator followed by the class name</p>
+
 <h2>Syntax</h2>
-<pre class="prettyprint"><code class="language-jquery">
- $(".test")
-</code></pre>
+<pre class="prettyprint jquery">
+ $(".example-class-name")
+</pre>
 
 
 
 <h2>Example</h2>
-<pre class="prettyprint"><code class="language-jquery">
+
+<b>HTML</b>
+<pre class="prettyprint jquery">
+&lt;div class="class-one"&gt;I am Class One"&lt;/div&gt;
+&lt;div class="class-two"&gt;I am Class Two&lt;/div&gt;
+&lt;span class="class-three"&gt;I am Class Three&lt;/span&gt;
+</pre>
+
+<p>In the above <code>HTML</code> code each <code>div </code> element has a different class name as <code>class-one, class-two, class-three</code>. So what we can do is, we can simply target those three classes and apply the styles like below</p>
+
+<b>jQuery</b>
+<pre class="prettyprint jquery">
  $(document).ready(function(){
     $( ".class-one" ).css( "border", "3px solid green" );
     $(".class-two").css("border", "5px solid blue");
     $(".class-three").css("border", "5px solid red");
 });
-</code></pre>
+</pre>
 
-<p>If you run the above jQuery class example code,  it will apply the green color for class-one and blue color to class-two and finally, red color to class-three. Run the below live example and see it in live.:</p>
+<p>If you run the above jQuery class example code,  it will apply the  <font color="green"><b> green</b> </font> color to the <code>class-one</code> HTML div element, <font color="blue"><b>blue </b></font> color to <code>class-two</code> div element and finally, <font color="red"><b>red</b> </font> color to <code>class-three</code> span elemement</p>
+
+
+
 <b>Output</b>
-<br><img src="images/examples/class-selector.png">
+<br><img  alt="jquery class selector" title ="jQuery Class Selector" src="images/examples/jquery-class-selector.png">
 <br>
-<a href="examples/class-selector-example.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<a href="examples/jquery-class-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<br><h3>jQuery this selector</h3>
-<p>Selects the current HTML element</p>
-<p>$(this) enables you to select the current HTML element. Here, meaning of this keyword is to refer the current element.
+
+
+
+<br><h2>jQuery this selector</h2>
+<div class="alert alert-info">
+<p>jQuery  this selector is used to select the current HTML element and apply the required styles or manipulates the data.</p>
+</div>
+
+<p>jQuery <code>$(this)</code> selector enables you to select the current HTML element. 
 </p>
 
 <h2>Syntax</h2>
 <pre class="prettyprint jquery">
 $(selector).action()
 </pre>
+
+
 <h2>Example</h2>
 <pre class="prettyprint jquery">
-
 $(document).ready(function(){
-    $("button").click(function(){
-        $(this).hide();
-    });
+   $("button").click(function () {
+      $(this).next().removeAttr("disabled")
+             .focus()
+             .val("My next task is to go home");
+   });
 });
 </pre>
 
 <b>Output</b>
-<br><img src="images/examples/this-selector.png">
+<br><img src="images/examples/jquery-this-selector.png">
 <br>
 
-<a href="examples/this-selector-example.html" class="btn btn-primary" target="_blank" >Try It Now</a>
+<a href="examples/jquery-this-selector.html" class="btn btn-primary" target="_blank" >Try It Now</a>
 
 
- <h3>jQuery Multiple Selector (“selector1, selector2, selectorN”)</h3>
- <p>Selects the combined results of all the specified selectors.</p><br />
+ <h2>jQuery Multiple Selector</h2>
+ <p>jQuery multiple selector is used to target multiple html elements at a time and apply the required styles to HTML elements.</p>
+
 <h2>Syntax</h2>
 <pre class="prettyprint">
-
 $( "selector1, selector2, selectorN" )
 </pre>
 
-<h2>Example</h2>
-<p>Finds the elements that match any of these three selectors.</p>
 
+<h2>Example</h2>
+<b>HTML</b>
+<pre class="prettyprint jquery">
+&lt;body&gt;
+  &lt;div&gt;div&lt;/div&gt;
+  &lt;p class="classOne"&gt;p class="classOne"&lt;/p&gt;
+  &lt;p class="notMyClass"&gt;p class="notMyClass"&lt;/p&gt;
+  &lt;span&gt;span&lt;/span&gt;
+&lt;/body&gt;  
+</pre>
+<p>In the above HTML code we have three different html elements those are<code>div</code>  two paragraph <code>p</code> elements and one <code>span</code> element</p>
+
+
+<p>By using jquery multiple selector we can target all the four different html elements and apply the styles in a single as follows</p>
+
+<b>jQuery</b>
 <pre class="prettyprint jquery">
 $( "div, span, p.classOne" ).css( "border", "3px solid blue" );
 </pre>
 
+<p>The above jquery <code>multiple selector</code> will target <code>div, p, span</code> elements and apply css styles as <code>css( "border", "3px solid blue" ) </code>
 <br>
 <b>Output</b>
-<br><img src="images/examples/multiple-selector.png">
-<br><a href="examples/multiple-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img alt="jquery multiple selector" title ="jQuery Multiple Selector"src="images/examples/jquery-multiple-selector.png">
+<br><a href="examples/jquery-multiple-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
+
+<p>jQuery provides different selectors for various purposes. To learn more selectors  see the below chapters</p>
+
+<h2>jQuery Selectors Referances</h2>
+
+<a href="jquery-basic-selectors.html">jQuery Basic Selectors</a>
+<br>
+<br/>
+<a href="jquery-child-selectors.html">jQuery Child Selectors</a>
+<br>
+<br/ >
+<a href="jquery-content-filter-selectors.html">jQuery Content Filter Selectors</a>
 
 
 <!-- CONTENT END HERE -->
@@ -324,29 +413,32 @@ $( "div, span, p.classOne" ).css( "border", "3px solid blue" );
 
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-installation.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+<a href="jquery-basic-selectors.html"  class="glyphicon glyphicon-hand-right"></a>
 </div>
+
+<br>
+<div>
+  
+</div>
+<br>
 <div class="clearer"></div>
 </div>
-<div class="ads"><img src="images/ad2.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
+
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
+
+</div>
 </div><!-- middlecol -->
 <div id="rightcol">
 <div class="rightgooglead">
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 160;
-google_ad_height = 600;
-google_ad_format = "160x600_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
+
 </div>
 </div><!-- rightcol -->
 <div style="clear:both;"></div>

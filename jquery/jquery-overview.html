@@ -117,8 +117,11 @@
 <br>
 
 </div><!-- leftcol -->
+<br >
 <div class="middle_right">
-<div class="ads"><img src="images/ad1.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
@@ -128,60 +131,72 @@
 <h1>jQuery Overview</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-indtroduction.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-installation.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
-<h3>jQuery Overview</h3>
+<h1>jQuery Overview</h1>
+<div class="alert alert-info">
+In this overview chapter, lets look at how jQuery actually works with html elements and implement the jquery functions or methods on it.
+    
+</div>
 
-<p>Following steps are very useful to start with jQuery and which helps you to increase the confidence in building the web-based applications.</p>
+<p>Following steps are very useful to start with jQuery and which helps you to understand how jQuery internally works with HTML elements.</p>
 <ol>
-    <li>Wait until the page is being ready.</li>
-    <li>Select HTML elements that are defined to modify furtherly.</li>
-    <li>
-Specify appropriate attributes with CSS styles to modify the behaviour.</li>
-<li>If needed, try adding the listener functions, e.g. click() or wait for a JQuery effect to finish etc.
+    <li><p>Wait until the page is being ready.</p></li>
+    <li><p>Select HTML elements that are defined to modify furtherly.</p></li>
+    <li><p>
+Specify appropriate attributes with CSS styles to modify the behaviour.</p></li>
+<li><p> Try adding the listener functions, e.g. click() or wait for a JQuery effect to finish etc.</p>
 </li>
 </ol>
 
-<h3>Example</h3>
+<h2>Example</h2>
 <pre class="prettyprint"><code class="language-javascript">
-    // Step 1. Need to wait until page is being ready. this would be done by ready()
-$(document).ready(function() {
+//Step 1. Make sure you wait till the page is ready. This will be done by ready().
 
-    // Step 2. select the HTML element with id ‘parentDiv’ which actually defined in in html code.
-    var parentDiv= $('#parentDiv);
+// Step 2. Select the HTML element with id ‘#hide’ which is actually defined in in html code.
+// Step 3. Modify the HTML elements CSS attributes
+// Step 4. Add a click-listener function . 
 
-    //Step 3. modify the HTML elements CSS attributes
-    parentDiv.css("font-size", "13px");
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
 
-    // Step 4. add a click-listener function as follows.
-    parentDiv.click(function() {
-        $('#parentDiv).hide(); // to hide the div element 
-        });
-
-}
 
 </code></pre>
+<a href="examples/jquery-show-and-hide.html" target="_blank" class="btn btn-primary">Try It Now</a><br><br/>
 
-<p>First the above example by default JQuery's $(document).ready() function can be called when the page is being ready which takes a parameter as a  function.</p>
+<p>In the above example by default jQuery's <code>$(document).ready() </code>function will  be called when the page is being ready which takes a parameter as a  function.</p>
 <p>
-In Second step, jQuery select the HTML element by using the jQuery selection function called $() where it takes string as a parameter to identifying the particular HTML element like “parentDiv”.
+In the second step, jQuery will select HTML element by using the jQuery selection function called <code>$()</code> where it takes string as a parameter to identify the particular HTML element like <code>#hide</code> and <code>#show</code>.
 </p>
-<p>In Third step, if we wanted to modify the styles of HTML element that can be achieved by simply taking the help of CSS styles. To achieve this, we have to use CSS() function with CSS attributes. As we see in the above example font-size is a CSS attribute and 13px is the value which sets the font-size of the parent div text.
-</p>
-<p>In Final step, we can add jquery events for the HTML elements like click(), dblclick() and mouseleave() etc. From example jQuery adds the click listener to HTML element “parentDiv” which can be done by using the click() function. Click listener will be functioned when click on HTML “parentDiv” element.
+<p>In eh third step, if we want to modify the styles of HTML element that can be done by simply taking the help of CSS styles. To do this, we have to use CSS() function with CSS attributes.</p>
+<p>In the final step, we added jquery events for the HTML elements like <code>click()</code>. Then jQuery adds the click listener to HTML element <code>#hide</code> and <code>#show</code> which is done using the <code>click()</code> function. Click listener will be functioned when click on HTML <code>#hide</code> and <code>#show</code> element.
               
 </p>
 
+<p>Let us understand how this jquery show and hide actually works see the below examples</p>
+<a href="effects/show-method.html" target="_blank">jQuery Show Method</a>
+<p>Demonstrates a simple jQuery hide() method.</p>
+
+<br>
+
+<a href="effects/hide-method.html" target="_blank">jQuery Hide Method</a>
+<p>Demonstrates a simple jQuery hide() method.</p>
 
 
-
+  
 
 <!-- CONTENT END HERE -->
 </div>
@@ -189,34 +204,37 @@ In Second step, jQuery select the HTML element by using the jQuery selection fun
 
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-introduction.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+<a href="jquery-installation.html"  class="glyphicon glyphicon-hand-right"></a>
 </div>
+<br>
+<div>
+  
+</div>
+<br>
 <div class="clearer"></div>
 </div>
-<div class="ads"><img src="images/ad2.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
+
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
+
+</div>
 </div><!-- middlecol -->
 <div id="rightcol">
 <div class="rightgooglead">
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 160;
-google_ad_height = 600;
-google_ad_format = "160x600_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
+
 </div>
 </div><!-- rightcol -->
 <div style="clear:both;"></div>
 </div>
 </div>
+
 <div id="footer" >
     <div class="main ">
         <div class="footer_middle">

@@ -115,11 +115,14 @@
 </li>
 <li><a target="_top" href="jquery-with-css.html">jQuery with CSS</a></li>
 </ul>
-<br>
 
+<br>
 </div><!-- leftcol -->
+<br >
 <div class="middle_right">
-<div class="ads"><img src="images/ad1.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
@@ -129,58 +132,64 @@
 <h1>jQuery Installation</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-overview.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-selectors.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
 <h3>How to install jQuery</h3>
-<p>The jQuery installation main motto is to include the jQuery JavaScript file in the web page. We can do this in two ways to access the JavaScript file.</p>
+<p>
+  Before using jQuery in your web application, you have to install the jQuery official library in your application. Follow the below steps to install it locally.
+</p>
 
 
-<p>Download the jQuery library from<a href="jQuery.com">jQuery website</a>  and hosting it in web application</p>
+<p>Download the jQuery library from <a href="jQuery.com">jQuery website</a> and host it in your web application
+  </p>
+
+<p>There are two versions available, choose which one to use based on your requirements.</p>
+<p>Production version - This is for your live website because it is minified and compressed
+Development version - This is for testing and development (uncompressed and readable code)
+Both versions can be downloaded from <a href="jQuery.com">jQuery</a> officla website.</p>
 
 
-<p> Downloading jQuery</p>
+<p>If you want to download the jQuery API, you have to place it on a web server. Once it is done, your webpages will start using jQuery </p>
 
-<p>There are two versions available for downloading the jQuery library:</p>
-<p>Production version - this is for your live website because it has been minified and compressed
-Development version - this is for testing and development (uncompressed and readable code)
-Both versions can be downloaded from <a href="jQuery.com">jQuery</a>.</p>
-
-
-<p>If you want to download the jQuery API, you have to place it on a web server. Once done, Your web pages start consuming jQuery library by specifying the directory path in &lt;scirpt&gt; </code>tag as follows.</p>
-
-<p><b>Note:</b> the &lt;script&gt; tag should be inside the &lt;head&gt; section.
+<p><b>Note:</b> The &lt;script&gt; tag should be inside the &lt;head&gt; section.
 
 <h4>How to include jQuery in html file</h4><br />
 <pre class="prettyprint"><code class="language-html">
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Including jQuery in HTML&lt;/title&gt;
-        &lt;script type="text/javascript"  src="/jqfolder/1.7.1/jquery.min.js"&gt;&lt;/script>
-    &lt;/head&gt;
-   &lt;body&gt;
-         <p>Basic jQuery Example 
-   &lt;/body&gt;
-   &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Including jQuery in HTML&lt;/title&gt;
+    &lt;script type="text/javascript"  src="/jqfolder/1.7.1/jquery.min.js"&gt;&lt;/script>
+  &lt;/head&gt;
+ &lt;body&gt;
+      &lt;p&gt;Basic jQuery Example<&lt;p&gt; 
+ &lt;/body&gt;
+ &lt;/html&gt;
 </code></pre>
   
 
 
 
-
+<br />
 <strong>Referencing jQuery at Google CDN</strong>
 
 <b>jQuery CDN :</b>
 
-<p>If you don't want to download and make use of hosting jQuery in web pages, still there is an easiest way to include JavaScript file from a CDN (Content Delivery Network). Both Google and Microsoft has CDN to host them on to web pages.</p><br />
+<p> 
+Referencing jQuery at Google CDN jQuery CDN:
+
+If you don't want to download and but you want use it from the third party providers you can use it via CDN networks. The easiest way to include jQuery f from a CDN (Content Delivery Network). is just use their CDN link in your webpage. Both Google and Microsoft has CDN to host them onto web pages.
+
+To use jQuery from Google or Microsoft, use one of the following:</p><br />
 <p>To use jQuery from Google or Microsoft, use one of the following:</p>
+
 
 <b>Google CDN:</b>
 <pre class="prettyptint"><code class="language-html">
@@ -188,13 +197,15 @@ Both versions can be downloaded from <a href="jQuery.com">jQuery</a>.</p>
   &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&lt;&lt;/script&gt;
 &lt;/head&gt;
 </code></pre>
+<br>
 <b>Microsoft CDN:</b>
 <pre class="prettyptiny"><code class="language-html">
-
 &lt;head&gt;
   &lt;script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"&lt;&lt;/script&gt;
 &lt;/head&gt;   
 </code></pre>
+
+
 
   <h4>Minimized vs. Full jQuery Versions</h4>
 <p>
@@ -220,34 +231,38 @@ Usually, developers use the full version during development, and when the site i
 
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-overview.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+<a href="jquery-selectors.html"  class="glyphicon glyphicon-hand-right"></a>
 </div>
+
+
+<br>
+<div>
+  
+</div>
+<br>
 <div class="clearer"></div>
 </div>
-<div class="ads"><img src="images/ad2.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
+
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
+
+</div>
 </div><!-- middlecol -->
 <div id="rightcol">
 <div class="rightgooglead">
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 160;
-google_ad_height = 600;
-google_ad_format = "160x600_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
+
 </div>
 </div><!-- rightcol -->
 <div style="clear:both;"></div>
 </div>
-</div>
+</div>s
 <div id="footer" >
     <div class="main ">
         <div class="footer_middle">
