@@ -116,10 +116,12 @@
 <li><a target="_top" href="jquery-with-css.html">jQuery with CSS</a></li>
 </ul>
 <br>
-
 </div><!-- leftcol -->
+<br >
 <div class="middle_right">
-<div class="ads"><img src="images/ad1.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_52_28.jpg" alt="" border="0" /></a>
+
 <div id="middlecol">
 
 <!-- CONTENT STARTS -->
@@ -129,19 +131,22 @@
 <h1>jQuery Child Filter Selectors</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-basic-selectors.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-content-filter-selectors.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h3>jQuery first-child Selector</h3>
-<p>Selects all elements that are the first child of their parent.
+<h1>jQuery first-child Selector</h1>
+<div class="alert alert-info">
+<p>jQuery <code>first-child</code> selector is used to select all the <code>HTML</code>elements which are the first child of their parent.
 </p>
+</div>
+
 
 <h2>Syntax</h2>
 <pre class="prettyprint">
@@ -149,65 +154,58 @@ $( ":first-child" )
 </pre>
 
 <p>When there many no of elements in a page, jquery <code> :first-child </code> selector
-can be used to select the first element of each parent in the webpage</p>
+can be used to select the first element of each parent in the webpage. It will come in handy when you working with different webpages.</p>
+
 
 <h2>Example</h2>
+<strong>HTML</strong>
 <pre class="prettyprint">
-    &lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;first-child demo&lt;/title&gt;
-  &lt;style&gt;
-  span {
-    color: #008;
-  }
-  span.sogreen {
-    color: blue;
-    font-weight: bolder;
-  }
-  &lt;/style&gt;
-  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
- 
-&lt;div&gt;
-  &lt;span&gt;Apple,&lt;/span&gt;
-  &lt;span&gt;Banana,&lt;/span&gt;
-  &lt;span&gt;Mango&lt;/span&gt;
+&lt;b&gt;jQuery First Child Example&lt;/b&gt;
+&lt;div class="one" style="border:1px solid;"&gt;
+  &lt;p&gt;First Child&lt;/p&gt;
+  &lt;p&gt;Second Child.&lt;/p&gt;
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class="two" style="border:1px solid;"&gt;
+  &lt;p&gt;Apple&lt;/p&gt;
+  &lt;p&gt;Banana&lt;/p&gt;
 &lt;/div&gt;
-&lt;div&gt;
-  &lt;span&gt;Orange&lt;/span&gt;
-  &lt;span&gt;Grape&lt;/span&gt;
-  &lt;span&gt;Carrot&lt;/span&gt;
+&lt;div class="three"style="border:1px solid;"&gt;
+  &lt;p&gt;First Child in Third Div&lt;/p&gt;
+  &lt;p&gt;Second Child in Third Div&lt;/p&gt;
 &lt;/div&gt;
- 
-&lt;script&gt;
-$( "div span:first-child" )
-  .css( "color", "green" )
-  .hover(function() {
-    $( this ).addClass( "sogreen" );
-  }, function() {
-    $( this ).removeClass( "sogreen" );
-  });
-&lt;/script&gt;
- 
-&lt;/body&gt;
-&lt;/html&gt;
 </pre>
-<b>Output</b><br />
-<br><img src="images/examples/child-first-selector.png"><br>
-
-<br><a href="examples/child-first-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> <br />
+<p>In the above <code>HTML</code> code we have three different <code>div</code> tags which has two elements in each. In the first <code>div</code> tag the element <code>First Child</code> paragraph is the first-child of its parent div.</p>
 
 
 
+<p>In the second div element <code>Apple</code> is the first child element of it's parent <code>div</code>
 
-<br><h3>jQuery :last-child Selector</h3>
-<p>Selects all elements that are the last child of their parent.
+
+<p>In the third div tag <code>First Child in Third Div</code> is the first child element of it's parent <code>div</code>
+
+<p>Using the jQuery first-child selector see how we select the first-child elements and apply different colors to the first-child elemenets in the below jQuery example</p>
+
+<strong>jQuery</strong>
+<pre class="prettyprint jquery">
+$(document).ready(function(){
+    $(".one p:first-child").css("background-color", "yellow");
+    $(".two p:first-child").css("background-color", "red");
+    $(".three p:first-child").css("background-color", "green");
+});
+  </pre>
+<strong>Output</strong>
+<br><img alt= "jQuery first-child selector " title="jQuery first-child Selector"src="images/examples/jquery-first-child-selector.png"><br>
+
+<br><a href="examples/jquery-first-child-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> <br />
+
+<h2>jQuery :last-child Selector</h2>
+
+<div class="alert alert-info">
+<p>jQuery <code>last-child </code>selector is used to select all the last-child elements of its parent.
 </p>
-<p>When there are many no of elements in a webpage, and you want to select only the last element in
-each parent in such cases you can :last-child selector</p>
+</div>
+
 
 <h2>Syntax</h2>
 <pre class="prettyprint">
@@ -261,19 +259,24 @@ $( "div span:last-child" )
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p><b>Output</b></p><br />
-<img src="images/examples/child-last-selector.png"><br>
+
+<br><br/>
+<b>Output</b><br />
+<img alt="jquery last-child selector" title="jQuery last-child selector"src="images/examples/jquery-last-child-selector.png"><br>
 
 
 
-<br><a href="examples/child-last-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="examples/jquery-last-child-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<br><h3>jQuery :first-of-type Selector</h3>
-<p>The <code>:first-of-type</code> selector matches elements that have no other element with both the same parent and the same element name coming before it in the document tree.</p>
+<br><h2>jQuery :first-of-type Selector</h2>
+<div class="alert alert-info">
+<p>jQuery <code>:first-of-type</code> selector used to select the first of type element if there are more than one element in the same parent.</p>
+</div>
+
 
 <h2>Syntax</h2>
 <pre class="prettyprint">
-  jQuery( ":first-of-type" )
+  $( ":first-of-type" )
 </pre>
 
 
@@ -300,47 +303,54 @@ $( "div span:last-child" )
   &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
- 
 &lt;div&gt;
   &lt;span&gt;Tom,&lt;/span&gt;
   &lt;span&gt;Jerry,&lt;/span&gt;
   &lt;span&gt;Tom,&lt;/span&gt;
   &lt;span&gt;Cherry&lt;/span&gt;
-  &lt;span&gt;Tom,&lt;/span&gt;
-  &lt;span&gt;Tom,&lt;/span&gt;
+ &lt;span&gt;Tom,&lt;/span&gt;
+ &lt;span&gt;Tom,&lt;/span&gt;
 &lt;/div&gt;
 &lt;div&gt;
   &lt;b&gt;Dollar,&lt;/b&gt;
   &lt;span&gt;Rupee,&lt;/span&gt;
   &lt;span&gt;Euro,&lt;/span&gt;
- &lt;span&gt;Rupee&lt;/span&gt;
- &lt;span&gt;Rupee&lt;/span&gt;
-  
+  &lt;span&gt;Rupee&lt;/span&gt;
+  &lt;span&gt;Rupee,&lt;/span&gt;
+  &lt;span&gt;Rupee,&lt;/span&gt;
 &lt;/div&gt;
  
-&lt;script&gt;
-$( "span:first-of-type" ).addClass( "change" );
-&lt;/script&gt;
- 
-&lt;/body&gt;
+  &lt;script&gt;
+  $( "span:first-of-type" ).addClass( "change" );
+  &lt;/script&gt; 
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>There are elements named Tom and 3 Elements named Rupee. But it only selected the first of its type.</p>
+
+<p>In the above <code>HTML</code> code we have the span element <code>Tom</code> 4 times in the first parent and in the second div we have <code>Rupee</code> span element 3 times. Using the below jQuery :first-of-type selector we can select the first occurance of <code>Tom, Rupee</code> and apply blue color to both.</p>
+
+
 
 <b>Output</b><br>
-<img src="images/examples/first-of-type-selector.png"><br>
+<img alt="jQuery first-of-type selector" title="jQuery first-of-type selector" src="images/examples/jquery-first-of-type-selector.png"><br>
 
-<br><a href="examples/first-of-type-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> 
+<br><a href="examples/jquery-first-of-type-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> 
 <br>
 
-<h3>jQuery :last-of-type Selector</h3>
-<p>The <code>:last-of-type</code> selector matches elements that have no other element with both the same parent and the same element name coming before it in the document tree.</p>
+<h2>jQuery :last-of-type Selector</h2>
+<div class="alert alert-info">
+<p>jQuery <code>:last-of-type</code> selector matches elements that have no other element with both the same parent and the same element name coming before it in the document tree.</p>
+</div>
+<p>It works similar to jQuery <code>:first-of-type</code> selector but the only difference is it selects the last element</p>
+
+
+
 <h2>Syntax</h2>
 <pre class="prettyprint">
-  jQuery( ":last-of-type" )
+  $( ":last-of-type" )
 </pre>
 
-<p>When there are multiple elements with the same content or same value, jquery <code>:last-of-type</code> selector will select the first element of its type</p>
+<p>When there are multiple elements with the same content or same value, jquery <code>:last-of-type</code> selector will select the last element of its type</p>
 
 
 
@@ -390,15 +400,20 @@ $( "span:last-of-type" ).addClass( "change" );
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>There are elements named Tom and 3 Elements named Rupee. But it only selected the last of its type.</p>
+<p>There are elements named Tom and Rupe three times. But it only selected the last of its type.</p>
+
+
+
 <b>Output</b><br>
-<img src="images/examples/last-of-type-selector.png"><br>
+<img alt="jQuery last-of-type selector" title="jQuery last-of-type selector" src="images/examples/jquery-last-of-type-selector.png"><br>
 
 
-<br><a href="examples/last-of-type-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> 
+<br><a href="examples/jquery-last-of-type-selector.html" class="btn btn-primary" target="_blank">Try It Now</a> 
 
-<br><h3>jQuery :nth-child() Selector</h3>
-<div class="alert alert-success">
+
+
+<h2>jQuery :nth-child() Selector</h2>
+<div class="alert alert-info">
   Matches all elements that are the nth-child of their parent or that are the parent's even or odd children.
 </div>
 
@@ -416,58 +431,40 @@ index: The index of each child to match, starting with 1, the string <code>even<
 <p>The below example selects every second element in each parent of second child because in our case <code>:nth-child(2)</code></p>
 
 <pre class="prettyprint jquery">
-&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="utf-8"&gt;
-&lt;title&gt;nth-child demo&lt;/title&gt;
-&lt;style&gt;
-div {
-float: left;
-}
-span {
-color: blue;
-}
-p {
-color: green;
-}
-&lt;/style&gt;
-&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-  &lt;body&gt;
+&lt;body&gt;
   &lt;div&gt;
-  &lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;/ul&gt;
+    &lt;ul&gt;
+    &lt;li&gt;One&lt;/li&gt;
+    &lt;li&gt;Two&lt;/li&gt;
+    &lt;li&gt;Three&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/div&gt;
   &lt;div&gt;
-  &lt;ul&gt;
-  &lt;li&gt;Numbers&lt;/li&gt;
-  &lt;li&gt;Names&lt;/li&gt;
-  &lt;li&gt;Values&lt;/li&gt;
-  &lt;/ul&gt;
+    &lt;ul&gt;
+    &lt;li&gt;Numbers&lt;/li&gt;
+    &lt;li&gt;Names&lt;/li&gt;
+    &lt;li&gt;Values&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/div&gt;
   &lt;div&gt;
-  &lt;ul&gt;
-  &lt;li&gt;This is One&lt;/li&gt;
-  &lt;li&gt;This is Two&lt;/li&gt;
-  &lt;li&gt;This is Three&lt;/li&gt;
-  &lt;li&gt;This is Four&lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;p&gt;It will selet every second element in each parent ul&lt;/p&gt;
-  &lt;/div&gt;
-&lt;script&gt;
-$( "ul li:nth-child(2)" ).append( "&lt;span&gt; - 2nd!&lt;/span&gt;" );
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    &lt;ul&gt;
+    &lt;li&gt;This is One&lt;/li&gt;
+    &lt;li&gt;This is Two&lt;/li&gt;
+    &lt;li&gt;This is Three&lt;/li&gt;
+    &lt;li&gt;This is Four&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;    
 </pre>
+
+<p>In the above HTML  the jquery :nth-child selector will select every second element </p>
+<pre class="prettyprint jquery">
+$( "ul li:nth-child(2)" ).append( "&lt;span&gt; - 2nd!&lt;/span&gt;" );
+</pre>
+
+
 <b>Outpt</b><br/>
-<img src="images/examples/nth-child.png"><br>
-<br><a href="examples/nth-child.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<img alt="jquery nth-child selector" title="jQuery nth-child selector" src="images/examples/jquery-nth-child-selector.png"><br>
+<br><a href="examples/jquery-nth-child-selector.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 <!-- CONTENT END HERE -->
@@ -476,34 +473,37 @@ $( "ul li:nth-child(2)" ).append( "&lt;span&gt; - 2nd!&lt;/span&gt;" );
 
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-basic-selectors.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+<a href="jquery-content-filter-selectors.html"  class="glyphicon glyphicon-hand-right"></a>
 </div>
+<br>
+<div>
+  
+</div>
+<br>
 <div class="clearer"></div>
 </div>
-<div class="ads"><img src="images/ad2.png" /></div>
+<div class="ads">
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_34_17.gif" alt="" border="0" /></a>
+
+<a href="http://mbsy.co/bGzP7" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/5615/2014_06_26_21_51_27.jpg" alt="" border="0" /></a>
+
+</div>
 </div><!-- middlecol -->
 <div id="rightcol">
 <div class="rightgooglead">
 <div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
-<script type="text/javascript"><!--
-google_ad_client = "pub-7133395778201029";
-google_ad_width = 160;
-google_ad_height = 600;
-google_ad_format = "160x600_as";
-google_ad_type = "image";
-google_ad_channel ="";
-//--></script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+
+<a href="http://mbsy.co/CodeSchool/uprabhakar" target="_blank" style="outline:none;border:none;"><img src="https://ambassador-api.s3.amazonaws.com/uploads/marketing/970/2014_09_22_13_33_36.gif" alt="" border="0" /></a>
+
 </div>
 </div><!-- rightcol -->
 <div style="clear:both;"></div>
 </div>
 </div>
+
 <div id="footer" >
     <div class="main ">
         <div class="footer_middle">
