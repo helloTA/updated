@@ -1,4 +1,4 @@
-w<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -136,22 +136,24 @@ w<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.o
 <h1>jQuery Custom Effects</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-sliding-effects.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-traversal.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
 
-<h4>jQuery animate() Method </h4>
+<h2>jQuery Effect  animate() Method </h2>
 
+<div class="alert alert-info">
 <p>
-The jQuery <code>animate()</code> method performs custom animation effects based on CSS styles that are supplied to it. The required parameter for the animate method is a plain object of CSS properties.</p>
+jQuery <code>animate()</code> method performs custom animation effects based on CSS styles that are supplied to it. The required parameter for the animate method is a plain object of CSS properties.</p>
 
-<h2>Syntax for jQuery animate() method</h2>
+</div>
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
  .animate( properties [, duration ] [, easing ] [, complete ] )
   
@@ -159,8 +161,33 @@ The jQuery <code>animate()</code> method performs custom animation effects based
 <p>
 The following is the animation example which has CSS styles like width, opacity, margin-left and etc in order to animate the div element.
 </p>
-<h3>Example</h3>
+<h2>Example</h2>
 <pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;animate demo&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    background-color: red;
+    width: 150px;
+    border: 5px solid yellow;
+color:white;
+padding:10px
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;button id="go"&gt;Animate me&lt;/button&gt;
+&lt;div id="block"&gt;
+This is the Jquery animate demo&lt;/div&gt;
+ 
+&lt;script&gt;
+// Using multiple unit types within one animation.
+ 
 $( "#go" ).click(function() {
   $( "#block" ).animate({
     width: "70%",
@@ -170,20 +197,30 @@ $( "#go" ).click(function() {
     borderWidth: "10px"
   }, 1500 );
 });
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;
+
 </pre>
 
 <b>Output</b>
-<br><img src="images/examples/animate.png">
-<br><a href="examples/traversal/animate.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img  alt="jquery animate() method" title = "jquery animate() method" width="700" src="images/examples/jquery-animate-method.png">
+<br><a href="examples/traversal/jquery-animate-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
-<br><h4>jQuery clearQueue() Method</h4>
+<br>
 
+<h2>jQuery Effect clearQueue() Method</h2>
+
+<div class="alert alert-info">
 <p>
-The jQuery <code>clearQueue()</code> method removes all the functions removed from the queue that have not been executed from the queue.</p>
+The jQuery <code>clearQueue()</code> method removes all items from the queue that have not yet been run. Note that when a function has started to run, it runs until it is completed.</p>
 
-<h2>Syntax for jquery clearQueue() method</h2>
+</div>
+
+<h2>Syntax</h2>
 <pre class="prettyprint jquery"> 
 .clearQueue( [queueName ] )
 </pre>
@@ -196,7 +233,37 @@ Here is an example how to usejQuery <code>clearQueue()</code>
 <h3>Example</h3>
 
 <pre class="prettyprint jquery">
-  $( "#start" ).click(function() {
+ 
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;clearQueue demo&lt;/title&gt;
+  &lt;style&gt;
+  div {
+    margin: 7px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    background: red;
+    display: none;
+  }
+  div.newcolor {
+    background: blue;
+  }
+  &lt;/style&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ 
+&lt;button id="start"&gt;Begin&lt;/button&gt;
+&lt;button id="stop"&gt;Pause&lt;/button&gt;
+&lt;div&gt;&lt;/div&gt;
+ 
+&lt;script&gt;
+$( "#start" ).click(function() {
   var myDiv = $( "div" );
   myDiv.show( "slow" );
   myDiv.animate({
@@ -225,27 +292,34 @@ $( "#stop" ).click(function() {
   myDiv.clearQueue();
   myDiv.stop();
 });
+&lt;/script&gt;
+ 
+&lt;/body&gt;
+&lt;/html&gt;s
 </pre>
 
-<b>Output</b>
-<br><img src="images/examples/clear-queue.png">
-<br><a href="examples/traversal/clear-queue.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<strong>Output</strong>
+<br><img title="jquery clear queue method" alt="jquery clear queue method" src="images/examples/jquery-clear-queue-method.png">
+<br><a href="examples/traversal/jquery-clear-queue-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<br><h4>jQuery delay() Method</h4>
+<br><h2>jQuery Effect delay() Method</h2>
 
+<div class="alert alert-info">
 
 <p>
-jQuery <code>delay()</code> method has been introduced in jQuery version 1.4. The delay() method delays function to execute that follow it in the queue. Basically, delay method sets the timer to execute next function in the queue.</p>
+jQuery <code>delay()</code> method was introduced in jQuery version 1.4. The delay() method delays function to execute and follow it in the queue. Basically, delay method sets the timer to execute next function in the queue.</p>
 
-<h2>Syntax for jquery delay method</h2>
+</div>
+
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
  .delay( duration [, queueName ] )
 </pre>
 
 <p>
-Duration is the parameter to delay method which is in milliseconds. Duration can be used like higher values indicate slower animations. The strings 'fast' and 'slow' can be supplied as parameters to indicate durations of 200 and 600 milliseconds, respectively.</p>
+Duration is the parameter to delay the method which is in milliseconds. Duration can be used like higher values indicate slower animations. The strings 'fast' and 'slow' can be supplied as parameters to indicate durations of 200 and 600 milliseconds, respectively.</p>
 <p>
-Here is the delay method example
+Here is the jquery <code>delay()</code> method example
 </p>
 
 <h3>Example</h3>
@@ -257,9 +331,20 @@ Here is the delay method example
 </pre>
 <b>Output</b>
 
-<br><img src="images/examples/delay.png">
-<br><a href="examples/traversal/delay.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img title="jquery delay() method" alt="jquery delay() method" src="images/examples/jquery-delay-method.png">
+<br><a href="examples/traversal/jquery-delay-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
+<br>
+<br />
+<h4>Learn about other jQuery Effects</h4>
+
+<a href="../jquery-effects.html" target="_top" >jQuery Effects</a>
+<br><br />
+<a target="_top" href="../jquery-basic-effects.html">jQuery Basic Effects</a>
+<br><br />
+<a target="_top" href="../jquery-fading-effects.html">jQuery Fading Effects</a>
+<br><br />
+<a target="_top" href="../jquery-sliding-effects.html">jQuery Sliding Effects</a>
 
 
 
@@ -269,10 +354,10 @@ Here is the delay method example
 
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-sliding-effects.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+<a href="jquery-traversal.html"  class="glyphicon glyphicon-hand-right"></a>
 </div>
 <br>
 <div>

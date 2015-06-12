@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery Effects</title>
+<title>jQuery Basic Effects</title>
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <link href="../css/desert.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../css/hint.min.css"></link>
@@ -117,7 +117,7 @@
 <li><a target="_top" href="jquery-with-css.html">jQuery with CSS</a></li>
 </ul>
 <br>
-s
+
 </div><!-- leftcol -->
 <br >
 <div class="middle_right">
@@ -136,64 +136,74 @@ s
 <h1>jQuery  Basic Effects</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-effects.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-fading-effects.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
 <div>
 <!-- CONTENT STARTS HERE -->
 
-
-<h4>jQuery Show () Method </h4>
+<h2>jQuery Show () Method </h2>
+<div class="alert alert-info">
 <p>
-jQuery show() method in jQuery display the selected html element. The show() method functions by calling .css( "display", "block") where display is a css property and block is the value to display element. This method doesn’t have animation.</p>
-<h4>Syntax</h4>
+jQuery <code>show() </code>method is used to show the content  wrapped inside <code>HTML</code> elements.
+
+</div>
+
+
+<p>The jQuery <code>show()</code> method function call the css function <code>.css( "display", "block") </code>where display is a css property and block is the value to display element. This method doesn’t have animation.</p>
+
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
  .show()   
 </pre>
  
  <p>
-<b>Note:</b> In css, If the element has the !important property in inline css styles we need to override it by appending !important to the value of display attribute.<code> .css( "display", "block !important").</code>
+<b>Note:</b> In css, If the element has the <code>!important </code> property in inline to the  css styles then  we need to override it by appending <code>!important</code> to the value of display attributes like <code> css( "display", "block !important").</code>
 
 </p>
 <p>Consider the following example and which contains p tag 
 </p>
 <h4>Example</h4>
 <pre class="prettyprint jquery">
-  $( "button" ).click(function() {
-  $( "p" ).show( "slow" );
+  $("button").click(function() {
+  $("p").show( "slow" );
 });
 </pre>
 
 <b>Output</b>
-<br><img src="images/examples/show.png">
+<br><img alt="jQuery show() method" title="jQuery show() Method" src="images/examples/jquery-show-method.png">
 
-<br><a href="examples/traversal/show.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="examples/traversal/jquery-show-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<br><h4>jQuery Hide() Method</h4>
+<h2>jQuery hide() Method</h2>
 
+<div class="alert alert-info">
 <p>
-jQuery <code>hide()</code> method simply hides the selected element. The hide() method functions by calling <code>.css( "display", "none")</code> where display is a css property and none is the value to hide element. This method doesn’t have animation.</p>
+jQuery <code>hide()</code> method simply hides the selected <code>HTML</code>elements.
+</p></div>
 
-<h4>Syntax</h4>
+<p> The <code>hide()</code> method works by calling <code>.css( "display", "none")</code> where display is a css property and none is the value to hide element. This method doesn’t have animation.</p>
+
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
 .hide()
 </pre>
 
-<p><b>Note:</b> In css, If the element has the !important property in inline css styles we need to override it by appending !important to the value of display attribute.<code> .css( "display", "none !important")</code></p>
+<p><b>Note:</b> In css, If the element has the <code>!important</code> property in inline css styles we need to override it by appending <code>!important</code> to the value of display attribute.<code> .css( "display", "none !important")</code></p>
 
 <p>
-Let us look at the following example to hide an HTML element.
+Let us look at the following example to hide HTML element.
 </p>
 
 <h4>Example</h4>
 
 <pre class="prettyprint jquery">
 for ( var i = 0; i < 5; i++ ) {
-  $( "<div>" ).appendTo( document.body );
+  $( "&lt;div&gt;" ).appendTo( document.body );
 }
 $( "div" ).click(function() {
   $( this ).hide( 3000, function() {
@@ -202,19 +212,28 @@ $( "div" ).click(function() {
 });
 </pre>
 
+
 <b>Output</b>
-<br><img src="images/examples/hide.png">
+<br><img alt="jQuery hide() method" title="jQuery Hide() Method" src="images/examples/jquery-hide-method.png">
 
-<br><a href="examples/traversal/hide.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="examples/traversal/jquery-hide-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
-<br><h4>jQuery toggle() Method</h4>
+
+<br>
+<h2>jQuery toggle() Method</h2>
+
+Before you understand about jquery toggle method try to understand these two jquery methods <a href="jquery-show-method.html" target="_blank">show </a> and jquery  <a href="jquery-hide-method.html" target="_blank"> hide</a>
+
+<br ><br/>
+<div class="alert alert-info">
 <p>
 
 jQuery 
-<code>toggle()</code> method in jQuery does the both display and hide functions alternatively meaning if the element is initially displayed then it will be hidden, if the element is hidden then it will be shown. Internally toggle() method maintains the state of display property value.</p>
+<code>toggle()</code> method does the both jquery <a href="jquery-show-method.html" target="_blank">show </a> and jquery <a href="jquery-hide-method.html" target="_blank">hide</a> functions alternatively meaning if the element is initially displayed then it will be hidden, if the element is hidden then it will be shown. Internally toggle() method maintains the state of display property value.</p>
+</div>
 
-<h4>Syntax</h4>
+<h2>Syntax</h2>
 <pre class="prettyprint jquery">
 .toggle( [duration ] [, complete ] )
 </pre>
@@ -222,7 +241,7 @@ jQuery
 toggle() </code>has a duration and functions parameters in order to make animation act upon the html element.</p>
 
 <p>
-The following example illustrates how to use .toggle()
+The following example illustrates how to use jquery toggle() method
 </p>
 
 <h4>Example</h4>
@@ -232,10 +251,26 @@ $( "button" ).click(function() {
 });
 </pre>
 
-<b>Output</b>
-<br><img src="images/examples/toggle.png">
-<br><a href="examples/traversal/toggle.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<p>The above example will toggle the paragraph, like hiding and showing it</p>
 
+<strong>Output</strong>
+<br><img alt="jquery toggle() method" title="jquery toggle() method" src="images/examples/jquery-toggle-method.png">
+<br><a href="examples/traversal/jquery-toggle-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
+
+
+
+<br>
+<br />
+<h4>Learn about other jQuery Effects</h4>
+
+<a href="../jquery-effects.html" target="_top" >jQuery Effects</a>
+<br><br />
+<a target="_top" href="../jquery-fading-effects.html">jQuery Fading Effects</a>
+<br><br />
+<a target="_top" href="../jquery-sliding-effects.html">jQuery Sliding Effects</a>
+<br><br />
+<a target="_top" href="../jquery-custom-effects.html">jQuery Custom Effects</a>
 
 
 <!-- CONTENT END HERE -->
@@ -244,10 +279,10 @@ $( "button" ).click(function() {
 
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-effects.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+<a href="jquery-fading-effects.html"  class="glyphicon glyphicon-hand-right"></a>
 </div>
 <br>
 <div>

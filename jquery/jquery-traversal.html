@@ -130,10 +130,10 @@
 <h1>jQuery Traversal</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-custom-effects.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-traversal-filters.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
@@ -148,58 +148,98 @@ Most of the DOM Traversal Methods do not modify the jQuery object and they are u
 
 
 
-<h4> jQuery .add() Method</h4>
+
+
+<h2> jQuery .add() Method</h2>
  
- <div class="alert alert-success">
-     Create a new jQuery object with elements added to the set of matched elements.
+ <div class="alert alert-info">
+     jQuery <code>add() </code> method creates a new jQuery object with elements added to the set of matched elements.
  </div>
  <p>
 
-Given a jQuery object that represents a set of DOM elements, the jquery .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method. The argument to .add() can be pretty much anything that $() accepts, including a jQuery selector expression, references to DOM elements or an HTML snippet.
+Given a jQuery object that represents a set of DOM elements, the jquery <code>.add()</code> method constructs a new jQuery object from the union of those elements. s
 </p>
 
 
-<b>jQuery add() method Syntax</b>
+<b>Syntax</b>
 <pre class="prettyprint jquery">
  .add( selector )
 </pre>
 
-<p>Let's look at example of how we can use the jquery traversal .add() method</p>
+<p>Let's look at an example of how we can use the jquery traversal .add() method</p>
 
-<h4>Example</h4>
+<h2>Example</h2>
 
 <p>Below example program finds all divs and makes a border. Then adds all paragraphs to the jQuery object to set their backgrounds green.</p>
 
 
-<h1>jQuery add() method examples</h1>
+<h2> Example</h2>
 <pre class="prettyprint jquery">
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;add demo&lt;/title&gt;
+&lt;style&gt;
+div {
+width: 60px;
+height: 60px;
+margin: 10px;
+float: left;
+}
+p {
+clear: left;
+font-weight: bold;
+font-size: 16px;
+color: white;
+margin: 0 10px;
+padding: 2px;
+}
+&lt;/style&gt;
+&lt;script src="https://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;p&gt;See the boxes clearly!!!!&lt;/p&gt;
+&lt;script&gt;
+  $( "div" ).css( "border", "2px solid red" )
+  .add( "p" )
+  .css( "background", "green" );
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 
-$( "div" ).css( "border", "2px solid red" )
-.add( "p" ).css( "background", "green" );
 </pre>
 
 <p>When you run the above jQuery <code>add()</code> method example, it will produce the following output</p>
 
-<img src="images/examples/add.png">
+<strong>Output</strong>
+<img alt="jquery traversal add() method" alt="jquery add() method" src="examples/images/jquery-add-method.png">
 
-<br><a href="examples/add.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="examples/jquery-add-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 <div>
   
 </div>
 
-<br><h4>jQuery addBack() Method</h4>
+<br>
+<h2>jQuery addBack() Method</h2>
 
-<div class="alert alert-success">
-Add the previous set of elements on the stack to the current set, optionally filtered by a selector.</div>
+<div class="alert alert-info">
+jQuery <code>addBack()</code> traversal method adds the previous set of elements on the stack to the current set, optionally filtered by a selector.</div>
 
-<p><code>jQuery .addBack() method </code> adds DOM previous element to the current set and maintains them in the internal stack which will take care of changes to the matched set of elements. 
+<p><code>jQuery .addBack() method </code> adds  previous DOM element to the current set and maintains them in the internal stack which will take care of changes to the matched set of elements. 
 </p>
 
 <p>A Set of new elements will be pushed onto the stack when DOM traversal method being called. The advantage with<code>jQuery  .addBack() method </code>is to get access on the previous set of elements.
 </p>
 
 
-<b>jQuery addBack() method Syntax</b>
+<h2> Syntax</h2>
 
 <pre class="prettyprint jquery">
  .addBack( [selector ] )
@@ -210,24 +250,22 @@ Add the previous set of elements on the stack to the current set, optionally fil
 
 <h4>jQuery addBack() method example</h4>
 <pre class="prettyprint jquery">
-  $( "div.left, div.right" ).find( "div, div > p" ).addClass( "border" );
+  $("div.left, div.right").find("div, div > p").addClass("border");
  
 // First Example
-$( "div.before-addback" ).find( "p" ).addClass( "background" );
+$("div.before-addback").find("p").addClass("background");
  
 // Second Example
-$( "div.after-addback" ).find( "p" ).addBack().addClass( "background" );
+$("div.after-addback").find("p").addBack().addClass("background");
 
 </pre>
-<b>Output</b><br />
+<strong>Output</strong><br />
 <p>The above example produces the following result.</p>
 
-<br><img src="images/examples/addBack.png">
-<div>
-  
-</div>
+<img alt="jquery traversal addBack() method" alt="jquery addBack() method" src="examples/images/jquery-addBack-method.png">
 
-<br><a href="examples/traversal/addback.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><a href="examples/jquery-addBack-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
+
 
 
 <br>

@@ -134,10 +134,10 @@
 <h1>jQuery Sliding Effects</h1>
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="#" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-basic-effects.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a><br />
+<a href="jquery-custom-effects.html"  class="glyphicon glyphicon-hand-right"></a><br />
 </div>
 <div class="clearer"></div><br />
 <div class="inner_content"><br />
@@ -145,9 +145,14 @@
 <!-- CONTENT STARTS HERE -->
 
 
-<br><h3>jQuery slideUp () Method</h3>
+<br>
+<h2>jQuery slideUp () Method</h2>
+
+<div class="alert alert-info">
 <p>
-The jQuery <code>slideUp()</code> method makes the selected element to be slide up.</p>
+The jQuery <code>slideUp()</code> method makes the selected <code>HTML</code>element to slide up from its position.</p>
+</div>
+
 <h2>Syntax</h2>
 <pre class="prettyprint jquery">
   .slideUp( [duration ] [, complete ] )
@@ -172,13 +177,19 @@ The following example illustrates usage of <code>slideToggle()</code>. In this e
 </pre>
 
 <b>Output</b>
-<br><img src="effects/images/examples/slideUp.png">
-<br><a href="examples/traversal/slideup.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img title="jquery slideUp method" alt="jquery slideUp method" src="images/examples/jquery-slideUp-method.png">
+<br><a href="examples/traversal/jquery-slideup-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
-<br><h3>jQuery slideDown() Method</h3>
 
-<p>jQuery <code>slideDown()</code> method makes an selected element slide down.</p>
-<h3>Syntax</h3>
+<br><h2>jQuery Effect slideDown() Method</h2>
+<div class="alert alert-info">
+
+<p>jQuery <code>slideDown()</code> method makes the selected <code>HTML</code>element to  slide down from its position.</p>
+
+</div>
+
+
+<h2>Syntax</h2>
 
 <pre class="prettyprint jquery"> 
  .slideDown( [duration ] [, complete ] )
@@ -188,11 +199,11 @@ The following example illustrates usage of <code>slideToggle()</code>. In this e
 Durations are given in milliseconds; higher values indicate slower animations, not faster ones. The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively. If any other string is supplied, or if the duration parameter is omitted, the default duration of 400 milliseconds is used.</p>
 
 <p>
-The following example illustrates usage of slideDown(). In this example the ‘div’ element slide down by calling <code>$( "div" ).slideDown( "slow")</code>.where slow is indicate duration.
+The following example illustrates usage of jquery <code>slideDown()</code>. In this example the ‘div’ element slide down by calling <code>$( "div" ).slideDown( "slow")</code>.where slow is indicate duration.
 </p>
 
 
-<h3>Example</h3>
+<h2>Example</h2>
 <pre class="prettyprint jquery">
   $( document.body ).click(function () {
   if ( $( "div:first" ).is( ":hidden" ) ) {
@@ -205,17 +216,22 @@ The following example illustrates usage of slideDown(). In this example the ‘d
 
 
 <b>Output</b>
-<br><img src="effects/images/examples/slideDown.png">
-<br><a href="examples/traversal/slidedown.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img title="jQuery slideDown method" alt="jQuery slideDown method" src="images/examples/jquery-slideDown-method.png">
+<br><a href="examples/traversal/jquery-slidedown-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
 
+<br><h2>jQuery Effect SlideToggle() Method</h2>
 
-<br><h4>jQuery SlideToggle() Method</h4>
+<p>Before you understand about the jquery  slideToggle() method try to understand how jquery <a href ="jquery-slidedown-method.html" target="_blank">slideDown</a>   method <a href="jquery-slideup-method.html" target="_blank"> slideUp</a> method works.</p> 
 
+<br>
+<br />
+<div class="alert alert-info">
 <p>
-jQuery <code>slideToggle()</code> method makes an selected element display or hide with a sliding motion. Meaning it toggles between slideDown and slideUp methods.</p>
+jQuery <code>slideToggle()</code> method makes the selected<code>HTML</code> elementS TO  display or hide with a sliding motion. Meaning it toggles between jQuery <a href ="jquery-slidedown-metho.html" target="_blank">slideDown</a> and jQuery <a href="jquery-slideup-method.html" target="_blank"> slideUp</a> methods.</p>
 
+</div>
 <h3>Syntax</h3>
 <pre class="prettyprint jquery">
 .slideToggle( [duration ] [, complete ] )
@@ -239,10 +255,22 @@ The following example illustrates usage of slideToggle(). In this example the �
 </pre>
 
 <b>Output</b>
-<br><img src="effects/images/examples/slideToggle.png">
-<br><a href="examples/traversal/slidetoggle.html" class="btn btn-primary" target="_blank">Try It Now</a>
+<br><img title="jquery slideToggle method" alt="jquery slidetoggle method" src="images/examples/jquery-slideToggle-method.png">
+<br><a href="examples/traversal/jquery-slidetoggle-method.html" class="btn btn-primary" target="_blank">Try It Now</a>
 
 
+
+<br>
+<br />
+<h4>Learn about other jQuery Effects</h4>
+
+<a href="../jquery-effects.html" target="_top" >jQuery Effects</a>
+<br><br />
+<a target="_top" href="../jquery-basic-effects.html">jQuery Basic Effects</a>
+<br><br />
+<a target="_top" href="../jquery-fading-effects.html">jQuery Fading Effects</a>
+<br><br />s
+<a target="_top" href="../jquery-custom-effects.html">jQuery Custom Effects</a>
 
 
 
@@ -252,10 +280,10 @@ The following example illustrates usage of slideToggle(). In this example the �
 
 <hr />
 <div class="pre-btn" class="hint--right  hint--error" data-hint="Previous Page!">
-  <a href="" class="glyphicon glyphicon-hand-left"></a>
+  <a href="jquery-effects.html" class="glyphicon glyphicon-hand-left"></a>
 </div>
 <div class="nxt-btn" class="hint--right hint-error" data-hint="Next page">
-<a href="#"  class="glyphicon glyphicon-hand-right"></a>
+<a href="jquery-custom-effects.html"  class="glyphicon glyphicon-hand-right"></a>
 </div>
 <br>
 <div>
